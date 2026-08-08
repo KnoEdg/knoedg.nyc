@@ -77,7 +77,7 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .copy p:first-of-type { color: var(--ink); font-size: 1.35rem; }
 
 .kee-term { margin: 0 0 1.75rem; }
-.kee-term h3 { margin: 0 0 0.2rem; }
+.kee-term h3 { line-height: 1.2; margin: 0; }
 .kee-term p { margin: 0; }
 .back-to-top {
   display: inline-block;
