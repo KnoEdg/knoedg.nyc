@@ -76,6 +76,19 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .copy p { color: var(--muted); font-size: 1.18rem; }
 .copy p:first-of-type { color: var(--ink); font-size: 1.35rem; }
 
+.kee-term { margin: 0 0 1.75rem; }
+.kee-term h3 { margin: 0 0 0.2rem; }
+.kee-term p { margin: 0; }
+.back-to-top {
+  display: inline-block;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  text-decoration: none;
+  vertical-align: 0.08em;
+}
+
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; padding: 2rem 0; }
 .site-footer p { margin: 0; }
 
