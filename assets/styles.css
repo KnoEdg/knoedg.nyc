@@ -46,6 +46,34 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
   text-transform: uppercase;
 }
 
+.brand-frame {
+  display: grid;
+  white-space: nowrap;
+}
+
+.brand-primary,
+.brand-expanded {
+  grid-area: 1 / 1;
+}
+
+.brand-primary {
+  animation: brand-primary 2.4s ease-in-out both;
+}
+
+.brand-expanded {
+  animation: brand-expanded 2.4s ease-in-out both;
+}
+
+@keyframes brand-primary {
+  0%, 20%, 100% { opacity: 1; }
+  38%, 68% { opacity: 0; }
+}
+
+@keyframes brand-expanded {
+  0%, 24%, 82%, 100% { opacity: 0; }
+  42%, 66% { opacity: 1; }
+}
+
 nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
 nav a { color: var(--muted); font-size: 0.92rem; text-decoration: none; }
 nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
@@ -76,6 +104,15 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .copy p { color: var(--muted); font-size: 1.18rem; }
 .copy p:first-of-type { color: var(--ink); font-size: 1.35rem; }
 
+.section-divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.name-meaning h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
+.name-meaning p { margin-bottom: 0; }
+
 .kee-term { margin: 0 0 1.75rem; }
 .kee-term h3 { line-height: 1.2; margin: 0; }
 .kee-term p { margin: 0; }
@@ -100,5 +137,6 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
+  .brand-primary { animation: none; }
+  .brand-expanded { display: none; animation: none; }
 }
-
