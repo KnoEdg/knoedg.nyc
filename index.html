@@ -38,13 +38,44 @@
 
       if (!brand || reducedMotion) return;
 
-      window.setTimeout(() => {
-        brand.textContent = 'Knowledge NYC';
-      }, 500);
+      const original = 'KnoEdg.NYC';
+      const expanded = 'Knowledge NYC';
+      const wait = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 
-      window.setTimeout(() => {
-        brand.textContent = 'KnoEdg.NYC';
-      }, 1800);
+      const erase = async () => {
+        while (brand.textContent.length > 0) {
+          brand.textContent = brand.textContent.slice(0, -1);
+          await wait(55);
+        }
+      };
+
+      const type = async (text) => {
+        for (const character of text) {
+          brand.textContent += character;
+          await wait(85);
+        }
+      };
+
+      const animate = async () => {
+        brand.style.borderRight = '0.08em solid currentColor';
+        brand.style.paddingRight = '0.12em';
+
+        await wait(600);
+        await erase();
+        await type(expanded);
+        await wait(900);
+        await erase();
+        await type(original);
+
+        brand.style.borderRight = '';
+        brand.style.paddingRight = '';
+      };
+
+      animate().catch(() => {
+        brand.textContent = original;
+        brand.style.borderRight = '';
+        brand.style.paddingRight = '';
+      });
     })();
   </script>
 </body>
