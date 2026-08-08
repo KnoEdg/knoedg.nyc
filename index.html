@@ -39,18 +39,20 @@
       if (!brand || reducedMotion) return;
 
       const original = 'KnoEdg.NYC';
-      const expanded = 'Knowledge NYC';
+      const sharedPrefix = 'Kno';
+      const expandedSuffix = 'wledge NYC';
+      const originalSuffix = 'Edg.NYC';
       const wait = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 
-      const erase = async () => {
-        while (brand.textContent.length > 0) {
+      const eraseToPrefix = async () => {
+        while (brand.textContent.length > sharedPrefix.length) {
           brand.textContent = brand.textContent.slice(0, -1);
           await wait(55);
         }
       };
 
-      const type = async (text) => {
-        for (const character of text) {
+      const typeSuffix = async (suffix) => {
+        for (const character of suffix) {
           brand.textContent += character;
           await wait(85);
         }
@@ -61,11 +63,11 @@
         brand.style.paddingRight = '0.12em';
 
         await wait(600);
-        await erase();
-        await type(expanded);
+        await eraseToPrefix();
+        await typeSuffix(expandedSuffix);
         await wait(900);
-        await erase();
-        await type(original);
+        await eraseToPrefix();
+        await typeSuffix(originalSuffix);
 
         brand.style.borderRight = '';
         brand.style.paddingRight = '';
