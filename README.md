@@ -22,4 +22,6 @@ python3 scripts/generate_nyc_boroughs_svg.py --check
 sha256sum --check data/fixtures/SHA256SUMS
 ```
 
-The fixture identifies the originating governed `pack-nyc` records and the `meta-knoedg-nyc` publication run. The original upstream response checksum and first projection script were not retained; that limitation is disclosed in the fixture. Determinism begins at the reviewed public fixture for this first publication.
+The fixture retains public source, review, confidence and transformation metadata without exposing private publication machinery. Its human-readable public view is [NYC Boundaries](https://knoedg.nyc/nyc-boundaries/), with a linked JSON-LD description.
+
+The original upstream response checksum and first projection script were not retained; that limitation is disclosed publicly. Determinism begins at the reviewed public fixture for this first publication.
