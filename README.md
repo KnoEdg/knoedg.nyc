@@ -33,16 +33,21 @@ The fixture retains public source, review, confidence and transformation metadat
 The original water-excluded upstream response checksum and first projection script were not retained; that limitation is disclosed publicly. Determinism for that first publication begins at the reviewed public fixture. The later water-included publication retains the full source-to-fixture-to-overlay chain.
 
 
-## NYC boundary count validation
+## NYC Boundaries generation and validation
 
-`nyc-boundaries/record-counts.json` is the single count manifest for the public
-NYC Boundaries resource. Whenever an intake changes representation coverage,
-update the manifest and every affected human- and machine-readable surface
-together, then run:
+`data/fixtures/nyc-boundary-public-view.json` is the canonical public-safe
+artifact for fixture-derived counts, provenance clusters, measurement
+availability, measurement semantics, comparison dispositions, and values.
+`nyc-boundaries/record-counts.json`, the generated HTML measurement section,
+and matching JSON-LD properties are outputs—not independent sources.
+
+Regenerate and verify without network access:
 
 ```bash
+python3 scripts/generate_nyc_boundaries_view.py
+python3 scripts/generate_nyc_boundaries_view.py --check
 python3 scripts/validate_nyc_boundary_counts.py
 ```
 
-The repository workflow runs the same reconciliation check for pull requests
-that change the resource, manifest, validator, or workflow.
+The repository workflow rejects stale generated output or any disagreement
+between the artifact, HTML, JSON-LD, and count manifest.
