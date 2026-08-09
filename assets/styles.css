@@ -81,6 +81,27 @@ nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
 main { min-height: calc(100vh - 11rem); }
 
 .hero { padding: clamp(5rem, 13vw, 10rem) 0 clamp(4rem, 10vw, 8rem); }
+.hero-grid {
+  display: grid;
+  gap: clamp(3rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  align-items: center;
+}
+.hero-copy { min-width: 0; }
+.nyc-map { margin: 0; }
+.nyc-map img {
+  display: block;
+  height: auto;
+  max-height: 35rem;
+  width: 100%;
+}
+.nyc-map figcaption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin-top: 0.85rem;
+  text-align: right;
+}
 .eyebrow {
   color: var(--accent);
   font-size: 0.78rem;
@@ -133,6 +154,8 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
   .site-header .shell { align-items: flex-start; flex-direction: column; gap: 0.65rem; padding-block: 1.2rem; }
   nav { gap: 0.8rem 1.1rem; }
   h1 { letter-spacing: -0.04em; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .nyc-map { margin-inline: auto; max-width: 28rem; width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
