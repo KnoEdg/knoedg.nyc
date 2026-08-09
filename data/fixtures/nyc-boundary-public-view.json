@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-09T23:20:00Z",
+  "issuedAt": "2026-08-09T23:35:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-09.7",
+  "artifactVersion": "2026-08-09.8",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -2736,7 +2736,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. The Census records are published as measurements without geometry. The OpenStreetMap records are published as exact relation-version metadata without geometry, relation members, Nominatim bounds, centroids, or numeric area. The geoBoundaries publication contains retained generalized, shoreline-clipped 2018 Census-derived geometry with no calculated area; it is not suitable for precise analysis or legal coastal extent. The Who's On First publication contains retained current Quattroshapes-derived geometry that is not an independently surveyed boundary, plus a Shapely-derived geom:area_square_m field that is neither land-only nor independent corroboration. The Overture publication contains geometry that is Overture's own integration of the cited OpenStreetMap relation, not an independently surveyed boundary; its land/maritime classification was re-verified directly against the pinned release at publication time and differs from this collection's original 2026-08-09 disposition for ten of the eleven representations, disclosed here rather than silently corrected."
+                    "text": "The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. The Census records are published as measurements without geometry. The OpenStreetMap records are published as exact relation-version metadata without geometry, relation members, Nominatim bounds, centroids, or numeric area. The geoBoundaries publication contains retained generalized, shoreline-clipped 2018 Census-derived geometry with no calculated area; it is not suitable for precise analysis or legal coastal extent. The Who's On First publication contains retained current Quattroshapes-derived geometry that is not an independently surveyed boundary, plus a Shapely-derived geom:area_square_m field that is neither land-only nor independent corroboration. The Overture publication contains geometry that is Overture's own integration of the cited OpenStreetMap relation, not an independently surveyed boundary; its land/maritime classification was re-verified directly against the pinned release at publication time and was found to differ from this collection's original governed disposition for ten of the eleven representations. A follow-up root-cause investigation found the underlying release asset unchanged since the original capture and concluded the original capture was the error; the governed source was corrected accordingly rather than left standing."
                   }
                 ]
               }
@@ -2829,6 +2829,12 @@
                       "type": "text",
                       "text": "August 9, 2026 — Eleven Overture Maps division-area geometries published with ODbL 1.0 attribution, both Richmond County land and maritime representations, deterministic regeneration, and a disclosed land/maritime-classification re-verification finding against the collection's original governed capture."
                     }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 9, 2026 — Root-caused the Overture land/maritime re-verification finding: the underlying release asset was confirmed unchanged since the original capture, and the discrepancy was traced to an error in that original capture rather than a live data change. The governed source's prose disposition was corrected accordingly."
+                    }
                   ]
                 ]
               }
@@ -2856,7 +2862,7 @@
           "@id": "https://knoedg.nyc/#organization"
         },
         "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-        "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates. The Who's On First publication deterministically derives a five-feature public fixture from the retained reviewed current county records without altering geometry coordinates. The Overture publication deterministically derives an eleven-feature public fixture from geometry re-queried directly against the pinned release at publication time; land/maritime classification was re-verified against the same pinned release and found to differ from the collection's original governed capture for ten of the eleven representations.",
+        "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates. The Who's On First publication deterministically derives a five-feature public fixture from the retained reviewed current county records without altering geometry coordinates. The Overture publication deterministically derives an eleven-feature public fixture from geometry re-queried directly against the pinned release at publication time; land/maritime classification was re-verified against the same pinned release, found to differ from the collection's original governed capture for ten of the eleven representations, and traced to an error in that original capture -- confirmed by an unchanged release-asset checksum, a reproducible query, and the release-wide base rate -- with the governed source corrected accordingly.",
         "dcterms:issued": {
           "@value": "2026-08-09",
           "@type": "xsd:date"
@@ -3770,7 +3776,7 @@
           {
             "@type": "schema:PropertyValue",
             "schema:name": "Land/maritime classification re-verification",
-            "schema:value": "Re-queried directly against the pinned 2026-07-22.0 release at publication time. Ten of the eleven representations returned is_territorial=true where this collection's original governed capture recorded false; only Richmond County's land representation returned false. Geometry, version, and OSM record_id all matched the original capture exactly. The fresh values are used in the published fixture; disclosed rather than silently reconciled."
+            "schema:value": "Re-queried directly against the pinned 2026-07-22.0 release at publication time. Ten of the eleven representations returned is_territorial=true where this collection's original governed capture recorded false; only Richmond County's land representation returned false. Geometry, version, and OSM record_id all matched the original capture exactly. A follow-up root-cause investigation (unchanged S3 asset checksum metadata, a reproducible duplicate-free query, and a 99.6% true base rate across the full release) concluded this was an error in the original governed capture, not a live Overture data change; the governed source's prose disposition was corrected accordingly and the fresh values are published here."
           }
         ]
       },
