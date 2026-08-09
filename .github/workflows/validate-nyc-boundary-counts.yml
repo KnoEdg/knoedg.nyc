@@ -14,6 +14,8 @@ on:
     paths:
       - "nyc-boundaries/**"
       - "scripts/validate_nyc_boundary_counts.py"
+      - "scripts/generate_nyc_boundaries_view.py"
+      - "data/fixtures/nyc-boundary-public-view.json"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
 permissions:
