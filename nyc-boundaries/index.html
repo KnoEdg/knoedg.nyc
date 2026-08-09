@@ -30,8 +30,14 @@
             <p class="resource-lede">A governed public view of how multiple sources represent New York City’s borough and county boundaries—without flattening shoreline, offshore, administrative and naming differences into one unquestioned shape.</p>
           </div>
           <figure class="resource-map">
-            <img src="/assets/nyc-boroughs.svg" alt="Water-excluded shoreline geometry for New York City’s five boroughs">
-            <figcaption>Published DCP water-excluded fixture · five boroughs</figcaption>
+            <img src="/assets/nyc-boundaries-comparison.svg" alt="Overlay comparing water-included boundaries in blue with water-excluded shoreline geometry in green for New York City’s five boroughs">
+            <figcaption>
+              <span class="map-legend" aria-label="Boundary map legend">
+                <span><i class="legend-swatch water-included" aria-hidden="true"></i>Water included</span>
+                <span><i class="legend-swatch water-excluded" aria-hidden="true"></i>Water excluded</span>
+              </span>
+              DCP boundary-method overlay · five boroughs
+            </figcaption>
           </figure>
         </header>
 
@@ -60,25 +66,25 @@
                   <td>NYC DCP · water excluded</td>
                   <td>Five borough shoreline geometries, excluding water areas</td>
                   <td><span class="status">Active</span> High confidence · 0.95</td>
-                  <td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne">Dataset gthc-hcne</a></td>
+                  <td><a class="external-link" href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne" target="_blank" rel="noopener noreferrer" aria-label="Dataset gthc-hcne (opens in a new tab)">Dataset gthc-hcne</a></td>
                 </tr>
                 <tr>
                   <td>NYC DCP · water included</td>
                   <td>Five borough geometries extending into surrounding water</td>
                   <td><span class="status">Active</span> High confidence · 0.95</td>
-                  <td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf">Dataset wh2p-dxnf</a></td>
+                  <td><a class="external-link" href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf" target="_blank" rel="noopener noreferrer" aria-label="Dataset wh2p-dxnf (opens in a new tab)">Dataset wh2p-dxnf</a></td>
                 </tr>
                 <tr>
                   <td>U.S. Census Bureau</td>
                   <td>2023 county land and water area, TIGER/Line-derived</td>
                   <td><span class="status">Active</span> High confidence · 0.93</td>
-                  <td><a href="https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip">2023 county Gazetteer</a></td>
+                  <td><a class="external-link" href="https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip" target="_blank" rel="noopener noreferrer" aria-label="2023 county Gazetteer (opens in a new tab)">2023 county Gazetteer</a></td>
                 </tr>
                 <tr>
                   <td>OpenStreetMap</td>
                   <td>Paired county and borough administrative relations</td>
                   <td><span class="status">Active</span> Moderate confidence · 0.78</td>
-                  <td><a href="https://www.openstreetmap.org/relation/175905">New York relation and members</a></td>
+                  <td><a class="external-link" href="https://www.openstreetmap.org/relation/175905" target="_blank" rel="noopener noreferrer" aria-label="New York relation and members (opens in a new tab)">New York relation and members</a></td>
                 </tr>
               </tbody>
             </table>
@@ -121,11 +127,15 @@
 
         <section aria-labelledby="published-material">
           <h2 id="published-material">Published fixture and artifacts</h2>
-          <p>The currently downloadable raw fixture is the DCP water-excluded five-borough geometry used by the homepage. It is one member of this broader boundary collection; the comparison records summarized above are not yet published as raw exports.</p>
+          <p>The DCP water-excluded and water-included geometries are both downloadable public fixtures. The comparison map overlays them without a network request. Census and OpenStreetMap records summarized above are not yet published as raw exports.</p>
           <ul class="downloads">
-            <li><a href="/data/fixtures/nyc-boroughs-water-excluded.json"><strong>Raw fixture</strong><span>JSON · five preprojected borough paths</span></a></li>
-            <li><a href="/assets/nyc-boroughs.svg"><strong>Generated map</strong><span>SVG presentation artifact</span></a></li>
-            <li><a href="https://github.com/KnoEdg/knoedg.nyc/blob/main/scripts/generate_nyc_boroughs_svg.py"><strong>Offline generator</strong><span>Python · no network dependency</span></a></li>
+            <li><a href="/data/fixtures/nyc-boroughs-water-excluded.json"><strong>Water-excluded fixture</strong><span>JSON · five preprojected borough paths</span></a></li>
+            <li><a href="/data/fixtures/nyc-boroughs-water-included.json"><strong>Water-included fixture</strong><span>JSON · five GeoJSON MultiPolygons</span></a></li>
+            <li><a href="/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"><strong>Retained source response</strong><span>GeoJSON · exact DCP API snapshot</span></a></li>
+            <li><a href="/assets/nyc-boundaries-comparison.svg"><strong>Boundary overlay</strong><span>SVG · water included and excluded</span></a></li>
+            <li><a href="/assets/nyc-boroughs.svg"><strong>Shoreline map</strong><span>SVG · water excluded only</span></a></li>
+            <li><a href="/scripts/build_nyc_water_included_fixture.py"><strong>Fixture builder</strong><span>Python · retained response to public fixture</span></a></li>
+            <li><a href="/scripts/generate_nyc_boroughs_svg.py"><strong>Map generator</strong><span>Python · no network dependency</span></a></li>
             <li><a href="/data/fixtures/SHA256SUMS"><strong>Checksum manifest</strong><span>SHA-256 verification</span></a></li>
             <li><a href="/nyc-boundaries/index.jsonld"><strong>Structured description</strong><span>JSON-LD</span></a></li>
           </ul>
@@ -134,9 +144,10 @@
         <section aria-labelledby="quality">
           <h2 id="quality">Validation and provenance</h2>
           <ul class="check-list">
-            <li>Five unique, named borough paths are required by the generator.</li>
-            <li>The SVG regenerates byte for byte from the public fixture without a network request.</li>
-            <li>The public fixture, generator and SVG are covered by SHA-256 checksums.</li>
+            <li>Both public fixtures require exactly five unique borough identities and non-empty geometries.</li>
+            <li>The retained water-included API response regenerates the public fixture byte for byte.</li>
+            <li>Both SVGs regenerate byte for byte from public fixtures without a network request.</li>
+            <li>The source snapshot, fixtures, builders, generators and SVGs are covered by SHA-256 checksums.</li>
             <li>The source comparison contains no recorded contradiction: observed differences are assessed as methodological choices, administrative framing or ordinary measurement variance.</li>
             <li>KnoEdg.NYC publishes this view; each claim continues to identify its applicable public evidence source.</li>
           </ul>
@@ -145,7 +156,7 @@
         <section class="limitation" aria-labelledby="limitations">
           <h2 id="limitations">Known limitations</h2>
           <p>The original DCP API response used for the first map was not retained with a checksum, and the initial geographic-to-SVG projection script was not preserved. Reproducibility therefore begins with the reviewed public SVG-path fixture, not the original API response. Future boundary publications are required to retain the complete response and transformation chain before first publication.</p>
-          <p>The current public raw fixture covers only the DCP water-excluded geometry. Other source comparisons on this page are public summaries linked to their evidence; additional raw exports require their own publication review.</p>
+          <p>The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. Census and OpenStreetMap comparisons on this page remain public summaries linked to their evidence; their raw exports require separate publication review.</p>
         </section>
 
         <section aria-labelledby="history">
@@ -153,6 +164,7 @@
           <ol class="history">
             <li><time datetime="2026-08-09">August 9, 2026</time> — Water-excluded borough fixture, deterministic generator and SVG published.</li>
             <li><time datetime="2026-08-09">August 9, 2026</time> — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison.</li>
+            <li><time datetime="2026-08-09">August 9, 2026</time> — Water-included geometry, retained source response and reproducible boundary overlay published.</li>
           </ol>
         </section>
       </article>
