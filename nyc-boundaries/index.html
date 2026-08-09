@@ -43,14 +43,14 @@
 
         <dl class="resource-facts" aria-label="Resource status">
           <div><dt>Scope</dt><dd>Five boroughs and corresponding counties</dd></div>
-          <div><dt>Sources represented</dt><dd>NYC DCP, U.S. Census Bureau, OpenStreetMap</dd></div>
+          <div><dt>Sources represented</dt><dd>NYC DCP, U.S. Census Bureau, OpenStreetMap, geoBoundaries, Overture Maps</dd></div>
           <div><dt>Governed assertions</dt><dd>25 active records</dd></div>
           <div><dt>Last reviewed</dt><dd><time datetime="2026-08-09">August 9, 2026</time></dd></div>
         </dl>
 
         <section aria-labelledby="why-boundaries-differ">
           <h2 id="why-boundaries-differ">One city, several valid boundaries</h2>
-          <p>A boundary depends on the question being asked. The Department of City Planning publishes both water-excluded shoreline geometry and water-included geometry. The Census Bureau publishes county land and water measurements. OpenStreetMap represents each borough and its corresponding county as separate administrative relations, even where they refer to the same real-world extent.</p>
+          <p>A boundary depends on the question being asked. The Department of City Planning publishes both water-excluded shoreline geometry and water-included geometry. The Census Bureau publishes county land and water measurements. OpenStreetMap represents each borough and its corresponding county as separate administrative relations, even where they refer to the same real-world extent. geoBoundaries republishes generalized, shoreline-clipped Census-derived county geometry; Overture Maps integrates the exact OpenStreetMap relation versions already governed here while adding stable division and area identifiers.</p>
           <p>These are not interchangeable records. This view keeps the source, method, administrative framing and review assessment attached to each claim.</p>
         </section>
 
@@ -98,10 +98,28 @@
                   <td><a href="#osm-source-versions">10 county/borough relation versions</a></td>
                   <td>Per relation<br><a href="#osm-source-versions">10 exact versions</a></td>
                 </tr>
+                <tr>
+                  <td>geoBoundaries · USA ADM2</td>
+                  <td>Five generalized, shoreline-clipped county representations derived from 2018 Census MAF/TIGER</td>
+                  <td><span class="status">Active</span></td>
+                  <td>Moderate</td>
+                  <td>0.82</td>
+                  <td><a class="external-link" href="https://github.com/wmgeolab/geoBoundaries/blob/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson" target="_blank" rel="noopener noreferrer" aria-label="Pinned geoBoundaries USA ADM2 distribution (opens in a new tab)">Pinned USA ADM2 distribution</a></td>
+                  <td><time datetime="2023-12-12">December 12, 2023</time><br><small>geoBoundaries build date</small></td>
+                </tr>
+                <tr>
+                  <td>Overture Maps · Divisions</td>
+                  <td>Eleven division-area representations derived from the same ten governed OpenStreetMap relation versions; Richmond County has separate land and maritime areas</td>
+                  <td><span class="status">Active</span></td>
+                  <td>High</td>
+                  <td>0.95</td>
+                  <td><a class="external-link" href="https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json" target="_blank" rel="noopener noreferrer" aria-label="Overture Maps Divisions release 2026-07-22.0 (opens in a new tab)">Divisions 2026-07-22.0</a></td>
+                  <td><time datetime="2026-07-22T17:36:51Z">July 22, 2026</time><br><small>Distribution modified · 17:36:51 UTC</small></td>
+                </tr>
               </tbody>
             </table>
           </div>
-          <p class="annotation">Confidence values qualify the reviewed assertions in this collection; they are not universal ratings of an entire publisher or dataset. Source update values come from each publisher’s own dataset, distribution or version metadata; retrieval, review and publication times are recorded separately.</p>
+          <p class="annotation">Confidence values qualify the reviewed mappings or assertions in this collection; they are not universal ratings of an entire publisher or dataset. Source update values come from each publisher’s own dataset, distribution or version metadata; retrieval, review and publication times are recorded separately. Derived representations remain in their upstream provenance cluster and are not counted as independent corroboration.</p>
         </section>
 
 
@@ -125,6 +143,31 @@
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section aria-labelledby="provenance-clusters">
+          <h2 id="provenance-clusters">Provenance clusters</h2>
+          <p>Representation count is not evidence count. A downstream product can add useful identifiers, release history or geometry semantics while still inheriting its boundary claim from an upstream source.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Derived representation</th><th>Upstream cluster</th><th>What it adds</th><th>Independence disposition</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>geoBoundaries USA ADM2 · 5 county features</td>
+                  <td>U.S. Census</td>
+                  <td>Open global ADM2 packaging, build metadata and simplified county polygons</td>
+                  <td>Not independent; derived from 2018 Census MAF/TIGER cartographic boundaries</td>
+                </tr>
+                <tr>
+                  <td>Overture Maps Divisions · 11 areas</td>
+                  <td>OpenStreetMap</td>
+                  <td>Overture division/area identifiers, feature versions, and land/maritime classification</td>
+                  <td>Not independent; all reviewed NYC records cite the same 10 OSM relation versions already represented</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="annotation">The confidence score for geoBoundaries qualifies the reviewed cross-release identity mapping. The Overture score qualifies mappings to exact OSM relation versions. Neither score is a claim of independent authority.</p>
         </section>
 
         <section aria-labelledby="agreement">
@@ -162,7 +205,7 @@
 
         <section aria-labelledby="published-material">
           <h2 id="published-material">Published fixture and artifacts</h2>
-          <p>The DCP water-excluded and water-included geometries are both downloadable public fixtures. The comparison map overlays them without a network request. Census and OpenStreetMap records summarized above are not yet published as raw exports.</p>
+          <p>The DCP water-excluded and water-included geometries are both downloadable public fixtures. The comparison map overlays them without a network request. Census, OpenStreetMap, geoBoundaries and Overture records summarized above are governed in pack-nyc but are not yet published here as raw exports.</p>
           <ul class="downloads">
             <li><a href="/data/fixtures/nyc-boroughs-water-excluded.json"><strong>Water-excluded fixture</strong><span>JSON · five preprojected borough paths</span></a></li>
             <li><a href="/data/fixtures/nyc-boroughs-water-included.json"><strong>Water-included fixture</strong><span>JSON · five GeoJSON MultiPolygons</span></a></li>
@@ -184,6 +227,8 @@
             <li>The retained water-included API response regenerates the public fixture byte for byte.</li>
             <li>Both SVGs regenerate byte for byte from public fixtures without a network request.</li>
             <li>The source snapshot, fixtures, builders, generators and SVGs are covered by SHA-256 checksums.</li>
+            <li>The source comparison now covers 41 active governed records: 10 DCP, 5 Census Gazetteer, 10 OpenStreetMap, 5 geoBoundaries and 11 Overture representations.</li>
+            <li>geoBoundaries remains in the Census provenance cluster and Overture remains in the OpenStreetMap provenance cluster; neither increases the independent-source count.</li>
             <li>The source comparison contains no recorded contradiction: observed differences are assessed as methodological choices, administrative framing or ordinary measurement variance.</li>
             <li>KnoEdg.NYC publishes this view; each claim continues to identify its applicable public evidence source.</li>
           </ul>
@@ -192,7 +237,7 @@
         <section class="limitation" aria-labelledby="limitations">
           <h2 id="limitations">Known limitations</h2>
           <p>The original DCP API response used for the first map was not retained with a checksum, and the initial geographic-to-SVG projection script was not preserved. Reproducibility therefore begins with the reviewed public SVG-path fixture, not the original API response. Future boundary publications are required to retain the complete response and transformation chain before first publication.</p>
-          <p>The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. Census and OpenStreetMap comparisons on this page remain public summaries linked to their evidence; their raw exports require separate publication review.</p>
+          <p>The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. Census, OpenStreetMap, geoBoundaries and Overture comparisons on this page remain public summaries linked to their evidence; their raw exports require separate publication review.</p>
         </section>
 
         <section aria-labelledby="history">
@@ -201,6 +246,7 @@
             <li><time datetime="2026-08-09">August 9, 2026</time> — Water-excluded borough fixture, deterministic generator and SVG published.</li>
             <li><time datetime="2026-08-09">August 9, 2026</time> — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison.</li>
             <li><time datetime="2026-08-09">August 9, 2026</time> — Water-included geometry, retained source response and reproducible boundary overlay published.</li>
+            <li><time datetime="2026-08-09">August 9, 2026</time> — geoBoundaries and Overture Maps governed representations added with explicit Census and OpenStreetMap provenance-cluster dispositions.</li>
           </ol>
         </section>
       </article>
