@@ -38,9 +38,11 @@ The original water-excluded upstream response checksum and first projection scri
 `data/fixtures/nyc-boundary-public-view.json` is the canonical public-safe
 artifact for every fixture-dependent fact and disposition on the NYC Boundaries
 resource. `templates/fixture-page.html` contains only reusable site structure.
-The generic `scripts/generate_fixture_page.py` renderer produces the complete
-HTML article, JSON-LD representation, and count manifest; none is an independent
-semantic source.
+The artifact declares `fixture-page/v2` and carries authoritative
+`fixture-content-blocks/v1`. The generic `scripts/generate_fixture_page.py`
+renderer accepts both the frozen v1 contract and v2, renders v2 only from typed
+blocks and RFC 6901 pointers, and produces the complete HTML article, JSON-LD
+representation, and count manifest. None is an independent semantic source.
 
 Regenerate and verify without network access:
 
@@ -48,7 +50,11 @@ Regenerate and verify without network access:
 python3 scripts/generate_nyc_boundaries_view.py
 python3 scripts/generate_nyc_boundaries_view.py --check
 python3 scripts/validate_nyc_boundary_counts.py
+python3 scripts/validate_jsonld.py
 ```
 
-The repository workflow rejects stale generated output or any disagreement
-between the artifact, HTML, JSON-LD, and count manifest.
+The repository workflow validates the public JSON Schema, expands JSON-LD,
+rejects stale generated output, and rejects disagreement between the artifact,
+HTML, JSON-LD, and count manifest. Public schemas are served from
+`/schemas/fixture-dependent-public-view/v1` and
+`/schemas/fixture-dependent-public-view/v2`.

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1",
+  "title": "Fixture-dependent public view v1",
+  "type": "object",
+  "required": [
+    "schemaVersion", "artifactType", "schema", "resource", "artifactVersion",
+    "rendererContract", "issuedAt", "integrity", "countingGranularity",
+    "activeRecordCount", "sourceGroups", "page", "semanticRepresentation",
+    "provenanceBoundary"
+  ],
+  "properties": {
+    "schemaVersion": {"const": 2},
+    "artifactType": {"const": "fixture-dependent-public-view"},
+    "schema": {"const": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1"},
+    "resource": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "artifactVersion": {"type": "string", "minLength": 1},
+    "rendererContract": {"const": "fixture-page/v1"},
+    "issuedAt": {"type": "string", "format": "date-time"},
+    "integrity": {"type": "object", "minProperties": 1},
+    "countingGranularity": {"type": "string", "minLength": 1},
+    "activeRecordCount": {"type": "integer", "minimum": 0},
+    "sourceGroups": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceGroup"}
+    },
+    "page": {
+      "type": "object",
+      "required": ["language", "title", "description", "canonical", "alternate", "stylesheet", "articleHtml"],
+      "properties": {
+        "language": {"type": "string", "minLength": 2},
+        "title": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "canonical": {"type": "string", "format": "uri"},
+        "alternate": {"$ref": "#/$defs/alternate"},
+        "stylesheet": {"type": "string", "minLength": 1},
+        "articleHtml": {"type": "string", "pattern": "^\\s*<article[ >]"}
+      },
+      "additionalProperties": true
+    },
+    "semanticRepresentation": {
+      "type": "object",
+      "required": ["@context", "@graph"]
+    },
+    "provenanceBoundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "alternate": {
+      "type": "object",
+      "required": ["mediaType", "href", "title"],
+      "properties": {
+        "mediaType": {"type": "string", "minLength": 1},
+        "href": {"type": "string", "format": "uri"},
+        "title": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "sourceGroup": {
+      "type": "object",
+      "required": ["id", "label", "count"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "label": {"type": "string", "minLength": 1},
+        "count": {"type": "integer", "minimum": 0},
+        "provenanceCluster": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
+
