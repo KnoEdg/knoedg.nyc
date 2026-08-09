@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoedg.nyc/schemas/nyc-openstreetmap-relation-metadata/v1",
+  "title": "NYC OpenStreetMap relation metadata fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "fixtureType", "fixtureVersion", "id", "resource", "title", "publisher", "source", "rights", "selection", "comparisonDisposition", "records", "limitations"],
+  "properties": {
+    "$schema": {"const": "https://knoedg.nyc/schemas/nyc-openstreetmap-relation-metadata/v1"},
+    "schemaVersion": {"const": 1},
+    "fixtureType": {"const": "openstreetmap-relation-metadata"},
+    "fixtureVersion": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}\\.[1-9][0-9]*$"},
+    "id": {"const": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"},
+    "resource": {"const": "https://knoedg.nyc/nyc-boundaries/"},
+    "title": {"type": "string", "minLength": 1},
+    "publisher": {
+      "type": "object", "additionalProperties": false, "required": ["name", "url"],
+      "properties": {"name": {"const": "OpenStreetMap contributors"}, "url": {"const": "https://www.openstreetmap.org/"}}
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["apiVersion", "capturedAt", "versionMetadataRetrievedAt", "retainedEvidenceCanonicalSha256", "derivation"],
+      "properties": {
+        "apiVersion": {"const": "0.6"},
+        "capturedAt": {"type": "string", "format": "date-time"},
+        "versionMetadataRetrievedAt": {"type": "string", "format": "date-time"},
+        "retainedEvidenceCanonicalSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "derivation": {"type": "string", "minLength": 1}
+      }
+    },
+    "rights": {
+      "type": "object", "additionalProperties": false,
+      "required": ["redistributionDecision", "license", "licenseUrl", "attribution", "attributionUrl", "constraints"],
+      "properties": {
+        "redistributionDecision": {"const": "approved"},
+        "license": {"const": "Open Database License 1.0"},
+        "licenseUrl": {"const": "https://opendatacommons.org/licenses/odbl/1-0/"},
+        "attribution": {"const": "© OpenStreetMap contributors"},
+        "attributionUrl": {"const": "https://www.openstreetmap.org/copyright"},
+        "constraints": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "selection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rule", "countingGranularity", "recordCount", "pairCount", "geometryIncluded", "relationMembersIncluded"],
+      "properties": {
+        "rule": {"type": "string", "minLength": 1},
+        "countingGranularity": {"const": "OpenStreetMap relation-version metadata record"},
+        "recordCount": {"const": 10},
+        "pairCount": {"const": 5},
+        "geometryIncluded": {"const": false},
+        "relationMembersIncluded": {"const": false}
+      }
+    },
+    "comparisonDisposition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["provenanceCluster", "independentEvidenceFamily", "numericAreaStatus", "landAreaStatus", "reason"],
+      "properties": {
+        "provenanceCluster": {"const": "OpenStreetMap"},
+        "independentEvidenceFamily": {"const": true},
+        "numericAreaStatus": {"const": "not-provided-in-reviewed-source-record"},
+        "landAreaStatus": {"const": "excluded"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "records": {
+      "type": "array", "minItems": 10, "maxItems": 10,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["boroughCode", "boroughName", "countyName", "representation", "relationId", "relationUrl", "version", "versionUrl", "sourceModifiedAt", "versionMetadataRetrievedAt", "retainedResponseSha256", "name", "adminLevel", "borderType", "fipsCode", "wikidata", "governedAssertion", "lifecycle", "confidence"],
+        "properties": {
+          "boroughCode": {"type": "integer", "minimum": 1, "maximum": 5},
+          "boroughName": {"type": "string", "minLength": 1},
+          "countyName": {"type": "string", "minLength": 1},
+          "representation": {"enum": ["county", "borough"]},
+          "relationId": {"type": "integer", "minimum": 1},
+          "relationUrl": {"type": "string", "format": "uri", "pattern": "^https://www\\.openstreetmap\\.org/relation/[0-9]+$"},
+          "version": {"type": "integer", "minimum": 1},
+          "versionUrl": {"type": "string", "format": "uri", "pattern": "^https://www\\.openstreetmap\\.org/relation/[0-9]+/history/[0-9]+$"},
+          "sourceModifiedAt": {"type": "string", "format": "date-time"},
+          "versionMetadataRetrievedAt": {"type": "string", "format": "date-time"},
+          "retainedResponseSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "name": {"type": "string", "minLength": 1},
+          "adminLevel": {"enum": [6, 7]},
+          "borderType": {"enum": ["county", "borough"]},
+          "fipsCode": {"type": "string", "pattern": "^36[0-9]{3}$"},
+          "wikidata": {"type": "string", "format": "uri", "pattern": "^https://www\\.wikidata\\.org/entity/Q[0-9]+$"},
+          "governedAssertion": {"type": "string", "format": "uri", "pattern": "^https://knoedg\\.org/nyc-knowledge-pack/"},
+          "lifecycle": {"const": "Active"},
+          "confidence": {"const": 0.78}
+        }
+      }
+    },
+    "limitations": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}}
+  }
+}
