@@ -31,3 +31,18 @@ sha256sum --check data/fixtures/SHA256SUMS
 The fixture retains public source, review, confidence and transformation metadata without exposing private publication machinery. Its human-readable public view is [NYC Boundaries](https://knoedg.nyc/nyc-boundaries/), with a linked JSON-LD description.
 
 The original water-excluded upstream response checksum and first projection script were not retained; that limitation is disclosed publicly. Determinism for that first publication begins at the reviewed public fixture. The later water-included publication retains the full source-to-fixture-to-overlay chain.
+
+
+## NYC boundary count validation
+
+`nyc-boundaries/record-counts.json` is the single count manifest for the public
+NYC Boundaries resource. Whenever an intake changes representation coverage,
+update the manifest and every affected human- and machine-readable surface
+together, then run:
+
+```bash
+python3 scripts/validate_nyc_boundary_counts.py
+```
+
+The repository workflow runs the same reconciliation check for pull requests
+that change the resource, manifest, validator, or workflow.
