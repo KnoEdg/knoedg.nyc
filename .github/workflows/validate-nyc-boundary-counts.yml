@@ -13,10 +13,13 @@ on:
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
       - "data/fixtures/nyc-census-gazetteer-county-measurements.json"
+      - "data/fixtures/nyc-openstreetmap-relation-metadata.json"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
+      - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "scripts/validate_nyc_census_gazetteer_fixture.py"
+      - "scripts/validate_nyc_osm_relation_metadata_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
@@ -33,10 +36,13 @@ on:
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
       - "data/fixtures/nyc-census-gazetteer-county-measurements.json"
+      - "data/fixtures/nyc-openstreetmap-relation-metadata.json"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
+      - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "scripts/validate_nyc_census_gazetteer_fixture.py"
+      - "scripts/validate_nyc_osm_relation_metadata_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
@@ -68,4 +74,5 @@ jobs:
       - run: python3 scripts/validate_nyc_boundary_counts.py
       - run: python3 scripts/validate_jsonld.py
       - run: python3 scripts/validate_nyc_census_gazetteer_fixture.py
+      - run: python3 scripts/validate_nyc_osm_relation_metadata_fixture.py
       - run: sha256sum --check data/fixtures/SHA256SUMS
