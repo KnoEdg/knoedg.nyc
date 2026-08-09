@@ -1,111 +1,44 @@
 #!/usr/bin/env python3
-"""Validate NYC Boundaries record-count reconciliation across public surfaces."""
-
-from __future__ import annotations
+"""Validate full artifact ownership for the NYC Boundaries fixture page."""
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RESOURCE_DIR = ROOT / "nyc-boundaries"
-MANIFEST_PATH = RESOURCE_DIR / "record-counts.json"
-ARTIFACT_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
-HTML_PATH = RESOURCE_DIR / "index.html"
-JSONLD_PATH = RESOURCE_DIR / "index.jsonld"
+ARTIFACT = ROOT / "data/fixtures/nyc-boundary-public-view.json"
+TEMPLATE = ROOT / "templates/fixture-page.html"
+HTML = ROOT / "nyc-boundaries/index.html"
+JSONLD = ROOT / "nyc-boundaries/index.jsonld"
+MANIFEST = ROOT / "nyc-boundaries/record-counts.json"
 
 
 def fail(message: str) -> None:
-    raise SystemExit(f"NYC boundary count validation failed: {message}")
+    raise SystemExit(f"fixture-page ownership validation failed: {message}")
 
 
-manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-artifact = json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))
-html = HTML_PATH.read_text(encoding="utf-8")
-jsonld = json.loads(JSONLD_PATH.read_text(encoding="utf-8"))
+data = json.loads(ARTIFACT.read_text(encoding="utf-8"))
+template = TEMPLATE.read_text(encoding="utf-8")
+rendered = HTML.read_text(encoding="utf-8")
+jsonld = json.loads(JSONLD.read_text(encoding="utf-8"))
+manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 
-expected_total = manifest["activeRecordCount"]
-if manifest["activeRecordCount"] != artifact["activeRecordCount"]:
-    fail("generated count manifest disagrees with the canonical artifact")
-if manifest["representations"] != [
-    {
-        "id": group["id"],
-        "label": group["label"],
-        "count": group["count"],
-        "provenanceCluster": group["provenanceCluster"],
-    }
-    for group in artifact["sourceGroups"]
-]:
-    fail("generated representation groups disagree with the canonical artifact")
-groups = manifest["representations"]
-computed_total = sum(group["count"] for group in groups)
-
-if computed_total != expected_total:
-    fail(
-        f"manifest total is {expected_total}, but representation counts sum to "
-        f"{computed_total}"
-    )
-
-html_totals = {
-    int(value)
-    for value in re.findall(r"(\d+) active (?:governed )?records", html)
-}
-if html_totals != {expected_total}:
-    fail(
-        f"HTML active-record totals are {sorted(html_totals)}; expected only "
-        f"{expected_total}"
-    )
-
+if data.get("schemaVersion") != 2 or data.get("rendererContract") != "fixture-page/v1":
+    fail("artifact does not declare fixture-page/v1 schema version 2")
+if rendered.count("<article>") != 1 or data["page"]["articleHtml"] not in rendered:
+    fail("complete artifact-owned article is not present exactly once")
+if jsonld != data["semanticRepresentation"]:
+    fail("JSON-LD is not the artifact-owned semantic representation")
+groups = data["sourceGroups"]
+if sum(group["count"] for group in groups) != data["activeRecordCount"]:
+    fail("source-group counts do not reconcile")
+if manifest["activeRecordCount"] != data["activeRecordCount"]:
+    fail("manifest total disagrees with artifact")
 for group in groups:
-    token = f'{group["count"]} {group["label"]}'
-    if token not in html:
-        fail(f"HTML is missing reconciled representation token: {token!r}")
-
-dataset = next(
-    (
-        node
-        for node in jsonld.get("@graph", [])
-        if node.get("@id") == manifest["resource"]
-    ),
-    None,
-)
-if dataset is None:
-    fail(f"JSON-LD has no dataset node for {manifest['resource']}")
-
-description = dataset.get("dcterms:description", "")
-match = re.search(r"(\d+) representations", description)
-if match is None or int(match.group(1)) != expected_total:
-    fail(
-        "JSON-LD dataset description does not contain the reconciled total "
-        f"{expected_total}"
-    )
-
-for group in artifact["sourceGroups"]:
-    status = group["measurement"]["status"]
-    claim = next(
-        (
-            node for node in jsonld.get("@graph", [])
-            if node.get("@id", "").endswith({
-                "dcp": "#dcp-water-excluded",
-                "census-gazetteer": "#census-county",
-                "openstreetmap": "#osm-administrative",
-                "geoboundaries": "#geoboundaries-adm2",
-                "overture": "#overture-divisions",
-                "whos-on-first": "#whos-on-first-counties",
-            }[group["id"]])
-        ),
-        None,
-    )
-    if claim is None:
-        fail(f"JSON-LD claim missing for {group['id']}")
-    values = {
-        prop.get("schema:name"): prop.get("schema:value")
-        for prop in claim.get("schema:additionalProperty", [])
-    }
-    if values.get("Numeric area availability") != status:
-        fail(f"JSON-LD measurement status disagrees for {group['id']}")
-
-print(
-    f"NYC boundary counts reconcile: {expected_total} active records across "
-    f"{len(groups)} representation groups."
-)
+    if group["label"] not in data["page"]["articleHtml"]:
+        fail(f"article does not expose source group {group['id']}")
+for forbidden in [data["page"]["title"], str(data["activeRecordCount"]), *[g["label"] for g in groups]]:
+    if forbidden in template:
+        fail(f"template independently contains fixture content: {forbidden}")
+if "BEGIN GENERATED" in rendered or "END GENERATED" in rendered:
+    fail("partial-generation markers remain in the complete generated page")
+print(f"Fixture page is fully artifact-generated: {data['activeRecordCount']} records, {len(groups)} groups, HTML + JSON-LD + manifest.")
