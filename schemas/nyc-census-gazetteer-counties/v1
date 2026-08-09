@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoedg.nyc/schemas/nyc-census-gazetteer-counties/v1",
+  "title": "NYC Census Gazetteer county measurements fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "fixtureType", "fixtureVersion", "id", "resource", "title", "publisher", "source", "rights", "selection", "measurementSemantics", "comparisonDisposition", "records", "limitations"],
+  "properties": {
+    "$schema": {"const": "https://knoedg.nyc/schemas/nyc-census-gazetteer-counties/v1"},
+    "schemaVersion": {"const": 1},
+    "fixtureType": {"const": "census-gazetteer-county-measurements"},
+    "fixtureVersion": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}\\.[1-9][0-9]*$"},
+    "id": {"type": "string", "format": "uri", "pattern": "^https://knoedg\\.nyc/"},
+    "resource": {"const": "https://knoedg.nyc/nyc-boundaries/"},
+    "title": {"type": "string", "minLength": 1},
+    "publisher": {
+      "type": "object", "additionalProperties": false, "required": ["name", "url"],
+      "properties": {"name": {"const": "U.S. Census Bureau"}, "url": {"type": "string", "format": "uri"}}
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["product", "nationalDistribution", "selectedStateFile", "recordLayout", "representedYear", "distributionModified", "capturedAt", "lineage", "purpose"],
+      "properties": {
+        "product": {"type": "string", "minLength": 1},
+        "nationalDistribution": {"type": "string", "format": "uri"},
+        "selectedStateFile": {"type": "string", "format": "uri"},
+        "recordLayout": {"type": "string", "format": "uri"},
+        "representedYear": {"const": 2023},
+        "distributionModified": {"type": "string", "format": "date-time"},
+        "capturedAt": {"type": "string", "format": "date-time"},
+        "lineage": {"type": "string", "minLength": 1},
+        "purpose": {"type": "string", "minLength": 1}
+      }
+    },
+    "rights": {
+      "type": "object", "additionalProperties": false, "required": ["redistributionDecision", "statement", "reference", "attribution"],
+      "properties": {
+        "redistributionDecision": {"const": "approved"},
+        "statement": {"type": "string", "minLength": 1},
+        "reference": {"type": "string", "format": "uri"},
+        "attribution": {"type": "string", "minLength": 1}
+      }
+    },
+    "selection": {
+      "type": "object", "additionalProperties": false, "required": ["rule", "countingGranularity", "recordCount", "geometryIncluded"],
+      "properties": {
+        "rule": {"type": "string", "minLength": 1},
+        "countingGranularity": {"const": "Census county record"},
+        "recordCount": {"const": 5},
+        "geometryIncluded": {"const": false}
+      }
+    },
+    "measurementSemantics": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1}, "required": ["aland", "awater", "internalPoint"]},
+    "comparisonDisposition": {
+      "type": "object", "additionalProperties": false, "required": ["provenanceCluster", "independentEvidenceFamily", "landAreaStatus", "reason"],
+      "properties": {
+        "provenanceCluster": {"const": "U.S. Census Bureau"},
+        "independentEvidenceFamily": {"const": true},
+        "landAreaStatus": {"const": "included"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "records": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["boroughCode", "boroughName", "countyName", "geoid", "ansiCode", "alandSquareMeters", "awaterSquareMeters", "alandSquareMiles", "awaterSquareMiles", "internalPoint", "governedAssertion", "lifecycle", "confidence"],
+        "properties": {
+          "boroughCode": {"type": "integer", "minimum": 1, "maximum": 5},
+          "boroughName": {"type": "string", "minLength": 1},
+          "countyName": {"type": "string", "pattern": " County$"},
+          "geoid": {"type": "string", "pattern": "^36[0-9]{3}$"},
+          "ansiCode": {"type": "string", "pattern": "^[0-9]{8}$"},
+          "alandSquareMeters": {"type": "integer", "minimum": 1},
+          "awaterSquareMeters": {"type": "integer", "minimum": 0},
+          "alandSquareMiles": {"type": "number", "exclusiveMinimum": 0},
+          "awaterSquareMiles": {"type": "number", "minimum": 0},
+          "internalPoint": {
+            "type": "object", "additionalProperties": false, "required": ["latitude", "longitude"],
+            "properties": {"latitude": {"type": "number", "minimum": -90, "maximum": 90}, "longitude": {"type": "number", "minimum": -180, "maximum": 180}}
+          },
+          "governedAssertion": {"type": "string", "format": "uri"},
+          "lifecycle": {"const": "Active"},
+          "confidence": {"const": 0.93}
+        }
+      }
+    },
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  }
+}
