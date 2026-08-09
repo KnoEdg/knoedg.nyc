@@ -136,6 +136,12 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .resource-map { margin: 0; }
 .resource-map img { display: block; height: auto; width: 100%; }
 .resource-map figcaption { color: var(--muted); font-size: 0.78rem; margin-top: 0.75rem; text-align: right; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 0.45rem 0.9rem; justify-content: flex-end; margin-bottom: 0.3rem; }
+.map-legend > span { align-items: center; display: inline-flex; gap: 0.35rem; }
+.legend-swatch { border: 1px solid transparent; display: inline-block; height: 0.72rem; width: 1.25rem; }
+.legend-swatch.water-included { background: #d8e7e8; border-color: #3f7785; border-style: dashed; }
+.legend-swatch.water-excluded { background: #176b52; border-color: #0f4939; }
+.external-link::after { content: " ↗"; font-size: 0.8em; text-decoration: none; }
 .resource-facts { border-block: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(3rem, 7vw, 5rem) 0 0; }
 .resource-facts div { padding: 1.25rem; }
 .resource-facts div + div { border-left: 1px solid var(--line); }
