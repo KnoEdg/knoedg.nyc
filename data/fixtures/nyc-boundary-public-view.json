@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-09T19:01:07Z",
+  "issuedAt": "2026-08-09T20:05:39Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-09.2",
+  "artifactVersion": "2026-08-09.3",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -2313,7 +2313,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The DCP water-excluded and water-included geometries are both downloadable public fixtures. The comparison map overlays them without a network request. Census, OpenStreetMap, geoBoundaries, Overture and Who's On First records summarized above are governed in the source collection but are not yet published here as raw exports."
+                    "text": "The DCP water-excluded and water-included geometries and the five Census Gazetteer county measurement records are downloadable public fixtures. The comparison map overlays the DCP geometries without a network request. OpenStreetMap, geoBoundaries, Overture and Who's On First records summarized above are governed in the source collection but are not yet published here as raw exports."
                   }
                 ]
               },
@@ -2359,6 +2359,27 @@
                         {
                           "type": "text",
                           "text": "JSON · five GeoJSON MultiPolygons"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "/data/fixtures/nyc-census-gazetteer-county-measurements.json",
+                      "content": [
+                        {
+                          "type": "strong",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Census Gazetteer measurements"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "JSON · five county records; ALAND, AWATER and internal points; no geometry"
                         }
                       ]
                     }
@@ -2676,6 +2697,12 @@
                       "type": "text",
                       "text": "; the public renderer remains backward-compatible with frozen v1 artifacts."
                     }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 9, 2026 — Five 2023 Census Gazetteer county measurement records published as a public-safe JSON fixture with ALAND, AWATER, internal points, source lineage, rights, and statistical-purpose limitations; no geometry is included."
+                    }
                   ]
                 ]
               }
@@ -2811,6 +2838,9 @@
             "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
           },
           {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
+          },
+          {
             "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
           },
           {
@@ -2872,6 +2902,26 @@
         "schema:encodingFormat": "application/geo+json",
         "prov:wasDerivedFrom": {
           "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "2023 Census Gazetteer measurements for New York City's five counties",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
+        },
+        "dcat:mediaType": "application/json",
+        "schema:encodingFormat": "application/json",
+        "dcterms:rights": "Census Bureau employee-created data and works generally are not subject to copyright protection within the United States; attribution is retained.",
+        "dcterms:license": {
+          "@id": "https://www2.census.gov/foia/ds_policies/ds027.pdf"
+        },
+        "prov:wasDerivedFrom": {
+          "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
         }
       },
       {
