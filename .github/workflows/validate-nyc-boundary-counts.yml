@@ -12,7 +12,11 @@ on:
       - "scripts/test_fixture_page_renderer.py"
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "data/fixtures/nyc-census-gazetteer-county-measurements.json"
+      - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
+      - "schemas/nyc-census-gazetteer-counties/**"
+      - "scripts/validate_nyc_census_gazetteer_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
@@ -28,7 +32,11 @@ on:
       - "scripts/test_fixture_page_renderer.py"
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "data/fixtures/nyc-census-gazetteer-county-measurements.json"
+      - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
+      - "schemas/nyc-census-gazetteer-counties/**"
+      - "scripts/validate_nyc_census_gazetteer_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
@@ -59,3 +67,5 @@ jobs:
       - run: python3 scripts/test_fixture_page_renderer.py
       - run: python3 scripts/validate_nyc_boundary_counts.py
       - run: python3 scripts/validate_jsonld.py
+      - run: python3 scripts/validate_nyc_census_gazetteer_fixture.py
+      - run: sha256sum --check data/fixtures/SHA256SUMS
