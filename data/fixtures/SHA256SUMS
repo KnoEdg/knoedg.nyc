@@ -1,3 +1,3 @@
-da803a34e14cf10fc16ef075459c5f2e4834558021f5cf84101084f159f3b6bc  data/fixtures/nyc-boroughs-water-excluded.json
+12c5a92f0a05e58a409ecb3ee8cf123fea7dc43556acc9b0a730c8a5f7c2a8f9  data/fixtures/nyc-boroughs-water-excluded.json
 f5af21940e5e622366b4e6f498b98131e2f5619c6c299c9934d000d81272cbc8  scripts/generate_nyc_boroughs_svg.py
 91a734b7e32c117fc14637271c4945ccef925d2dfb304e8ea9e3eead00932e6f  assets/nyc-boroughs.svg
