@@ -59,8 +59,10 @@ if not re.search(r"<table>\s*<caption>.+?</caption>\s*<thead><tr><th scope=\"col
     fail("v2 tables must expose captions and scoped column headers")
 if 'target="_blank"' in article and 'rel="noopener noreferrer"' not in article:
     fail("new-window links are missing safe relationship attributes")
-if 'target="_blank"' in article and 'class="visually-hidden"> opens in a new tab' not in article:
-    fail("new-window links are missing assistive announcements")
+if 'target="_blank"' in article and '(opens in a new tab)"' not in article:
+    fail("new-window links are missing accessible names")
+if 'class="visually-hidden"> opens in a new tab' in article:
+    fail("new-window announcement text still occupies generated markup")
 
 graph = data["semanticRepresentation"].get("@graph")
 if not isinstance(graph, list) or not graph:
