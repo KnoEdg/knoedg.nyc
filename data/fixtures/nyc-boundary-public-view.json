@@ -1,7 +1,8 @@
 {
-  "schemaVersion": 1,
-  "artifactType": "nyc-boundary-public-view",
+  "schemaVersion": 2,
+  "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
+  "issuedAt": "2026-08-09T18:11:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -173,5 +174,1044 @@
       "squareMeters": 264637333.644406
     }
   ],
-  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted."
+  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1",
+  "artifactVersion": "2026-08-09.1",
+  "rendererContract": "fixture-page/v1",
+  "integrity": {
+    "mechanism": "immutable-git-blob-and-byte-equality",
+    "valueProvidedByTransport": true
+  },
+  "page": {
+    "language": "en",
+    "title": "NYC Boundaries — KnoEdg.NYC",
+    "description": "A governed public view of New York City boundary representations, their sources, agreements, differences, provenance and published artifacts.",
+    "canonical": "https://knoedg.nyc/nyc-boundaries/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/nyc-boundaries/index.jsonld",
+      "title": "NYC Boundaries structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "articleHtml": "      <article>\n        <header class=\"resource-header\">\n          <div>\n            <p class=\"eyebrow\">Knowledge resource</p>\n            <h1>NYC Boundaries</h1>\n            <p class=\"resource-lede\">A governed public view of how multiple sources represent New York City’s borough and county boundaries—without flattening shoreline, offshore, administrative and naming differences into one unquestioned shape.</p>\n          </div>\n          <figure class=\"resource-map\">\n            <img src=\"/assets/nyc-boundaries-comparison.svg\" alt=\"Overlay comparing water-included boundaries in blue with water-excluded shoreline geometry in green for New York City’s five boroughs\">\n            <figcaption>\n              <span class=\"map-legend\" aria-label=\"Boundary map legend\">\n                <span><i class=\"legend-swatch water-included\" aria-hidden=\"true\"></i>Water included</span>\n                <span><i class=\"legend-swatch water-excluded\" aria-hidden=\"true\"></i>Water excluded</span>\n              </span>\n              DCP boundary-method overlay · five boroughs\n            </figcaption>\n          </figure>\n        </header>\n\n        <dl class=\"resource-facts\" aria-label=\"Resource status\">\n          <div><dt>Scope</dt><dd>Five boroughs and corresponding counties</dd></div>\n          <div><dt>Sources represented</dt><dd>NYC DCP, U.S. Census Bureau, OpenStreetMap, geoBoundaries, Overture Maps, Who's On First</dd></div>\n          <div><dt>Governed assertions</dt><dd>46 active records</dd></div>\n          <div><dt>Last reviewed</dt><dd><time datetime=\"2026-08-09\">August 9, 2026</time></dd></div>\n        </dl>\n\n        <section aria-labelledby=\"why-boundaries-differ\">\n          <h2 id=\"why-boundaries-differ\">One city, several valid boundaries</h2>\n          <p>A boundary depends on the question being asked. The Department of City Planning publishes both water-excluded shoreline geometry and water-included geometry. The Census Bureau publishes county land and water measurements. OpenStreetMap represents each borough and its corresponding county as separate administrative relations, even where they refer to the same real-world extent. geoBoundaries republishes generalized, shoreline-clipped Census-derived county geometry; Overture Maps integrates the exact OpenStreetMap relation versions already governed here while adding stable division and area identifiers. Who's On First adds stable gazetteer identifiers, hierarchy and concordances for the five counties; its default county geometry is a Census-sourced Quattroshapes derivative.</p>\n          <p>These are not interchangeable records. This view keeps the source, method, administrative framing and review assessment attached to each claim.</p>\n        </section>\n\n        <section aria-labelledby=\"compared-views\">\n          <h2 id=\"compared-views\">Compared views</h2>\n          <div class=\"table-wrap\">\n            <table>\n              <thead>\n                <tr><th>View</th><th>What it represents</th><th>Lifecycle</th><th>Confidence</th><th>Score</th><th>Source reference</th><th>Source last updated</th></tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>NYC DCP · water excluded</td>\n                  <td>Five borough shoreline geometries, excluding water areas</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>High</td>\n                  <td>0.95</td>\n                  <td><a class=\"external-link\" href=\"https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Dataset gthc-hcne (opens in a new tab)\">Dataset gthc-hcne</a></td>\n                  <td><time datetime=\"2026-05-26T19:35:50Z\">May 26, 2026</time><br><small>Data update · 19:35:50 UTC</small></td>\n                </tr>\n                <tr>\n                  <td>NYC DCP · water included</td>\n                  <td>Five borough geometries extending into surrounding water</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>High</td>\n                  <td>0.95</td>\n                  <td><a class=\"external-link\" href=\"https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Dataset wh2p-dxnf (opens in a new tab)\">Dataset wh2p-dxnf</a></td>\n                  <td><time datetime=\"2026-05-26T19:35:22Z\">May 26, 2026</time><br><small>Data update · 19:35:22 UTC</small></td>\n                </tr>\n                <tr>\n                  <td>U.S. Census Bureau</td>\n                  <td>2023 county land and water area, TIGER/Line-derived</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>High</td>\n                  <td>0.93</td>\n                  <td><a class=\"external-link\" href=\"https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2023 county Gazetteer (opens in a new tab)\">2023 county Gazetteer</a></td>\n                  <td><time datetime=\"2023-09-26T13:32:24Z\">September 26, 2023</time><br><small>Distribution modified · 13:32:24 UTC</small></td>\n                </tr>\n                <tr>\n                  <td>OpenStreetMap</td>\n                  <td>Paired county and borough administrative relations</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>Moderate</td>\n                  <td>0.78</td>\n                  <td><a href=\"#osm-source-versions\">10 county/borough relation versions</a></td>\n                  <td>Per relation<br><a href=\"#osm-source-versions\">10 exact versions</a></td>\n                </tr>\n                <tr>\n                  <td>geoBoundaries · USA ADM2</td>\n                  <td>Five generalized, shoreline-clipped county representations derived from 2018 Census MAF/TIGER</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>Moderate</td>\n                  <td>0.82</td>\n                  <td><a class=\"external-link\" href=\"https://github.com/wmgeolab/geoBoundaries/blob/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Pinned geoBoundaries USA ADM2 distribution (opens in a new tab)\">Pinned USA ADM2 distribution</a></td>\n                  <td><time datetime=\"2023-12-12\">December 12, 2023</time><br><small>geoBoundaries build date</small></td>\n                </tr>\n                <tr>\n                  <td>Overture Maps · Divisions</td>\n                  <td>Eleven division-area representations derived from the same ten governed OpenStreetMap relation versions; Richmond County has separate land and maritime areas</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>High</td>\n                  <td>0.95</td>\n                  <td><a class=\"external-link\" href=\"https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Overture Maps Divisions release 2026-07-22.0 (opens in a new tab)\">Divisions 2026-07-22.0</a></td>\n                  <td><time datetime=\"2026-07-22T17:36:51Z\">July 22, 2026</time><br><small>Distribution modified · 17:36:51 UTC</small></td>\n                </tr>\n                <tr>\n                  <td>Who's On First · U.S. administrative data</td>\n                  <td>Five current county gazetteer records with stable WOF IDs, the NYC locality's five-county hierarchy and Census GEOID/HASC concordances; default geometry is Census-sourced Quattroshapes</td>\n                  <td><span class=\"status\">Active</span></td>\n                  <td>High</td>\n                  <td>0.95</td>\n                  <td><a href=\"#wof-source-records\">5 exact WOF record versions</a></td>\n                  <td>Per record<br><a href=\"#wof-source-records\">5 source timestamps</a></td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n          <p class=\"annotation\">Confidence values qualify the reviewed mappings or assertions in this collection; they are not universal ratings of an entire publisher or dataset. Source update values come from each publisher’s own dataset, distribution or version metadata; retrieval, review and publication times are recorded separately. Derived representations remain in their upstream provenance cluster and are not counted as independent corroboration.</p>\n        </section>\n\n\n        <section aria-labelledby=\"osm-source-versions\">\n          <h2 id=\"osm-source-versions\">OpenStreetMap source versions</h2>\n          <p>The OpenStreetMap comparison is not sourced from one generic New York City relation. It uses ten separately versioned county and borough relations. Each timestamp below belongs to the exact cited relation version.</p>\n          <div class=\"table-wrap\">\n            <table>\n              <thead><tr><th>Borough / county</th><th>Representation</th><th>Relation version</th><th>Source last updated</th></tr></thead>\n              <tbody>\n                <tr><td>Manhattan / New York County</td><td>County</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/2552485/history/56\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 2552485 version 56 (opens in a new tab)\">2552485 · v56</a></td><td><time datetime=\"2026-01-13T14:07:26Z\">January 13, 2026 · 14:07:26 UTC</time></td></tr>\n                <tr><td>Manhattan / New York County</td><td>Borough</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/8398124/history/50\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 8398124 version 50 (opens in a new tab)\">8398124 · v50</a></td><td><time datetime=\"2026-06-15T09:04:18Z\">June 15, 2026 · 09:04:18 UTC</time></td></tr>\n                <tr><td>Bronx / Bronx County</td><td>County</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/2552450/history/32\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 2552450 version 32 (opens in a new tab)\">2552450 · v32</a></td><td><time datetime=\"2026-02-08T17:09:24Z\">February 8, 2026 · 17:09:24 UTC</time></td></tr>\n                <tr><td>Bronx / Bronx County</td><td>Borough</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/9691916/history/24\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 9691916 version 24 (opens in a new tab)\">9691916 · v24</a></td><td><time datetime=\"2026-02-08T17:09:24Z\">February 8, 2026 · 17:09:24 UTC</time></td></tr>\n                <tr><td>Brooklyn / Kings County</td><td>County</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/369518/history/44\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 369518 version 44 (opens in a new tab)\">369518 · v44</a></td><td><time datetime=\"2026-01-13T14:07:26Z\">January 13, 2026 · 14:07:26 UTC</time></td></tr>\n                <tr><td>Brooklyn / Kings County</td><td>Borough</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/9691750/history/34\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 9691750 version 34 (opens in a new tab)\">9691750 · v34</a></td><td><time datetime=\"2026-01-13T14:07:26Z\">January 13, 2026 · 14:07:26 UTC</time></td></tr>\n                <tr><td>Queens / Queens County</td><td>County</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/369519/history/71\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 369519 version 71 (opens in a new tab)\">369519 · v71</a></td><td><time datetime=\"2026-01-13T14:07:26Z\">January 13, 2026 · 14:07:26 UTC</time></td></tr>\n                <tr><td>Queens / Queens County</td><td>Borough</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/9691819/history/39\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 9691819 version 39 (opens in a new tab)\">9691819 · v39</a></td><td><time datetime=\"2026-01-13T14:07:26Z\">January 13, 2026 · 14:07:26 UTC</time></td></tr>\n                <tr><td>Staten Island / Richmond County</td><td>County</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/962876/history/18\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 962876 version 18 (opens in a new tab)\">962876 · v18</a></td><td><time datetime=\"2025-08-24T18:21:46Z\">August 24, 2025 · 18:21:46 UTC</time></td></tr>\n                <tr><td>Staten Island / Richmond County</td><td>Borough</td><td><a class=\"external-link\" href=\"https://www.openstreetmap.org/relation/9691948/history/17\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OpenStreetMap relation 9691948 version 17 (opens in a new tab)\">9691948 · v17</a></td><td><time datetime=\"2025-08-24T18:21:46Z\">August 24, 2025 · 18:21:46 UTC</time></td></tr>\n              </tbody>\n            </table>\n          </div>\n        </section>\n\n        \n        <section aria-labelledby=\"wof-source-records\">\n          <h2 id=\"wof-source-records\">Who's On First source records</h2>\n          <p>The five county representations come from exact records in the pinned U.S. administrative-data snapshot. Each source timestamp is the record's own <code>wof:lastmodified</code> value. The New York locality record supplies five-county hierarchy context but is not counted as a sixth boundary assertion.</p>\n          <div class=\"table-wrap\">\n            <table>\n              <thead><tr><th>Borough / county</th><th>WOF record</th><th>Census GEOID</th><th>Source last updated</th></tr></thead>\n              <tbody>\n                <tr><td>New York County / Manhattan</td><td><a class=\"external-link\" href=\"https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Who's On First record 102081863 (opens in a new tab)\">102081863</a></td><td>36061</td><td><time datetime=\"2024-08-02T06:31:21Z\">August 2, 2024 · 06:31:21 UTC</time></td></tr>\n                <tr><td>Bronx County / Bronx</td><td><a class=\"external-link\" href=\"https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Who's On First record 102083063 (opens in a new tab)\">102083063</a></td><td>36005</td><td><time datetime=\"2024-08-02T06:31:34Z\">August 2, 2024 · 06:31:34 UTC</time></td></tr>\n                <tr><td>Kings County / Brooklyn</td><td><a class=\"external-link\" href=\"https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Who's On First record 102082361 (opens in a new tab)\">102082361</a></td><td>36047</td><td><time datetime=\"2024-08-02T06:31:27Z\">August 2, 2024 · 06:31:27 UTC</time></td></tr>\n                <tr><td>Queens County / Queens</td><td><a class=\"external-link\" href=\"https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Who's On First record 102082377 (opens in a new tab)\">102082377</a></td><td>36081</td><td><time datetime=\"2024-08-02T06:31:27Z\">August 2, 2024 · 06:31:27 UTC</time></td></tr>\n                <tr><td>Richmond County / Staten Island</td><td><a class=\"external-link\" href=\"https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Who's On First record 102081779 (opens in a new tab)\">102081779</a></td><td>36085</td><td><time datetime=\"2024-08-02T06:31:21Z\">August 2, 2024 · 06:31:21 UTC</time></td></tr>\n              </tbody>\n            </table>\n          </div>\n        </section>\n\n<section aria-labelledby=\"provenance-clusters\">\n          <h2 id=\"provenance-clusters\">Provenance clusters</h2>\n          <p>Representation count is not evidence count. A downstream product can add useful identifiers, release history or geometry semantics while still inheriting its boundary claim from an upstream source.</p>\n          <div class=\"table-wrap\">\n            <table>\n              <thead><tr><th>Derived representation</th><th>Upstream cluster</th><th>What it adds</th><th>Independence disposition</th></tr></thead>\n              <tbody>\n                <tr>\n                  <td>geoBoundaries USA ADM2 · 5 county features</td>\n                  <td>U.S. Census</td>\n                  <td>Open global ADM2 packaging, build metadata and simplified county polygons</td>\n                  <td>Not independent; derived from 2018 Census MAF/TIGER cartographic boundaries</td>\n                </tr>\n                <tr>\n                  <td>Overture Maps Divisions · 11 areas</td>\n                  <td>OpenStreetMap</td>\n                  <td>Overture division/area identifiers, feature versions, and land/maritime classification</td>\n                  <td>Not independent; all reviewed NYC records cite the same 10 OSM relation versions already represented</td>\n                </tr>\n                              <tr>\n                  <td>Who's On First · 5 county records</td>\n                  <td>U.S. Census via Quattroshapes</td>\n                  <td>Stable WOF identifiers, five-county locality hierarchy, Census GEOID/HASC concordances and lifecycle continuity</td>\n                  <td>Not independent; each default geometry declares Quattroshapes with US Census as source</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n          <p class=\"annotation\">The confidence score for geoBoundaries qualifies the reviewed cross-release identity mapping. The Overture score qualifies mappings to exact OSM relation versions. The Who's On First score qualifies mappings supported by exact Census GEOID concordances. None is a claim of independent authority.</p>\n        </section>\n\n        <section aria-labelledby=\"agreement\">\n          <h2 id=\"agreement\">Where independent land-area measurements agree</h2>\n          <p>The two independent, directly comparable land-area series are within 1.25% for every borough/county pair; this is treated as ordinary cross-source measurement variance, not a contradiction.</p>\n          <div class=\"table-wrap\">\n            <table class=\"numeric\">\n              <thead>\n                <tr><th>Borough / county</th><th>DCP land shape<br><span>sq mi</span></th><th>Census land<br><span>sq mi</span></th><th>Difference</th></tr>\n              </thead>\n              <tbody>\n                <tr><td>Manhattan / New York County</td><td>22.836</td><td>22.658</td><td>0.79%</td></tr>\n                <tr><td>Bronx / Bronx County</td><td>42.585</td><td>42.176</td><td>0.97%</td></tr>\n                <tr><td>Brooklyn / Kings County</td><td>69.389</td><td>69.377</td><td>0.02%</td></tr>\n                <tr><td>Queens / Queens County</td><td>109.096</td><td>108.724</td><td>0.34%</td></tr>\n                <tr><td>Staten Island / Richmond County</td><td>58.239</td><td>57.523</td><td>1.25%</td></tr>\n              </tbody>\n            </table>\n          </div>\n          <h3>Measurement availability and comparison disposition</h3>\n          <div class=\"table-wrap\">\n            <table>\n              <thead><tr><th>Source group</th><th>Numeric area availability</th><th>Metric</th><th>Land-area table</th><th>Governed reason</th></tr></thead>\n              <tbody>\n                <tr><td>DCP</td><td>Available · governed-calculation</td><td>land area</td><td>Included</td><td>Five governed water-excluded geometry calculations are directly compared with Census Gazetteer land-area values.</td></tr>\n                <tr><td>Census Gazetteer</td><td>Available · publisher-supplied</td><td>land area</td><td>Included</td><td>The publisher supplies land-only area values directly in the 2023 county Gazetteer.</td></tr>\n                <tr><td>OpenStreetMap</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The governed relation records supply boundary geometry and version metadata, but no source-provided numeric area field. A future geometry calculation would be a separate governed assertion.</td></tr>\n                <tr><td>geoBoundaries</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The reviewed ADM2 features supply generalized geometry but no numeric area field, and their geometry is Census-derived.</td></tr>\n                <tr><td>Overture</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The reviewed division_area records supply geometry and land/maritime classification but no numeric area field, and their geometry derives from the governed OSM relations.</td></tr>\n                <tr><td>Who's On First</td><td>Available · source-record-derived-geometric-area</td><td>geometric area</td><td>Excluded</td><td>WOF supplies Shapely-derived geometric area for its Census-sourced Quattroshapes geometry. It is not land-only and is not an independent measurement, so it is not directly comparable with the DCP/Census land-area table.</td></tr>\n              </tbody>\n            </table>\n          </div>\n          <p class=\"annotation\">Measurement availability and source independence are separate. A numeric field can be available yet excluded because its metric or provenance is not comparable; geometry without a numeric area requires a separate governed calculation before comparison.</p>\n          <h3>Who's On First geometric-area fields</h3>\n          <p>All five WOF records supply <code>geom:area_square_m</code>. WOF documents these as Shapely-derived geometric areas. Because the underlying geometry is Census-sourced Quattroshapes and the metric is not land-only, these values are governed and shown here but excluded from the independent land-area table.</p>\n          <div class=\"table-wrap\">\n            <table class=\"numeric\">\n              <thead><tr><th>Borough / county</th><th>WOF ID</th><th><code>geom:area_square_m</code></th></tr></thead>\n              <tbody>\n                <tr><td>Manhattan / New York County</td><td>102081863</td><td>86,897,676.555846</td></tr>\n                <tr><td>Bronx / Bronx County</td><td>102083063</td><td>148,690,598.289121</td></tr>\n                <tr><td>Brooklyn / Kings County</td><td>102082361</td><td>250,730,261.838561</td></tr>\n                <tr><td>Queens / Queens County</td><td>102082377</td><td>461,032,060.060989</td></tr>\n                <tr><td>Staten Island / Richmond County</td><td>102081779</td><td>264,637,333.644406</td></tr>\n              </tbody>\n            </table>\n          </div>\n        </section>\n\n        <section aria-labelledby=\"differences\">\n          <h2 id=\"differences\">Differences that should remain visible</h2>\n          <div class=\"knowledge-grid\">\n            <article class=\"knowledge-card\">\n              <h3>Shoreline vs. offshore</h3>\n              <p>Water-excluded geometry traces inlets, coves and piers. Water-included geometry follows a smoother offshore boundary. A larger area can therefore have a shorter perimeter. The review records this as a methodological distinction, not conflicting evidence.</p>\n            </article>\n            <article class=\"knowledge-card\">\n              <h3>Borough vs. county</h3>\n              <p>OpenStreetMap keeps separate borough and county relations. The paired records are treated as close representations of the same referent, not collapsed into an exact-identity claim and not marked as a contradiction.</p>\n            </article>\n          </div>\n        </section>\n\n        <section aria-labelledby=\"published-material\">\n          <h2 id=\"published-material\">Published fixture and artifacts</h2>\n          <p>The DCP water-excluded and water-included geometries are both downloadable public fixtures. The comparison map overlays them without a network request. Census, OpenStreetMap, geoBoundaries, Overture and Who's On First records summarized above are governed in the source collection but are not yet published here as raw exports.</p>\n          <ul class=\"downloads\">\n            <li><a href=\"/data/fixtures/nyc-boroughs-water-excluded.json\"><strong>Water-excluded fixture</strong><span>JSON · five preprojected borough paths</span></a></li>\n            <li><a href=\"/data/fixtures/nyc-boroughs-water-included.json\"><strong>Water-included fixture</strong><span>JSON · five GeoJSON MultiPolygons</span></a></li>\n            <li><a href=\"/data/sources/nyc-boroughs-water-included-2026-08-09.geojson\"><strong>Retained source response</strong><span>GeoJSON · exact DCP API snapshot</span></a></li>\n            <li><a href=\"/assets/nyc-boundaries-comparison.svg\"><strong>Boundary overlay</strong><span>SVG · water included and excluded</span></a></li>\n            <li><a href=\"/assets/nyc-boroughs.svg\"><strong>Shoreline map</strong><span>SVG · water excluded only</span></a></li>\n            <li><a href=\"/scripts/build_nyc_water_included_fixture.py\"><strong>Fixture builder</strong><span>Python · retained response to public fixture</span></a></li>\n            <li><a href=\"/scripts/generate_nyc_boroughs_svg.py\"><strong>Map generator</strong><span>Python · no network dependency</span></a></li>\n            <li><a href=\"/data/fixtures/SHA256SUMS\"><strong>Checksum manifest</strong><span>SHA-256 verification</span></a></li>\n            <li><a href=\"/nyc-boundaries/index.jsonld\"><strong>Structured description</strong><span>JSON-LD</span></a></li>\n          </ul>\n        </section>\n\n        <section aria-labelledby=\"quality\">\n          <h2 id=\"quality\">Validation and provenance</h2>\n          <p>Source last-updated values are now backed by primary publisher metadata: Socrata data-update timestamps for DCP, the HTTP Last-Modified value for the Census distribution, and exact OpenStreetMap relation versions. The retained DCP water-included response was captured on August 9, 2026; capture, source update, review and publication remain distinct events.</p>\n          <ul class=\"check-list\">\n            <li>Both public fixtures require exactly five unique borough identities and non-empty geometries.</li>\n            <li>The retained water-included API response regenerates the public fixture byte for byte.</li>\n            <li>Both SVGs regenerate byte for byte from public fixtures without a network request.</li>\n            <li>The source snapshot, fixtures, builders, generators and SVGs are covered by SHA-256 checksums.</li>\n            <li>The source comparison now covers 46 active governed records: 10 DCP, 5 Census Gazetteer, 10 OpenStreetMap, 5 geoBoundaries, 11 Overture and 5 Who's On First representations.</li>\n            <li>geoBoundaries and Who's On First remain in the Census provenance cluster, and Overture remains in the OpenStreetMap provenance cluster; none increases the independent-source count.</li>\n            <li>The source comparison contains no recorded contradiction: observed differences are assessed as methodological choices, administrative framing or ordinary measurement variance.</li>\n            <li>KnoEdg.NYC publishes this view; each claim continues to identify its applicable public evidence source.</li>\n          </ul>\n        </section>\n\n        <section class=\"limitation\" aria-labelledby=\"limitations\">\n          <h2 id=\"limitations\">Known limitations</h2>\n          <p>The original DCP API response used for the first map was not retained with a checksum, and the initial geographic-to-SVG projection script was not preserved. Reproducibility therefore begins with the reviewed public SVG-path fixture, not the original API response. Future boundary publications are required to retain the complete response and transformation chain before first publication.</p>\n          <p>The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. Census, OpenStreetMap, geoBoundaries, Overture and Who's On First comparisons on this page remain public summaries linked to their evidence; their raw exports require separate publication review.</p>\n        </section>\n\n        <section aria-labelledby=\"history\">\n          <h2 id=\"history\">Publication history</h2>\n          <ol class=\"history\">\n            <li><time datetime=\"2026-08-09\">August 9, 2026</time> — Water-excluded borough fixture, deterministic generator and SVG published.</li>\n            <li><time datetime=\"2026-08-09\">August 9, 2026</time> — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison.</li>\n            <li><time datetime=\"2026-08-09\">August 9, 2026</time> — Water-included geometry, retained source response and reproducible boundary overlay published.</li>\n            <li><time datetime=\"2026-08-09\">August 9, 2026</time> — geoBoundaries and Overture Maps governed representations added with explicit Census and OpenStreetMap provenance-cluster dispositions.</li>\n            <li><time datetime=\"2026-08-09\">August 9, 2026</time> — Five Who's On First county records added for stable identifiers, hierarchy and concordances, with default geometry retained in the Census provenance cluster.</li>\n          </ol>\n        </section>\n      </article>"
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/",
+        "@type": "dcat:Dataset",
+        "dcterms:title": "NYC Boundaries",
+        "dcterms:description": "A governed public view of 46 representations of New York City borough and county boundaries, with derived products grouped by upstream provenance.",
+        "dcterms:publisher": {
+          "@id": "https://knoedg.nyc/#organization"
+        },
+        "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
+        "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay.",
+        "dcterms:issued": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "dcterms:spatial": {
+          "@id": "https://www.wikidata.org/entity/Q60"
+        },
+        "dcterms:hasPart": [
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#census-county"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#geoboundaries-adm2"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#overture-divisions"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#whos-on-first-counties"
+          }
+        ],
+        "prov:wasDerivedFrom": [
+          {
+            "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+          },
+          {
+            "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+          },
+          {
+            "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+          },
+          {
+            "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+          },
+          {
+            "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+          }
+        ],
+        "dcat:landingPage": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        },
+        "dcat:distribution": [
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+          },
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+          },
+          {
+            "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+          },
+          {
+            "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"
+          },
+          {
+            "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#page",
+        "@type": "schema:WebPage",
+        "schema:name": "NYC Boundaries",
+        "schema:url": "https://knoedg.nyc/nyc-boundaries/",
+        "schema:mainEntity": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        },
+        "schema:isPartOf": {
+          "@id": "https://knoedg.nyc/"
+        },
+        "schema:datePublished": "2026-08-09",
+        "schema:dateModified": "2026-08-09"
+      },
+      {
+        "@id": "https://knoedg.nyc/#organization",
+        "@type": "schema:Organization",
+        "schema:name": "KnoEdg.NYC",
+        "schema:url": "https://knoedg.nyc/"
+      },
+      {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "New York City borough boundaries, water excluded",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+        },
+        "dcat:mediaType": "application/json",
+        "schema:encodingFormat": "application/json",
+        "dcterms:rights": "Source attribution is retained. Review current NYC Open Data terms before redistribution.",
+        "prov:wasDerivedFrom": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "Retained NYC DCP water-included boundary response",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+        },
+        "dcat:mediaType": "application/geo+json",
+        "schema:encodingFormat": "application/geo+json",
+        "prov:wasDerivedFrom": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "New York City borough boundaries, water included",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+        },
+        "dcat:mediaType": "application/json",
+        "schema:encodingFormat": "application/json",
+        "dcterms:rights": "Source attribution is retained. Review current NYC Open Data terms before redistribution.",
+        "prov:wasDerivedFrom": {
+          "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "Generated NYC five-borough shoreline map",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"
+        },
+        "dcat:mediaType": "image/svg+xml",
+        "schema:encodingFormat": "image/svg+xml",
+        "prov:wasDerivedFrom": {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "Generated water-included and water-excluded NYC boundary overlay",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
+        },
+        "dcat:mediaType": "image/svg+xml",
+        "schema:encodingFormat": "image/svg+xml",
+        "prov:wasDerivedFrom": [
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+          },
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded",
+        "@type": "schema:Claim",
+        "schema:text": "NYC DCP water-excluded data represents the five borough shoreline geometries used by the published map.",
+        "schema:citation": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2026-05-26T19:35:50Z",
+              "@type": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "governed-calculation"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "Five governed water-excluded geometry calculations are directly compared with Census Gazetteer land-area values."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "included"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included",
+        "@type": "schema:Claim",
+        "schema:text": "NYC DCP water-included data represents a distinct offshore boundary method for all five boroughs.",
+        "schema:citation": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2026-05-26T19:35:22Z",
+              "@type": "xsd:dateTime"
+            }
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#census-county",
+        "@type": "schema:Claim",
+        "schema:text": "The U.S. Census Bureau 2023 Gazetteer provides independently maintained county land and water measurements corresponding to the five boroughs.",
+        "schema:citation": {
+          "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.93
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2023-09-26T13:32:24Z",
+              "@type": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "publisher-supplied"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "The publisher supplies land-only area values directly in the 2023 county Gazetteer."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "included"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative",
+        "@type": "schema:Claim",
+        "schema:text": "OpenStreetMap represents corresponding borough and county administrative relations separately rather than collapsing them into one identity.",
+        "schema:citation": [
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+          }
+        ],
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.78
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": "Per cited relation: 2025-08-24T18:21:46Z through 2026-06-15T09:04:18Z"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "not-provided-in-reviewed-source-record"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "The governed relation records supply boundary geometry and version metadata, but no source-provided numeric area field. A future geometry calculation would be a separate governed assertion."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "excluded"
+          }
+        ]
+      },
+      {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
+        "@type": [
+          "dcat:Dataset",
+          "schema:Dataset"
+        ],
+        "dcterms:modified": {
+          "@value": "2026-05-26T19:35:50Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
+        "@type": [
+          "dcat:Dataset",
+          "schema:Dataset"
+        ],
+        "dcterms:modified": {
+          "@value": "2026-05-26T19:35:22Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:modified": {
+          "@value": "2023-09-26T13:32:24Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/2552485/history/56",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/2552485"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "56"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/8398124/history/50",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/8398124"
+        },
+        "dcterms:modified": {
+          "@value": "2026-06-15T09:04:18Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "50"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/2552450/history/32",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/2552450"
+        },
+        "dcterms:modified": {
+          "@value": "2026-02-08T17:09:24Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "32"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691916/history/24",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691916"
+        },
+        "dcterms:modified": {
+          "@value": "2026-02-08T17:09:24Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "24"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/369518/history/44",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/369518"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "44"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691750/history/34",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691750"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "34"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/369519/history/71",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/369519"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "71"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691819/history/39",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691819"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "39"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/962876/history/18",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/962876"
+        },
+        "dcterms:modified": {
+          "@value": "2025-08-24T18:21:46Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "18"
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691948/history/17",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691948"
+        },
+        "dcterms:modified": {
+          "@value": "2025-08-24T18:21:46Z",
+          "@type": "xsd:dateTime"
+        },
+        "schema:version": "17"
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#geoboundaries-adm2",
+        "@type": "schema:Claim",
+        "schema:text": "Five geoBoundaries USA ADM2 features are reviewed mappings to NYC counties. They are generalized, shoreline-clipped derivatives of 2018 Census MAF/TIGER cartographic boundaries and remain in the Census provenance cluster.",
+        "schema:citation": {
+          "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.82
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Representations",
+            "schema:value": 5
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Provenance cluster",
+            "schema:value": "U.S. Census"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independence disposition",
+            "schema:value": "Not independent corroboration"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Represented year",
+            "schema:value": 2018
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "geoBoundaries build date",
+            "schema:value": {
+              "@value": "2023-12-12",
+              "@type": "xsd:date"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "not-provided-in-reviewed-source-record"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "The reviewed ADM2 features supply generalized geometry but no numeric area field, and their geometry is Census-derived."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "excluded"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#overture-divisions",
+        "@type": "schema:Claim",
+        "schema:text": "Eleven Overture Maps division-area representations map to the ten exact OpenStreetMap relation versions already governed here, including separate Richmond County land and maritime areas. They remain in the OpenStreetMap provenance cluster.",
+        "schema:citation": {
+          "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Representations",
+            "schema:value": 11
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Provenance cluster",
+            "schema:value": "OpenStreetMap"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independence disposition",
+            "schema:value": "Not independent corroboration"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Overture release",
+            "schema:value": "2026-07-22.0"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Distribution modified",
+            "schema:value": {
+              "@value": "2026-07-22T17:36:51Z",
+              "@type": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "not-provided-in-reviewed-source-record"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "The reviewed division_area records supply geometry and land/maritime classification but no numeric area field, and their geometry derives from the governed OSM relations."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "excluded"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:title": "geoBoundaries USA ADM2 immutable distribution",
+        "dcterms:issued": {
+          "@value": "2023-12-12",
+          "@type": "xsd:date"
+        },
+        "dcterms:temporal": "2018",
+        "dcterms:license": {
+          "@id": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "prov:wasDerivedFrom": {
+          "@id": "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_500k.zip"
+        }
+      },
+      {
+        "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:title": "Overture Maps Divisions release 2026-07-22.0",
+        "dcterms:issued": {
+          "@value": "2026-07-22",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-07-22T17:36:51Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:license": {
+          "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#whos-on-first-counties",
+        "@type": "schema:Claim",
+        "schema:text": "Five current Who's On First county records provide stable WOF identifiers, the New York locality's five-county hierarchy, Census GEOID/HASC concordances and boundary representations whose default geometry is sourced from Quattroshapes and US Census. They remain in the Census provenance cluster.",
+        "schema:citation": [
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+          },
+          {
+            "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+          }
+        ],
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Representations",
+            "schema:value": 5
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Provenance cluster",
+            "schema:value": "U.S. Census via Quattroshapes"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independence disposition",
+            "schema:value": "Not independent corroboration"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Hierarchy context",
+            "schema:value": "New York locality WOF:85977539; not counted as a sixth boundary assertion"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": "Per cited WOF record: 2024-08-02T06:31:21Z through 2024-08-02T06:31:34Z"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Numeric area availability",
+            "schema:value": "source-record-derived-geometric-area"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Measurement semantics",
+            "schema:value": "WOF supplies Shapely-derived geometric area for its Census-sourced Quattroshapes geometry. It is not land-only and is not an independent measurement, so it is not directly comparable with the DCP/Census land-area table."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Independent land-area comparison disposition",
+            "schema:value": "excluded"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source-supplied geometric areas",
+            "schema:value": "102081863: 86897676.555846 m²; 102083063: 148690598.289121 m²; 102082361: 250730261.838561 m²; 102082377: 461032060.060989 m²; 102081779: 264637333.644406 m²"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:identifier": "WOF:102081863",
+        "dcterms:modified": {
+          "@value": "2024-08-02T06:31:21Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:isVersionOf": {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/863/102081863.geojson"
+        },
+        "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Census GEOID",
+            "schema:value": "36061"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Git blob",
+            "schema:value": "6818d9de4ab7d1abfff7711ef1b250e2e417920c"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Geometry source",
+            "schema:value": "Quattroshapes; qs:source US Census"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:identifier": "WOF:102083063",
+        "dcterms:modified": {
+          "@value": "2024-08-02T06:31:34Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:isVersionOf": {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/083/063/102083063.geojson"
+        },
+        "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Census GEOID",
+            "schema:value": "36005"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Git blob",
+            "schema:value": "bfd0e6cacfc317b0614b70c0ebcedae54450b542"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Geometry source",
+            "schema:value": "Quattroshapes; qs:source US Census"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:identifier": "WOF:102082361",
+        "dcterms:modified": {
+          "@value": "2024-08-02T06:31:27Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:isVersionOf": {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/361/102082361.geojson"
+        },
+        "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Census GEOID",
+            "schema:value": "36047"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Git blob",
+            "schema:value": "8d2d0c14c5cf1f6bb3cb106722e36944443cfae2"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Geometry source",
+            "schema:value": "Quattroshapes; qs:source US Census"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:identifier": "WOF:102082377",
+        "dcterms:modified": {
+          "@value": "2024-08-02T06:31:27Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:isVersionOf": {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/377/102082377.geojson"
+        },
+        "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Census GEOID",
+            "schema:value": "36081"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Git blob",
+            "schema:value": "faeb46f2de1fb2ffcd2c08d89c242effd70ad787"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Geometry source",
+            "schema:value": "Quattroshapes; qs:source US Census"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:identifier": "WOF:102081779",
+        "dcterms:modified": {
+          "@value": "2024-08-02T06:31:21Z",
+          "@type": "xsd:dateTime"
+        },
+        "dcterms:isVersionOf": {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/779/102081779.geojson"
+        },
+        "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Census GEOID",
+            "schema:value": "36085"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Git blob",
+            "schema:value": "8f9d2af27850c47ec9f0b7555f24b8c81ff6f6c8"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Geometry source",
+            "schema:value": "Quattroshapes; qs:source US Census"
+          }
+        ]
+      }
+    ]
+  }
 }
