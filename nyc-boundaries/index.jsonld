@@ -148,7 +148,8 @@
       },
       "schema:additionalProperty": [
         {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95}
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95},
+        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
       ]
     },
     {
@@ -160,7 +161,8 @@
       },
       "schema:additionalProperty": [
         {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95}
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95},
+        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
       ]
     },
     {
@@ -172,7 +174,8 @@
       },
       "schema:additionalProperty": [
         {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.93}
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.93},
+        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
       ]
     },
     {
@@ -184,7 +187,8 @@
       },
       "schema:additionalProperty": [
         {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.78}
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.78},
+        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
       ]
     }
   ]

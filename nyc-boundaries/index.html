@@ -59,37 +59,49 @@
           <div class="table-wrap">
             <table>
               <thead>
-                <tr><th>View</th><th>What it represents</th><th>KEE review state</th><th>Evidence</th></tr>
+                <tr><th>View</th><th>What it represents</th><th>Lifecycle</th><th>Confidence</th><th>Score</th><th>Source reference</th><th>Source last updated</th></tr>
               </thead>
               <tbody>
                 <tr>
                   <td>NYC DCP · water excluded</td>
                   <td>Five borough shoreline geometries, excluding water areas</td>
-                  <td><span class="status">Active</span> High confidence · 0.95</td>
+                  <td><span class="status">Active</span></td>
+                  <td>High</td>
+                  <td>0.95</td>
                   <td><a class="external-link" href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne" target="_blank" rel="noopener noreferrer" aria-label="Dataset gthc-hcne (opens in a new tab)">Dataset gthc-hcne</a></td>
+                  <td>Not captured</td>
                 </tr>
                 <tr>
                   <td>NYC DCP · water included</td>
                   <td>Five borough geometries extending into surrounding water</td>
-                  <td><span class="status">Active</span> High confidence · 0.95</td>
+                  <td><span class="status">Active</span></td>
+                  <td>High</td>
+                  <td>0.95</td>
                   <td><a class="external-link" href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf" target="_blank" rel="noopener noreferrer" aria-label="Dataset wh2p-dxnf (opens in a new tab)">Dataset wh2p-dxnf</a></td>
+                  <td>Not captured</td>
                 </tr>
                 <tr>
                   <td>U.S. Census Bureau</td>
                   <td>2023 county land and water area, TIGER/Line-derived</td>
-                  <td><span class="status">Active</span> High confidence · 0.93</td>
+                  <td><span class="status">Active</span></td>
+                  <td>High</td>
+                  <td>0.93</td>
                   <td><a class="external-link" href="https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip" target="_blank" rel="noopener noreferrer" aria-label="2023 county Gazetteer (opens in a new tab)">2023 county Gazetteer</a></td>
+                  <td>Not captured</td>
                 </tr>
                 <tr>
                   <td>OpenStreetMap</td>
                   <td>Paired county and borough administrative relations</td>
-                  <td><span class="status">Active</span> Moderate confidence · 0.78</td>
+                  <td><span class="status">Active</span></td>
+                  <td>Moderate</td>
+                  <td>0.78</td>
                   <td><a class="external-link" href="https://www.openstreetmap.org/relation/175905" target="_blank" rel="noopener noreferrer" aria-label="New York relation and members (opens in a new tab)">New York relation and members</a></td>
+                  <td>Not captured</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="annotation">Confidence values qualify the reviewed assertions in this collection; they are not universal ratings of an entire publisher or dataset.</p>
+          <p class="annotation">Confidence values qualify the reviewed assertions in this collection; they are not universal ratings of an entire publisher or dataset. “Not captured” means the source’s own last-updated value is absent from the current provenance record; it does not mean the source has never changed.</p>
         </section>
 
         <section aria-labelledby="agreement">
@@ -143,6 +155,7 @@
 
         <section aria-labelledby="quality">
           <h2 id="quality">Validation and provenance</h2>
+          <p>Source references and source last-updated status are shown in the comparison above. The retained DCP water-included response was captured on August 9, 2026; a capture time records this publication’s observation and is not substituted for the source’s own last-updated value.</p>
           <ul class="check-list">
             <li>Both public fixtures require exactly five unique borough identities and non-empty geometries.</li>
             <li>The retained water-included API response regenerates the public fixture byte for byte.</li>
