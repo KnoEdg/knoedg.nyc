@@ -127,6 +127,9 @@
           "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
         },
         {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
+        },
+        {
           "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
         },
         {
@@ -209,6 +212,55 @@
       "prov:wasDerivedFrom": {
         "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
       }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json",
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
+      "dcterms:title": "OpenStreetMap relation metadata for New York City's borough and county representations",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
+      },
+      "dcat:mediaType": "application/json",
+      "schema:encodingFormat": "application/json",
+      "dcterms:rights": "© OpenStreetMap contributors. Metadata only; no geometry or relation members are included.",
+      "dcterms:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+        }
+      ]
     },
     {
       "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
