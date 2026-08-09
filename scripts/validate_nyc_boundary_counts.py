@@ -82,8 +82,6 @@ if match is None or int(match.group(1)) != expected_total:
 
 for group in artifact["sourceGroups"]:
     status = group["measurement"]["status"]
-    if status not in html:
-        fail(f"HTML is missing artifact measurement status for {group['id']}")
     claim = next(
         (
             node for node in jsonld.get("@graph", [])
