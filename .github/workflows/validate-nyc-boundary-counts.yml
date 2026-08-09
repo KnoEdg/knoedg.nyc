@@ -5,6 +5,8 @@ on:
     paths:
       - "nyc-boundaries/**"
       - "scripts/validate_nyc_boundary_counts.py"
+      - "scripts/generate_nyc_boundaries_view.py"
+      - "data/fixtures/nyc-boundary-public-view.json"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
     branches:
@@ -25,4 +27,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python3 scripts/generate_nyc_boundaries_view.py --check
       - run: python3 scripts/validate_nyc_boundary_counts.py
