@@ -16,7 +16,7 @@
         "@id": "https://knoedg.nyc/#organization"
       },
       "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-      "dcterms:provenance": "The published geometry is reproducible from the reviewed public SVG-path fixture forward. The original upstream API-response checksum and initial projection script were not retained.",
+      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay.",
       "dcterms:issued": {
         "@value": "2026-08-09",
         "@type": "xsd:date"
@@ -45,7 +45,10 @@
       },
       "dcat:distribution": [
         {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
-        {"@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"}
+        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"},
+        {"@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"},
+        {"@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"},
+        {"@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"}
       ]
     },
     {
@@ -83,6 +86,33 @@
       }
     },
     {
+      "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson",
+      "@type": ["prov:Entity", "schema:DataDownload"],
+      "dcterms:title": "Retained NYC DCP water-included boundary response",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+      },
+      "dcat:mediaType": "application/geo+json",
+      "schema:encodingFormat": "application/geo+json",
+      "prov:wasDerivedFrom": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcterms:title": "New York City borough boundaries, water included",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+      },
+      "dcat:mediaType": "application/json",
+      "schema:encodingFormat": "application/json",
+      "dcterms:rights": "Source attribution is retained. Review current NYC Open Data terms before redistribution.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+      }
+    },
+    {
       "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg",
       "@type": ["dcat:Distribution", "schema:DataDownload"],
       "dcterms:title": "Generated NYC five-borough shoreline map",
@@ -94,6 +124,20 @@
       "prov:wasDerivedFrom": {
         "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
       }
+    },
+    {
+      "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcterms:title": "Generated water-included and water-excluded NYC boundary overlay",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
+      },
+      "dcat:mediaType": "image/svg+xml",
+      "schema:encodingFormat": "image/svg+xml",
+      "prov:wasDerivedFrom": [
+        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
+        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"}
+      ]
     },
     {
       "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded",
