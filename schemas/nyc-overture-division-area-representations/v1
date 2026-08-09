@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoedg.nyc/schemas/nyc-overture-division-area-representations/v1",
+  "title": "NYC Overture Maps division_area identity and geometry fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "type", "fixtureType", "fixtureVersion", "id", "resource", "title", "crs", "publisher", "source", "rights", "selection", "comparisonDisposition", "features", "limitations"],
+  "properties": {
+    "$schema": {"const": "https://knoedg.nyc/schemas/nyc-overture-division-area-representations/v1"},
+    "type": {"const": "FeatureCollection"},
+    "fixtureType": {"const": "overture-division-area-representation"},
+    "fixtureVersion": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}\\.[1-9][0-9]*$"},
+    "id": {"const": "https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson"},
+    "resource": {"const": "https://knoedg.nyc/nyc-boundaries/"},
+    "title": {"type": "string", "minLength": 1},
+    "crs": {"type": "object", "additionalProperties": false, "required": ["type", "properties"], "properties": {"type": {"const": "name"}, "properties": {"type": "object", "additionalProperties": false, "required": ["name"], "properties": {"name": {"const": "urn:ogc:def:crs:OGC:1.3:CRS84"}}}}},
+    "publisher": {"type": "object", "additionalProperties": false, "required": ["name", "url"], "properties": {"name": {"const": "Overture Maps Foundation"}, "url": {"const": "https://overturemaps.org/"}}},
+    "source": {"type": "object", "additionalProperties": false, "required": ["release", "asset", "capturedAt", "retainedGeometryCanonicalSha256", "derivation"], "properties": {
+      "release": {"const": "2026-07-22.0"},
+      "asset": {"type": "string", "format": "uri"},
+      "capturedAt": {"type": "string", "format": "date-time"},
+      "retainedGeometryCanonicalSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+      "derivation": {"type": "string", "minLength": 1}
+    }},
+    "rights": {"type": "object", "additionalProperties": false, "required": ["redistributionDecision", "license", "licenseUrl", "attribution", "changes"], "properties": {
+      "redistributionDecision": {"const": "approved"},
+      "license": {"const": "Open Data Commons Open Database License 1.0"},
+      "licenseUrl": {"const": "https://opendatacommons.org/licenses/odbl/1-0/"},
+      "attribution": {"const": "Overture Maps Foundation; underlying source © OpenStreetMap contributors"},
+      "changes": {"type": "string", "minLength": 1}
+    }},
+    "selection": {"type": "object", "additionalProperties": false, "required": ["rule", "countingGranularity", "featureCount", "geometryIncluded"], "properties": {"rule": {"type": "string", "minLength": 1}, "countingGranularity": {"const": "Overture division_area representation"}, "featureCount": {"const": 11}, "geometryIncluded": {"const": true}}},
+    "comparisonDisposition": {"type": "object", "additionalProperties": false, "required": ["provenanceCluster", "independentEvidenceFamily", "numericAreaStatus", "reason"], "properties": {"provenanceCluster": {"const": "OpenStreetMap"}, "independentEvidenceFamily": {"const": false}, "numericAreaStatus": {"const": "not-provided-in-reviewed-source-record"}, "reason": {"type": "string", "minLength": 1}}},
+    "features": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"type": "object", "additionalProperties": false, "required": ["type", "id", "properties", "geometry"], "properties": {
+      "type": {"const": "Feature"}, "id": {"type": "string", "format": "uri"},
+      "properties": {"type": "object", "additionalProperties": false, "required": ["boroughCode", "boroughName", "areaId", "divisionId", "namePrimary", "subtype", "adminLevel", "isLand", "isTerritorial", "version", "sourceRecordId", "sourceUpdateTime", "osmVersionTimestamp", "governedAssertion", "lifecycle", "confidence"], "properties": {
+        "boroughCode": {"type": "integer", "minimum": 1, "maximum": 5},
+        "boroughName": {"type": "string", "minLength": 1},
+        "areaId": {"type": "string", "minLength": 1},
+        "divisionId": {"type": "string", "minLength": 1},
+        "namePrimary": {"type": "string", "minLength": 1},
+        "subtype": {"enum": ["county", "locality"]},
+        "adminLevel": {"type": ["integer", "null"]},
+        "isLand": {"type": "boolean"},
+        "isTerritorial": {"type": "boolean"},
+        "version": {"type": "integer", "minimum": 0},
+        "sourceRecordId": {"type": "string", "minLength": 1},
+        "sourceUpdateTime": {"type": "string", "format": "date-time"},
+        "osmVersionTimestamp": {"type": "string", "format": "date-time"},
+        "governedAssertion": {"type": "string", "format": "uri"},
+        "lifecycle": {"const": "Active"},
+        "confidence": {"const": 0.95}
+      }},
+      "geometry": {"type": "object", "additionalProperties": false, "required": ["type", "coordinates"], "properties": {
+        "type": {"enum": ["Polygon", "MultiPolygon"]},
+        "coordinates": {"type": "array"}
+      }}
+    }}},
+    "limitations": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}}
+  }
+}

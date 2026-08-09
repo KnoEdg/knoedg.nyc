@@ -17,6 +17,7 @@ The homepage shoreline map and the NYC Boundaries comparison overlay are generat
 - `data/fixtures/nyc-openstreetmap-relation-metadata.json` — ten exact OSM county/borough relation-version metadata records with stable identities, timestamps, selected administrative tags, lifecycle/confidence, provenance checksums, and ODbL attribution; no geometry, relation members, Nominatim bounds/centroids, or numeric area.
 - `data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson` — five retained geoBoundaries USA ADM2 county geometries with unchanged coordinates, deterministic borough ordering, governed assertion links, CC BY 4.0 attribution, and explicit generalized/shoreline-clipped Census-derived limitations; no numeric area.
 - `data/fixtures/nyc-whos-on-first-county-representations.geojson` — five current Who's On First county geometries with unchanged Quattroshapes coordinates, deterministic borough ordering, governed assertion links, Census GEOID/HASC concordances, WOF/Quattroshapes attribution, and a disclosed non-independent, non-land-only geom:area_square_m field.
+- `data/fixtures/nyc-overture-division-area-representations.geojson` — eleven Overture Maps division-area geometries, range-queried directly against the pinned release Parquet asset, deterministic borough ordering, governed assertion links, ODbL 1.0 attribution, both Richmond County land and maritime representations, and a disclosed land/maritime-classification re-verification finding against the collection's original governed capture.
 - `scripts/generate_nyc_boroughs_svg.py` — deterministic offline generator for both maps.
 - `assets/nyc-boroughs.svg` — generated water-excluded presentation artifact.
 - `assets/nyc-boundaries-comparison.svg` — generated water-included/water-excluded overlay.
@@ -59,6 +60,7 @@ python3 scripts/validate_nyc_census_gazetteer_fixture.py
 python3 scripts/validate_nyc_osm_relation_metadata_fixture.py
 python3 scripts/validate_nyc_geoboundaries_fixture.py
 python3 scripts/validate_nyc_whos_on_first_fixture.py
+python3 scripts/validate_nyc_overture_fixture.py
 ```
 
 The repository workflow validates the public JSON Schema, expands JSON-LD,
@@ -70,3 +72,5 @@ served from `/schemas/nyc-openstreetmap-relation-metadata/v1`.
 The geoBoundaries fixture schema is served from
 `/schemas/nyc-geoboundaries-usa-adm2-counties/v1`. The Who's On First fixture
 schema is served from `/schemas/nyc-whos-on-first-county-representations/v1`.
+The Overture fixture schema is served from
+`/schemas/nyc-overture-division-area-representations/v1`.
