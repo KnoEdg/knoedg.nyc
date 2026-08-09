@@ -16,7 +16,7 @@
         "@id": "https://knoedg.nyc/#organization"
       },
       "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay.",
+      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates.",
       "dcterms:issued": {
         "@value": "2026-08-09",
         "@type": "xsd:date"
@@ -128,6 +128,9 @@
         },
         {
           "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
         },
         {
           "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
@@ -261,6 +264,30 @@
           "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
         }
       ]
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson",
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
+      "dcterms:title": "geoBoundaries USA ADM2 NYC county geometry fixture",
+      "dcterms:description": "Five reviewed generalized, shoreline-clipped 2018 Census-derived county geometries, with build-specific identities, lifecycle/confidence metadata, attribution and limitations.",
+      "dcterms:format": "application/geo+json",
+      "dcat:mediaType": "application/geo+json",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+      },
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dcterms:rights": "Attribution: geoBoundaries, William & Mary geoLab. Extracted five reviewed NYC features, reordered them, and added metadata; geometry coordinates are unchanged.",
+      "dcterms:source": {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+      }
     },
     {
       "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
