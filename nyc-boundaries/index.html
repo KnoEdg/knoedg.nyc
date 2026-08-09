@@ -203,9 +203,10 @@
           <p class="annotation">The confidence score for geoBoundaries qualifies the reviewed cross-release identity mapping. The Overture score qualifies mappings to exact OSM relation versions. The Who's On First score qualifies mappings supported by exact Census GEOID concordances. None is a claim of independent authority.</p>
         </section>
 
+        <!-- BEGIN GENERATED: measurement-disposition -->
         <section aria-labelledby="agreement">
           <h2 id="agreement">Where independent land-area measurements agree</h2>
-          <p>This numeric comparison is intentionally limited to two independently maintained, directly comparable land-area measurements: areas calculated from DCP water-excluded geometry and Census Gazetteer land-area values. They are within 1.25% for every borough/county pair. The review treats this as normal cross-source measurement variance, not a contradiction.</p>
+          <p>The two independent, directly comparable land-area series are within 1.25% for every borough/county pair; this is treated as ordinary cross-source measurement variance, not a contradiction.</p>
           <div class="table-wrap">
             <table class="numeric">
               <thead>
@@ -220,8 +221,37 @@
               </tbody>
             </table>
           </div>
-          <p class="annotation">The other governed representations are not additional rows in this table. OpenStreetMap supplies boundary geometry, but this collection has not governed a comparable calculated land-area measurement from it. geoBoundaries and Who's On First use Census-derived geometry, while Overture derives from OpenStreetMap. They add useful geometry, identifiers, hierarchy, release history and land/maritime semantics, but not another independent land-area measurement.</p>
+          <h3>Measurement availability and comparison disposition</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Source group</th><th>Numeric area availability</th><th>Metric</th><th>Land-area table</th><th>Governed reason</th></tr></thead>
+              <tbody>
+                <tr><td>DCP</td><td>Available · governed-calculation</td><td>land area</td><td>Included</td><td>Five governed water-excluded geometry calculations are directly compared with Census Gazetteer land-area values.</td></tr>
+                <tr><td>Census Gazetteer</td><td>Available · publisher-supplied</td><td>land area</td><td>Included</td><td>The publisher supplies land-only area values directly in the 2023 county Gazetteer.</td></tr>
+                <tr><td>OpenStreetMap</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The governed relation records supply boundary geometry and version metadata, but no source-provided numeric area field. A future geometry calculation would be a separate governed assertion.</td></tr>
+                <tr><td>geoBoundaries</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The reviewed ADM2 features supply generalized geometry but no numeric area field, and their geometry is Census-derived.</td></tr>
+                <tr><td>Overture</td><td>No numeric area in reviewed source record</td><td>—</td><td>Excluded</td><td>The reviewed division_area records supply geometry and land/maritime classification but no numeric area field, and their geometry derives from the governed OSM relations.</td></tr>
+                <tr><td>Who's On First</td><td>Available · source-record-derived-geometric-area</td><td>geometric area</td><td>Excluded</td><td>WOF supplies Shapely-derived geometric area for its Census-sourced Quattroshapes geometry. It is not land-only and is not an independent measurement, so it is not directly comparable with the DCP/Census land-area table.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="annotation">Measurement availability and source independence are separate. A numeric field can be available yet excluded because its metric or provenance is not comparable; geometry without a numeric area requires a separate governed calculation before comparison.</p>
+          <h3>Who's On First geometric-area fields</h3>
+          <p>All five WOF records supply <code>geom:area_square_m</code>. WOF documents these as Shapely-derived geometric areas. Because the underlying geometry is Census-sourced Quattroshapes and the metric is not land-only, these values are governed and shown here but excluded from the independent land-area table.</p>
+          <div class="table-wrap">
+            <table class="numeric">
+              <thead><tr><th>Borough / county</th><th>WOF ID</th><th><code>geom:area_square_m</code></th></tr></thead>
+              <tbody>
+                <tr><td>Manhattan / New York County</td><td>102081863</td><td>86,897,676.555846</td></tr>
+                <tr><td>Bronx / Bronx County</td><td>102083063</td><td>148,690,598.289121</td></tr>
+                <tr><td>Brooklyn / Kings County</td><td>102082361</td><td>250,730,261.838561</td></tr>
+                <tr><td>Queens / Queens County</td><td>102082377</td><td>461,032,060.060989</td></tr>
+                <tr><td>Staten Island / Richmond County</td><td>102081779</td><td>264,637,333.644406</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
+        <!-- END GENERATED: measurement-disposition -->
 
         <section aria-labelledby="differences">
           <h2 id="differences">Differences that should remain visible</h2>

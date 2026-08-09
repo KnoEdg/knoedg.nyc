@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "nyc-boundary-public-view",
+  "resource": "https://knoedg.nyc/nyc-boundaries/",
+  "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
+  "activeRecordCount": 46,
+  "sourceGroups": [
+    {
+      "id": "dcp",
+      "label": "DCP",
+      "count": 10,
+      "provenanceCluster": "NYC Department of City Planning",
+      "independentEvidenceFamily": true,
+      "measurement": {
+        "numericAreaAvailable": true,
+        "status": "governed-calculation",
+        "metric": "land area",
+        "property": "Area calculated from governed DCP water-excluded geometry",
+        "unit": "square mile",
+        "independent": true,
+        "comparisonDisposition": "included",
+        "reason": "Five governed water-excluded geometry calculations are directly compared with Census Gazetteer land-area values."
+      }
+    },
+    {
+      "id": "census-gazetteer",
+      "label": "Census Gazetteer",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau",
+      "independentEvidenceFamily": true,
+      "measurement": {
+        "numericAreaAvailable": true,
+        "status": "publisher-supplied",
+        "metric": "land area",
+        "property": "ALAND",
+        "unit": "square meter",
+        "independent": true,
+        "comparisonDisposition": "included",
+        "reason": "The publisher supplies land-only area values directly in the 2023 county Gazetteer."
+      }
+    },
+    {
+      "id": "openstreetmap",
+      "label": "OpenStreetMap",
+      "count": 10,
+      "provenanceCluster": "OpenStreetMap",
+      "independentEvidenceFamily": true,
+      "measurement": {
+        "numericAreaAvailable": false,
+        "status": "not-provided-in-reviewed-source-record",
+        "metric": null,
+        "property": null,
+        "unit": null,
+        "independent": null,
+        "comparisonDisposition": "excluded",
+        "reason": "The governed relation records supply boundary geometry and version metadata, but no source-provided numeric area field. A future geometry calculation would be a separate governed assertion."
+      }
+    },
+    {
+      "id": "geoboundaries",
+      "label": "geoBoundaries",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau",
+      "independentEvidenceFamily": false,
+      "measurement": {
+        "numericAreaAvailable": false,
+        "status": "not-provided-in-reviewed-source-record",
+        "metric": null,
+        "property": null,
+        "unit": null,
+        "independent": false,
+        "comparisonDisposition": "excluded",
+        "reason": "The reviewed ADM2 features supply generalized geometry but no numeric area field, and their geometry is Census-derived."
+      }
+    },
+    {
+      "id": "overture",
+      "label": "Overture",
+      "count": 11,
+      "provenanceCluster": "OpenStreetMap",
+      "independentEvidenceFamily": false,
+      "measurement": {
+        "numericAreaAvailable": false,
+        "status": "not-provided-in-reviewed-source-record",
+        "metric": null,
+        "property": null,
+        "unit": null,
+        "independent": false,
+        "comparisonDisposition": "excluded",
+        "reason": "The reviewed division_area records supply geometry and land/maritime classification but no numeric area field, and their geometry derives from the governed OSM relations."
+      }
+    },
+    {
+      "id": "whos-on-first",
+      "label": "Who's On First",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau via Quattroshapes",
+      "independentEvidenceFamily": false,
+      "measurement": {
+        "numericAreaAvailable": true,
+        "status": "source-record-derived-geometric-area",
+        "metric": "geometric area",
+        "property": "geom:area_square_m",
+        "unit": "square meter",
+        "independent": false,
+        "comparisonDisposition": "excluded",
+        "reason": "WOF supplies Shapely-derived geometric area for its Census-sourced Quattroshapes geometry. It is not land-only and is not an independent measurement, so it is not directly comparable with the DCP/Census land-area table.",
+        "derivationReference": "https://whosonfirst.org/docs/properties/geom/"
+      }
+    }
+  ],
+  "independentLandAreaComparison": {
+    "heading": "Where independent land-area measurements agree",
+    "maximumObservedDifferencePercent": 1.25,
+    "assessment": "The two independent, directly comparable land-area series are within 1.25% for every borough/county pair; this is treated as ordinary cross-source measurement variance, not a contradiction.",
+    "rows": [
+      {
+        "place": "Manhattan / New York County",
+        "dcpSquareMiles": 22.836,
+        "censusSquareMiles": 22.658,
+        "differencePercent": 0.79
+      },
+      {
+        "place": "Bronx / Bronx County",
+        "dcpSquareMiles": 42.585,
+        "censusSquareMiles": 42.176,
+        "differencePercent": 0.97
+      },
+      {
+        "place": "Brooklyn / Kings County",
+        "dcpSquareMiles": 69.389,
+        "censusSquareMiles": 69.377,
+        "differencePercent": 0.02
+      },
+      {
+        "place": "Queens / Queens County",
+        "dcpSquareMiles": 109.096,
+        "censusSquareMiles": 108.724,
+        "differencePercent": 0.34
+      },
+      {
+        "place": "Staten Island / Richmond County",
+        "dcpSquareMiles": 58.239,
+        "censusSquareMiles": 57.523,
+        "differencePercent": 1.25
+      }
+    ]
+  },
+  "whosOnFirstGeometricAreas": [
+    {
+      "wofId": 102081863,
+      "place": "Manhattan / New York County",
+      "squareMeters": 86897676.555846
+    },
+    {
+      "wofId": 102083063,
+      "place": "Bronx / Bronx County",
+      "squareMeters": 148690598.289121
+    },
+    {
+      "wofId": 102082361,
+      "place": "Brooklyn / Kings County",
+      "squareMeters": 250730261.838561
+    },
+    {
+      "wofId": 102082377,
+      "place": "Queens / Queens County",
+      "squareMeters": 461032060.060989
+    },
+    {
+      "wofId": 102081779,
+      "place": "Staten Island / Richmond County",
+      "squareMeters": 264637333.644406
+    }
+  ],
+  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted."
+}

@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE_DIR = ROOT / "nyc-boundaries"
 MANIFEST_PATH = RESOURCE_DIR / "record-counts.json"
+ARTIFACT_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
 HTML_PATH = RESOURCE_DIR / "index.html"
 JSONLD_PATH = RESOURCE_DIR / "index.jsonld"
 
@@ -19,10 +20,23 @@ def fail(message: str) -> None:
 
 
 manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+artifact = json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))
 html = HTML_PATH.read_text(encoding="utf-8")
 jsonld = json.loads(JSONLD_PATH.read_text(encoding="utf-8"))
 
 expected_total = manifest["activeRecordCount"]
+if manifest["activeRecordCount"] != artifact["activeRecordCount"]:
+    fail("generated count manifest disagrees with the canonical artifact")
+if manifest["representations"] != [
+    {
+        "id": group["id"],
+        "label": group["label"],
+        "count": group["count"],
+        "provenanceCluster": group["provenanceCluster"],
+    }
+    for group in artifact["sourceGroups"]
+]:
+    fail("generated representation groups disagree with the canonical artifact")
 groups = manifest["representations"]
 computed_total = sum(group["count"] for group in groups)
 
@@ -65,6 +79,31 @@ if match is None or int(match.group(1)) != expected_total:
         "JSON-LD dataset description does not contain the reconciled total "
         f"{expected_total}"
     )
+
+for group in artifact["sourceGroups"]:
+    status = group["measurement"]["status"]
+    claim = next(
+        (
+            node for node in jsonld.get("@graph", [])
+            if node.get("@id", "").endswith({
+                "dcp": "#dcp-water-excluded",
+                "census-gazetteer": "#census-county",
+                "openstreetmap": "#osm-administrative",
+                "geoboundaries": "#geoboundaries-adm2",
+                "overture": "#overture-divisions",
+                "whos-on-first": "#whos-on-first-counties",
+            }[group["id"]])
+        ),
+        None,
+    )
+    if claim is None:
+        fail(f"JSON-LD claim missing for {group['id']}")
+    values = {
+        prop.get("schema:name"): prop.get("schema:value")
+        for prop in claim.get("schema:additionalProperty", [])
+    }
+    if values.get("Numeric area availability") != status:
+        fail(f"JSON-LD measurement status disagrees for {group['id']}")
 
 print(
     f"NYC boundary counts reconcile: {expected_total} active records across "
