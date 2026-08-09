@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The reviewed public fixture set used to render KnoEdg.NYC's five-borough shoreline map.">
-  <title>NYC borough shoreline boundaries — KnoEdg.NYC fixture set</title>
-  <link rel="canonical" href="https://knoedg.nyc/fixtures/nyc-borough-boundaries/">
+  <meta name="description" content="This legacy URL now points to the canonical NYC Boundaries knowledge resource.">
+  <meta http-equiv="refresh" content="0; url=/nyc-boundaries/">
+  <title>NYC Boundaries — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-boundaries/">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
@@ -19,35 +20,11 @@
       </nav>
     </div>
   </header>
-  <main class="page">
-    <div class="shell">
-      <article class="copy">
-        <p class="eyebrow">Published fixture set</p>
-        <h1>NYC borough shoreline boundaries</h1>
-        <p>This fixture set supplies the geometry used to render the five-borough map on the KnoEdg.NYC homepage. It represents the current New York City borough boundaries with water areas excluded, producing the recognizable land and shoreline shapes.</p>
-
-        <h2>Included geometry</h2>
-        <p>Manhattan, the Bronx, Brooklyn, Queens and Staten Island are included as five reviewed, preprojected SVG paths.</p>
-
-        <h2>Publication path</h2>
-        <p>The boundary assertions were governed in the private <code>pack-nyc</code> repository, cleared for publication through <a href="https://github.com/KnoEdg/meta-knoedg-nyc">meta-knoedg-nyc</a>, and published here as a public-safe fixture. The site generates the presentation SVG exclusively from that committed fixture, without network access or a private-repository dependency.</p>
-
-        <h2>Fixture artifacts</h2>
-        <ul>
-          <li><a href="/data/fixtures/nyc-boroughs-water-excluded.json">Boundary fixture (JSON)</a></li>
-          <li><a href="https://github.com/KnoEdg/knoedg.nyc/blob/main/scripts/generate_nyc_boroughs_svg.py">Offline SVG generator</a></li>
-          <li><a href="/assets/nyc-boroughs.svg">Generated map (SVG)</a></li>
-          <li><a href="/data/fixtures/SHA256SUMS">SHA-256 checksum manifest</a></li>
-        </ul>
-
-        <h2>Upstream source</h2>
-        <p>NYC Department of City Planning, <a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne">Borough Boundaries</a>, water areas excluded. Dataset identifier: <code>gthc-hcne</code>.</p>
-
-        <h2>Reproducibility note</h2>
-        <p>This first publication is reproducible from the reviewed public fixture forward: the fixture regenerates the SVG byte for byte. The original upstream API-response checksum and the initial geographic-to-SVG projection script were not retained. Future publication runs are required to preserve that complete upstream transformation chain.</p>
-      </article>
-    </div>
-  </main>
+  <main class="page"><div class="shell copy">
+    <p class="eyebrow">Moved</p>
+    <h1>NYC Boundaries</h1>
+    <p>This public view has moved to the canonical <a href="/nyc-boundaries/">NYC Boundaries knowledge resource</a>.</p>
+  </div></main>
   <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
 </body>
 </html>

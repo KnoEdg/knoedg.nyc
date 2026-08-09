@@ -125,6 +125,53 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .copy p { color: var(--muted); font-size: 1.18rem; }
 .copy p:first-of-type { color: var(--ink); font-size: 1.35rem; }
 
+.resource-page { padding: clamp(3.5rem, 8vw, 7rem) 0; }
+.resource-page section { border-top: 1px solid var(--line); margin-top: clamp(3rem, 7vw, 5rem); padding-top: clamp(3rem, 7vw, 5rem); }
+.resource-page h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
+.resource-page h2 { margin-bottom: 1.25rem; }
+.resource-page h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 500; line-height: 1.2; margin: 0 0 0.8rem; }
+.resource-page p { color: var(--muted); max-width: 52rem; }
+.resource-header { display: grid; gap: clamp(2.5rem, 6vw, 6rem); grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.65fr); align-items: center; }
+.resource-lede { font-size: clamp(1.2rem, 2.5vw, 1.55rem); margin: 2rem 0 0; }
+.resource-map { margin: 0; }
+.resource-map img { display: block; height: auto; width: 100%; }
+.resource-map figcaption { color: var(--muted); font-size: 0.78rem; margin-top: 0.75rem; text-align: right; }
+.resource-facts { border-block: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(3rem, 7vw, 5rem) 0 0; }
+.resource-facts div { padding: 1.25rem; }
+.resource-facts div + div { border-left: 1px solid var(--line); }
+.resource-facts dt { color: var(--muted); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.resource-facts dd { font-size: 0.98rem; margin: 0.35rem 0 0; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; font-size: 0.92rem; min-width: 46rem; width: 100%; }
+th, td { border-bottom: 1px solid var(--line); padding: 1rem; text-align: left; vertical-align: top; }
+th { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+th span { font-size: 0.9em; letter-spacing: 0; text-transform: none; }
+.numeric td:not(:first-child), .numeric th:not(:first-child) { text-align: right; }
+.status { background: #dfeee7; border-radius: 999px; color: var(--accent-dark); display: inline-block; font-size: 0.72rem; font-weight: 750; margin-right: 0.35rem; padding: 0.12rem 0.5rem; }
+.annotation { font-size: 0.88rem; }
+.knowledge-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+.knowledge-card { background: var(--panel); border: 1px solid var(--line); padding: clamp(1.5rem, 4vw, 2.5rem); }
+.knowledge-card p { margin-bottom: 0; }
+.downloads { display: grid; gap: 0.75rem; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; padding: 0; }
+.downloads a { background: var(--panel); border: 1px solid var(--line); display: block; padding: 1.1rem 1.25rem; text-decoration: none; }
+.downloads strong, .downloads span { display: block; }
+.downloads span { color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
+.check-list { padding-left: 1.2rem; }
+.check-list li { margin-bottom: 0.65rem; }
+.limitation { background: #eee7d8; border: 0 !important; margin-inline: -1.5rem; padding: clamp(1.5rem, 5vw, 3rem) !important; }
+.limitation h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.history { padding-left: 1.2rem; }
+.history li { margin-bottom: 0.65rem; }
+
+@media (max-width: 56rem) {
+  .resource-header { grid-template-columns: 1fr; }
+  .resource-map { margin-inline: auto; max-width: 24rem; }
+  .resource-facts { grid-template-columns: 1fr 1fr; }
+  .resource-facts div + div { border-left: 0; }
+  .resource-facts div:nth-child(even) { border-left: 1px solid var(--line); }
+  .resource-facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
 .section-divider {
   border: 0;
   border-top: 1px solid var(--line);
@@ -156,6 +203,7 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
   h1 { letter-spacing: -0.04em; }
   .hero-grid { grid-template-columns: 1fr; }
   .nyc-map { margin-inline: auto; max-width: 28rem; width: 100%; }
+  .knowledge-grid, .downloads { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A governed public view of New York City boundary representations, their sources, agreements, differences, provenance and published artifacts.">
+  <title>NYC Boundaries — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-boundaries/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/nyc-boundaries/index.jsonld" title="NYC Boundaries structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+      <article>
+        <header class="resource-header">
+          <div>
+            <p class="eyebrow">Knowledge resource</p>
+            <h1>NYC Boundaries</h1>
+            <p class="resource-lede">A governed public view of how multiple sources represent New York City’s borough and county boundaries—without flattening shoreline, offshore, administrative and naming differences into one unquestioned shape.</p>
+          </div>
+          <figure class="resource-map">
+            <img src="/assets/nyc-boroughs.svg" alt="Water-excluded shoreline geometry for New York City’s five boroughs">
+            <figcaption>Published DCP water-excluded fixture · five boroughs</figcaption>
+          </figure>
+        </header>
+
+        <dl class="resource-facts" aria-label="Resource status">
+          <div><dt>Scope</dt><dd>Five boroughs and corresponding counties</dd></div>
+          <div><dt>Sources represented</dt><dd>NYC DCP, U.S. Census Bureau, OpenStreetMap</dd></div>
+          <div><dt>Governed assertions</dt><dd>25 active records</dd></div>
+          <div><dt>Last reviewed</dt><dd><time datetime="2026-08-09">August 9, 2026</time></dd></div>
+        </dl>
+
+        <section aria-labelledby="why-boundaries-differ">
+          <h2 id="why-boundaries-differ">One city, several valid boundaries</h2>
+          <p>A boundary depends on the question being asked. The Department of City Planning publishes both water-excluded shoreline geometry and water-included geometry. The Census Bureau publishes county land and water measurements. OpenStreetMap represents each borough and its corresponding county as separate administrative relations, even where they refer to the same real-world extent.</p>
+          <p>These are not interchangeable records. This view keeps the source, method, administrative framing and review assessment attached to each claim.</p>
+        </section>
+
+        <section aria-labelledby="compared-views">
+          <h2 id="compared-views">Compared views</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>View</th><th>What it represents</th><th>KEE review state</th><th>Evidence</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>NYC DCP · water excluded</td>
+                  <td>Five borough shoreline geometries, excluding water areas</td>
+                  <td><span class="status">Active</span> High confidence · 0.95</td>
+                  <td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne">Dataset gthc-hcne</a></td>
+                </tr>
+                <tr>
+                  <td>NYC DCP · water included</td>
+                  <td>Five borough geometries extending into surrounding water</td>
+                  <td><span class="status">Active</span> High confidence · 0.95</td>
+                  <td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf">Dataset wh2p-dxnf</a></td>
+                </tr>
+                <tr>
+                  <td>U.S. Census Bureau</td>
+                  <td>2023 county land and water area, TIGER/Line-derived</td>
+                  <td><span class="status">Active</span> High confidence · 0.93</td>
+                  <td><a href="https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip">2023 county Gazetteer</a></td>
+                </tr>
+                <tr>
+                  <td>OpenStreetMap</td>
+                  <td>Paired county and borough administrative relations</td>
+                  <td><span class="status">Active</span> Moderate confidence · 0.78</td>
+                  <td><a href="https://www.openstreetmap.org/relation/175905">New York relation and members</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="annotation">Confidence values qualify the reviewed assertions in this collection; they are not universal ratings of an entire publisher or dataset.</p>
+        </section>
+
+        <section aria-labelledby="agreement">
+          <h2 id="agreement">Where the measurements agree</h2>
+          <p>The independently maintained DCP water-excluded and Census land-only measurements are within 1.25% for every borough/county pair. The review treats this as normal cross-source measurement variance, not a contradiction.</p>
+          <div class="table-wrap">
+            <table class="numeric">
+              <thead>
+                <tr><th>Borough / county</th><th>DCP land shape<br><span>sq mi</span></th><th>Census land<br><span>sq mi</span></th><th>Difference</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Manhattan / New York County</td><td>22.836</td><td>22.658</td><td>0.79%</td></tr>
+                <tr><td>Bronx / Bronx County</td><td>42.585</td><td>42.176</td><td>0.97%</td></tr>
+                <tr><td>Brooklyn / Kings County</td><td>69.389</td><td>69.377</td><td>0.02%</td></tr>
+                <tr><td>Queens / Queens County</td><td>109.096</td><td>108.724</td><td>0.34%</td></tr>
+                <tr><td>Staten Island / Richmond County</td><td>58.239</td><td>57.523</td><td>1.25%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section aria-labelledby="differences">
+          <h2 id="differences">Differences that should remain visible</h2>
+          <div class="knowledge-grid">
+            <article class="knowledge-card">
+              <h3>Shoreline vs. offshore</h3>
+              <p>Water-excluded geometry traces inlets, coves and piers. Water-included geometry follows a smoother offshore boundary. A larger area can therefore have a shorter perimeter. The review records this as a methodological distinction, not conflicting evidence.</p>
+            </article>
+            <article class="knowledge-card">
+              <h3>Borough vs. county</h3>
+              <p>OpenStreetMap keeps separate borough and county relations. The paired records are treated as close representations of the same referent, not collapsed into an exact-identity claim and not marked as a contradiction.</p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="published-material">
+          <h2 id="published-material">Published fixture and artifacts</h2>
+          <p>The currently downloadable raw fixture is the DCP water-excluded five-borough geometry used by the homepage. It is one member of this broader boundary collection; the comparison records summarized above are not yet published as raw exports.</p>
+          <ul class="downloads">
+            <li><a href="/data/fixtures/nyc-boroughs-water-excluded.json"><strong>Raw fixture</strong><span>JSON · five preprojected borough paths</span></a></li>
+            <li><a href="/assets/nyc-boroughs.svg"><strong>Generated map</strong><span>SVG presentation artifact</span></a></li>
+            <li><a href="https://github.com/KnoEdg/knoedg.nyc/blob/main/scripts/generate_nyc_boroughs_svg.py"><strong>Offline generator</strong><span>Python · no network dependency</span></a></li>
+            <li><a href="/data/fixtures/SHA256SUMS"><strong>Checksum manifest</strong><span>SHA-256 verification</span></a></li>
+            <li><a href="/nyc-boundaries/index.jsonld"><strong>Structured description</strong><span>JSON-LD</span></a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="quality">
+          <h2 id="quality">Validation and provenance</h2>
+          <ul class="check-list">
+            <li>Five unique, named borough paths are required by the generator.</li>
+            <li>The SVG regenerates byte for byte from the public fixture without a network request.</li>
+            <li>The public fixture, generator and SVG are covered by SHA-256 checksums.</li>
+            <li>The source comparison contains no recorded contradiction: observed differences are assessed as methodological choices, administrative framing or ordinary measurement variance.</li>
+            <li>KnoEdg.NYC publishes this view; each claim continues to identify its applicable public evidence source.</li>
+          </ul>
+        </section>
+
+        <section class="limitation" aria-labelledby="limitations">
+          <h2 id="limitations">Known limitations</h2>
+          <p>The original DCP API response used for the first map was not retained with a checksum, and the initial geographic-to-SVG projection script was not preserved. Reproducibility therefore begins with the reviewed public SVG-path fixture, not the original API response. Future boundary publications are required to retain the complete response and transformation chain before first publication.</p>
+          <p>The current public raw fixture covers only the DCP water-excluded geometry. Other source comparisons on this page are public summaries linked to their evidence; additional raw exports require their own publication review.</p>
+        </section>
+
+        <section aria-labelledby="history">
+          <h2 id="history">Publication history</h2>
+          <ol class="history">
+            <li><time datetime="2026-08-09">August 9, 2026</time> — Water-excluded borough fixture, deterministic generator and SVG published.</li>
+            <li><time datetime="2026-08-09">August 9, 2026</time> — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison.</li>
+          </ol>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>

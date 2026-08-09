@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC Boundaries",
+      "dcterms:description": "A governed public view of multiple representations of New York City borough and county boundaries.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
+      "dcterms:provenance": "The published geometry is reproducible from the reviewed public SVG-path fixture forward. The original upstream API-response checksum and initial projection script were not retained.",
+      "dcterms:issued": {
+        "@value": "2026-08-09",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-09",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {"@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded"},
+        {"@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included"},
+        {"@id": "https://knoedg.nyc/nyc-boundaries/#census-county"},
+        {"@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative"}
+      ],
+      "prov:wasDerivedFrom": [
+        {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"},
+        {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"},
+        {"@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"},
+        {"@id": "https://www.openstreetmap.org/relation/175905"}
+      ],
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      },
+      "dcat:distribution": [
+        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
+        {"@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"}
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#page",
+      "@type": "schema:WebPage",
+      "schema:name": "NYC Boundaries",
+      "schema:url": "https://knoedg.nyc/nyc-boundaries/",
+      "schema:mainEntity": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      },
+      "schema:isPartOf": {
+        "@id": "https://knoedg.nyc/"
+      },
+      "schema:datePublished": "2026-08-09",
+      "schema:dateModified": "2026-08-09"
+    },
+    {
+      "@id": "https://knoedg.nyc/#organization",
+      "@type": "schema:Organization",
+      "schema:name": "KnoEdg.NYC",
+      "schema:url": "https://knoedg.nyc/"
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcterms:title": "New York City borough boundaries, water excluded",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+      },
+      "dcat:mediaType": "application/json",
+      "schema:encodingFormat": "application/json",
+      "dcterms:rights": "Source attribution is retained. Review current NYC Open Data terms before redistribution.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcterms:title": "Generated NYC five-borough shoreline map",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"
+      },
+      "dcat:mediaType": "image/svg+xml",
+      "schema:encodingFormat": "image/svg+xml",
+      "prov:wasDerivedFrom": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded",
+      "@type": "schema:Claim",
+      "schema:text": "NYC DCP water-excluded data represents the five borough shoreline geometries used by the published map.",
+      "schema:citation": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+      },
+      "schema:additionalProperty": [
+        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95}
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included",
+      "@type": "schema:Claim",
+      "schema:text": "NYC DCP water-included data represents a distinct offshore boundary method for all five boroughs.",
+      "schema:citation": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+      },
+      "schema:additionalProperty": [
+        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95}
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#census-county",
+      "@type": "schema:Claim",
+      "schema:text": "The U.S. Census Bureau 2023 Gazetteer provides independently maintained county land and water measurements corresponding to the five boroughs.",
+      "schema:citation": {
+        "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+      },
+      "schema:additionalProperty": [
+        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.93}
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative",
+      "@type": "schema:Claim",
+      "schema:text": "OpenStreetMap represents corresponding borough and county administrative relations separately rather than collapsing them into one identity.",
+      "schema:citation": {
+        "@id": "https://www.openstreetmap.org/relation/175905"
+      },
+      "schema:additionalProperty": [
+        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
+        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.78}
+      ]
+    }
+  ]
+}
