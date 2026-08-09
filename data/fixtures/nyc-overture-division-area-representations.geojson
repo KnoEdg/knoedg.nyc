@@ -14619,7 +14619,7 @@
   ],
   "limitations": [
     "Geometry is Overture's own division_area representation, which integrates the cited OpenStreetMap relation rather than an independently surveyed boundary.",
-    "isTerritorial values were re-verified directly against the pinned release at publication time and differ from the fixture's original 2026-08-09 governed-capture disposition for ten of the eleven rows; see the publication record for the discrepancy and its disposition. All other fields (geometry, version, record_id, update_time) matched the original capture exactly.",
+    "isTerritorial values were re-verified directly against the pinned release at publication time and were found to differ from this collection's original 2026-08-09 governed capture for ten of the eleven rows; all other fields (geometry, version, record_id, update_time) matched the original capture exactly. A follow-up root-cause investigation (unchanged S3 asset ETag/Last-Modified/Content-Length, a duplicate-free reproducible query, and a global base rate of 99.6% true across the release) concluded this was an error in the original capture, not a live Overture data change; the governed TTL's prose was corrected accordingly.",
     "Overture's provider-dependent update_time is retained separately from the immutable OSM relation-version timestamp; no edit-time equivalence is asserted between them.",
     "areaId and divisionId identify a specific Overture release representation; they are not claimed as stable place identifiers across releases.",
     "No numeric area is supplied or calculated in this fixture."
