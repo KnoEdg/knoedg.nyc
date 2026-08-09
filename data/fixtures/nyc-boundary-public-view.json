@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-09T20:33:21Z",
+  "issuedAt": "2026-08-09T21:12:31Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-09.4",
+  "artifactVersion": "2026-08-09.5",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -2313,7 +2313,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The DCP water-excluded and water-included geometries, five Census Gazetteer county measurement records, and ten exact OpenStreetMap relation-version metadata records are downloadable public fixtures. The comparison map overlays the DCP geometries without a network request. The OpenStreetMap export contains metadata only—not geometry, relation members, Nominatim bounds, centroids, or numeric area. geoBoundaries, Overture and Who's On First records summarized above are governed in the source collection but are not yet published here as raw exports."
+                    "text": "The DCP water-excluded and water-included geometries, five Census Gazetteer county measurement records, ten exact OpenStreetMap relation-version metadata records, and five geoBoundaries county geometries are downloadable public fixtures. The comparison map overlays the DCP geometries without a network request. The OpenStreetMap export contains metadata only—not geometry, relation members, Nominatim bounds, centroids, or numeric area. The geoBoundaries export contains the retained generalized, shoreline-clipped 2018 Census-derived geometries with CC BY 4.0 attribution and no numeric area. Overture and Who's On First records summarized above are governed in the source collection but are not yet published here as raw exports."
                   }
                 ]
               },
@@ -2401,6 +2401,27 @@
                         {
                           "type": "text",
                           "text": "JSON · ten exact county/borough relation versions; metadata only; no geometry"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson",
+                      "content": [
+                        {
+                          "type": "strong",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "geoBoundaries county geometry"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "GeoJSON · five generalized, shoreline-clipped 2018 county representations · CC BY 4.0"
                         }
                       ]
                     }
@@ -2606,6 +2627,12 @@
                   [
                     {
                       "type": "text",
+                      "text": "The retained geoBoundaries subset regenerates as a schema-valid five-feature fixture with byte-identical geometry coordinates, deterministic borough ordering, attribution and limitations."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
                       "text": "The source comparison now covers 46 active governed records: 10 DCP, 5 Census Gazetteer, 10 OpenStreetMap, 5 geoBoundaries, 11 Overture and 5 Who's On First representations."
                     }
                   ],
@@ -2655,7 +2682,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. The Census records are published as measurements without geometry. The OpenStreetMap records are published as exact relation-version metadata without geometry, relation members, Nominatim bounds, centroids, or numeric area. geoBoundaries, Overture and Who's On First comparisons remain public summaries linked to their evidence; their raw exports require separate publication review."
+                    "text": "The water-included publication corrects that practice prospectively: its exact API response, checksum, normalized fixture, fixed projection and generated overlay are retained. The Census records are published as measurements without geometry. The OpenStreetMap records are published as exact relation-version metadata without geometry, relation members, Nominatim bounds, centroids, or numeric area. The geoBoundaries publication contains retained generalized, shoreline-clipped 2018 Census-derived geometry with no calculated area; it is not suitable for precise analysis or legal coastal extent. Overture and Who's On First comparisons remain public summaries linked to their evidence; their raw exports require separate publication review."
                   }
                 ]
               }
@@ -2730,6 +2757,12 @@
                       "type": "text",
                       "text": "August 9, 2026 — Ten exact OpenStreetMap county/borough relation versions published as a public-safe metadata fixture with stable identifiers, timestamps, governed assertion links, ODbL attribution, and explicit geometry/measurement absence."
                     }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 9, 2026 — Five retained geoBoundaries USA ADM2 county geometries published with CC BY 4.0 attribution, build-specific identifiers, Census provenance-cluster disposition, deterministic regeneration and explicit generalized/shoreline-clipped limitations."
+                    }
                   ]
                 ]
               }
@@ -2757,7 +2790,7 @@
           "@id": "https://knoedg.nyc/#organization"
         },
         "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-        "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay.",
+        "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates.",
         "dcterms:issued": {
           "@value": "2026-08-09",
           "@type": "xsd:date"
@@ -2871,6 +2904,9 @@
             "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
           },
           {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+          },
+          {
             "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
           },
           {
@@ -2971,17 +3007,61 @@
           "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
         },
         "prov:wasDerivedFrom": [
-          {"@id": "https://www.openstreetmap.org/relation/2552485/history/56"},
-          {"@id": "https://www.openstreetmap.org/relation/8398124/history/50"},
-          {"@id": "https://www.openstreetmap.org/relation/2552450/history/32"},
-          {"@id": "https://www.openstreetmap.org/relation/9691916/history/24"},
-          {"@id": "https://www.openstreetmap.org/relation/369518/history/44"},
-          {"@id": "https://www.openstreetmap.org/relation/9691750/history/34"},
-          {"@id": "https://www.openstreetmap.org/relation/369519/history/71"},
-          {"@id": "https://www.openstreetmap.org/relation/9691819/history/39"},
-          {"@id": "https://www.openstreetmap.org/relation/962876/history/18"},
-          {"@id": "https://www.openstreetmap.org/relation/9691948/history/17"}
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+          }
         ]
+      },
+      {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson",
+        "@type": [
+          "dcat:Distribution",
+          "schema:DataDownload"
+        ],
+        "dcterms:title": "geoBoundaries USA ADM2 NYC county geometry fixture",
+        "dcterms:description": "Five reviewed generalized, shoreline-clipped 2018 Census-derived county geometries, with build-specific identities, lifecycle/confidence metadata, attribution and limitations.",
+        "dcterms:format": "application/geo+json",
+        "dcat:mediaType": "application/geo+json",
+        "dcat:downloadURL": {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+        },
+        "dcterms:license": {
+          "@id": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "dcterms:rights": "Attribution: geoBoundaries, William & Mary geoLab. Extracted five reviewed NYC features, reordered them, and added metadata; geometry coordinates are unchanged.",
+        "dcterms:source": {
+          "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+        },
+        "prov:wasDerivedFrom": {
+          "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+        }
       },
       {
         "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
