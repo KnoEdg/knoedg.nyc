@@ -36,10 +36,11 @@ The original water-excluded upstream response checksum and first projection scri
 ## NYC Boundaries generation and validation
 
 `data/fixtures/nyc-boundary-public-view.json` is the canonical public-safe
-artifact for fixture-derived counts, provenance clusters, measurement
-availability, measurement semantics, comparison dispositions, and values.
-`nyc-boundaries/record-counts.json`, the generated HTML measurement section,
-and matching JSON-LD properties are outputs—not independent sources.
+artifact for every fixture-dependent fact and disposition on the NYC Boundaries
+resource. `templates/fixture-page.html` contains only reusable site structure.
+The generic `scripts/generate_fixture_page.py` renderer produces the complete
+HTML article, JSON-LD representation, and count manifest; none is an independent
+semantic source.
 
 Regenerate and verify without network access:
 
