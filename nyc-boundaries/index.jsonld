@@ -11,7 +11,7 @@
       "@id": "https://knoedg.nyc/nyc-boundaries/",
       "@type": "dcat:Dataset",
       "dcterms:title": "NYC Boundaries",
-      "dcterms:description": "A governed public view of 41 representations of New York City borough and county boundaries, with derived products grouped by upstream provenance.",
+      "dcterms:description": "A governed public view of 46 representations of New York City borough and county boundaries, with derived products grouped by upstream provenance.",
       "dcterms:publisher": {
         "@id": "https://knoedg.nyc/#organization"
       },
@@ -46,6 +46,9 @@
         },
         {
           "@id": "https://knoedg.nyc/nyc-boundaries/#overture-divisions"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#whos-on-first-counties"
         }
       ],
       "prov:wasDerivedFrom": [
@@ -93,6 +96,21 @@
         },
         {
           "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
         }
       ],
       "dcat:landingPage": {
@@ -677,6 +695,230 @@
       "dcterms:license": {
         "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
       }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#whos-on-first-counties",
+      "@type": "schema:Claim",
+      "schema:text": "Five current Who's On First county records provide stable WOF identifiers, the New York locality's five-county hierarchy, Census GEOID/HASC concordances and boundary representations whose default geometry is sourced from Quattroshapes and US Census. They remain in the Census provenance cluster.",
+      "schema:citation": [
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Representations",
+          "schema:value": 5
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Provenance cluster",
+          "schema:value": "U.S. Census via Quattroshapes"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independence disposition",
+          "schema:value": "Not independent corroboration"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Hierarchy context",
+          "schema:value": "New York locality WOF:85977539; not counted as a sixth boundary assertion"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": "Per cited WOF record: 2024-08-02T06:31:21Z through 2024-08-02T06:31:34Z"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102081863",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:21Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/863/102081863.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36061"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "6818d9de4ab7d1abfff7711ef1b250e2e417920c"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102083063",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:34Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/083/063/102083063.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36005"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "bfd0e6cacfc317b0614b70c0ebcedae54450b542"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102082361",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:27Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/361/102082361.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36047"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "8d2d0c14c5cf1f6bb3cb106722e36944443cfae2"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102082377",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:27Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/377/102082377.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36081"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "faeb46f2de1fb2ffcd2c08d89c242effd70ad787"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102081779",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:21Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/779/102081779.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36085"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "8f9d2af27850c47ec9f0b7555f24b8c81ff6f6c8"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
     }
   ]
 }
