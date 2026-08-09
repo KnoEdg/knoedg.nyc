@@ -4,10 +4,15 @@ on:
   pull_request:
     paths:
       - "nyc-boundaries/**"
+      - "assets/styles.css"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
+      - "scripts/validate_jsonld.py"
+      - "scripts/test_fixture_page_renderer.py"
+      - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "schemas/fixture-dependent-public-view/**"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
@@ -15,10 +20,15 @@ on:
       - main
     paths:
       - "nyc-boundaries/**"
+      - "assets/styles.css"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
+      - "scripts/validate_jsonld.py"
+      - "scripts/test_fixture_page_renderer.py"
+      - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "schemas/fixture-dependent-public-view/**"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
@@ -33,5 +43,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install pinned conformance dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check jsonschema==4.25.0 PyLD==2.0.4
+      - name: Validate v2 artifact against the public JSON Schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open("schemas/fixture-dependent-public-view/v2"))
+          artifact = json.load(open("data/fixtures/nyc-boundary-public-view.json"))
+          Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+          PY
       - run: python3 scripts/generate_nyc_boundaries_view.py --check
+      - run: python3 scripts/test_fixture_page_renderer.py
       - run: python3 scripts/validate_nyc_boundary_counts.py
+      - run: python3 scripts/validate_jsonld.py
