@@ -16,7 +16,7 @@
         "@id": "https://knoedg.nyc/#organization"
       },
       "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates.",
+      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates. The Who's On First publication deterministically derives a five-feature public fixture from the retained reviewed current county records without altering geometry coordinates.",
       "dcterms:issued": {
         "@value": "2026-08-09",
         "@type": "xsd:date"
@@ -131,6 +131,9 @@
         },
         {
           "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-whos-on-first-county-representations.geojson"
         },
         {
           "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
@@ -288,6 +291,41 @@
       "prov:wasDerivedFrom": {
         "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
       }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-whos-on-first-county-representations.geojson",
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
+      "dcterms:title": "Who's On First NYC county identity and geometry fixture",
+      "dcterms:description": "Five reviewed current Who's On First county records, with Quattroshapes/US Census-derived geometry unchanged, stable WOF identifiers, Census GEOID/HASC concordances, lifecycle/confidence metadata and a disclosed non-independent geom:area_square_m field.",
+      "dcterms:format": "application/geo+json",
+      "dcat:mediaType": "application/geo+json",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-whos-on-first-county-representations.geojson"
+      },
+      "dcterms:license": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/LICENSE.md"
+      },
+      "dcterms:rights": "Attribution: Who's On First / Quattroshapes (source: US Census). WOF repository structure is CC0; reviewed default county geometries use Quattroshapes under CC BY attribution. Extracted five reviewed current NYC county features, reordered them, and added metadata; geometry coordinates are unchanged.",
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+        }
+      ]
     },
     {
       "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
