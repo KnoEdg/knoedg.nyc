@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "resource": "https://knoedg.nyc/nyc-boundaries/",
+  "activeRecordCount": 41,
+  "representations": [
+    {
+      "id": "dcp",
+      "label": "DCP",
+      "count": 10,
+      "provenanceCluster": "NYC Department of City Planning"
+    },
+    {
+      "id": "census-gazetteer",
+      "label": "Census Gazetteer",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau"
+    },
+    {
+      "id": "openstreetmap",
+      "label": "OpenStreetMap",
+      "count": 10,
+      "provenanceCluster": "OpenStreetMap"
+    },
+    {
+      "id": "geoboundaries",
+      "label": "geoBoundaries",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau"
+    },
+    {
+      "id": "overture",
+      "label": "Overture",
+      "count": 11,
+      "provenanceCluster": "OpenStreetMap"
+    }
+  ]
+}
