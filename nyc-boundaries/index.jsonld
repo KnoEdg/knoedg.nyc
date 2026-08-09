@@ -29,26 +29,79 @@
         "@id": "https://www.wikidata.org/entity/Q60"
       },
       "dcterms:hasPart": [
-        {"@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded"},
-        {"@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included"},
-        {"@id": "https://knoedg.nyc/nyc-boundaries/#census-county"},
-        {"@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative"}
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-excluded"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#dcp-water-included"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#census-county"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative"
+        }
       ],
       "prov:wasDerivedFrom": [
-        {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"},
-        {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"},
-        {"@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"},
-        {"@id": "https://www.openstreetmap.org/relation/175905"}
+        {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+        },
+        {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        },
+        {
+          "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+        }
       ],
       "dcat:landingPage": {
         "@id": "https://knoedg.nyc/nyc-boundaries/"
       },
       "dcat:distribution": [
-        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
-        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"},
-        {"@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"},
-        {"@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"},
-        {"@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"}
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+        },
+        {
+          "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"
+        },
+        {
+          "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
+        }
       ]
     },
     {
@@ -73,7 +126,10 @@
     },
     {
       "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json",
-      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
       "dcterms:title": "New York City borough boundaries, water excluded",
       "dcat:downloadURL": {
         "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
@@ -87,7 +143,10 @@
     },
     {
       "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson",
-      "@type": ["prov:Entity", "schema:DataDownload"],
+      "@type": [
+        "prov:Entity",
+        "schema:DataDownload"
+      ],
       "dcterms:title": "Retained NYC DCP water-included boundary response",
       "dcat:downloadURL": {
         "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
@@ -100,7 +159,10 @@
     },
     {
       "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
-      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
       "dcterms:title": "New York City borough boundaries, water included",
       "dcat:downloadURL": {
         "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
@@ -114,7 +176,10 @@
     },
     {
       "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg",
-      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
       "dcterms:title": "Generated NYC five-borough shoreline map",
       "dcat:downloadURL": {
         "@id": "https://knoedg.nyc/assets/nyc-boroughs.svg"
@@ -127,7 +192,10 @@
     },
     {
       "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg",
-      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
       "dcterms:title": "Generated water-included and water-excluded NYC boundary overlay",
       "dcat:downloadURL": {
         "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
@@ -135,8 +203,12 @@
       "dcat:mediaType": "image/svg+xml",
       "schema:encodingFormat": "image/svg+xml",
       "prov:wasDerivedFrom": [
-        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
-        {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"}
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+        }
       ]
     },
     {
@@ -147,9 +219,24 @@
         "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
       },
       "schema:additionalProperty": [
-        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95},
-        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2026-05-26T19:35:50Z",
+            "@type": "xsd:dateTime"
+          }
+        }
       ]
     },
     {
@@ -160,9 +247,24 @@
         "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
       },
       "schema:additionalProperty": [
-        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.95},
-        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2026-05-26T19:35:22Z",
+            "@type": "xsd:dateTime"
+          }
+        }
       ]
     },
     {
@@ -173,23 +275,262 @@
         "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
       },
       "schema:additionalProperty": [
-        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.93},
-        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.93
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2023-09-26T13:32:24Z",
+            "@type": "xsd:dateTime"
+          }
+        }
       ]
     },
     {
       "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative",
       "@type": "schema:Claim",
       "schema:text": "OpenStreetMap represents corresponding borough and county administrative relations separately rather than collapsing them into one identity.",
-      "schema:citation": {
-        "@id": "https://www.openstreetmap.org/relation/175905"
-      },
+      "schema:citation": [
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+        }
+      ],
       "schema:additionalProperty": [
-        {"@type": "schema:PropertyValue", "schema:name": "KEE lifecycle state", "schema:value": "Active"},
-        {"@type": "schema:PropertyValue", "schema:name": "KEE confidence", "schema:value": 0.78},
-        {"@type": "schema:PropertyValue", "schema:name": "Source last updated", "schema:value": "Not captured"}
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.78
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": "Per cited relation: 2025-08-24T18:21:46Z through 2026-06-15T09:04:18Z"
+        }
       ]
+    },
+    {
+      "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
+      "@type": [
+        "dcat:Dataset",
+        "schema:Dataset"
+      ],
+      "dcterms:modified": {
+        "@value": "2026-05-26T19:35:50Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
+      "@type": [
+        "dcat:Dataset",
+        "schema:Dataset"
+      ],
+      "dcterms:modified": {
+        "@value": "2026-05-26T19:35:22Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
+      "dcterms:modified": {
+        "@value": "2023-09-26T13:32:24Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/2552485/history/56",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/2552485"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "56"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/8398124/history/50",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/8398124"
+      },
+      "dcterms:modified": {
+        "@value": "2026-06-15T09:04:18Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "50"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/2552450/history/32",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/2552450"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-08T17:09:24Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "32"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691916/history/24",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691916"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-08T17:09:24Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "24"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/369518/history/44",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/369518"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "44"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691750/history/34",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691750"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "34"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/369519/history/71",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/369519"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "71"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691819/history/39",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691819"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "39"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/962876/history/18",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/962876"
+      },
+      "dcterms:modified": {
+        "@value": "2025-08-24T18:21:46Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "18"
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691948/history/17",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691948"
+      },
+      "dcterms:modified": {
+        "@value": "2025-08-24T18:21:46Z",
+        "@type": "xsd:dateTime"
+      },
+      "schema:version": "17"
     }
   ]
 }
