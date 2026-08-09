@@ -266,6 +266,21 @@
             "@value": "2026-05-26T19:35:50Z",
             "@type": "xsd:dateTime"
           }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "governed-calculation"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "Five governed water-excluded geometry calculations are directly compared with Census Gazetteer land-area values."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "included"
         }
       ]
     },
@@ -322,6 +337,21 @@
             "@value": "2023-09-26T13:32:24Z",
             "@type": "xsd:dateTime"
           }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "publisher-supplied"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "The publisher supplies land-only area values directly in the 2023 county Gazetteer."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "included"
         }
       ]
     },
@@ -376,6 +406,21 @@
           "@type": "schema:PropertyValue",
           "schema:name": "Source last updated",
           "schema:value": "Per cited relation: 2025-08-24T18:21:46Z through 2026-06-15T09:04:18Z"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "not-provided-in-reviewed-source-record"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "The governed relation records supply boundary geometry and version metadata, but no source-provided numeric area field. A future geometry calculation would be a separate governed assertion."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "excluded"
         }
       ]
     },
@@ -607,6 +652,21 @@
             "@value": "2023-12-12",
             "@type": "xsd:date"
           }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "not-provided-in-reviewed-source-record"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "The reviewed ADM2 features supply generalized geometry but no numeric area field, and their geometry is Census-derived."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "excluded"
         }
       ]
     },
@@ -655,6 +715,21 @@
             "@value": "2026-07-22T17:36:51Z",
             "@type": "xsd:dateTime"
           }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "not-provided-in-reviewed-source-record"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "The reviewed division_area records supply geometry and land/maritime classification but no numeric area field, and their geometry derives from the governed OSM relations."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "excluded"
         }
       ]
     },
@@ -752,6 +827,26 @@
           "@type": "schema:PropertyValue",
           "schema:name": "Source last updated",
           "schema:value": "Per cited WOF record: 2024-08-02T06:31:21Z through 2024-08-02T06:31:34Z"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Numeric area availability",
+          "schema:value": "source-record-derived-geometric-area"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Measurement semantics",
+          "schema:value": "WOF supplies Shapely-derived geometric area for its Census-sourced Quattroshapes geometry. It is not land-only and is not an independent measurement, so it is not directly comparable with the DCP/Census land-area table."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independent land-area comparison disposition",
+          "schema:value": "excluded"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source-supplied geometric areas",
+          "schema:value": "102081863: 86897676.555846 m²; 102083063: 148690598.289121 m²; 102082361: 250730261.838561 m²; 102082377: 461032060.060989 m²; 102081779: 264637333.644406 m²"
         }
       ]
     },
