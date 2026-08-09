@@ -11,7 +11,7 @@
       "@id": "https://knoedg.nyc/nyc-boundaries/",
       "@type": "dcat:Dataset",
       "dcterms:title": "NYC Boundaries",
-      "dcterms:description": "A governed public view of multiple representations of New York City borough and county boundaries.",
+      "dcterms:description": "A governed public view of 41 representations of New York City borough and county boundaries, with derived products grouped by upstream provenance.",
       "dcterms:publisher": {
         "@id": "https://knoedg.nyc/#organization"
       },
@@ -40,6 +40,12 @@
         },
         {
           "@id": "https://knoedg.nyc/nyc-boundaries/#osm-administrative"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#geoboundaries-adm2"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#overture-divisions"
         }
       ],
       "prov:wasDerivedFrom": [
@@ -81,6 +87,12 @@
         },
         {
           "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+        },
+        {
+          "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+        },
+        {
+          "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
         }
       ],
       "dcat:landingPage": {
@@ -531,6 +543,140 @@
         "@type": "xsd:dateTime"
       },
       "schema:version": "17"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#geoboundaries-adm2",
+      "@type": "schema:Claim",
+      "schema:text": "Five geoBoundaries USA ADM2 features are reviewed mappings to NYC counties. They are generalized, shoreline-clipped derivatives of 2018 Census MAF/TIGER cartographic boundaries and remain in the Census provenance cluster.",
+      "schema:citation": {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.82
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Representations",
+          "schema:value": 5
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Provenance cluster",
+          "schema:value": "U.S. Census"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independence disposition",
+          "schema:value": "Not independent corroboration"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Represented year",
+          "schema:value": 2018
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "geoBoundaries build date",
+          "schema:value": {
+            "@value": "2023-12-12",
+            "@type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#overture-divisions",
+      "@type": "schema:Claim",
+      "schema:text": "Eleven Overture Maps division-area representations map to the ten exact OpenStreetMap relation versions already governed here, including separate Richmond County land and maritime areas. They remain in the OpenStreetMap provenance cluster.",
+      "schema:citation": {
+        "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Representations",
+          "schema:value": 11
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Provenance cluster",
+          "schema:value": "OpenStreetMap"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Independence disposition",
+          "schema:value": "Not independent corroboration"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Overture release",
+          "schema:value": "2026-07-22.0"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Distribution modified",
+          "schema:value": {
+            "@value": "2026-07-22T17:36:51Z",
+            "@type": "xsd:dateTime"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:title": "geoBoundaries USA ADM2 immutable distribution",
+      "dcterms:issued": {
+        "@value": "2023-12-12",
+        "@type": "xsd:date"
+      },
+      "dcterms:temporal": "2018",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_500k.zip"
+      }
+    },
+    {
+      "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:title": "Overture Maps Divisions release 2026-07-22.0",
+      "dcterms:issued": {
+        "@value": "2026-07-22",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-07-22T17:36:51Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      }
     }
   ]
 }
