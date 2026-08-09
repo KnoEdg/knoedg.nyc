@@ -1,0 +1,129 @@
+{
+  "$schema": "https://knoedg.nyc/schemas/nyc-census-gazetteer-counties/v1",
+  "schemaVersion": 1,
+  "fixtureType": "census-gazetteer-county-measurements",
+  "fixtureVersion": "2026-08-09.1",
+  "id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json",
+  "resource": "https://knoedg.nyc/nyc-boundaries/",
+  "title": "2023 Census Gazetteer measurements for New York City's five counties",
+  "publisher": {
+    "name": "U.S. Census Bureau",
+    "url": "https://www.census.gov/"
+  },
+  "source": {
+    "product": "2023 Gazetteer county file",
+    "nationalDistribution": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+    "selectedStateFile": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_gaz_counties_36.txt",
+    "recordLayout": "https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/gaz-record-layouts/gaz23-record-layouts.html",
+    "representedYear": 2023,
+    "distributionModified": "2023-09-26T13:32:24Z",
+    "capturedAt": "2026-08-08T00:00:00Z",
+    "lineage": "TIGER/Line-derived Gazetteer county records",
+    "purpose": "Statistical county measurements and internal points; this fixture contains no boundary geometry and is not evidence of a legal boundary survey."
+  },
+  "rights": {
+    "redistributionDecision": "approved",
+    "statement": "Census Bureau employee-created data and works generally are not subject to copyright protection within the United States; attribution is retained.",
+    "reference": "https://www2.census.gov/foia/ds_policies/ds027.pdf",
+    "attribution": "U.S. Census Bureau, 2023 Gazetteer Files"
+  },
+  "selection": {
+    "rule": "Select the five New York State county records whose GEOIDs correspond to New York City's borough-county pairs.",
+    "countingGranularity": "Census county record",
+    "recordCount": 5,
+    "geometryIncluded": false
+  },
+  "measurementSemantics": {
+    "aland": "Land area in square meters, created for statistical purposes only.",
+    "awater": "Water area in square meters, created for statistical purposes only.",
+    "internalPoint": "Publisher-supplied internal latitude/longitude; not a centroid guarantee or boundary geometry."
+  },
+  "comparisonDisposition": {
+    "provenanceCluster": "U.S. Census Bureau",
+    "independentEvidenceFamily": true,
+    "landAreaStatus": "included",
+    "reason": "Publisher-supplied ALAND values are directly comparable with the independently governed DCP water-excluded geometry calculations."
+  },
+  "records": [
+    {
+      "boroughCode": 1,
+      "boroughName": "Manhattan",
+      "countyName": "New York County",
+      "geoid": "36061",
+      "ansiCode": "00974129",
+      "alandSquareMeters": 58683879,
+      "awaterSquareMeters": 29010416,
+      "alandSquareMiles": 22.658,
+      "awaterSquareMiles": 11.201,
+      "internalPoint": {"latitude": 40.776642, "longitude": -73.970187},
+      "governedAssertion": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-manhattan-per-census-tiger",
+      "lifecycle": "Active",
+      "confidence": 0.93
+    },
+    {
+      "boroughCode": 2,
+      "boroughName": "Bronx",
+      "countyName": "Bronx County",
+      "geoid": "36005",
+      "ansiCode": "00974101",
+      "alandSquareMeters": 109235672,
+      "awaterSquareMeters": 39353304,
+      "alandSquareMiles": 42.176,
+      "awaterSquareMiles": 15.194,
+      "internalPoint": {"latitude": 40.848711, "longitude": -73.852939},
+      "governedAssertion": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bronx-per-census-tiger",
+      "lifecycle": "Active",
+      "confidence": 0.93
+    },
+    {
+      "boroughCode": 3,
+      "boroughName": "Brooklyn",
+      "countyName": "Kings County",
+      "geoid": "36047",
+      "ansiCode": "00974122",
+      "alandSquareMeters": 179684484,
+      "awaterSquareMeters": 71158757,
+      "alandSquareMiles": 69.377,
+      "awaterSquareMiles": 27.475,
+      "internalPoint": {"latitude": 40.635045, "longitude": -73.95064},
+      "governedAssertion": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-brooklyn-per-census-tiger",
+      "lifecycle": "Active",
+      "confidence": 0.93
+    },
+    {
+      "boroughCode": 4,
+      "boroughName": "Queens",
+      "countyName": "Queens County",
+      "geoid": "36081",
+      "ansiCode": "00974139",
+      "alandSquareMeters": 281594053,
+      "awaterSquareMeters": 188444349,
+      "alandSquareMiles": 108.724,
+      "awaterSquareMiles": 72.759,
+      "internalPoint": {"latitude": 40.654658, "longitude": -73.841209},
+      "governedAssertion": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-queens-per-census-tiger",
+      "lifecycle": "Active",
+      "confidence": 0.93
+    },
+    {
+      "boroughCode": 5,
+      "boroughName": "Staten Island",
+      "countyName": "Richmond County",
+      "geoid": "36085",
+      "ansiCode": "00974141",
+      "alandSquareMeters": 148982680,
+      "awaterSquareMeters": 117441532,
+      "alandSquareMiles": 57.523,
+      "awaterSquareMiles": 45.344,
+      "internalPoint": {"latitude": 40.561263, "longitude": -74.1399},
+      "governedAssertion": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-richmond-county-per-census-tiger",
+      "lifecycle": "Active",
+      "confidence": 0.93
+    }
+  ],
+  "limitations": [
+    "The values are 2023 statistical Gazetteer fields and must not be presented as current legal-boundary survey measurements.",
+    "No boundary geometry is included in this fixture.",
+    "Borough and county names are paired for NYC presentation while the source records identify counties."
+  ]
+}
