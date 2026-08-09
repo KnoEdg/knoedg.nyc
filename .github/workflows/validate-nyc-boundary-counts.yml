@@ -16,16 +16,19 @@ on:
       - "data/fixtures/nyc-openstreetmap-relation-metadata.json"
       - "data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
       - "data/fixtures/nyc-whos-on-first-county-representations.geojson"
+      - "data/fixtures/nyc-overture-division-area-representations.geojson"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
       - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "schemas/nyc-geoboundaries-usa-adm2-counties/**"
       - "schemas/nyc-whos-on-first-county-representations/**"
+      - "schemas/nyc-overture-division-area-representations/**"
       - "scripts/validate_nyc_census_gazetteer_fixture.py"
       - "scripts/validate_nyc_osm_relation_metadata_fixture.py"
       - "scripts/validate_nyc_geoboundaries_fixture.py"
       - "scripts/validate_nyc_whos_on_first_fixture.py"
+      - "scripts/validate_nyc_overture_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
@@ -45,16 +48,19 @@ on:
       - "data/fixtures/nyc-openstreetmap-relation-metadata.json"
       - "data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
       - "data/fixtures/nyc-whos-on-first-county-representations.geojson"
+      - "data/fixtures/nyc-overture-division-area-representations.geojson"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
       - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "schemas/nyc-geoboundaries-usa-adm2-counties/**"
       - "schemas/nyc-whos-on-first-county-representations/**"
+      - "schemas/nyc-overture-division-area-representations/**"
       - "scripts/validate_nyc_census_gazetteer_fixture.py"
       - "scripts/validate_nyc_osm_relation_metadata_fixture.py"
       - "scripts/validate_nyc_geoboundaries_fixture.py"
       - "scripts/validate_nyc_whos_on_first_fixture.py"
+      - "scripts/validate_nyc_overture_fixture.py"
       - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
@@ -89,4 +95,5 @@ jobs:
       - run: python3 scripts/validate_nyc_osm_relation_metadata_fixture.py
       - run: python3 scripts/validate_nyc_geoboundaries_fixture.py
       - run: python3 scripts/validate_nyc_whos_on_first_fixture.py
+      - run: python3 scripts/validate_nyc_overture_fixture.py
       - run: sha256sum --check data/fixtures/SHA256SUMS

@@ -16,7 +16,7 @@
         "@id": "https://knoedg.nyc/#organization"
       },
       "dcterms:rights": "Reuse remains subject to the terms of each cited source. Review current source terms before redistribution.",
-      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates. The Who's On First publication deterministically derives a five-feature public fixture from the retained reviewed current county records without altering geometry coordinates.",
+      "dcterms:provenance": "The water-excluded geometry is reproducible from the reviewed public SVG-path fixture forward; its original upstream API-response checksum and initial projection script were not retained. The later water-included publication retains its exact upstream response, checksum, normalized fixture, fixed projection and generated overlay. The geoBoundaries publication deterministically derives a five-feature public fixture from the retained reviewed subset without altering geometry coordinates. The Who's On First publication deterministically derives a five-feature public fixture from the retained reviewed current county records without altering geometry coordinates. The Overture publication deterministically derives an eleven-feature public fixture from geometry re-queried directly against the pinned release at publication time; land/maritime classification was re-verified against the same pinned release and found to differ from the collection's original governed capture for ten of the eleven representations.",
       "dcterms:issued": {
         "@value": "2026-08-09",
         "@type": "xsd:date"
@@ -134,6 +134,9 @@
         },
         {
           "@id": "https://knoedg.nyc/data/fixtures/nyc-whos-on-first-county-representations.geojson"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson"
         },
         {
           "@id": "https://knoedg.nyc/data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
@@ -324,6 +327,59 @@
         },
         {
           "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson",
+      "@type": [
+        "dcat:Distribution",
+        "schema:DataDownload"
+      ],
+      "dcterms:title": "Overture Maps NYC division-area identity and geometry fixture",
+      "dcterms:description": "Eleven reviewed Overture Maps division_area representations, geometry re-queried directly from the pinned release and unchanged from that query, covering ten already-governed OpenStreetMap relation versions plus Richmond County's separate land and maritime representations. Land/maritime classification was re-verified at publication time; see dcterms:provenance for the disclosed discrepancy against the collection's original governed capture.",
+      "dcterms:format": "application/geo+json",
+      "dcat:mediaType": "application/geo+json",
+      "dcat:downloadURL": {
+        "@id": "https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson"
+      },
+      "dcterms:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      },
+      "dcterms:rights": "Attribution: Overture Maps Foundation; underlying source © OpenStreetMap contributors. Extracted the eleven reviewed NYC division_area features, reordered them by borough code, and added metadata; geometry coordinates are unchanged from the queried release.",
+      "dcterms:source": {
+        "@id": "https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
         }
       ]
     },
@@ -870,6 +926,11 @@
           "@type": "schema:PropertyValue",
           "schema:name": "Independent land-area comparison disposition",
           "schema:value": "excluded"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Land/maritime classification re-verification",
+          "schema:value": "Re-queried directly against the pinned 2026-07-22.0 release at publication time. Ten of the eleven representations returned is_territorial=true where this collection's original governed capture recorded false; only Richmond County's land representation returned false. Geometry, version, and OSM record_id all matched the original capture exactly. The fresh values are used in the published fixture; disclosed rather than silently reconciled."
         }
       ]
     },
