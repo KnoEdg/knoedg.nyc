@@ -1,4 +1,4 @@
-name: Validate NYC boundary counts
+name: Validate NYC fixture page
 
 on:
   pull_request:
@@ -6,7 +6,9 @@ on:
       - "nyc-boundaries/**"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
+      - "scripts/generate_fixture_page.py"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
   push:
     branches:
@@ -15,14 +17,16 @@ on:
       - "nyc-boundaries/**"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
+      - "scripts/generate_fixture_page.py"
       - "data/fixtures/nyc-boundary-public-view.json"
+      - "templates/fixture-page.html"
       - ".github/workflows/validate-nyc-boundary-counts.yml"
 
 permissions:
   contents: read
 
 jobs:
-  reconcile-counts:
+  validate-fixture-page:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
