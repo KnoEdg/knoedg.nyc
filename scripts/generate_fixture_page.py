@@ -102,8 +102,12 @@ def render_inlines(nodes: list[dict], artifact: dict) -> str:
             if node.get("newWindow"):
                 announcement = node.get("accessibleNewWindowText")
                 require(isinstance(announcement, str) and announcement.strip(), "new-window link requires accessibleNewWindowText")
-                attrs += ' target="_blank" rel="noopener noreferrer"'
-                body += f'<span aria-hidden="true"> ↗</span><span class="visually-hidden"> {html.escape(announcement)}</span>'
+                accessible_name = html.unescape(re.sub(r"<[^>]+>", "", body))
+                attrs += (
+                    ' target="_blank" rel="noopener noreferrer"'
+                    f' aria-label="{html.escape(f"{accessible_name} ({announcement})", quote=True)}"'
+                )
+                body += '<span aria-hidden="true"> ↗</span>'
             else:
                 require("accessibleNewWindowText" not in node, "new-window text requires newWindow=true")
             rendered.append(f"<a {attrs}>{body}</a>")
