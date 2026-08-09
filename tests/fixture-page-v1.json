@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "artifactType": "fixture-dependent-public-view",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1",
+  "resource": "https://knoedg.nyc/example/",
+  "artifactVersion": "1",
+  "rendererContract": "fixture-page/v1",
+  "issuedAt": "2026-08-09T18:11:00Z",
+  "integrity": {"mechanism": "test-vector"},
+  "countingGranularity": "Active example records",
+  "activeRecordCount": 1,
+  "sourceGroups": [{"id": "example", "label": "Example source", "count": 1, "provenanceCluster": "Example"}],
+  "page": {
+    "language": "en",
+    "title": "Example",
+    "description": "Legacy compatibility vector",
+    "canonical": "https://knoedg.nyc/example/",
+    "alternate": {"mediaType": "application/ld+json", "href": "https://knoedg.nyc/example/index.jsonld", "title": "Example structured data"},
+    "stylesheet": "/assets/styles.css",
+    "articleHtml": "<article><h1>Example</h1><p>One governed record.</p></article>"
+  },
+  "semanticRepresentation": {"@context": {"schema": "https://schema.org/"}, "@graph": [{"@id": "https://knoedg.nyc/example/", "@type": "schema:Dataset"}]},
+  "provenanceBoundary": "Public-safe test vector."
+}
