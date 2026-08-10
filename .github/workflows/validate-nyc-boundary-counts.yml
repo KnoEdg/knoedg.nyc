@@ -5,6 +5,13 @@ on:
     paths:
       - "nyc-boundaries/**"
       - "assets/styles.css"
+      - "assets/nyc-boroughs.svg"
+      - "assets/nyc-boundaries-comparison.svg"
+      - "data/fixtures/nyc-boroughs-water-excluded.json"
+      - "data/fixtures/nyc-boroughs-water-included.json"
+      - "data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+      - "scripts/build_nyc_water_included_fixture.py"
+      - "scripts/generate_nyc_boroughs_svg.py"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
@@ -37,6 +44,13 @@ on:
     paths:
       - "nyc-boundaries/**"
       - "assets/styles.css"
+      - "assets/nyc-boroughs.svg"
+      - "assets/nyc-boundaries-comparison.svg"
+      - "data/fixtures/nyc-boroughs-water-excluded.json"
+      - "data/fixtures/nyc-boroughs-water-included.json"
+      - "data/sources/nyc-boroughs-water-included-2026-08-09.geojson"
+      - "scripts/build_nyc_water_included_fixture.py"
+      - "scripts/generate_nyc_boroughs_svg.py"
       - "scripts/validate_nyc_boundary_counts.py"
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
@@ -87,6 +101,8 @@ jobs:
           artifact = json.load(open("data/fixtures/nyc-boundary-public-view.json"))
           Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
           PY
+      - run: python3 scripts/build_nyc_water_included_fixture.py --check
+      - run: python3 scripts/generate_nyc_boroughs_svg.py --check
       - run: python3 scripts/generate_nyc_boundaries_view.py --check
       - run: python3 scripts/test_fixture_page_renderer.py
       - run: python3 scripts/validate_nyc_boundary_counts.py
