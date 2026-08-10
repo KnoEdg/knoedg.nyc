@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T11:50:00Z",
+  "issuedAt": "2026-08-10T12:15:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.6",
+  "artifactVersion": "2026-08-10.7",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -2849,100 +2849,200 @@
                 "items": [
                   [
                     {
-                      "type": "text",
-                      "text": "August 9, 2026 — Water-excluded borough fixture, deterministic generator and SVG published."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "text",
-                      "text": "August 9, 2026 — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "text",
-                      "text": "August 9, 2026 — Water-included geometry, retained source response and reproducible boundary overlay published."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "text",
-                      "text": "August 9, 2026 — geoBoundaries and Overture Maps governed representations added with explicit Census and OpenStreetMap provenance-cluster dispositions."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "text",
-                      "text": "August 9, 2026 — Five Who's On First county records added for stable identifiers, hierarchy and concordances, with default geometry retained in the Census provenance cluster."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "text",
-                      "text": "August 9, 2026 — NYC Boundaries migrated to authoritative structured content blocks under "
-                    },
-                    {
-                      "type": "code",
-                      "text": "fixture-page/v2"
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/40/prov:generatedAtTime/@value",
+                      "format": "date"
                     },
                     {
                       "type": "text",
-                      "text": "; the public renderer remains backward-compatible with frozen v1 artifacts."
+                      "text": " — Water-excluded borough fixture, deterministic generator and SVG published."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/41/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Five 2023 Census Gazetteer county measurement records published as a public-safe JSON fixture with ALAND, AWATER, internal points, source lineage, rights, and statistical-purpose limitations; no geometry is included."
+                      "text": " — NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/42/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Ten exact OpenStreetMap county/borough relation versions published as a public-safe metadata fixture with stable identifiers, timestamps, governed assertion links, ODbL attribution, and explicit geometry/measurement absence."
+                      "text": " — Water-included geometry, retained source response and reproducible boundary overlay published."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/43/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Five retained geoBoundaries USA ADM2 county geometries published with CC BY 4.0 attribution, build-specific identifiers, Census provenance-cluster disposition, deterministic regeneration and explicit generalized/shoreline-clipped limitations."
+                      "text": " — geoBoundaries and Overture Maps governed representations added with explicit Census and OpenStreetMap provenance-cluster dispositions."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/44/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Five retained Who's On First county geometries published with Quattroshapes/CC0 attribution, stable WOF identifiers, Census GEOID/HASC concordances, deterministic regeneration and an explicit non-independent geom:area_square_m disclosure."
+                      "text": " — Five Who's On First county records added for stable identifiers, hierarchy and concordances, with default geometry retained in the Census provenance cluster."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/45/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Eleven Overture Maps division-area geometries published with ODbL 1.0 attribution, both Richmond County land and maritime representations, deterministic regeneration, and a disclosed land/maritime-classification re-verification finding against the collection's original governed capture."
+                      "text": " — NYC Boundaries migrated to authoritative structured content blocks under fixture-page/v2; the public renderer remains backward-compatible with frozen v1 artifacts."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/46/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 9, 2026 — Root-caused the Overture land/maritime re-verification finding: the underlying release asset was confirmed unchanged since the original capture, and the discrepancy was traced to an error in that original capture rather than a live data change. The governed source's prose disposition was corrected accordingly."
+                      "text": " — Five 2023 Census Gazetteer county measurement records published as a public-safe JSON fixture with ALAND, AWATER, internal points, source lineage, rights, and statistical-purpose limitations; no geometry is included."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/47/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 10, 2026 -- DCP water-excluded/water-included evidence cells now link primarily to the new /nyc-dcp-borough-boundaries/ internal source page, with the original NYC Open Data links retained alongside."
+                      "text": " — Ten exact OpenStreetMap county/borough relation versions published as a public-safe metadata fixture with stable identifiers, timestamps, governed assertion links, ODbL attribution, and explicit geometry/measurement absence."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/48/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 10, 2026 -- Census Gazetteer evidence cell now links primarily to the new /nyc-census-gazetteer/ internal source page, with the original census.gov link retained alongside."
+                      "text": " — Five retained geoBoundaries USA ADM2 county geometries published with CC BY 4.0 attribution, build-specific identifiers, Census provenance-cluster disposition, deterministic regeneration and explicit generalized/shoreline-clipped limitations."
                     }
                   ],
                   [
                     {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/49/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
                       "type": "text",
-                      "text": "August 10, 2026 -- Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md."
+                      "text": " — Five retained Who's On First county geometries published with Quattroshapes/CC0 attribution, stable WOF identifiers, Census GEOID/HASC concordances, deterministic regeneration and an explicit non-independent geom:area_square_m disclosure."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/50/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Eleven Overture Maps division-area geometries published with ODbL 1.0 attribution, both Richmond County land and maritime representations, deterministic regeneration, and a disclosed land/maritime-classification re-verification finding against the collection's original governed capture."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/51/prov:generatedAtTime/@value",
+                      "format": "date"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Root-caused the Overture land/maritime re-verification finding: the underlying release asset was confirmed unchanged since the original capture, and the discrepancy was traced to an error in that original capture rather than a live data change. The governed source's prose disposition was corrected accordingly."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/52/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — DCP water-excluded/water-included evidence cells now link primarily to the new /nyc-dcp-borough-boundaries/ internal source page, with the original NYC Open Data links retained alongside."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/53/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Census Gazetteer evidence cell now links primarily to the new /nyc-census-gazetteer/ internal source page, with the original census.gov link retained alongside."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/54/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/55/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Replaced 19 hardcoded UTC-text table cells with time/pointer nodes resolving to their governed dcterms:modified graph values, so displayed instants render in America/New_York local time like the rest of the page."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/56/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — OpenStreetMap evidence cell now links primarily to the new /nyc-openstreetmap/ internal source page, with the in-page relation-version table retained alongside."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/57/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Publication history rebuilt to resolve every entry via time/pointer nodes instead of hardcoded prose, and DCP/Census Gazetteer dataset “Source last updated” precision corrected from date-only to the already-governed exact timestamp, per ADR-0006."
                     }
                   ]
                 ]
@@ -3148,6 +3248,15 @@
           },
           {
             "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-03"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-04"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-05"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-06"
           }
         ]
       },
@@ -4392,6 +4501,42 @@
         "dcterms:description": "Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md.",
         "prov:generatedAtTime": {
           "@value": "2026-08-10T10:32:14Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-04",
+        "@type": "prov:Activity",
+        "dcterms:description": "Replaced 19 hardcoded UTC-text table cells with time/pointer nodes resolving to their governed dcterms:modified graph values, so displayed instants render in America/New_York local time like the rest of the page.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T11:18:21Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-05",
+        "@type": "prov:Activity",
+        "dcterms:description": "OpenStreetMap evidence cell now links primarily to the new /nyc-openstreetmap/ internal source page, with the in-page relation-version table retained alongside.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T11:50:00Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-06",
+        "@type": "prov:Activity",
+        "dcterms:description": "Publication history rebuilt to resolve every entry via time/pointer nodes instead of hardcoded prose, and DCP/Census Gazetteer dataset “Source last updated” precision corrected from date-only to the already-governed exact timestamp, per ADR-0006.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T12:15:00Z",
           "@type": "xsd:dateTime"
         },
         "prov:generated": {
