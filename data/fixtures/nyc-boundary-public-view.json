@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T04:01:02Z",
+  "issuedAt": "2026-08-10T10:06:12Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.1",
+  "artifactVersion": "2026-08-10.2",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -586,11 +586,25 @@
                     [
                       {
                         "type": "link",
+                        "href": "https://knoedg.nyc/nyc-census-gazetteer/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Census Gazetteer source page"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " · "
+                      },
+                      {
+                        "type": "link",
                         "href": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
                         "content": [
                           {
                             "type": "text",
-                            "text": "2023 county Gazetteer"
+                            "text": "census.gov"
                           }
                         ],
                         "newWindow": true,

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "rendererContract": "fixture-page/v2",
+  "resource": "https://knoedg.nyc/nyc-census-gazetteer/",
+  "activeRecordCount": 5,
+  "representations": [
+    {
+      "id": "census-gazetteer",
+      "label": "Census Gazetteer",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau"
+    }
+  ]
+}
