@@ -205,6 +205,9 @@
         },
         {
           "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-07"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-08"
         }
       ]
     },
@@ -1497,6 +1500,18 @@
       "dcterms:description": "Removed the duplicated “OpenStreetMap source versions” per-relation detail table now that /nyc-openstreetmap/ carries that content; the Compared views OpenStreetMap row links there directly instead.",
       "prov:generatedAtTime": {
         "@value": "2026-08-10T12:40:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-08",
+      "@type": "prov:Activity",
+      "dcterms:description": "Published the Who's On First internal source page and removed the duplicated “Who's On First source records” per-record detail table now that /nyc-whos-on-first/ carries that content; the Compared views Who's On First row links there directly instead.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T13:05:00Z",
         "@type": "xsd:dateTime"
       },
       "prov:generated": {
