@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A governed public view of Overture Maps as a boundary-data publisher: the eleven exact division_area representations used by NYC Boundaries, including the disclosed land/maritime classification correction.">
+  <title>NYC Overture Maps Divisions — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-overture/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/nyc-overture/index.jsonld" title="NYC Overture Maps Divisions structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+<article>
+<section aria-labelledby="nyc-overture">
+<h1 id="nyc-overture">NYC Overture Maps Divisions</h1>
+<p>Knowledge resource</p>
+<p>A governed public view of <strong>Overture Maps</strong> as a boundary-data publisher — the eleven exact division_area representations used by NYC Boundaries, all mapped to the ten already-governed OpenStreetMap relation versions. For how these representations compare against DCP, the Census Bureau, OpenStreetMap, and other independently governed sources, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+<section aria-labelledby="publisher">
+<h2 id="publisher">Publisher</h2>
+<dl aria-label="Publisher identity">
+<div><dt>Name</dt><dd>Overture Maps Foundation</dd></div>
+<div><dt>Organization type</dt><dd>Open geospatial data foundation (a Linux Foundation project) publishing openly licensed map data aggregated from multiple sources, including OpenStreetMap</dd></div>
+<div><dt>Website</dt><dd><a href="https://overturemaps.org/" target="_blank" rel="noopener noreferrer" aria-label="overturemaps.org (opens in a new tab)">overturemaps.org<span aria-hidden="true"> ↗</span></a></dd></div>
+</dl>
+</section>
+<section aria-labelledby="dataset">
+<h2 id="dataset">Dataset</h2>
+<p>This page governs eleven <code>divisions / division_area</code> features from Overture Maps release <code>2026-07-22.0</code>, each geometrically re-queried directly against the pinned release Parquet asset at publication time.</p>
+<dl aria-label="Release identity">
+<div><dt>Release</dt><dd><a href="https://stac.overturemaps.org/2026-07-22.0/collections/divisions.json" target="_blank" rel="noopener noreferrer" aria-label="Divisions 2026-07-22.0 (opens in a new tab)">Divisions 2026-07-22.0<span aria-hidden="true"> ↗</span></a></dd></div>
+<div><dt>Distribution modified</dt><dd><time datetime="2026-07-22T17:36:51Z">July 22, 2026, 1:36 PM EDT</time></dd></div>
+</dl>
+</section>
+<section aria-labelledby="measurements">
+<h2 id="measurements">Divisions</h2>
+<p>All eleven governed division_area representations, as published by Overture. Each maps to one of the ten already-governed OpenStreetMap relation versions via its own <code>sources[].record_id</code> field; Richmond County has separate land and maritime representations.</p>
+<div class="table-wrap"><table>
+<caption>Overture Maps division_area representations, five NYC counties</caption>
+<thead><tr><th scope="col">Borough</th><th scope="col">Name</th><th scope="col">Subtype</th><th scope="col">is_territorial</th><th scope="col">Version</th><th scope="col">Source relation</th></tr></thead>
+<tbody><tr><td>Manhattan</td><td>New York County</td><td>county</td><td>true</td><td><code>8</code></td><td><a href="https://www.openstreetmap.org/relation/2552485/history/56" target="_blank" rel="noopener noreferrer" aria-label="r2552485@56 (opens in a new tab)">r2552485@56<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Manhattan</td><td>Manhattan</td><td>locality</td><td>true</td><td><code>8</code></td><td><a href="https://www.openstreetmap.org/relation/8398124/history/50" target="_blank" rel="noopener noreferrer" aria-label="r8398124@50 (opens in a new tab)">r8398124@50<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Bronx</td><td>Bronx County</td><td>county</td><td>true</td><td><code>6</code></td><td><a href="https://www.openstreetmap.org/relation/2552450/history/32" target="_blank" rel="noopener noreferrer" aria-label="r2552450@32 (opens in a new tab)">r2552450@32<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Bronx</td><td>The Bronx</td><td>locality</td><td>true</td><td><code>5</code></td><td><a href="https://www.openstreetmap.org/relation/9691916/history/24" target="_blank" rel="noopener noreferrer" aria-label="r9691916@24 (opens in a new tab)">r9691916@24<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Brooklyn</td><td>Kings County</td><td>county</td><td>true</td><td><code>6</code></td><td><a href="https://www.openstreetmap.org/relation/369518/history/44" target="_blank" rel="noopener noreferrer" aria-label="r369518@44 (opens in a new tab)">r369518@44<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Brooklyn</td><td>Brooklyn</td><td>locality</td><td>true</td><td><code>5</code></td><td><a href="https://www.openstreetmap.org/relation/9691750/history/34" target="_blank" rel="noopener noreferrer" aria-label="r9691750@34 (opens in a new tab)">r9691750@34<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Queens</td><td>Queens County</td><td>county</td><td>true</td><td><code>7</code></td><td><a href="https://www.openstreetmap.org/relation/369519/history/71" target="_blank" rel="noopener noreferrer" aria-label="r369519@71 (opens in a new tab)">r369519@71<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Queens</td><td>Queens</td><td>locality</td><td>true</td><td><code>6</code></td><td><a href="https://www.openstreetmap.org/relation/9691819/history/39" target="_blank" rel="noopener noreferrer" aria-label="r9691819@39 (opens in a new tab)">r9691819@39<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Staten Island</td><td>Richmond County (land)</td><td>county</td><td>false</td><td><code>9</code></td><td><a href="https://www.openstreetmap.org/relation/962876/history/18" target="_blank" rel="noopener noreferrer" aria-label="r962876@18 (opens in a new tab)">r962876@18<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Staten Island</td><td>Richmond County (maritime)</td><td>county</td><td>true</td><td><code>4</code></td><td><a href="https://www.openstreetmap.org/relation/962876/history/18" target="_blank" rel="noopener noreferrer" aria-label="r962876@18 (opens in a new tab)">r962876@18<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Staten Island</td><td>Staten Island</td><td>locality</td><td>true</td><td><code>2</code></td><td><a href="https://www.openstreetmap.org/relation/9691948/history/17" target="_blank" rel="noopener noreferrer" aria-label="r9691948@17 (opens in a new tab)">r9691948@17<span aria-hidden="true"> ↗</span></a></td></tr></tbody>
+</table></div>
+<p>No numeric area is published in these representations&#x27; governed metadata; the raw fixture is: <a href="https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson">Overture Maps NYC division-area identity and geometry fixture</a>.</p>
+</section>
+<section aria-labelledby="rights">
+<h2 id="rights">Rights and attribution</h2>
+<p>Overture Maps data is published under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer" aria-label="Open Database License (ODbL) 1.0 (opens in a new tab)">Open Database License (ODbL) 1.0<span aria-hidden="true"> ↗</span></a>. Redistribution requires attribution — Overture Maps Foundation; underlying source © OpenStreetMap contributors.</p>
+</section>
+<section aria-labelledby="published-material">
+<h2 id="published-material">Published fixture and artifacts</h2>
+<ul><li><a href="https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson">Overture Maps NYC division-area identity and geometry fixture</a></li><li><a href="https://knoedg.nyc/nyc-overture/index.jsonld">This page&#x27;s structured data (JSON-LD)</a></li></ul>
+</section>
+<section aria-labelledby="validation">
+<h2 id="validation">Validation and provenance</h2>
+<p>Each representation&#x27;s geometry, version, and source relation were re-queried directly against the pinned release Parquet asset at publication time and cross-checked against the governed assertion records; this page does not independently verify Overture&#x27;s underlying geometry, which derives from the governed OpenStreetMap relations. For independent cross-source verification of these representations, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+<p><strong>Disclosed correction: </strong>at publication time, ten of the eleven representations returned <code>is_territorial=true</code> where this collection&#x27;s original governed capture had recorded <code>false</code> (only Richmond County&#x27;s land representation returned <code>false</code>). Geometry, version, and OSM source relation all matched the original capture exactly. A follow-up root-cause investigation — an unchanged release-asset checksum, a reproducible duplicate-free query, and a 99.6% true base rate across the full release — concluded this was an error in the original governed capture, not a live Overture data change. The governed source&#x27;s prose disposition was corrected accordingly, and the corrected values (shown in the table above) are what this page publishes.</p>
+</section>
+<section aria-labelledby="governance">
+<h2 id="governance">Governance</h2>
+<dl>
+<div><dt>Lifecycle</dt><dd>Active</dd></div>
+<div><dt>Confidence</dt><dd>High (0.95)</dd></div>
+<div><dt>Scope</dt><dd>Overture&#x27;s own published division_area representations, each mapped to an already-governed OpenStreetMap relation version — not an independent recomputation. Confidence is High because identity, version, and geometry re-query are stable and precisely versioned, even though the representations remain in the OpenStreetMap provenance cluster rather than counting as independent corroboration.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="limitations">
+<h2 id="limitations">Limitations</h2>
+<p>The eleven governed representations are the exact versions re-queried against release <code>2026-07-22.0</code> at publication time, not a live feed. Each representation derives from an already-governed OpenStreetMap relation — the same provenance cluster, not independent corroboration. No numeric area is published in Overture&#x27;s own metadata. This page presents Overture&#x27;s own published values, including the disclosed is_territorial correction described above; it is not the place to compare Overture against other sources — that comparison lives on <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+</section>
+<section aria-labelledby="history">
+<h2 id="history">Publication history</h2>
+<ol><li><time datetime="2026-08-10T14:00:00Z">August 10, 2026, 10:00 AM EDT</time> — Initial publication of the NYC Overture Maps Divisions source page.</li></ol>
+</section>
+</section>
+</article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>
+
