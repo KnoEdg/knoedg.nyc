@@ -30,6 +30,9 @@
       "dcterms:hasPart": [
         {
           "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-census-gazetteer/#county-measurements"
         }
       ],
       "prov:wasAttributedTo": {
@@ -41,6 +44,12 @@
       "dcat:distribution": [
         {
           "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
+        }
+      ],
+      "dcterms:provenance": "Land/water area figures and internal points are the Census Bureau's own published values, retrieved directly from the 2023 county Gazetteer file on 2026-08-08; not independently recomputed by this pack. Distribution-modified timestamp is the file's own HTTP Last-Modified value.",
+      "prov:wasGeneratedBy": [
+        {
+          "@id": "https://knoedg.nyc/nyc-census-gazetteer/#publication-2026-08-10"
         }
       ]
     },
@@ -66,6 +75,46 @@
         "schema:GovernmentOrganization"
       ],
       "schema:name": "U.S. Census Bureau"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-census-gazetteer/#county-measurements",
+      "@type": "schema:Claim",
+      "schema:text": "The U.S. Census Bureau 2023 Gazetteer provides independently maintained county land and water measurements for the five NYC-area counties.",
+      "schema:citation": {
+        "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.93
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2023-09-26T13:32:24Z",
+            "@type": "xsd:dateTime"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-census-gazetteer/#publication-2026-08-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Initial publication of the NYC Census Gazetteer Counties source page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T10:04:17Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-census-gazetteer/"
+      }
     }
   ]
 }
