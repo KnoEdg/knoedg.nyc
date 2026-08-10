@@ -65,4 +65,13 @@ time_html = render_inlines([{"type": "time", "pointer": "/foo", "format": "datet
 if time_html != '<time datetime="2026-08-10T03:55:38Z">August 9, 2026, 11:55 PM EDT</time>':
     raise SystemExit(f"time node did not preserve UTC datetime attribute while localizing display text: {time_html!r}")
 
-print("Renderer conformance passes: v1 compatibility, v2 blocks, unknown schema, pointer, raw HTML, projection drift, ET localization.")
+# ADR-0006 (meta-knoedg-nyc): date-only values render human-readable text,
+# not a raw ISO string, and never gain a fabricated time.
+if format_value("2023-12-12", "date") != "December 12, 2023":
+    raise SystemExit(f"date format did not render human-readable text: {format_value('2023-12-12', 'date')!r}")
+date_artifact = {"foo": "2023-12-12"}
+date_html = render_inlines([{"type": "time", "pointer": "/foo", "format": "date"}], date_artifact)
+if date_html != '<time datetime="2023-12-12">December 12, 2023</time>':
+    raise SystemExit(f"date-format time node did not preserve ISO date attribute while rendering human-readable text: {date_html!r}")
+
+print("Renderer conformance passes: v1 compatibility, v2 blocks, unknown schema, pointer, raw HTML, projection drift, ET localization, date-only formatting.")

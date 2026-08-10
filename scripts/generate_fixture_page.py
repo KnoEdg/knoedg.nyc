@@ -69,7 +69,7 @@ def format_value(value: object, format_name: str = "text") -> str:
         return f"{format(value * 100, '.15g')}%"
     if format_name == "date":
         require(isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value), "date format requires YYYY-MM-DD")
-        return value
+        return datetime.strptime(value, "%Y-%m-%d").strftime("%B %-d, %Y")
     if format_name == "datetime":
         require(isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", value), "datetime format requires UTC ISO 8601 seconds")
         instant = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)

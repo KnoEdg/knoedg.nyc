@@ -193,6 +193,15 @@
         },
         {
           "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-03"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-04"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-05"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-06"
         }
       ]
     },
@@ -1437,6 +1446,42 @@
       "dcterms:description": "Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md.",
       "prov:generatedAtTime": {
         "@value": "2026-08-10T10:32:14Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-04",
+      "@type": "prov:Activity",
+      "dcterms:description": "Replaced 19 hardcoded UTC-text table cells with time/pointer nodes resolving to their governed dcterms:modified graph values, so displayed instants render in America/New_York local time like the rest of the page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T11:18:21Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-05",
+      "@type": "prov:Activity",
+      "dcterms:description": "OpenStreetMap evidence cell now links primarily to the new /nyc-openstreetmap/ internal source page, with the in-page relation-version table retained alongside.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T11:50:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-06",
+      "@type": "prov:Activity",
+      "dcterms:description": "Publication history rebuilt to resolve every entry via time/pointer nodes instead of hardcoded prose, and DCP/Census Gazetteer dataset “Source last updated” precision corrected from date-only to the already-governed exact timestamp, per ADR-0006.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T12:15:00Z",
         "@type": "xsd:dateTime"
       },
       "prov:generated": {
