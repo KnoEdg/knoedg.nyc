@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T10:32:14Z",
+  "issuedAt": "2026-08-10T11:18:21Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.4",
+  "artifactVersion": "2026-08-10.5",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -482,7 +482,12 @@
                     [
                       {
                         "type": "text",
-                        "text": "May 26, 2026 Data update · 19:35:50 UTC"
+                        "text": "May 26, 2026 Data update · "
+                      },
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/17/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -548,7 +553,12 @@
                     [
                       {
                         "type": "text",
-                        "text": "May 26, 2026 Data update · 19:35:22 UTC"
+                        "text": "May 26, 2026 Data update · "
+                      },
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/18/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -614,7 +624,12 @@
                     [
                       {
                         "type": "text",
-                        "text": "September 26, 2023 Distribution modified · 13:32:24 UTC"
+                        "text": "September 26, 2023 Distribution modified · "
+                      },
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/19/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -778,7 +793,12 @@
                     [
                       {
                         "type": "text",
-                        "text": "July 22, 2026 Distribution modified · 17:36:51 UTC"
+                        "text": "July 22, 2026 Distribution modified · "
+                      },
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/33/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -946,8 +966,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "January 13, 2026 · 14:07:26 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/20/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -980,8 +1001,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "June 15, 2026 · 09:04:18 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/21/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1014,8 +1036,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "February 8, 2026 · 17:09:24 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/22/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1048,8 +1071,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "February 8, 2026 · 17:09:24 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/23/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1082,8 +1106,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "January 13, 2026 · 14:07:26 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/24/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1116,8 +1141,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "January 13, 2026 · 14:07:26 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/25/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1150,8 +1176,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "January 13, 2026 · 14:07:26 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/26/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1184,8 +1211,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "January 13, 2026 · 14:07:26 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/27/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1218,8 +1246,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 24, 2025 · 18:21:46 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/28/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1252,8 +1281,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 24, 2025 · 18:21:46 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/29/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ]
@@ -1360,8 +1390,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 2, 2024 · 06:31:21 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/35/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1394,8 +1425,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 2, 2024 · 06:31:34 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/36/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1428,8 +1460,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 2, 2024 · 06:31:27 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/37/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1462,8 +1495,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 2, 2024 · 06:31:27 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/38/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ],
@@ -1496,8 +1530,9 @@
                     ],
                     [
                       {
-                        "type": "text",
-                        "text": "August 2, 2024 · 06:31:21 UTC"
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/39/dcterms:modified/@value",
+                        "format": "datetime"
                       }
                     ]
                   ]
