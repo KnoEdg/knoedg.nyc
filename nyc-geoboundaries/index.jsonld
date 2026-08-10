@@ -1,0 +1,133 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-geoboundaries/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC geoBoundaries Counties",
+      "dcterms:description": "A governed public view of geoBoundaries as a boundary-data publisher: the five exact USA ADM2 county representations used by NYC Boundaries.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "geoBoundaries data is published under CC BY 4.0. Redistribution requires attribution -- geoBoundaries, William & Mary geoLab.",
+      "dcterms:provenance": "Each representation's shapeID and identity were retrieved directly from the geoBoundaries API on 2026-08-09 and cross-checked against the governed assertion records via exact bounding-box review; not independently recomputed by this pack.",
+      "dcterms:issued": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {
+          "@id": "https://knoedg.nyc/nyc-geoboundaries/#counties"
+        }
+      ],
+      "prov:wasAttributedTo": {
+        "@id": "https://www.geoboundaries.org/"
+      },
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-geoboundaries/"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+        }
+      ],
+      "prov:wasGeneratedBy": [
+        {
+          "@id": "https://knoedg.nyc/nyc-geoboundaries/#publication-2026-08-10"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:title": "geoBoundaries USA ADM2 immutable distribution",
+      "dcterms:issued": {
+        "@value": "2023-12-12",
+        "@type": "xsd:date"
+      },
+      "dcterms:temporal": "2018",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_500k.zip"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "boundaryID",
+          "schema:value": "USA-ADM2-52423323"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "admUnitCount",
+          "schema:value": 3233
+        }
+      ]
+    },
+    {
+      "@id": "https://www.geoboundaries.org/",
+      "@type": [
+        "prov:Agent",
+        "schema:Organization"
+      ],
+      "schema:name": "geoBoundaries, William & Mary geoLab"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-geoboundaries/#counties",
+      "@type": "schema:Claim",
+      "schema:text": "geoBoundaries represents each of the five NYC counties as a generalized, shoreline-clipped USA ADM2 feature derived from 2018 Census MAF/TIGER cartographic boundaries.",
+      "schema:citation": {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.82
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2023-12-12",
+            "@type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-geoboundaries/#publication-2026-08-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Initial publication of the NYC geoBoundaries Counties source page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T13:30:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-geoboundaries/"
+      }
+    }
+  ]
+}
