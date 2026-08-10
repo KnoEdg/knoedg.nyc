@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T12:40:00Z",
+  "issuedAt": "2026-08-10T13:05:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.8",
+  "artifactVersion": "2026-08-10.9",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -836,11 +836,11 @@
                     [
                       {
                         "type": "link",
-                        "href": "#wof-source-records",
+                        "href": "https://knoedg.nyc/nyc-whos-on-first/",
                         "content": [
                           {
                             "type": "text",
-                            "text": "5 exact WOF record versions"
+                            "text": "Who's On First source page"
                           }
                         ]
                       }
@@ -852,7 +852,7 @@
                       },
                       {
                         "type": "link",
-                        "href": "#wof-source-records",
+                        "href": "https://knoedg.nyc/nyc-whos-on-first/#measurements",
                         "content": [
                           {
                             "type": "text",
@@ -871,255 +871,6 @@
                     "type": "text",
                     "text": "Confidence values qualify the reviewed mappings or assertions in this collection; they are not universal ratings of an entire publisher or dataset. Source update values come from each publisher’s own dataset, distribution or version metadata; retrieval, review and publication times are recorded separately. Derived representations remain in their upstream provenance cluster and are not counted as independent corroboration."
                   }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "section",
-            "id": "wof-source-records",
-            "heading": [
-              {
-                "type": "text",
-                "text": "Who's On First source records"
-              }
-            ],
-            "children": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "The five county representations come from exact records in the pinned U.S. administrative-data snapshot. Each source timestamp is the record's own "
-                  },
-                  {
-                    "type": "code",
-                    "text": "wof:lastmodified"
-                  },
-                  {
-                    "type": "text",
-                    "text": " value. The New York locality record supplies five-county hierarchy context but is not counted as a sixth boundary assertion."
-                  }
-                ]
-              },
-              {
-                "type": "table",
-                "caption": [
-                  {
-                    "type": "text",
-                    "text": "Who's On First source records"
-                  }
-                ],
-                "columns": [
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Borough / county"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "WOF record"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Census GEOID"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Source last updated"
-                      }
-                    ]
-                  }
-                ],
-                "rows": [
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "New York County / Manhattan"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "102081863"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "36061"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/35/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Bronx County / Bronx"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "102083063"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "36005"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/36/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Kings County / Brooklyn"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "102082361"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "36047"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/37/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Queens County / Queens"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "102082377"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "36081"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/38/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Richmond County / Staten Island"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "102081779"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "36085"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/39/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ]
                 ]
               }
             ]
@@ -2625,6 +2376,17 @@
                       "type": "text",
                       "text": " — Removed the duplicated “OpenStreetMap source versions” per-relation detail table now that /nyc-openstreetmap/ carries that content; the Compared views OpenStreetMap row links there directly instead."
                     }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/59/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Published the Who's On First internal source page and removed the duplicated “Who's On First source records” per-record detail table now that /nyc-whos-on-first/ carries that content; the Compared views Who's On First row links there directly instead."
+                    }
                   ]
                 ]
               }
@@ -2841,6 +2603,9 @@
           },
           {
             "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-07"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-08"
           }
         ]
       },
@@ -4133,6 +3898,18 @@
         "dcterms:description": "Removed the duplicated “OpenStreetMap source versions” per-relation detail table now that /nyc-openstreetmap/ carries that content; the Compared views OpenStreetMap row links there directly instead.",
         "prov:generatedAtTime": {
           "@value": "2026-08-10T12:40:00Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-08",
+        "@type": "prov:Activity",
+        "dcterms:description": "Published the Who's On First internal source page and removed the duplicated “Who's On First source records” per-record detail table now that /nyc-whos-on-first/ carries that content; the Compared views Who's On First row links there directly instead.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T13:05:00Z",
           "@type": "xsd:dateTime"
         },
         "prov:generated": {
