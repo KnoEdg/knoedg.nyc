@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-census-gazetteer/",
-  "artifactVersion": "2026-08-10.1",
+  "artifactVersion": "2026-08-10.2",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-10T10:04:17Z",
+  "issuedAt": "2026-08-10T10:30:57Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -38,42 +38,119 @@
       {
         "type": "section",
         "id": "nyc-census-gazetteer",
-        "heading": [{"type": "text", "text": "NYC Census Gazetteer Counties"}],
+        "heading": [
+          {
+            "type": "text",
+            "text": "NYC Census Gazetteer Counties"
+          }
+        ],
         "children": [
           {
             "type": "paragraph",
-            "content": [{"type": "text", "text": "Knowledge resource"}]
+            "content": [
+              {
+                "type": "text",
+                "text": "Knowledge resource"
+              }
+            ]
           },
           {
             "type": "paragraph",
             "content": [
-              {"type": "text", "text": "A governed public view of the "},
-              {"type": "strong", "content": [{"type": "text", "text": "U.S. Census Bureau"}]},
-              {"type": "text", "text": " as a boundary-data publisher — its 2023 county Gazetteer file and the five governed land/water measurements drawn from it for the NYC-area counties. For how these measurements compare against DCP, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see "},
-              {"type": "link", "href": "https://knoedg.nyc/nyc-boundaries/", "content": [{"type": "text", "text": "NYC Boundaries"}]},
-              {"type": "text", "text": "."}
+              {
+                "type": "text",
+                "text": "A governed public view of the "
+              },
+              {
+                "type": "strong",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "U.S. Census Bureau"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " as a boundary-data publisher — its 2023 county Gazetteer file and the five governed land/water measurements drawn from it for the NYC-area counties. For how these measurements compare against DCP, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see "
+              },
+              {
+                "type": "link",
+                "href": "https://knoedg.nyc/nyc-boundaries/",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NYC Boundaries"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
             ]
           },
           {
             "type": "section",
             "id": "publisher",
-            "heading": [{"type": "text", "text": "Publisher"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publisher"
+              }
+            ],
             "children": [
               {
                 "type": "definitionList",
                 "label": "Publisher identity",
                 "items": [
-                  {"term": [{"type": "text", "text": "Name"}], "description": [{"type": "text", "text": "U.S. Census Bureau"}]},
-                  {"term": [{"type": "text", "text": "Organization type"}], "description": [{"type": "text", "text": "Federal statistical agency, U.S. Department of Commerce"}]},
                   {
-                    "term": [{"type": "text", "text": "Website"}],
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Name"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "U.S. Census Bureau"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Organization type"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Federal statistical agency, U.S. Department of Commerce"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Website"
+                      }
+                    ],
                     "description": [
                       {
                         "type": "link",
                         "href": "https://www.census.gov/",
                         "newWindow": true,
                         "accessibleNewWindowText": "opens in a new tab",
-                        "content": [{"type": "text", "text": "census.gov"}]
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "census.gov"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -84,35 +161,97 @@
           {
             "type": "section",
             "id": "dataset",
-            "heading": [{"type": "text", "text": "Dataset"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Dataset"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
                 "content": [
-                  {"type": "text", "text": "The Census Bureau publishes an annual county Gazetteer file, a TIGER/Line-derived attribute table (not raw geometry) giving each county's land area, water area, and internal point. This page uses the 2023 vintage."}
+                  {
+                    "type": "text",
+                    "text": "The Census Bureau publishes an annual county Gazetteer file, a TIGER/Line-derived attribute table (not raw geometry) giving each county's land area, water area, and internal point. This page uses the 2023 vintage."
+                  }
                 ]
               },
               {
                 "type": "table",
-                "caption": [{"type": "text", "text": "Census Gazetteer dataset"}],
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "Census Gazetteer dataset"
+                  }
+                ],
                 "columns": [
-                  {"header": [{"type": "text", "text": "Dataset"}]},
-                  {"header": [{"type": "text", "text": "Vintage"}]},
-                  {"header": [{"type": "text", "text": "Distribution modified"}]},
-                  {"header": [{"type": "text", "text": "Source"}]}
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Dataset"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Vintage"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Distribution modified"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Source"
+                      }
+                    ]
+                  }
                 ],
                 "rows": [
                   [
-                    [{"type": "text", "text": "County Gazetteer file"}],
-                    [{"type": "text", "text": "2023"}],
-                    [{"type": "time", "pointer": "/semanticRepresentation/@graph/1/dcterms:modified/@value", "format": "date"}],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County Gazetteer file"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2023"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/1/dcterms:modified/@value",
+                        "format": "date"
+                      }
+                    ],
                     [
                       {
                         "type": "link",
                         "href": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
                         "newWindow": true,
                         "accessibleNewWindowText": "opens in a new tab",
-                        "content": [{"type": "text", "text": "census.gov"}]
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "census.gov"
+                          }
+                        ]
                       }
                     ]
                   ]
@@ -123,37 +262,392 @@
           {
             "type": "section",
             "id": "measurements",
-            "heading": [{"type": "text", "text": "County measurements"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "County measurements"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
-                "content": [{"type": "text", "text": "All five governed measurements, as published by the Census Bureau."}]
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "All five governed measurements, as published by the Census Bureau."
+                  }
+                ]
               },
               {
                 "type": "table",
-                "caption": [{"type": "text", "text": "Census Gazetteer land/water area and identifiers, five NYC-area counties"}],
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "Census Gazetteer land/water area and identifiers, five NYC-area counties"
+                  }
+                ],
                 "columns": [
-                  {"header": [{"type": "text", "text": "County"}]},
-                  {"header": [{"type": "text", "text": "GEOID"}]},
-                  {"header": [{"type": "text", "text": "ANSICODE"}]},
-                  {"header": [{"type": "text", "text": "Land area (sq mi)"}]},
-                  {"header": [{"type": "text", "text": "Water area (sq mi)"}]},
-                  {"header": [{"type": "text", "text": "Internal point"}]}
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "County"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "GEOID"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "ANSICODE"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Land area (sq mi)"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Water area (sq mi)"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Internal point"
+                      }
+                    ]
+                  }
                 ],
                 "rows": [
-                  [[{"type": "text", "text": "New York"}], [{"type": "code", "text": "36061"}], [{"type": "code", "text": "00974129"}], [{"type": "text", "text": "22.658"}], [{"type": "text", "text": "11.201"}], [{"type": "text", "text": "40.776642, -73.970187"}]],
-                  [[{"type": "text", "text": "Bronx"}], [{"type": "code", "text": "36005"}], [{"type": "code", "text": "00974101"}], [{"type": "text", "text": "42.176"}], [{"type": "text", "text": "15.194"}], [{"type": "text", "text": "40.848711, -73.852939"}]],
-                  [[{"type": "text", "text": "Kings"}], [{"type": "code", "text": "36047"}], [{"type": "code", "text": "00974122"}], [{"type": "text", "text": "69.377"}], [{"type": "text", "text": "27.475"}], [{"type": "text", "text": "40.635045, -73.95064"}]],
-                  [[{"type": "text", "text": "Queens"}], [{"type": "code", "text": "36081"}], [{"type": "code", "text": "00974139"}], [{"type": "text", "text": "108.724"}], [{"type": "text", "text": "72.759"}], [{"type": "text", "text": "40.654658, -73.841209"}]],
-                  [[{"type": "text", "text": "Richmond"}], [{"type": "code", "text": "36085"}], [{"type": "code", "text": "00974141"}], [{"type": "text", "text": "57.523"}], [{"type": "text", "text": "45.344"}], [{"type": "text", "text": "40.561263, -74.1399"}]]
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "New York"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36061"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "00974129"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "22.658"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "11.201"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.776642, -73.970187"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36005"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "00974101"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "42.176"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "15.194"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.848711, -73.852939"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Kings"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36047"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "00974122"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "69.377"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "27.475"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.635045, -73.95064"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36081"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "00974139"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "108.724"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "72.759"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.654658, -73.841209"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Richmond"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36085"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "00974141"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "57.523"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "45.344"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.561263, -74.1399"
+                      }
+                    ]
+                  ]
                 ]
               },
               {
                 "type": "paragraph",
                 "content": [
-                  {"type": "text", "text": "The raw fixture is separately published: "},
-                  {"type": "link", "href": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json", "content": [{"type": "text", "text": "Census Gazetteer fixture"}]},
-                  {"type": "text", "text": "."}
+                  {
+                    "type": "text",
+                    "text": "The raw fixture is separately published: "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Census Gazetteer fixture"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Census Bureau data is generally in the public domain. Review current census.gov terms before redistributing beyond this repository."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "published-material",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Published fixture and artifacts"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Census Gazetteer measurements fixture"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-census-gazetteer/index.jsonld",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "This page's structured data (JSON-LD)"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "validation",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation and provenance"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Land/water area figures and internal points are the Census Bureau's own published values, retrieved directly from the 2023 county Gazetteer file; this page does not independently recompute them. The distribution-modified timestamp is the file's own HTTP Last-Modified value, not this page's own retrieval or review time. For independent cross-source verification of these figures, see "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
                 ]
               }
             ]
@@ -161,14 +655,58 @@
           {
             "type": "section",
             "id": "governance",
-            "heading": [{"type": "text", "text": "Governance"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Governance"
+              }
+            ],
             "children": [
               {
                 "type": "definitionList",
                 "items": [
-                  {"term": [{"type": "text", "text": "Lifecycle"}], "description": [{"type": "text", "text": "Active"}]},
-                  {"term": [{"type": "text", "text": "Confidence"}], "description": [{"type": "text", "text": "High (0.93)"}]},
-                  {"term": [{"type": "text", "text": "Scope"}], "description": [{"type": "text", "text": "The Census Bureau's own published Gazetteer values, as published — not an independent recomputation."}]}
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Lifecycle"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Active"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Confidence"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "High (0.93)"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Scope"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "The Census Bureau's own published Gazetteer values, as published — not an independent recomputation."
+                      }
+                    ]
+                  }
                 ]
               }
             ]
@@ -176,14 +714,63 @@
           {
             "type": "section",
             "id": "limitations",
-            "heading": [{"type": "text", "text": "Limitations"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Limitations"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
                 "content": [
-                  {"type": "text", "text": "This page presents the Census Bureau's own published values as published. It does not independently verify Census geometry, and it is not the place to compare Census against other sources — that comparison, including area agreement/difference against DCP, OpenStreetMap, and NYS Civil Boundaries, lives on "},
-                  {"type": "link", "href": "https://knoedg.nyc/nyc-boundaries/", "content": [{"type": "text", "text": "NYC Boundaries"}]},
-                  {"type": "text", "text": ". The Gazetteer file is an attribute table, not raw geometry — it carries no polygon boundary of its own."}
+                  {
+                    "type": "text",
+                    "text": "This page presents the Census Bureau's own published values as published. It does not independently verify Census geometry, and it is not the place to compare Census against other sources — that comparison, including area agreement/difference against DCP, OpenStreetMap, and NYS Civil Boundaries, lives on "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". The Gazetteer file is an attribute table, not raw geometry — it carries no polygon boundary of its own."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/4/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Initial publication of the NYC Census Gazetteer Counties source page."
+                    }
+                  ]
                 ]
               }
             ]
@@ -206,31 +793,109 @@
         "@type": "dcat:Dataset",
         "dcterms:title": "NYC Census Gazetteer Counties",
         "dcterms:description": "A governed public view of the U.S. Census Bureau's 2023 county Gazetteer file and the five governed land/water measurements drawn from it for the NYC-area counties.",
-        "dcterms:publisher": {"@id": "https://knoedg.nyc/#organization"},
+        "dcterms:publisher": {
+          "@id": "https://knoedg.nyc/#organization"
+        },
         "dcterms:rights": "Census Bureau data is generally in the public domain. Review current census.gov terms before redistributing beyond this repository.",
-        "dcterms:issued": {"@value": "2026-08-10", "@type": "xsd:date"},
-        "dcterms:modified": {"@value": "2026-08-10", "@type": "xsd:date"},
-        "dcterms:spatial": {"@id": "https://www.wikidata.org/entity/Q60"},
+        "dcterms:issued": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:spatial": {
+          "@id": "https://www.wikidata.org/entity/Q60"
+        },
         "dcterms:hasPart": [
-          {"@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"}
+          {
+            "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-census-gazetteer/#county-measurements"
+          }
         ],
-        "prov:wasAttributedTo": {"@id": "https://www.census.gov/"},
-        "dcat:landingPage": {"@id": "https://knoedg.nyc/nyc-census-gazetteer/"},
+        "prov:wasAttributedTo": {
+          "@id": "https://www.census.gov/"
+        },
+        "dcat:landingPage": {
+          "@id": "https://knoedg.nyc/nyc-census-gazetteer/"
+        },
         "dcat:distribution": [
-          {"@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"}
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
+          }
+        ],
+        "dcterms:provenance": "Land/water area figures and internal points are the Census Bureau's own published values, retrieved directly from the 2023 county Gazetteer file on 2026-08-08; not independently recomputed by this pack. Distribution-modified timestamp is the file's own HTTP Last-Modified value.",
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-census-gazetteer/#publication-2026-08-10"
+          }
         ]
       },
       {
         "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
-        "@type": ["dcat:Dataset", "prov:Entity"],
+        "@type": [
+          "dcat:Dataset",
+          "prov:Entity"
+        ],
         "dcterms:title": "2023 county Gazetteer file",
-        "dcterms:publisher": {"@id": "https://www.census.gov/"},
-        "dcterms:modified": {"@value": "2023-09-26", "@type": "xsd:date"}
+        "dcterms:publisher": {
+          "@id": "https://www.census.gov/"
+        },
+        "dcterms:modified": {
+          "@value": "2023-09-26",
+          "@type": "xsd:date"
+        }
       },
       {
         "@id": "https://www.census.gov/",
-        "@type": ["prov:Agent", "schema:GovernmentOrganization"],
+        "@type": [
+          "prov:Agent",
+          "schema:GovernmentOrganization"
+        ],
         "schema:name": "U.S. Census Bureau"
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-census-gazetteer/#county-measurements",
+        "@type": "schema:Claim",
+        "schema:text": "The U.S. Census Bureau 2023 Gazetteer provides independently maintained county land and water measurements for the five NYC-area counties.",
+        "schema:citation": {
+          "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.93
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2023-09-26T13:32:24Z",
+              "@type": "xsd:dateTime"
+            }
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-census-gazetteer/#publication-2026-08-10",
+        "@type": "prov:Activity",
+        "dcterms:description": "Initial publication of the NYC Census Gazetteer Counties source page.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T10:04:17Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-census-gazetteer/"
+        }
       }
     ]
   }

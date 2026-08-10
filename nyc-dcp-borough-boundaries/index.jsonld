@@ -33,6 +33,12 @@
         },
         {
           "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-excluded"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-included"
         }
       ],
       "prov:wasAttributedTo": {
@@ -47,6 +53,12 @@
         },
         {
           "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+        }
+      ],
+      "dcterms:provenance": "Borough area and perimeter figures are DCP's own published values, retrieved directly from the two Borough Boundaries catalog datasets (gthc-hcne water-excluded, wh2p-dxnf water-included) on 2026-08-08; not independently recomputed by this pack. Source-update timestamps are Socrata's own data-update values for each dataset.",
+      "prov:wasGeneratedBy": [
+        {
+          "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#publication-2026-08-10"
         }
       ]
     },
@@ -87,6 +99,74 @@
         "schema:GovernmentOrganization"
       ],
       "schema:name": "NYC Department of City Planning"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-excluded",
+      "@type": "schema:Claim",
+      "schema:text": "NYC DCP water-excluded data represents the five borough shoreline geometries, excluding water areas.",
+      "schema:citation": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2026-05-26T19:35:50Z",
+            "@type": "xsd:dateTime"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-included",
+      "@type": "schema:Claim",
+      "schema:text": "NYC DCP water-included data represents the five borough geometries extending into surrounding water.",
+      "schema:citation": {
+        "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+      },
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": {
+            "@value": "2026-05-26T19:35:22Z",
+            "@type": "xsd:dateTime"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#publication-2026-08-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Initial publication of the NYC DCP Borough Boundaries source page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T03:55:38Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/"
+      }
     }
   ]
 }

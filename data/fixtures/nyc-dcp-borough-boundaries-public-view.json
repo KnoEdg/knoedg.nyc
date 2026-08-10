@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-dcp-borough-boundaries/",
-  "artifactVersion": "2026-08-10.1",
+  "artifactVersion": "2026-08-10.2",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-10T03:55:38Z",
+  "issuedAt": "2026-08-10T10:29:19Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -38,44 +38,147 @@
       {
         "type": "section",
         "id": "nyc-dcp-borough-boundaries",
-        "heading": [{"type": "text", "text": "NYC DCP Borough Boundaries"}],
+        "heading": [
+          {
+            "type": "text",
+            "text": "NYC DCP Borough Boundaries"
+          }
+        ],
         "children": [
           {
             "type": "paragraph",
-            "content": [{"type": "text", "text": "Knowledge resource"}]
+            "content": [
+              {
+                "type": "text",
+                "text": "Knowledge resource"
+              }
+            ]
           },
           {
             "type": "paragraph",
             "content": [
-              {"type": "text", "text": "A governed public view of the "},
-              {"type": "strong", "content": [{"type": "text", "text": "NYC Department of City Planning"}]},
-              {"type": "text", "text": " (DCP) as a boundary-data publisher — its two Borough Boundaries catalog datasets and the ten governed measurements drawn from them. For how these measurements compare against the Census Bureau, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see "},
-              {"type": "link", "href": "https://knoedg.nyc/nyc-boundaries/", "content": [{"type": "text", "text": "NYC Boundaries"}]},
-              {"type": "text", "text": "."}
+              {
+                "type": "text",
+                "text": "A governed public view of the "
+              },
+              {
+                "type": "strong",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NYC Department of City Planning"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " (DCP) as a boundary-data publisher — its two Borough Boundaries catalog datasets and the ten governed measurements drawn from them. For how these measurements compare against the Census Bureau, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see "
+              },
+              {
+                "type": "link",
+                "href": "https://knoedg.nyc/nyc-boundaries/",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NYC Boundaries"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
             ]
           },
           {
             "type": "section",
             "id": "publisher",
-            "heading": [{"type": "text", "text": "Publisher"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publisher"
+              }
+            ],
             "children": [
               {
                 "type": "definitionList",
                 "label": "Publisher identity",
                 "items": [
-                  {"term": [{"type": "text", "text": "Name"}], "description": [{"type": "text", "text": "Department of City Planning"}]},
-                  {"term": [{"type": "text", "text": "Organization type"}], "description": [{"type": "text", "text": "Mayoral Agency"}]},
-                  {"term": [{"type": "text", "text": "Reports to"}], "description": [{"type": "text", "text": "Deputy Mayor for Housing and Planning"}]},
-                  {"term": [{"type": "text", "text": "Principal officer"}], "description": [{"type": "text", "text": "Director"}]},
                   {
-                    "term": [{"type": "text", "text": "Website"}],
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Name"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Department of City Planning"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Organization type"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Mayoral Agency"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Reports to"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Deputy Mayor for Housing and Planning"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Principal officer"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Director"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Website"
+                      }
+                    ],
                     "description": [
                       {
                         "type": "link",
                         "href": "https://www.nyc.gov/site/planning/index.page",
                         "newWindow": true,
                         "accessibleNewWindowText": "opens in a new tab",
-                        "content": [{"type": "text", "text": "nyc.gov/site/planning"}]
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "nyc.gov/site/planning"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -86,50 +189,152 @@
           {
             "type": "section",
             "id": "datasets",
-            "heading": [{"type": "text", "text": "Datasets"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Datasets"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
-                "content": [{"type": "text", "text": "DCP publishes borough boundary geometry as two separate NYC Open Data catalog datasets — not one dataset with a variant flag — distinguished by whether open water is included in the polygon."}]
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "DCP publishes borough boundary geometry as two separate NYC Open Data catalog datasets — not one dataset with a variant flag — distinguished by whether open water is included in the polygon."
+                  }
+                ]
               },
               {
                 "type": "table",
-                "caption": [{"type": "text", "text": "DCP Borough Boundaries catalog datasets"}],
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "DCP Borough Boundaries catalog datasets"
+                  }
+                ],
                 "columns": [
-                  {"header": [{"type": "text", "text": "Dataset"}]},
-                  {"header": [{"type": "text", "text": "Water treatment"}]},
-                  {"header": [{"type": "text", "text": "Catalog ID"}]},
-                  {"header": [{"type": "text", "text": "Last updated"}]},
-                  {"header": [{"type": "text", "text": "Source"}]}
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Dataset"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Water treatment"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Catalog ID"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Last updated"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Source"
+                      }
+                    ]
+                  }
                 ],
                 "rows": [
                   [
-                    [{"type": "text", "text": "Borough Boundaries"}],
-                    [{"type": "text", "text": "Water excluded"}],
-                    [{"type": "code", "text": "gthc-hcne"}],
-                    [{"type": "time", "pointer": "/semanticRepresentation/@graph/1/dcterms:modified/@value", "format": "date"}],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough Boundaries"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Water excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "gthc-hcne"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/1/dcterms:modified/@value",
+                        "format": "date"
+                      }
+                    ],
                     [
                       {
                         "type": "link",
                         "href": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
                         "newWindow": true,
                         "accessibleNewWindowText": "opens in a new tab",
-                        "content": [{"type": "text", "text": "NYC Open Data"}]
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "NYC Open Data"
+                          }
+                        ]
                       }
                     ]
                   ],
                   [
-                    [{"type": "text", "text": "Borough Boundaries"}],
-                    [{"type": "text", "text": "Water included"}],
-                    [{"type": "code", "text": "wh2p-dxnf"}],
-                    [{"type": "time", "pointer": "/semanticRepresentation/@graph/2/dcterms:modified/@value", "format": "date"}],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough Boundaries"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Water included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "wh2p-dxnf"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/2/dcterms:modified/@value",
+                        "format": "date"
+                      }
+                    ],
                     [
                       {
                         "type": "link",
                         "href": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
                         "newWindow": true,
                         "accessibleNewWindowText": "opens in a new tab",
-                        "content": [{"type": "text", "text": "NYC Open Data"}]
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "NYC Open Data"
+                          }
+                        ]
                       }
                     ]
                   ]
@@ -140,42 +345,472 @@
           {
             "type": "section",
             "id": "measurements",
-            "heading": [{"type": "text", "text": "Borough measurements"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Borough measurements"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
-                "content": [{"type": "text", "text": "All ten governed measurements, as published by DCP — five boroughs, each with a water-excluded and a water-included figure."}]
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "All ten governed measurements, as published by DCP — five boroughs, each with a water-excluded and a water-included figure."
+                  }
+                ]
               },
               {
                 "type": "table",
-                "caption": [{"type": "text", "text": "DCP borough area and perimeter, both water treatments"}],
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "DCP borough area and perimeter, both water treatments"
+                  }
+                ],
                 "columns": [
-                  {"header": [{"type": "text", "text": "Borough"}]},
-                  {"header": [{"type": "text", "text": "Water treatment"}]},
-                  {"header": [{"type": "text", "text": "Area (sq mi)"}]},
-                  {"header": [{"type": "text", "text": "Perimeter (ft)"}]}
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Borough"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Water treatment"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Area (sq mi)"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Perimeter (ft)"
+                      }
+                    ]
+                  }
                 ],
                 "rows": [
-                  [[{"type": "text", "text": "Manhattan"}], [{"type": "text", "text": "Excluded"}], [{"type": "text", "text": "22.836"}], [{"type": "text", "text": "359,537.906171"}]],
-                  [[{"type": "text", "text": "Manhattan"}], [{"type": "text", "text": "Included"}], [{"type": "text", "text": "33.873"}], [{"type": "text", "text": "203,531.367419"}]],
-                  [[{"type": "text", "text": "Bronx"}], [{"type": "text", "text": "Excluded"}], [{"type": "text", "text": "42.585"}], [{"type": "text", "text": "463,146.326689"}]],
-                  [[{"type": "text", "text": "Bronx"}], [{"type": "text", "text": "Included"}], [{"type": "text", "text": "57.338"}], [{"type": "text", "text": "188,162.479525"}]],
-                  [[{"type": "text", "text": "Brooklyn"}], [{"type": "text", "text": "Excluded"}], [{"type": "text", "text": "69.389"}], [{"type": "text", "text": "726,953.045090"}]],
-                  [[{"type": "text", "text": "Brooklyn"}], [{"type": "text", "text": "Included"}], [{"type": "text", "text": "96.765"}], [{"type": "text", "text": "236,476.769178"}]],
-                  [[{"type": "text", "text": "Queens"}], [{"type": "text", "text": "Excluded"}], [{"type": "text", "text": "109.096"}], [{"type": "text", "text": "887,902.903727"}]],
-                  [[{"type": "text", "text": "Queens"}], [{"type": "text", "text": "Included"}], [{"type": "text", "text": "178.019"}], [{"type": "text", "text": "459,301.798759"}]],
-                  [[{"type": "text", "text": "Staten Island"}], [{"type": "text", "text": "Excluded"}], [{"type": "text", "text": "58.239"}], [{"type": "text", "text": "325,912.288988"}]],
-                  [[{"type": "text", "text": "Staten Island"}], [{"type": "text", "text": "Included"}], [{"type": "text", "text": "102.284"}], [{"type": "text", "text": "220,557.476076"}]]
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Manhattan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "22.836"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "359,537.906171"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Manhattan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "33.873"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "203,531.367419"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "42.585"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "463,146.326689"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "57.338"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "188,162.479525"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Brooklyn"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "69.389"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "726,953.045090"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Brooklyn"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "96.765"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "236,476.769178"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "109.096"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "887,902.903727"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "178.019"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "459,301.798759"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Staten Island"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Excluded"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "58.239"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "325,912.288988"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Staten Island"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Included"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "102.284"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "220,557.476076"
+                      }
+                    ]
+                  ]
                 ]
               },
               {
                 "type": "paragraph",
                 "content": [
-                  {"type": "text", "text": "Raw geometry for both variants is separately published: "},
-                  {"type": "link", "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json", "content": [{"type": "text", "text": "water-excluded fixture"}]},
-                  {"type": "text", "text": ", "},
-                  {"type": "link", "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json", "content": [{"type": "text", "text": "water-included fixture"}]},
-                  {"type": "text", "text": "."}
+                  {
+                    "type": "text",
+                    "text": "Raw geometry for both variants is separately published: "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "water-excluded fixture"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "water-included fixture"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Source attribution is retained on this page. Review current NYC Open Data terms before redistributing beyond this repository."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "published-material",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Published fixture and artifacts"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Water-excluded borough geometry fixture"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Water-included borough geometry fixture"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-dcp-borough-boundaries/index.jsonld",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "This page's structured data (JSON-LD)"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "validation",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation and provenance"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Borough area and perimeter figures are DCP's own published values, retrieved directly from the two Borough Boundaries catalog datasets; this page does not independently recompute them. Source-update timestamps are Socrata's own data-update values for each catalog dataset, not this page's own retrieval or review time. For independent cross-source verification of these figures, see "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
                 ]
               }
             ]
@@ -183,14 +818,58 @@
           {
             "type": "section",
             "id": "governance",
-            "heading": [{"type": "text", "text": "Governance"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Governance"
+              }
+            ],
             "children": [
               {
                 "type": "definitionList",
                 "items": [
-                  {"term": [{"type": "text", "text": "Lifecycle"}], "description": [{"type": "text", "text": "Active"}]},
-                  {"term": [{"type": "text", "text": "Confidence"}], "description": [{"type": "text", "text": "High (0.95)"}]},
-                  {"term": [{"type": "text", "text": "Scope"}], "description": [{"type": "text", "text": "DCP's own published borough boundary values, as DCP asserts them — not an independent recomputation."}]}
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Lifecycle"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Active"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Confidence"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "High (0.95)"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Scope"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "DCP's own published borough boundary values, as DCP asserts them — not an independent recomputation."
+                      }
+                    ]
+                  }
                 ]
               }
             ]
@@ -198,14 +877,63 @@
           {
             "type": "section",
             "id": "limitations",
-            "heading": [{"type": "text", "text": "Limitations"}],
+            "heading": [
+              {
+                "type": "text",
+                "text": "Limitations"
+              }
+            ],
             "children": [
               {
                 "type": "paragraph",
                 "content": [
-                  {"type": "text", "text": "This page presents DCP's own published values as DCP asserts them. It does not independently verify DCP's geometry, and it is not the place to compare DCP against other sources — that comparison, including area agreement/difference against the Census Bureau, OpenStreetMap, and NYS Civil Boundaries, lives on "},
-                  {"type": "link", "href": "https://knoedg.nyc/nyc-boundaries/", "content": [{"type": "text", "text": "NYC Boundaries"}]},
-                  {"type": "text", "text": "."}
+                  {
+                    "type": "text",
+                    "text": "This page presents DCP's own published values as DCP asserts them. It does not independently verify DCP's geometry, and it is not the place to compare DCP against other sources — that comparison, including area agreement/difference against the Census Bureau, OpenStreetMap, and NYS Civil Boundaries, lives on "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/6/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Initial publication of the NYC DCP Borough Boundaries source page."
+                    }
+                  ]
                 ]
               }
             ]
@@ -228,40 +956,161 @@
         "@type": "dcat:Dataset",
         "dcterms:title": "NYC DCP Borough Boundaries",
         "dcterms:description": "A governed public view of the NYC Department of City Planning's two Borough Boundaries catalog datasets and the ten governed borough measurements drawn from them.",
-        "dcterms:publisher": {"@id": "https://knoedg.nyc/#organization"},
+        "dcterms:publisher": {
+          "@id": "https://knoedg.nyc/#organization"
+        },
         "dcterms:rights": "Source attribution is retained on this page. Review current NYC Open Data terms before redistributing beyond this repository.",
-        "dcterms:issued": {"@value": "2026-08-10", "@type": "xsd:date"},
-        "dcterms:modified": {"@value": "2026-08-10", "@type": "xsd:date"},
-        "dcterms:spatial": {"@id": "https://www.wikidata.org/entity/Q60"},
+        "dcterms:issued": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:spatial": {
+          "@id": "https://www.wikidata.org/entity/Q60"
+        },
         "dcterms:hasPart": [
-          {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"},
-          {"@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"}
+          {
+            "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+          },
+          {
+            "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-excluded"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-included"
+          }
         ],
-        "prov:wasAttributedTo": {"@id": "https://www.nyc.gov/site/planning/index.page"},
-        "dcat:landingPage": {"@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/"},
+        "prov:wasAttributedTo": {
+          "@id": "https://www.nyc.gov/site/planning/index.page"
+        },
+        "dcat:landingPage": {
+          "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/"
+        },
         "dcat:distribution": [
-          {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"},
-          {"@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"}
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+          },
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+          }
+        ],
+        "dcterms:provenance": "Borough area and perimeter figures are DCP's own published values, retrieved directly from the two Borough Boundaries catalog datasets (gthc-hcne water-excluded, wh2p-dxnf water-included) on 2026-08-08; not independently recomputed by this pack. Source-update timestamps are Socrata's own data-update values for each dataset.",
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#publication-2026-08-10"
+          }
         ]
       },
       {
         "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
-        "@type": ["dcat:Dataset", "prov:Entity"],
+        "@type": [
+          "dcat:Dataset",
+          "prov:Entity"
+        ],
         "dcterms:title": "Borough Boundaries (water areas excluded)",
-        "dcterms:publisher": {"@id": "https://www.nyc.gov/site/planning/index.page"},
-        "dcterms:modified": {"@value": "2026-05-26", "@type": "xsd:date"}
+        "dcterms:publisher": {
+          "@id": "https://www.nyc.gov/site/planning/index.page"
+        },
+        "dcterms:modified": {
+          "@value": "2026-05-26",
+          "@type": "xsd:date"
+        }
       },
       {
         "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
-        "@type": ["dcat:Dataset", "prov:Entity"],
+        "@type": [
+          "dcat:Dataset",
+          "prov:Entity"
+        ],
         "dcterms:title": "Borough Boundaries (water areas included)",
-        "dcterms:publisher": {"@id": "https://www.nyc.gov/site/planning/index.page"},
-        "dcterms:modified": {"@value": "2026-05-26", "@type": "xsd:date"}
+        "dcterms:publisher": {
+          "@id": "https://www.nyc.gov/site/planning/index.page"
+        },
+        "dcterms:modified": {
+          "@value": "2026-05-26",
+          "@type": "xsd:date"
+        }
       },
       {
         "@id": "https://www.nyc.gov/site/planning/index.page",
-        "@type": ["prov:Agent", "schema:GovernmentOrganization"],
+        "@type": [
+          "prov:Agent",
+          "schema:GovernmentOrganization"
+        ],
         "schema:name": "NYC Department of City Planning"
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-excluded",
+        "@type": "schema:Claim",
+        "schema:text": "NYC DCP water-excluded data represents the five borough shoreline geometries, excluding water areas.",
+        "schema:citation": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2026-05-26T19:35:50Z",
+              "@type": "xsd:dateTime"
+            }
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#water-included",
+        "@type": "schema:Claim",
+        "schema:text": "NYC DCP water-included data represents the five borough geometries extending into surrounding water.",
+        "schema:citation": {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2026-05-26T19:35:22Z",
+              "@type": "xsd:dateTime"
+            }
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/#publication-2026-08-10",
+        "@type": "prov:Activity",
+        "dcterms:description": "Initial publication of the NYC DCP Borough Boundaries source page.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T03:55:38Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/"
+        }
       }
     ]
   }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T10:06:12Z",
+  "issuedAt": "2026-08-10T10:32:14Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.2",
+  "artifactVersion": "2026-08-10.4",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -2877,6 +2877,24 @@
                       "type": "text",
                       "text": "August 9, 2026 — Root-caused the Overture land/maritime re-verification finding: the underlying release asset was confirmed unchanged since the original capture, and the discrepancy was traced to an error in that original capture rather than a live data change. The governed source's prose disposition was corrected accordingly."
                     }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 10, 2026 -- DCP water-excluded/water-included evidence cells now link primarily to the new /nyc-dcp-borough-boundaries/ internal source page, with the original NYC Open Data links retained alongside."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 10, 2026 -- Census Gazetteer evidence cell now links primarily to the new /nyc-census-gazetteer/ internal source page, with the original census.gov link retained alongside."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "August 10, 2026 -- Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md."
+                    }
                   ]
                 ]
               }
@@ -3034,6 +3052,53 @@
           },
           {
             "@id": "https://knoedg.nyc/assets/nyc-boundaries-comparison.svg"
+          }
+        ],
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-01"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-02"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-03"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-04"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-05"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-06"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-07"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-08"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-09"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-10"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-11"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-12"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-01"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-02"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-03"
           }
         ]
       },
@@ -4103,6 +4168,186 @@
             "schema:value": "Quattroshapes; qs:source US Census"
           }
         ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-01",
+        "@type": "prov:Activity",
+        "dcterms:description": "Water-excluded borough fixture, deterministic generator and SVG published.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-02",
+        "@type": "prov:Activity",
+        "dcterms:description": "NYC Boundaries established as the canonical knowledge resource with Linked Data metadata and multi-source comparison.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-03",
+        "@type": "prov:Activity",
+        "dcterms:description": "Water-included geometry, retained source response and reproducible boundary overlay published.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-04",
+        "@type": "prov:Activity",
+        "dcterms:description": "geoBoundaries and Overture Maps governed representations added with explicit Census and OpenStreetMap provenance-cluster dispositions.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-05",
+        "@type": "prov:Activity",
+        "dcterms:description": "Five Who's On First county records added for stable identifiers, hierarchy and concordances, with default geometry retained in the Census provenance cluster.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-06",
+        "@type": "prov:Activity",
+        "dcterms:description": "NYC Boundaries migrated to authoritative structured content blocks under fixture-page/v2; the public renderer remains backward-compatible with frozen v1 artifacts.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-07",
+        "@type": "prov:Activity",
+        "dcterms:description": "Five 2023 Census Gazetteer county measurement records published as a public-safe JSON fixture with ALAND, AWATER, internal points, source lineage, rights, and statistical-purpose limitations; no geometry is included.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-08",
+        "@type": "prov:Activity",
+        "dcterms:description": "Ten exact OpenStreetMap county/borough relation versions published as a public-safe metadata fixture with stable identifiers, timestamps, governed assertion links, ODbL attribution, and explicit geometry/measurement absence.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-09",
+        "@type": "prov:Activity",
+        "dcterms:description": "Five retained geoBoundaries USA ADM2 county geometries published with CC BY 4.0 attribution, build-specific identifiers, Census provenance-cluster disposition, deterministic regeneration and explicit generalized/shoreline-clipped limitations.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-10",
+        "@type": "prov:Activity",
+        "dcterms:description": "Five retained Who's On First county geometries published with Quattroshapes/CC0 attribution, stable WOF identifiers, Census GEOID/HASC concordances, deterministic regeneration and an explicit non-independent geom:area_square_m disclosure.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-11",
+        "@type": "prov:Activity",
+        "dcterms:description": "Eleven Overture Maps division-area geometries published with ODbL 1.0 attribution, both Richmond County land and maritime representations, deterministic regeneration, and a disclosed land/maritime-classification re-verification finding against the collection's original governed capture.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-09-12",
+        "@type": "prov:Activity",
+        "dcterms:description": "Root-caused the Overture land/maritime re-verification finding: the underlying release asset was confirmed unchanged since the original capture, and the discrepancy was traced to an error in that original capture rather than a live data change. The governed source's prose disposition was corrected accordingly.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-09",
+          "@type": "xsd:date"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-01",
+        "@type": "prov:Activity",
+        "dcterms:description": "DCP water-excluded/water-included evidence cells now link primarily to the new /nyc-dcp-borough-boundaries/ internal source page, with the original NYC Open Data links retained alongside.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T04:02:16Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-02",
+        "@type": "prov:Activity",
+        "dcterms:description": "Census Gazetteer evidence cell now links primarily to the new /nyc-census-gazetteer/ internal source page, with the original census.gov link retained alongside.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T10:07:36Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-03",
+        "@type": "prov:Activity",
+        "dcterms:description": "Publication history, claim-level lifecycle/confidence, and provenance made structured (schema:Claim, prov:Activity) rather than HTML-prose-only, per docs/governance/INTERNAL_SOURCE_PAGE_PATTERN.md.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T10:32:14Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
       }
     ]
   },
