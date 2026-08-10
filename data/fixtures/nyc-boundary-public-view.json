@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T13:05:00Z",
+  "issuedAt": "2026-08-10T13:35:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.9",
+  "artifactVersion": "2026-08-10.10",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -727,6 +727,20 @@
                     [
                       {
                         "type": "link",
+                        "href": "https://knoedg.nyc/nyc-geoboundaries/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "geoBoundaries source page"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " · "
+                      },
+                      {
+                        "type": "link",
                         "href": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson",
                         "content": [
                           {
@@ -741,7 +755,12 @@
                     [
                       {
                         "type": "text",
-                        "text": "December 12, 2023 geoBoundaries build date"
+                        "text": "geoBoundaries build date "
+                      },
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/32/dcterms:issued/@value",
+                        "format": "date"
                       }
                     ]
                   ],
@@ -2387,6 +2406,17 @@
                       "type": "text",
                       "text": " — Published the Who's On First internal source page and removed the duplicated “Who's On First source records” per-record detail table now that /nyc-whos-on-first/ carries that content; the Compared views Who's On First row links there directly instead."
                     }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/60/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Published the geoBoundaries internal source page. The Compared views geoBoundaries row now links there as its primary reference (external link retained alongside), and its build-date cell resolves via a time/pointer node instead of hardcoded prose."
+                    }
                   ]
                 ]
               }
@@ -2606,6 +2636,9 @@
           },
           {
             "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-08"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-09"
           }
         ]
       },
@@ -3910,6 +3943,18 @@
         "dcterms:description": "Published the Who's On First internal source page and removed the duplicated “Who's On First source records” per-record detail table now that /nyc-whos-on-first/ carries that content; the Compared views Who's On First row links there directly instead.",
         "prov:generatedAtTime": {
           "@value": "2026-08-10T13:05:00Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-09",
+        "@type": "prov:Activity",
+        "dcterms:description": "Published the geoBoundaries internal source page. The Compared views geoBoundaries row now links there as its primary reference (external link retained alongside), and its build-date cell resolves via a time/pointer node instead of hardcoded prose.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T13:35:00Z",
           "@type": "xsd:dateTime"
         },
         "prov:generated": {
