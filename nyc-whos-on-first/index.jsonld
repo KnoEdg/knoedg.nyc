@@ -1,0 +1,278 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-whos-on-first/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC Who's On First Counties",
+      "dcterms:description": "A governed public view of Who's On First as a boundary-data publisher: the five exact county gazetteer records used by NYC Boundaries.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "Who's On First's own record structure is CC0 1.0 (public domain). The default geometry each record carries is Quattroshapes under CC BY 2.0 attribution, sourced from the U.S. Census Bureau (qs:source).",
+      "dcterms:provenance": "Each record's identity, Census GEOID/HASC concordance, and source-owned wof:lastmodified value were retrieved directly from the pinned whosonfirst-data-admin-us repository commit c4e4f9b2233c4b29a6f7124278b635e270d0b87d on 2026-08-09 and cross-checked via exact git blob SHA; not independently recomputed by this pack.",
+      "dcterms:issued": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {
+          "@id": "https://knoedg.nyc/nyc-whos-on-first/#records"
+        }
+      ],
+      "prov:wasAttributedTo": {
+        "@id": "https://whosonfirst.org/"
+      },
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-whos-on-first/"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-whos-on-first-county-representations.geojson"
+        }
+      ],
+      "prov:wasGeneratedBy": [
+        {
+          "@id": "https://knoedg.nyc/nyc-whos-on-first/#publication-2026-08-10"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102081863",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:21Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/863/102081863.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36061"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "6818d9de4ab7d1abfff7711ef1b250e2e417920c"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102083063",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:34Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/083/063/102083063.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36005"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "bfd0e6cacfc317b0614b70c0ebcedae54450b542"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102082361",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:27Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/361/102082361.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36047"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "8d2d0c14c5cf1f6bb3cb106722e36944443cfae2"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102082377",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:27Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/082/377/102082377.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36081"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "faeb46f2de1fb2ffcd2c08d89c242effd70ad787"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson",
+      "@type": [
+        "prov:Entity",
+        "schema:Dataset"
+      ],
+      "dcterms:identifier": "WOF:102081779",
+      "dcterms:modified": {
+        "@value": "2024-08-02T06:31:21Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/master/data/102/081/779/102081779.geojson"
+      },
+      "schema:version": "c4e4f9b2233c4b29a6f7124278b635e270d0b87d",
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Census GEOID",
+          "schema:value": "36085"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Git blob",
+          "schema:value": "8f9d2af27850c47ec9f0b7555f24b8c81ff6f6c8"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Geometry source",
+          "schema:value": "Quattroshapes; qs:source US Census"
+        }
+      ]
+    },
+    {
+      "@id": "https://whosonfirst.org/",
+      "@type": [
+        "prov:Agent",
+        "schema:Organization"
+      ],
+      "schema:name": "Who's On First"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-whos-on-first/#records",
+      "@type": "schema:Claim",
+      "schema:text": "Who's On First represents each of the five NYC counties as a current gazetteer record with default Quattroshapes geometry sourced from the U.S. Census Bureau.",
+      "schema:citation": [
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/863/102081863.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/083/063/102083063.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/361/102082361.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/082/377/102082377.geojson"
+        },
+        {
+          "@id": "https://github.com/whosonfirst-data/whosonfirst-data-admin-us/blob/c4e4f9b2233c4b29a6f7124278b635e270d0b87d/data/102/081/779/102081779.geojson"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.95
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": "Per cited record: 2024-08-02T06:31:21Z through 2024-08-02T06:31:34Z"
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-whos-on-first/#publication-2026-08-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Initial publication of the NYC Who's On First Counties source page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T13:00:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-whos-on-first/"
+      }
+    }
+  ]
+}
