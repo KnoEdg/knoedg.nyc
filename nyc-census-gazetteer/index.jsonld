@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-census-gazetteer/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC Census Gazetteer Counties",
+      "dcterms:description": "A governed public view of the U.S. Census Bureau's 2023 county Gazetteer file and the five governed land/water measurements drawn from it for the NYC-area counties.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "Census Bureau data is generally in the public domain. Review current census.gov terms before redistributing beyond this repository.",
+      "dcterms:issued": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {
+          "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip"
+        }
+      ],
+      "prov:wasAttributedTo": {
+        "@id": "https://www.census.gov/"
+      },
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-census-gazetteer/"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
+        }
+      ]
+    },
+    {
+      "@id": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+      "@type": [
+        "dcat:Dataset",
+        "prov:Entity"
+      ],
+      "dcterms:title": "2023 county Gazetteer file",
+      "dcterms:publisher": {
+        "@id": "https://www.census.gov/"
+      },
+      "dcterms:modified": {
+        "@value": "2023-09-26",
+        "@type": "xsd:date"
+      }
+    },
+    {
+      "@id": "https://www.census.gov/",
+      "@type": [
+        "prov:Agent",
+        "schema:GovernmentOrganization"
+      ],
+      "schema:name": "U.S. Census Bureau"
+    }
+  ]
+}
