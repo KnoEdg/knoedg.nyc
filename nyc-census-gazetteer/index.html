@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A governed public view of the U.S. Census Bureau&#x27;s 2023 county Gazetteer file as a boundary-data publisher: its land/water area figures and internal points for the five NYC-area counties.">
+  <title>NYC Census Gazetteer Counties — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-census-gazetteer/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/nyc-census-gazetteer/index.jsonld" title="NYC Census Gazetteer Counties structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+<article>
+<section aria-labelledby="nyc-census-gazetteer">
+<h1 id="nyc-census-gazetteer">NYC Census Gazetteer Counties</h1>
+<p>Knowledge resource</p>
+<p>A governed public view of the <strong>U.S. Census Bureau</strong> as a boundary-data publisher — its 2023 county Gazetteer file and the five governed land/water measurements drawn from it for the NYC-area counties. For how these measurements compare against DCP, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+<section aria-labelledby="publisher">
+<h2 id="publisher">Publisher</h2>
+<dl aria-label="Publisher identity">
+<div><dt>Name</dt><dd>U.S. Census Bureau</dd></div>
+<div><dt>Organization type</dt><dd>Federal statistical agency, U.S. Department of Commerce</dd></div>
+<div><dt>Website</dt><dd><a href="https://www.census.gov/" target="_blank" rel="noopener noreferrer" aria-label="census.gov (opens in a new tab)">census.gov<span aria-hidden="true"> ↗</span></a></dd></div>
+</dl>
+</section>
+<section aria-labelledby="dataset">
+<h2 id="dataset">Dataset</h2>
+<p>The Census Bureau publishes an annual county Gazetteer file, a TIGER/Line-derived attribute table (not raw geometry) giving each county&#x27;s land area, water area, and internal point. This page uses the 2023 vintage.</p>
+<div class="table-wrap"><table>
+<caption>Census Gazetteer dataset</caption>
+<thead><tr><th scope="col">Dataset</th><th scope="col">Vintage</th><th scope="col">Distribution modified</th><th scope="col">Source</th></tr></thead>
+<tbody><tr><td>County Gazetteer file</td><td>2023</td><td><time datetime="2023-09-26">2023-09-26</time></td><td><a href="https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip" target="_blank" rel="noopener noreferrer" aria-label="census.gov (opens in a new tab)">census.gov<span aria-hidden="true"> ↗</span></a></td></tr></tbody>
+</table></div>
+</section>
+<section aria-labelledby="measurements">
+<h2 id="measurements">County measurements</h2>
+<p>All five governed measurements, as published by the Census Bureau.</p>
+<div class="table-wrap"><table>
+<caption>Census Gazetteer land/water area and identifiers, five NYC-area counties</caption>
+<thead><tr><th scope="col">County</th><th scope="col">GEOID</th><th scope="col">ANSICODE</th><th scope="col">Land area (sq mi)</th><th scope="col">Water area (sq mi)</th><th scope="col">Internal point</th></tr></thead>
+<tbody><tr><td>New York</td><td><code>36061</code></td><td><code>00974129</code></td><td>22.658</td><td>11.201</td><td>40.776642, -73.970187</td></tr><tr><td>Bronx</td><td><code>36005</code></td><td><code>00974101</code></td><td>42.176</td><td>15.194</td><td>40.848711, -73.852939</td></tr><tr><td>Kings</td><td><code>36047</code></td><td><code>00974122</code></td><td>69.377</td><td>27.475</td><td>40.635045, -73.95064</td></tr><tr><td>Queens</td><td><code>36081</code></td><td><code>00974139</code></td><td>108.724</td><td>72.759</td><td>40.654658, -73.841209</td></tr><tr><td>Richmond</td><td><code>36085</code></td><td><code>00974141</code></td><td>57.523</td><td>45.344</td><td>40.561263, -74.1399</td></tr></tbody>
+</table></div>
+<p>The raw fixture is separately published: <a href="https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json">Census Gazetteer fixture</a>.</p>
+</section>
+<section aria-labelledby="governance">
+<h2 id="governance">Governance</h2>
+<dl>
+<div><dt>Lifecycle</dt><dd>Active</dd></div>
+<div><dt>Confidence</dt><dd>High (0.93)</dd></div>
+<div><dt>Scope</dt><dd>The Census Bureau&#x27;s own published Gazetteer values, as published — not an independent recomputation.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="limitations">
+<h2 id="limitations">Limitations</h2>
+<p>This page presents the Census Bureau&#x27;s own published values as published. It does not independently verify Census geometry, and it is not the place to compare Census against other sources — that comparison, including area agreement/difference against DCP, OpenStreetMap, and NYS Civil Boundaries, lives on <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>. The Gazetteer file is an attribute table, not raw geometry — it carries no polygon boundary of its own.</p>
+</section>
+</section>
+</article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>
+
