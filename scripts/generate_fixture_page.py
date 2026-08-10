@@ -7,11 +7,19 @@ import argparse
 import html
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
 
 V1_SCHEMA = "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1"
 V2_SCHEMA = "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2"
+# KnoEdg.NYC is a New York City knowledge resource; displayed instant text
+# renders in the site's own local time, not the UTC the artifact stores.
+# The <time datetime="..."> machine attribute always keeps the original UTC
+# instant unchanged -- only the human-visible text is localized. See
+# FIXTURE_DEPENDENT_PUBLIC_VIEW.md section 4 (deterministic locale behavior).
+SITE_TIMEZONE = ZoneInfo("America/New_York")
 PLACEHOLDERS = {
     "language", "description", "title", "canonical", "alternate_media_type",
     "alternate_href", "alternate_title", "stylesheet", "article_html",
@@ -64,7 +72,9 @@ def format_value(value: object, format_name: str = "text") -> str:
         return value
     if format_name == "datetime":
         require(isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", value), "datetime format requires UTC ISO 8601 seconds")
-        return value
+        instant = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        local = instant.astimezone(SITE_TIMEZONE)
+        return local.strftime("%B %-d, %Y, %-I:%M %p %Z")
     raise ConformanceError(f"unsupported value format: {format_name!r}")
 
 

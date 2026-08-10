@@ -5,7 +5,7 @@ import copy
 import json
 from pathlib import Path
 
-from generate_fixture_page import ConformanceError, load_artifact, render_article
+from generate_fixture_page import ConformanceError, format_value, load_artifact, render_article, render_inlines
 
 ROOT = Path(__file__).resolve().parents[1]
 V1 = ROOT / "tests/fixture-page-v1.json"
@@ -52,4 +52,17 @@ broken = copy.deepcopy(v2)
 broken["page"]["articleHtml"] = projected + "<!-- drift -->"
 must_fail(broken, "compatibility projection differs")
 
-print("Renderer conformance passes: v1 compatibility, v2 blocks, unknown schema, pointer, raw HTML, projection drift.")
+# KnoEdg.NYC displays instant text in America/New_York local time; the
+# <time datetime="..."> machine attribute must still carry the exact UTC
+# instant unchanged. This UTC value crosses a calendar-day boundary in ET
+# (03:55 UTC on the 10th is 23:55 EDT on the 9th) -- deliberately chosen so a
+# regression to raw-UTC display would be caught by a wrong displayed date,
+# not just a wrong hour.
+if format_value("2026-08-10T03:55:38Z", "datetime") != "August 9, 2026, 11:55 PM EDT":
+    raise SystemExit(f"datetime format did not localize to America/New_York ET: {format_value('2026-08-10T03:55:38Z', 'datetime')!r}")
+time_artifact = {"foo": "2026-08-10T03:55:38Z"}
+time_html = render_inlines([{"type": "time", "pointer": "/foo", "format": "datetime"}], time_artifact)
+if time_html != '<time datetime="2026-08-10T03:55:38Z">August 9, 2026, 11:55 PM EDT</time>':
+    raise SystemExit(f"time node did not preserve UTC datetime attribute while localizing display text: {time_html!r}")
+
+print("Renderer conformance passes: v1 compatibility, v2 blocks, unknown schema, pointer, raw HTML, projection drift, ET localization.")
