@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "nyc-boundaries/**"
+      - "nyc-dcp-borough-boundaries/**"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -24,6 +25,8 @@ on:
       - "data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
       - "data/fixtures/nyc-whos-on-first-county-representations.geojson"
       - "data/fixtures/nyc-overture-division-area-representations.geojson"
+      - "data/fixtures/nyc-dcp-borough-boundaries-public-view.json"
+      - "scripts/generate_nyc_dcp_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
@@ -43,6 +46,7 @@ on:
       - main
     paths:
       - "nyc-boundaries/**"
+      - "nyc-dcp-borough-boundaries/**"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -63,6 +67,8 @@ on:
       - "data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
       - "data/fixtures/nyc-whos-on-first-county-representations.geojson"
       - "data/fixtures/nyc-overture-division-area-representations.geojson"
+      - "data/fixtures/nyc-dcp-borough-boundaries-public-view.json"
+      - "scripts/generate_nyc_dcp_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
@@ -112,4 +118,29 @@ jobs:
       - run: python3 scripts/validate_nyc_geoboundaries_fixture.py
       - run: python3 scripts/validate_nyc_whos_on_first_fixture.py
       - run: python3 scripts/validate_nyc_overture_fixture.py
+      - name: Validate NYC DCP source-page v2 artifact against the public JSON Schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open("schemas/fixture-dependent-public-view/v2"))
+          artifact = json.load(open("data/fixtures/nyc-dcp-borough-boundaries-public-view.json"))
+          Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+          PY
+      - run: python3 scripts/generate_nyc_dcp_source_view.py --check
+      - name: Validate NYC DCP source-page JSON-LD expansion
+        run: |
+          python3 - <<'PY'
+          import json
+          from pyld import jsonld
+          document = json.load(open("nyc-dcp-borough-boundaries/index.jsonld"))
+          expanded = jsonld.expand(document)
+          if not isinstance(expanded, list) or not expanded:
+              raise SystemExit("JSON-LD expansion produced no nodes")
+          for node in expanded:
+              identifier = node.get("@id")
+              if identifier is not None and not identifier.startswith("https://"):
+                  raise SystemExit(f"expanded graph contains a non-HTTPS node identity: {identifier}")
+          print(f"JSON-LD expansion validates: {len(expanded)} nodes.")
+          PY
       - run: sha256sum --check data/fixtures/SHA256SUMS
