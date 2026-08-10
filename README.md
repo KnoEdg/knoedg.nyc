@@ -74,3 +74,51 @@ The geoBoundaries fixture schema is served from
 schema is served from `/schemas/nyc-whos-on-first-county-representations/v1`.
 The Overture fixture schema is served from
 `/schemas/nyc-overture-division-area-representations/v1`.
+
+
+## Internal source pages
+
+Six per-publisher-family pages, each presenting one boundary-data publisher
+(DCP, Census Gazetteer, OpenStreetMap, Who's On First, geoBoundaries, Overture
+Maps) as its own governed knowledge resource, replacing the transitional
+direct external-evidence links that used to be `/nyc-boundaries/`'s only way
+to point at a source:
+
+- [`/nyc-dcp-borough-boundaries/`](https://knoedg.nyc/nyc-dcp-borough-boundaries/)
+- [`/nyc-census-gazetteer/`](https://knoedg.nyc/nyc-census-gazetteer/)
+- [`/nyc-openstreetmap/`](https://knoedg.nyc/nyc-openstreetmap/)
+- [`/nyc-whos-on-first/`](https://knoedg.nyc/nyc-whos-on-first/)
+- [`/nyc-geoboundaries/`](https://knoedg.nyc/nyc-geoboundaries/)
+- [`/nyc-overture/`](https://knoedg.nyc/nyc-overture/)
+
+Each is generated the same way as `/nyc-boundaries/` itself, from its own
+`data/fixtures/nyc-*-source-public-view.json` artifact via a thin
+`scripts/generate_nyc_*_source_view.py` wrapper around the shared
+`generate_fixture_page.py` renderer — no page-specific rendering logic. Every
+page carries the same nine canonical sections (Publisher, Dataset, a
+measurements table, Rights, Published material, Validation, Governance,
+Limitations, Publication history) and the same JSON-LD shape: claim-level
+lifecycle/confidence, `dcterms:provenance`, and `prov:Activity`-backed
+publication history — never hardcoded prose duplicating a fact the JSON-LD
+already carries. See `meta-knoedg-nyc`'s `docs/governance/
+INTERNAL_SOURCE_PAGE_PATTERN.md` for the pattern definition.
+
+Regenerate and verify any of them without network access:
+
+```bash
+python3 scripts/generate_nyc_dcp_source_view.py --check
+python3 scripts/generate_nyc_census_gazetteer_source_view.py --check
+python3 scripts/generate_nyc_openstreetmap_source_view.py --check
+python3 scripts/generate_nyc_whos_on_first_source_view.py --check
+python3 scripts/generate_nyc_geoboundaries_source_view.py --check
+python3 scripts/generate_nyc_overture_source_view.py --check
+python3 scripts/test_fixture_page_renderer.py
+sha256sum --check data/fixtures/SHA256SUMS
+```
+
+Displayed instants render in `America/New_York` local time everywhere on the
+site (`knoedg.nyc` is a New York City knowledge resource); the underlying
+`<time datetime="...">` attribute always keeps the original UTC instant
+unchanged. A value the source only ever recorded as a calendar date (no
+time-of-day) renders as a plain human-readable date and is never given a
+fabricated time.
