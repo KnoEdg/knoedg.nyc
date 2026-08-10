@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-dcp-borough-boundaries/",
-  "artifactVersion": "2026-08-10.2",
+  "artifactVersion": "2026-08-10.3",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-10T10:29:19Z",
+  "issuedAt": "2026-08-10T12:15:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -279,7 +279,7 @@
                       {
                         "type": "time",
                         "pointer": "/semanticRepresentation/@graph/1/dcterms:modified/@value",
-                        "format": "date"
+                        "format": "datetime"
                       }
                     ],
                     [
@@ -320,7 +320,7 @@
                       {
                         "type": "time",
                         "pointer": "/semanticRepresentation/@graph/2/dcterms:modified/@value",
-                        "format": "date"
+                        "format": "datetime"
                       }
                     ],
                     [
@@ -1017,8 +1017,8 @@
           "@id": "https://www.nyc.gov/site/planning/index.page"
         },
         "dcterms:modified": {
-          "@value": "2026-05-26",
-          "@type": "xsd:date"
+          "@value": "2026-05-26T19:35:50Z",
+          "@type": "xsd:dateTime"
         }
       },
       {
@@ -1032,8 +1032,8 @@
           "@id": "https://www.nyc.gov/site/planning/index.page"
         },
         "dcterms:modified": {
-          "@value": "2026-05-26",
-          "@type": "xsd:date"
+          "@value": "2026-05-26T19:35:22Z",
+          "@type": "xsd:dateTime"
         }
       },
       {
