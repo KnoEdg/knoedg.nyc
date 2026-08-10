@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC DCP Borough Boundaries",
+      "dcterms:description": "A governed public view of the NYC Department of City Planning's two Borough Boundaries catalog datasets and the ten governed borough measurements drawn from them.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "Source attribution is retained on this page. Review current NYC Open Data terms before redistributing beyond this repository.",
+      "dcterms:issued": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne"
+        },
+        {
+          "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf"
+        }
+      ],
+      "prov:wasAttributedTo": {
+        "@id": "https://www.nyc.gov/site/planning/index.page"
+      },
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-dcp-borough-boundaries/"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
+      "@type": [
+        "dcat:Dataset",
+        "prov:Entity"
+      ],
+      "dcterms:title": "Borough Boundaries (water areas excluded)",
+      "dcterms:publisher": {
+        "@id": "https://www.nyc.gov/site/planning/index.page"
+      },
+      "dcterms:modified": {
+        "@value": "2026-05-26",
+        "@type": "xsd:date"
+      }
+    },
+    {
+      "@id": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
+      "@type": [
+        "dcat:Dataset",
+        "prov:Entity"
+      ],
+      "dcterms:title": "Borough Boundaries (water areas included)",
+      "dcterms:publisher": {
+        "@id": "https://www.nyc.gov/site/planning/index.page"
+      },
+      "dcterms:modified": {
+        "@value": "2026-05-26",
+        "@type": "xsd:date"
+      }
+    },
+    {
+      "@id": "https://www.nyc.gov/site/planning/index.page",
+      "@type": [
+        "prov:Agent",
+        "schema:GovernmentOrganization"
+      ],
+      "schema:name": "NYC Department of City Planning"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-09T23:35:00Z",
+  "issuedAt": "2026-08-10T04:01:02Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-09.8",
+  "artifactVersion": "2026-08-10.1",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -454,11 +454,25 @@
                     [
                       {
                         "type": "link",
+                        "href": "https://knoedg.nyc/nyc-dcp-borough-boundaries/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "DCP source page"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " · "
+                      },
+                      {
+                        "type": "link",
                         "href": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
                         "content": [
                           {
                             "type": "text",
-                            "text": "Dataset gthc-hcne"
+                            "text": "gthc-hcne"
                           }
                         ],
                         "newWindow": true,
@@ -506,11 +520,25 @@
                     [
                       {
                         "type": "link",
+                        "href": "https://knoedg.nyc/nyc-dcp-borough-boundaries/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "DCP source page"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " · "
+                      },
+                      {
+                        "type": "link",
                         "href": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf",
                         "content": [
                           {
                             "type": "text",
-                            "text": "Dataset wh2p-dxnf"
+                            "text": "wh2p-dxnf"
                           }
                         ],
                         "newWindow": true,
