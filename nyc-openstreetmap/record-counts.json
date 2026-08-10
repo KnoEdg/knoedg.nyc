@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "rendererContract": "fixture-page/v2",
+  "resource": "https://knoedg.nyc/nyc-openstreetmap/",
+  "activeRecordCount": 10,
+  "representations": [
+    {
+      "id": "openstreetmap",
+      "label": "OpenStreetMap",
+      "count": 10,
+      "provenanceCluster": "OpenStreetMap contributors"
+    }
+  ]
+}

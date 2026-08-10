@@ -1,0 +1,268 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-openstreetmap/",
+      "@type": "dcat:Dataset",
+      "dcterms:title": "NYC OpenStreetMap Relations",
+      "dcterms:description": "A governed public view of OpenStreetMap as a boundary-data publisher: the ten exact county- and borough-level administrative relation versions used by NYC Boundaries.",
+      "dcterms:publisher": {
+        "@id": "https://knoedg.nyc/#organization"
+      },
+      "dcterms:rights": "OpenStreetMap data is published under the Open Database License (ODbL) 1.0. Redistribution requires retaining attribution (© OpenStreetMap contributors) and the ODbL license reference alongside any redistributed OSM-origin data.",
+      "dcterms:provenance": "Each relation's version number, edit timestamp, administrative tags, and identifiers were retrieved directly from the OpenStreetMap API (version 0.6) on 2026-08-08 and cross-checked against the governed assertion records; not independently recomputed by this pack.",
+      "dcterms:issued": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-08-10",
+        "@type": "xsd:date"
+      },
+      "dcterms:spatial": {
+        "@id": "https://www.wikidata.org/entity/Q60"
+      },
+      "dcterms:hasPart": [
+        {
+          "@id": "https://knoedg.nyc/nyc-openstreetmap/#relations"
+        }
+      ],
+      "prov:wasAttributedTo": {
+        "@id": "https://www.openstreetmap.org/"
+      },
+      "dcat:landingPage": {
+        "@id": "https://knoedg.nyc/nyc-openstreetmap/"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
+        }
+      ],
+      "prov:wasGeneratedBy": [
+        {
+          "@id": "https://knoedg.nyc/nyc-openstreetmap/#publication-2026-08-10"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/2552485/history/56",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/2552485"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/8398124/history/50",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/8398124"
+      },
+      "dcterms:modified": {
+        "@value": "2026-06-15T09:04:18Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/2552450/history/32",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/2552450"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-08T17:09:24Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691916/history/24",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691916"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-08T17:09:24Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/369518/history/44",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/369518"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691750/history/34",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691750"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/369519/history/71",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/369519"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691819/history/39",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691819"
+      },
+      "dcterms:modified": {
+        "@value": "2026-01-13T14:07:26Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/962876/history/18",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/962876"
+      },
+      "dcterms:modified": {
+        "@value": "2025-08-24T18:21:46Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/relation/9691948/history/17",
+      "@type": [
+        "prov:Entity",
+        "dcterms:isVersionOf"
+      ],
+      "dcterms:isVersionOf": {
+        "@id": "https://www.openstreetmap.org/relation/9691948"
+      },
+      "dcterms:modified": {
+        "@value": "2025-08-24T18:21:46Z",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://www.openstreetmap.org/",
+      "@type": [
+        "prov:Agent",
+        "schema:Organization"
+      ],
+      "schema:name": "OpenStreetMap contributors"
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-openstreetmap/#relations",
+      "@type": "schema:Claim",
+      "schema:text": "OpenStreetMap represents each of the five NYC counties as a county-level and a borough-level administrative relation.",
+      "schema:citation": [
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+        },
+        {
+          "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+        }
+      ],
+      "schema:additionalProperty": [
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE lifecycle state",
+          "schema:value": "Active"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "KEE confidence",
+          "schema:value": 0.78
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Source last updated",
+          "schema:value": "Per cited relation: 2025-08-24T18:21:46Z through 2026-06-15T09:04:18Z"
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-openstreetmap/#publication-2026-08-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Initial publication of the NYC OpenStreetMap Relations source page.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T11:13:57Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-openstreetmap/"
+      }
+    }
+  ]
+}

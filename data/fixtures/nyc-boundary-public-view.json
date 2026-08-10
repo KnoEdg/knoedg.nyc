@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T11:18:21Z",
+  "issuedAt": "2026-08-10T11:50:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.5",
+  "artifactVersion": "2026-08-10.6",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -667,11 +667,25 @@
                     [
                       {
                         "type": "link",
+                        "href": "https://knoedg.nyc/nyc-openstreetmap/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "OpenStreetMap source page"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " · "
+                      },
+                      {
+                        "type": "link",
                         "href": "#osm-source-versions",
                         "content": [
                           {
                             "type": "text",
-                            "text": "10 county/borough relation versions"
+                            "text": "10 relation versions below"
                           }
                         ]
                       }
