@@ -1,0 +1,1400 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "fixture-dependent-public-view",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "resource": "https://knoedg.nyc/nyc-openstreetmap/",
+  "artifactVersion": "2026-08-10.1",
+  "rendererContract": "fixture-page/v2",
+  "contentModel": "fixture-content-blocks/v1",
+  "issuedAt": "2026-08-10T11:13:57Z",
+  "integrity": {
+    "mechanism": "immutable-git-blob-and-byte-equality",
+    "valueProvidedByTransport": true,
+    "compatibilityProjection": "generated-from-contentBlocks"
+  },
+  "countingGranularity": "Active governed OpenStreetMap relation-version records (ten: five county-level, five borough-level).",
+  "activeRecordCount": 10,
+  "sourceGroups": [
+    {
+      "id": "openstreetmap",
+      "label": "OpenStreetMap",
+      "count": 10,
+      "provenanceCluster": "OpenStreetMap contributors"
+    }
+  ],
+  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
+  "page": {
+    "language": "en",
+    "title": "NYC OpenStreetMap Relations — KnoEdg.NYC",
+    "description": "A governed public view of OpenStreetMap as a boundary-data publisher: the ten exact county- and borough-level administrative relation versions used by NYC Boundaries.",
+    "canonical": "https://knoedg.nyc/nyc-openstreetmap/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/nyc-openstreetmap/index.jsonld",
+      "title": "NYC OpenStreetMap Relations structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "contentBlocks": [
+      {
+        "type": "section",
+        "id": "nyc-openstreetmap",
+        "heading": [
+          {
+            "type": "text",
+            "text": "NYC OpenStreetMap Relations"
+          }
+        ],
+        "children": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Knowledge resource"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A governed public view of "
+              },
+              {
+                "type": "strong",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "OpenStreetMap"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " as a boundary-data publisher — the ten exact administrative relation versions used by NYC Boundaries: one county-level and one borough-level relation for each of the five NYC counties. For how these relations compare against DCP, the Census Bureau, NYS Civil Boundaries, and other independently governed sources, see "
+              },
+              {
+                "type": "link",
+                "href": "https://knoedg.nyc/nyc-boundaries/",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NYC Boundaries"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "publisher",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publisher"
+              }
+            ],
+            "children": [
+              {
+                "type": "definitionList",
+                "label": "Publisher identity",
+                "items": [
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Name"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "OpenStreetMap contributors"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Organization type"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Community-maintained, collaboratively edited map database, overseen by the OpenStreetMap Foundation"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Website"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "openstreetmap.org"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "dataset",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Dataset"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "OpenStreetMap has no separate catalog datasets the way a government open-data portal does — each administrative area is its own directly editable relation. This page governs ten specific relation versions, retrieved via the OSM API (version 0.6)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "measurements",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Relations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "All ten governed relations, as published by OpenStreetMap. Each county has both a county-level relation (admin_level 6) and a borough-level relation (admin_level 7) — the same real-world extent represented under two administrative framings, not two independent boundaries."
+                  }
+                ]
+              },
+              {
+                "type": "table",
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "OpenStreetMap administrative relations, five NYC counties"
+                  }
+                ],
+                "columns": [
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Relation"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Type"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "FIPS"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Centroid"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Wikidata"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Version"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Last edited"
+                      }
+                    ]
+                  }
+                ],
+                "rows": [
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "New York County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County (admin_level 6)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36061"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.7814865, -73.9590532"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q500416",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q500416"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/2552485/history/56",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v56"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-01-13"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Manhattan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough (admin_level 7)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36061"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.7579554, -73.9855319"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q11299",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q11299"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/8398124/history/50",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v50"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-06-15"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Bronx County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County (admin_level 6)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36005"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.851039, -73.8402503"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q855974",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q855974"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/2552450/history/32",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v32"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-02-08"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "The Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough (admin_level 7)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36005"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.8466508, -73.8785937"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q18426",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q18426"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/9691916/history/24",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v24"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-02-08"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Kings County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County (admin_level 6)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36047"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.64559, -73.9558866"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q11980692",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q11980692"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/369518/history/44",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v44"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-01-13"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Brooklyn"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough (admin_level 7)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36047"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.6526006, -73.9497211"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q18419",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q18419"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/9691750/history/34",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v34"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-01-13"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County (admin_level 6)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36081"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.6515585, -73.7926754"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q5142559",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q5142559"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/369519/history/71",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v71"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-01-13"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough (admin_level 7)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36081"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.7135078, -73.8283132"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q18424",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q18424"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/9691819/history/39",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v39"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2026-01-13"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Richmond County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "County (admin_level 6)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36085"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.5834557, -74.1496048"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q11997784",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q11997784"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/962876/history/18",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v18"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2025-08-24"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Staten Island"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Borough (admin_level 7)"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "36085"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "40.5834557, -74.1496048"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.wikidata.org/wiki/Q18432",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Q18432"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "link",
+                        "href": "https://www.openstreetmap.org/relation/9691948/history/17",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "v17"
+                          }
+                        ]
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2025-08-24"
+                      }
+                    ]
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "No numeric area is published in these relations' governed metadata; the raw fixture is: "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "OpenStreetMap relation metadata fixture"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "OpenStreetMap data is published under the "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://opendatacommons.org/licenses/odbl/1-0/",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Open Database License (ODbL) 1.0"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Redistribution requires retaining attribution — © "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://www.openstreetmap.org/copyright",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "OpenStreetMap contributors"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " — and the ODbL license reference alongside any redistributed OSM-origin data."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "published-material",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Published fixture and artifacts"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "OpenStreetMap relation metadata fixture"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-openstreetmap/index.jsonld",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "This page's structured data (JSON-LD)"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "validation",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation and provenance"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Each relation's version number, edit timestamp, administrative tags, and identifiers were retrieved directly from the OpenStreetMap API (version 0.6) and cross-checked against the governed assertion records; this page does not independently verify OSM's underlying geometry. For independent cross-source verification of these relations, see "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "governance",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Governance"
+              }
+            ],
+            "children": [
+              {
+                "type": "definitionList",
+                "items": [
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Lifecycle"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Active"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Confidence"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Moderate (0.78)"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Scope"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "OpenStreetMap's own published relation versions, as OpenStreetMap contributors edited them — not an independent recomputation. Confidence is Moderate rather than High because OSM is a crowd-sourced, continuously editable map, not a single authoritative publisher."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "limitations",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Limitations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "OpenStreetMap is community-edited and can change at any time; the versions governed here are the exact versions retrieved on 2026-08-08, not a live feed. Each county's two relations (county and borough) represent the same real-world extent under different administrative framings, not two independent boundaries. This page presents OSM's own published values as OSM contributors edited them; it does not independently verify OSM's geometry, and it is not the place to compare OSM against other sources — that comparison lives on "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/13/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Initial publication of the NYC OpenStreetMap Relations source page."
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/nyc-openstreetmap/",
+        "@type": "dcat:Dataset",
+        "dcterms:title": "NYC OpenStreetMap Relations",
+        "dcterms:description": "A governed public view of OpenStreetMap as a boundary-data publisher: the ten exact county- and borough-level administrative relation versions used by NYC Boundaries.",
+        "dcterms:publisher": {
+          "@id": "https://knoedg.nyc/#organization"
+        },
+        "dcterms:rights": "OpenStreetMap data is published under the Open Database License (ODbL) 1.0. Redistribution requires retaining attribution (© OpenStreetMap contributors) and the ODbL license reference alongside any redistributed OSM-origin data.",
+        "dcterms:provenance": "Each relation's version number, edit timestamp, administrative tags, and identifiers were retrieved directly from the OpenStreetMap API (version 0.6) on 2026-08-08 and cross-checked against the governed assertion records; not independently recomputed by this pack.",
+        "dcterms:issued": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:spatial": {
+          "@id": "https://www.wikidata.org/entity/Q60"
+        },
+        "dcterms:hasPart": [
+          {
+            "@id": "https://knoedg.nyc/nyc-openstreetmap/#relations"
+          }
+        ],
+        "prov:wasAttributedTo": {
+          "@id": "https://www.openstreetmap.org/"
+        },
+        "dcat:landingPage": {
+          "@id": "https://knoedg.nyc/nyc-openstreetmap/"
+        },
+        "dcat:distribution": [
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
+          }
+        ],
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-openstreetmap/#publication-2026-08-10"
+          }
+        ]
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/2552485/history/56",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/2552485"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/8398124/history/50",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/8398124"
+        },
+        "dcterms:modified": {
+          "@value": "2026-06-15T09:04:18Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/2552450/history/32",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/2552450"
+        },
+        "dcterms:modified": {
+          "@value": "2026-02-08T17:09:24Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691916/history/24",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691916"
+        },
+        "dcterms:modified": {
+          "@value": "2026-02-08T17:09:24Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/369518/history/44",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/369518"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691750/history/34",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691750"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/369519/history/71",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/369519"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691819/history/39",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691819"
+        },
+        "dcterms:modified": {
+          "@value": "2026-01-13T14:07:26Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/962876/history/18",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/962876"
+        },
+        "dcterms:modified": {
+          "@value": "2025-08-24T18:21:46Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/relation/9691948/history/17",
+        "@type": [
+          "prov:Entity",
+          "dcterms:isVersionOf"
+        ],
+        "dcterms:isVersionOf": {
+          "@id": "https://www.openstreetmap.org/relation/9691948"
+        },
+        "dcterms:modified": {
+          "@value": "2025-08-24T18:21:46Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://www.openstreetmap.org/",
+        "@type": [
+          "prov:Agent",
+          "schema:Organization"
+        ],
+        "schema:name": "OpenStreetMap contributors"
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-openstreetmap/#relations",
+        "@type": "schema:Claim",
+        "schema:text": "OpenStreetMap represents each of the five NYC counties as a county-level and a borough-level administrative relation.",
+        "schema:citation": [
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552485/history/56"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/8398124/history/50"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/2552450/history/32"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691916/history/24"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369518/history/44"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691750/history/34"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/369519/history/71"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691819/history/39"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/962876/history/18"
+          },
+          {
+            "@id": "https://www.openstreetmap.org/relation/9691948/history/17"
+          }
+        ],
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.78
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": "Per cited relation: 2025-08-24T18:21:46Z through 2026-06-15T09:04:18Z"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-openstreetmap/#publication-2026-08-10",
+        "@type": "prov:Activity",
+        "dcterms:description": "Initial publication of the NYC OpenStreetMap Relations source page.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T11:13:57Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-openstreetmap/"
+        }
+      }
+    ]
+  }
+}
