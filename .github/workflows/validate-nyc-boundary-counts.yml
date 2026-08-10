@@ -6,6 +6,7 @@ on:
       - "nyc-boundaries/**"
       - "nyc-dcp-borough-boundaries/**"
       - "nyc-census-gazetteer/**"
+      - "nyc-openstreetmap/**"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -30,6 +31,8 @@ on:
       - "scripts/generate_nyc_dcp_source_view.py"
       - "data/fixtures/nyc-census-gazetteer-source-public-view.json"
       - "scripts/generate_nyc_census_gazetteer_source_view.py"
+      - "data/fixtures/nyc-openstreetmap-source-public-view.json"
+      - "scripts/generate_nyc_openstreetmap_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
@@ -51,6 +54,7 @@ on:
       - "nyc-boundaries/**"
       - "nyc-dcp-borough-boundaries/**"
       - "nyc-census-gazetteer/**"
+      - "nyc-openstreetmap/**"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -75,6 +79,8 @@ on:
       - "scripts/generate_nyc_dcp_source_view.py"
       - "data/fixtures/nyc-census-gazetteer-source-public-view.json"
       - "scripts/generate_nyc_census_gazetteer_source_view.py"
+      - "data/fixtures/nyc-openstreetmap-source-public-view.json"
+      - "scripts/generate_nyc_openstreetmap_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
       - "schemas/nyc-census-gazetteer-counties/**"
@@ -165,6 +171,31 @@ jobs:
           import json
           from pyld import jsonld
           document = json.load(open("nyc-census-gazetteer/index.jsonld"))
+          expanded = jsonld.expand(document)
+          if not isinstance(expanded, list) or not expanded:
+              raise SystemExit("JSON-LD expansion produced no nodes")
+          for node in expanded:
+              identifier = node.get("@id")
+              if identifier is not None and not identifier.startswith("https://"):
+                  raise SystemExit(f"expanded graph contains a non-HTTPS node identity: {identifier}")
+          print(f"JSON-LD expansion validates: {len(expanded)} nodes.")
+          PY
+      - name: Validate NYC OpenStreetMap source-page v2 artifact against the public JSON Schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open("schemas/fixture-dependent-public-view/v2"))
+          artifact = json.load(open("data/fixtures/nyc-openstreetmap-source-public-view.json"))
+          Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+          PY
+      - run: python3 scripts/generate_nyc_openstreetmap_source_view.py --check
+      - name: Validate NYC OpenStreetMap source-page JSON-LD expansion
+        run: |
+          python3 - <<'PY'
+          import json
+          from pyld import jsonld
+          document = json.load(open("nyc-openstreetmap/index.jsonld"))
           expanded = jsonld.expand(document)
           if not isinstance(expanded, list) or not expanded:
               raise SystemExit("JSON-LD expansion produced no nodes")
