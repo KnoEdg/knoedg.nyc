@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A governed public view of the NYC Department of City Planning as a boundary-data publisher: its two Borough Boundaries datasets, the ten governed borough measurements drawn from them, and their organizational identity and limitations.">
+  <title>NYC DCP Borough Boundaries — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-dcp-borough-boundaries/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/nyc-dcp-borough-boundaries/index.jsonld" title="NYC DCP Borough Boundaries structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+<article>
+<section aria-labelledby="nyc-dcp-borough-boundaries">
+<h1 id="nyc-dcp-borough-boundaries">NYC DCP Borough Boundaries</h1>
+<p>Knowledge resource</p>
+<p>A governed public view of the <strong>NYC Department of City Planning</strong> (DCP) as a boundary-data publisher — its two Borough Boundaries catalog datasets and the ten governed measurements drawn from them. For how these measurements compare against the Census Bureau, OpenStreetMap, NYS Civil Boundaries, and other independently governed sources, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+<section aria-labelledby="publisher">
+<h2 id="publisher">Publisher</h2>
+<dl aria-label="Publisher identity">
+<div><dt>Name</dt><dd>Department of City Planning</dd></div>
+<div><dt>Organization type</dt><dd>Mayoral Agency</dd></div>
+<div><dt>Reports to</dt><dd>Deputy Mayor for Housing and Planning</dd></div>
+<div><dt>Principal officer</dt><dd>Director</dd></div>
+<div><dt>Website</dt><dd><a href="https://www.nyc.gov/site/planning/index.page" target="_blank" rel="noopener noreferrer" aria-label="nyc.gov/site/planning (opens in a new tab)">nyc.gov/site/planning<span aria-hidden="true"> ↗</span></a></dd></div>
+</dl>
+</section>
+<section aria-labelledby="datasets">
+<h2 id="datasets">Datasets</h2>
+<p>DCP publishes borough boundary geometry as two separate NYC Open Data catalog datasets — not one dataset with a variant flag — distinguished by whether open water is included in the polygon.</p>
+<div class="table-wrap"><table>
+<caption>DCP Borough Boundaries catalog datasets</caption>
+<thead><tr><th scope="col">Dataset</th><th scope="col">Water treatment</th><th scope="col">Catalog ID</th><th scope="col">Last updated</th><th scope="col">Source</th></tr></thead>
+<tbody><tr><td>Borough Boundaries</td><td>Water excluded</td><td><code>gthc-hcne</code></td><td><time datetime="2026-05-26">2026-05-26</time></td><td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne" target="_blank" rel="noopener noreferrer" aria-label="NYC Open Data (opens in a new tab)">NYC Open Data<span aria-hidden="true"> ↗</span></a></td></tr><tr><td>Borough Boundaries</td><td>Water included</td><td><code>wh2p-dxnf</code></td><td><time datetime="2026-05-26">2026-05-26</time></td><td><a href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/wh2p-dxnf" target="_blank" rel="noopener noreferrer" aria-label="NYC Open Data (opens in a new tab)">NYC Open Data<span aria-hidden="true"> ↗</span></a></td></tr></tbody>
+</table></div>
+</section>
+<section aria-labelledby="measurements">
+<h2 id="measurements">Borough measurements</h2>
+<p>All ten governed measurements, as published by DCP — five boroughs, each with a water-excluded and a water-included figure.</p>
+<div class="table-wrap"><table>
+<caption>DCP borough area and perimeter, both water treatments</caption>
+<thead><tr><th scope="col">Borough</th><th scope="col">Water treatment</th><th scope="col">Area (sq mi)</th><th scope="col">Perimeter (ft)</th></tr></thead>
+<tbody><tr><td>Manhattan</td><td>Excluded</td><td>22.836</td><td>359,537.906171</td></tr><tr><td>Manhattan</td><td>Included</td><td>33.873</td><td>203,531.367419</td></tr><tr><td>Bronx</td><td>Excluded</td><td>42.585</td><td>463,146.326689</td></tr><tr><td>Bronx</td><td>Included</td><td>57.338</td><td>188,162.479525</td></tr><tr><td>Brooklyn</td><td>Excluded</td><td>69.389</td><td>726,953.045090</td></tr><tr><td>Brooklyn</td><td>Included</td><td>96.765</td><td>236,476.769178</td></tr><tr><td>Queens</td><td>Excluded</td><td>109.096</td><td>887,902.903727</td></tr><tr><td>Queens</td><td>Included</td><td>178.019</td><td>459,301.798759</td></tr><tr><td>Staten Island</td><td>Excluded</td><td>58.239</td><td>325,912.288988</td></tr><tr><td>Staten Island</td><td>Included</td><td>102.284</td><td>220,557.476076</td></tr></tbody>
+</table></div>
+<p>Raw geometry for both variants is separately published: <a href="https://knoedg.nyc/data/fixtures/nyc-boroughs-water-excluded.json">water-excluded fixture</a>, <a href="https://knoedg.nyc/data/fixtures/nyc-boroughs-water-included.json">water-included fixture</a>.</p>
+</section>
+<section aria-labelledby="governance">
+<h2 id="governance">Governance</h2>
+<dl>
+<div><dt>Lifecycle</dt><dd>Active</dd></div>
+<div><dt>Confidence</dt><dd>High (0.95)</dd></div>
+<div><dt>Scope</dt><dd>DCP&#x27;s own published borough boundary values, as DCP asserts them — not an independent recomputation.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="limitations">
+<h2 id="limitations">Limitations</h2>
+<p>This page presents DCP&#x27;s own published values as DCP asserts them. It does not independently verify DCP&#x27;s geometry, and it is not the place to compare DCP against other sources — that comparison, including area agreement/difference against the Census Bureau, OpenStreetMap, and NYS Civil Boundaries, lives on <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+</section>
+</section>
+</article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>
+
