@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "issuedAt": "2026-08-10T12:15:00Z",
+  "issuedAt": "2026-08-10T12:40:00Z",
   "countingGranularity": "Active governed boundary representation records; supporting hierarchy and measurement-disposition records are not counted.",
   "activeRecordCount": 46,
   "sourceGroups": [
@@ -176,7 +176,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-08-10.7",
+  "artifactVersion": "2026-08-10.8",
   "rendererContract": "fixture-page/v2",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
@@ -674,20 +674,6 @@
                             "text": "OpenStreetMap source page"
                           }
                         ]
-                      },
-                      {
-                        "type": "text",
-                        "text": " · "
-                      },
-                      {
-                        "type": "link",
-                        "href": "#osm-source-versions",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "10 relation versions below"
-                          }
-                        ]
                       }
                     ],
                     [
@@ -697,7 +683,7 @@
                       },
                       {
                         "type": "link",
-                        "href": "#osm-source-versions",
+                        "href": "https://knoedg.nyc/nyc-openstreetmap/#measurements",
                         "content": [
                           {
                             "type": "text",
@@ -885,422 +871,6 @@
                     "type": "text",
                     "text": "Confidence values qualify the reviewed mappings or assertions in this collection; they are not universal ratings of an entire publisher or dataset. Source update values come from each publisher’s own dataset, distribution or version metadata; retrieval, review and publication times are recorded separately. Derived representations remain in their upstream provenance cluster and are not counted as independent corroboration."
                   }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "section",
-            "id": "osm-source-versions",
-            "heading": [
-              {
-                "type": "text",
-                "text": "OpenStreetMap source versions"
-              }
-            ],
-            "children": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "The OpenStreetMap comparison is not sourced from one generic New York City relation. It uses ten separately versioned county and borough relations. Each timestamp below belongs to the exact cited relation version."
-                  }
-                ]
-              },
-              {
-                "type": "table",
-                "caption": [
-                  {
-                    "type": "text",
-                    "text": "OpenStreetMap source versions"
-                  }
-                ],
-                "columns": [
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Borough / county"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Representation"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Relation version"
-                      }
-                    ]
-                  },
-                  {
-                    "header": [
-                      {
-                        "type": "text",
-                        "text": "Source last updated"
-                      }
-                    ]
-                  }
-                ],
-                "rows": [
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Manhattan / New York County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/2552485/history/56",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "2552485 · v56"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/20/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Manhattan / New York County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Borough"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/8398124/history/50",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "8398124 · v50"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/21/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Bronx / Bronx County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/2552450/history/32",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "2552450 · v32"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/22/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Bronx / Bronx County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Borough"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/9691916/history/24",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "9691916 · v24"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/23/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Brooklyn / Kings County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/369518/history/44",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "369518 · v44"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/24/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Brooklyn / Kings County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Borough"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/9691750/history/34",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "9691750 · v34"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/25/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Queens / Queens County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/369519/history/71",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "369519 · v71"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/26/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Queens / Queens County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Borough"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/9691819/history/39",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "9691819 · v39"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/27/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Staten Island / Richmond County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/962876/history/18",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "962876 · v18"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/28/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "Staten Island / Richmond County"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Borough"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "link",
-                        "href": "https://www.openstreetmap.org/relation/9691948/history/17",
-                        "content": [
-                          {
-                            "type": "text",
-                            "text": "9691948 · v17"
-                          }
-                        ],
-                        "newWindow": true,
-                        "accessibleNewWindowText": "opens in a new tab"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "time",
-                        "pointer": "/semanticRepresentation/@graph/29/dcterms:modified/@value",
-                        "format": "datetime"
-                      }
-                    ]
-                  ]
                 ]
               }
             ]
@@ -3044,6 +2614,17 @@
                       "type": "text",
                       "text": " — Publication history rebuilt to resolve every entry via time/pointer nodes instead of hardcoded prose, and DCP/Census Gazetteer dataset “Source last updated” precision corrected from date-only to the already-governed exact timestamp, per ADR-0006."
                     }
+                  ],
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/58/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Removed the duplicated “OpenStreetMap source versions” per-relation detail table now that /nyc-openstreetmap/ carries that content; the Compared views OpenStreetMap row links there directly instead."
+                    }
                   ]
                 ]
               }
@@ -3257,6 +2838,9 @@
           },
           {
             "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-06"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-07"
           }
         ]
       },
@@ -4537,6 +4121,18 @@
         "dcterms:description": "Publication history rebuilt to resolve every entry via time/pointer nodes instead of hardcoded prose, and DCP/Census Gazetteer dataset “Source last updated” precision corrected from date-only to the already-governed exact timestamp, per ADR-0006.",
         "prov:generatedAtTime": {
           "@value": "2026-08-10T12:15:00Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-boundaries/"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-07",
+        "@type": "prov:Activity",
+        "dcterms:description": "Removed the duplicated “OpenStreetMap source versions” per-relation detail table now that /nyc-openstreetmap/ carries that content; the Compared views OpenStreetMap row links there directly instead.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T12:40:00Z",
           "@type": "xsd:dateTime"
         },
         "prov:generated": {
