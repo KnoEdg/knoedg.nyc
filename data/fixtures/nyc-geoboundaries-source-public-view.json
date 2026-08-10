@@ -1,0 +1,834 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "fixture-dependent-public-view",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "resource": "https://knoedg.nyc/nyc-geoboundaries/",
+  "artifactVersion": "2026-08-10.1",
+  "rendererContract": "fixture-page/v2",
+  "contentModel": "fixture-content-blocks/v1",
+  "issuedAt": "2026-08-10T13:30:00Z",
+  "integrity": {
+    "mechanism": "immutable-git-blob-and-byte-equality",
+    "valueProvidedByTransport": true,
+    "compatibilityProjection": "generated-from-contentBlocks"
+  },
+  "countingGranularity": "Active governed geoBoundaries USA ADM2 county representations (five).",
+  "activeRecordCount": 5,
+  "sourceGroups": [
+    {
+      "id": "geoboundaries",
+      "label": "geoBoundaries",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau (via geoBoundaries generalization)"
+    }
+  ],
+  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted.",
+  "page": {
+    "language": "en",
+    "title": "NYC geoBoundaries Counties — KnoEdg.NYC",
+    "description": "A governed public view of geoBoundaries as a boundary-data publisher: the five exact USA ADM2 county representations used by NYC Boundaries.",
+    "canonical": "https://knoedg.nyc/nyc-geoboundaries/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/nyc-geoboundaries/index.jsonld",
+      "title": "NYC geoBoundaries Counties structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "contentBlocks": [
+      {
+        "type": "section",
+        "id": "nyc-geoboundaries",
+        "heading": [
+          {
+            "type": "text",
+            "text": "NYC geoBoundaries Counties"
+          }
+        ],
+        "children": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Knowledge resource"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A governed public view of "
+              },
+              {
+                "type": "strong",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "geoBoundaries"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " as a boundary-data publisher — the five exact USA ADM2 county representations used by NYC Boundaries. For how these representations compare against DCP, the Census Bureau, OpenStreetMap, and other independently governed sources, see "
+              },
+              {
+                "type": "link",
+                "href": "https://knoedg.nyc/nyc-boundaries/",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NYC Boundaries"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "publisher",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publisher"
+              }
+            ],
+            "children": [
+              {
+                "type": "definitionList",
+                "label": "Publisher identity",
+                "items": [
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Name"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "geoBoundaries, William & Mary geoLab"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Organization type"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Academic open-geodata project publishing openly licensed subnational administrative boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Website"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "link",
+                        "href": "https://www.geoboundaries.org/",
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "geoboundaries.org"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "dataset",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Dataset"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This page governs five NYC county representations from the "
+                  },
+                  {
+                    "type": "code",
+                    "text": "gbOpen USA ADM2"
+                  },
+                  {
+                    "type": "text",
+                    "text": " (county-level) release, boundary ID "
+                  },
+                  {
+                    "type": "code",
+                    "text": "USA-ADM2-52423323"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", pinned at commit "
+                  },
+                  {
+                    "type": "code",
+                    "text": "9469f09"
+                  },
+                  {
+                    "type": "text",
+                    "text": ". All five features share one release build date and represent 2018 boundaries, generalized and shoreline-clipped from the U.S. Census Bureau's cartographic boundary file — not an independent boundary claim."
+                  }
+                ]
+              },
+              {
+                "type": "definitionList",
+                "label": "Release identity",
+                "items": [
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Represented year"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "2018"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Build date"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "time",
+                        "pointer": "/semanticRepresentation/@graph/1/dcterms:issued/@value",
+                        "format": "date"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Upstream source"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "U.S. Census Bureau, 2018 county cartographic boundary file (1:500,000)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "measurements",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Representations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "All five governed county representations, as published by geoBoundaries. Selection used exact "
+                  },
+                  {
+                    "type": "code",
+                    "text": "shapeName"
+                  },
+                  {
+                    "type": "text",
+                    "text": " matching followed by NYC bounding-box review — name alone was rejected because Kings and Richmond recur as county names in other states."
+                  }
+                ]
+              },
+              {
+                "type": "table",
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "geoBoundaries USA ADM2 representations, five NYC counties"
+                  }
+                ],
+                "columns": [
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Borough / county"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "shapeID"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Coordinate positions"
+                      }
+                    ]
+                  }
+                ],
+                "rows": [
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Manhattan / New York County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "52423323B68557587713523"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "68"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Bronx / Bronx County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "52423323B44038614744637"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "68"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Brooklyn / Kings County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "52423323B42930074476451"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "73"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Queens / Queens County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "52423323B86897144494159"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "79"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "Staten Island / Richmond County"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "code",
+                        "text": "52423323B38635571773884"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "54"
+                      }
+                    ]
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "No numeric area is published in these representations' governed metadata; the raw fixture is: "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "geoBoundaries USA ADM2 NYC county geometry fixture"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "geoBoundaries data is published under "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://creativecommons.org/licenses/by/4.0/",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "CC BY 4.0"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Redistribution requires attribution — geoBoundaries, William & Mary geoLab."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "published-material",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Published fixture and artifacts"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "geoBoundaries USA ADM2 NYC county geometry fixture"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-geoboundaries/index.jsonld",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "This page's structured data (JSON-LD)"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "validation",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation and provenance"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Each representation's shapeID and identity were retrieved directly from the geoBoundaries API and cross-checked against the governed assertion records via exact bounding-box review; this page does not independently verify geoBoundaries' underlying geometry, which is itself a generalized derivative of Census MAF/TIGER data. For independent cross-source verification of these representations, see "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "governance",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Governance"
+              }
+            ],
+            "children": [
+              {
+                "type": "definitionList",
+                "items": [
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Lifecycle"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Active"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Confidence"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "Moderate (0.82)"
+                      }
+                    ]
+                  },
+                  {
+                    "term": [
+                      {
+                        "type": "text",
+                        "text": "Scope"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "type": "text",
+                        "text": "geoBoundaries' own published representations, generalized and shoreline-clipped from Census MAF/TIGER data — not an independent recomputation. Confidence is Moderate rather than High because the underlying geometry is a Census-derived generalization, remaining in the Census provenance cluster rather than counting as independent corroboration."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "limitations",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Limitations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The five governed representations are the exact versions retrieved at the pinned commit "
+                  },
+                  {
+                    "type": "code",
+                    "text": "9469f09"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", not a live feed. geoBoundaries' own "
+                  },
+                  {
+                    "type": "code",
+                    "text": "shapeID"
+                  },
+                  {
+                    "type": "text",
+                    "text": " values identify a geometry within one build and are not stable across releases. The geometry is generalized and shoreline-clipped, sourced from the U.S. Census Bureau — the same provenance cluster as this pack's Census Gazetteer and TIGER records, not independent corroboration. This page presents geoBoundaries' own published values; it is not the place to compare geoBoundaries against other sources — that comparison lives on "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-boundaries/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "NYC Boundaries"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  [
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/4/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    },
+                    {
+                      "type": "text",
+                      "text": " — Initial publication of the NYC geoBoundaries Counties source page."
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/nyc-geoboundaries/",
+        "@type": "dcat:Dataset",
+        "dcterms:title": "NYC geoBoundaries Counties",
+        "dcterms:description": "A governed public view of geoBoundaries as a boundary-data publisher: the five exact USA ADM2 county representations used by NYC Boundaries.",
+        "dcterms:publisher": {
+          "@id": "https://knoedg.nyc/#organization"
+        },
+        "dcterms:rights": "geoBoundaries data is published under CC BY 4.0. Redistribution requires attribution -- geoBoundaries, William & Mary geoLab.",
+        "dcterms:provenance": "Each representation's shapeID and identity were retrieved directly from the geoBoundaries API on 2026-08-09 and cross-checked against the governed assertion records via exact bounding-box review; not independently recomputed by this pack.",
+        "dcterms:issued": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:modified": {
+          "@value": "2026-08-10",
+          "@type": "xsd:date"
+        },
+        "dcterms:spatial": {
+          "@id": "https://www.wikidata.org/entity/Q60"
+        },
+        "dcterms:hasPart": [
+          {
+            "@id": "https://knoedg.nyc/nyc-geoboundaries/#counties"
+          }
+        ],
+        "prov:wasAttributedTo": {
+          "@id": "https://www.geoboundaries.org/"
+        },
+        "dcat:landingPage": {
+          "@id": "https://knoedg.nyc/nyc-geoboundaries/"
+        },
+        "dcat:distribution": [
+          {
+            "@id": "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
+          }
+        ],
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-geoboundaries/#publication-2026-08-10"
+          }
+        ]
+      },
+      {
+        "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson",
+        "@type": [
+          "prov:Entity",
+          "schema:Dataset"
+        ],
+        "dcterms:title": "geoBoundaries USA ADM2 immutable distribution",
+        "dcterms:issued": {
+          "@value": "2023-12-12",
+          "@type": "xsd:date"
+        },
+        "dcterms:temporal": "2018",
+        "dcterms:license": {
+          "@id": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "prov:wasDerivedFrom": {
+          "@id": "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_500k.zip"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "boundaryID",
+            "schema:value": "USA-ADM2-52423323"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "admUnitCount",
+            "schema:value": 3233
+          }
+        ]
+      },
+      {
+        "@id": "https://www.geoboundaries.org/",
+        "@type": [
+          "prov:Agent",
+          "schema:Organization"
+        ],
+        "schema:name": "geoBoundaries, William & Mary geoLab"
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-geoboundaries/#counties",
+        "@type": "schema:Claim",
+        "schema:text": "geoBoundaries represents each of the five NYC counties as a generalized, shoreline-clipped USA ADM2 feature derived from 2018 Census MAF/TIGER cartographic boundaries.",
+        "schema:citation": {
+          "@id": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.geojson"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.82
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2023-12-12",
+              "@type": "xsd:date"
+            }
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-geoboundaries/#publication-2026-08-10",
+        "@type": "prov:Activity",
+        "dcterms:description": "Initial publication of the NYC geoBoundaries Counties source page.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-10T13:30:00Z",
+          "@type": "xsd:dateTime"
+        },
+        "prov:generated": {
+          "@id": "https://knoedg.nyc/nyc-geoboundaries/"
+        }
+      }
+    ]
+  }
+}

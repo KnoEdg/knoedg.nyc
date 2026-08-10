@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A governed public view of geoBoundaries as a boundary-data publisher: the five exact USA ADM2 county representations used by NYC Boundaries.">
+  <title>NYC geoBoundaries Counties — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/nyc-geoboundaries/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/nyc-geoboundaries/index.jsonld" title="NYC geoBoundaries Counties structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+<article>
+<section aria-labelledby="nyc-geoboundaries">
+<h1 id="nyc-geoboundaries">NYC geoBoundaries Counties</h1>
+<p>Knowledge resource</p>
+<p>A governed public view of <strong>geoBoundaries</strong> as a boundary-data publisher — the five exact USA ADM2 county representations used by NYC Boundaries. For how these representations compare against DCP, the Census Bureau, OpenStreetMap, and other independently governed sources, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+<section aria-labelledby="publisher">
+<h2 id="publisher">Publisher</h2>
+<dl aria-label="Publisher identity">
+<div><dt>Name</dt><dd>geoBoundaries, William &amp; Mary geoLab</dd></div>
+<div><dt>Organization type</dt><dd>Academic open-geodata project publishing openly licensed subnational administrative boundaries</dd></div>
+<div><dt>Website</dt><dd><a href="https://www.geoboundaries.org/" target="_blank" rel="noopener noreferrer" aria-label="geoboundaries.org (opens in a new tab)">geoboundaries.org<span aria-hidden="true"> ↗</span></a></dd></div>
+</dl>
+</section>
+<section aria-labelledby="dataset">
+<h2 id="dataset">Dataset</h2>
+<p>This page governs five NYC county representations from the <code>gbOpen USA ADM2</code> (county-level) release, boundary ID <code>USA-ADM2-52423323</code>, pinned at commit <code>9469f09</code>. All five features share one release build date and represent 2018 boundaries, generalized and shoreline-clipped from the U.S. Census Bureau&#x27;s cartographic boundary file — not an independent boundary claim.</p>
+<dl aria-label="Release identity">
+<div><dt>Represented year</dt><dd>2018</dd></div>
+<div><dt>Build date</dt><dd><time datetime="2023-12-12">December 12, 2023</time></dd></div>
+<div><dt>Upstream source</dt><dd>U.S. Census Bureau, 2018 county cartographic boundary file (1:500,000)</dd></div>
+</dl>
+</section>
+<section aria-labelledby="measurements">
+<h2 id="measurements">Representations</h2>
+<p>All five governed county representations, as published by geoBoundaries. Selection used exact <code>shapeName</code> matching followed by NYC bounding-box review — name alone was rejected because Kings and Richmond recur as county names in other states.</p>
+<div class="table-wrap"><table>
+<caption>geoBoundaries USA ADM2 representations, five NYC counties</caption>
+<thead><tr><th scope="col">Borough / county</th><th scope="col">shapeID</th><th scope="col">Coordinate positions</th></tr></thead>
+<tbody><tr><td>Manhattan / New York County</td><td><code>52423323B68557587713523</code></td><td>68</td></tr><tr><td>Bronx / Bronx County</td><td><code>52423323B44038614744637</code></td><td>68</td></tr><tr><td>Brooklyn / Kings County</td><td><code>52423323B42930074476451</code></td><td>73</td></tr><tr><td>Queens / Queens County</td><td><code>52423323B86897144494159</code></td><td>79</td></tr><tr><td>Staten Island / Richmond County</td><td><code>52423323B38635571773884</code></td><td>54</td></tr></tbody>
+</table></div>
+<p>No numeric area is published in these representations&#x27; governed metadata; the raw fixture is: <a href="https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson">geoBoundaries USA ADM2 NYC county geometry fixture</a>.</p>
+</section>
+<section aria-labelledby="rights">
+<h2 id="rights">Rights and attribution</h2>
+<p>geoBoundaries data is published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" aria-label="CC BY 4.0 (opens in a new tab)">CC BY 4.0<span aria-hidden="true"> ↗</span></a>. Redistribution requires attribution — geoBoundaries, William &amp; Mary geoLab.</p>
+</section>
+<section aria-labelledby="published-material">
+<h2 id="published-material">Published fixture and artifacts</h2>
+<ul><li><a href="https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson">geoBoundaries USA ADM2 NYC county geometry fixture</a></li><li><a href="https://knoedg.nyc/nyc-geoboundaries/index.jsonld">This page&#x27;s structured data (JSON-LD)</a></li></ul>
+</section>
+<section aria-labelledby="validation">
+<h2 id="validation">Validation and provenance</h2>
+<p>Each representation&#x27;s shapeID and identity were retrieved directly from the geoBoundaries API and cross-checked against the governed assertion records via exact bounding-box review; this page does not independently verify geoBoundaries&#x27; underlying geometry, which is itself a generalized derivative of Census MAF/TIGER data. For independent cross-source verification of these representations, see <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+</section>
+<section aria-labelledby="governance">
+<h2 id="governance">Governance</h2>
+<dl>
+<div><dt>Lifecycle</dt><dd>Active</dd></div>
+<div><dt>Confidence</dt><dd>Moderate (0.82)</dd></div>
+<div><dt>Scope</dt><dd>geoBoundaries&#x27; own published representations, generalized and shoreline-clipped from Census MAF/TIGER data — not an independent recomputation. Confidence is Moderate rather than High because the underlying geometry is a Census-derived generalization, remaining in the Census provenance cluster rather than counting as independent corroboration.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="limitations">
+<h2 id="limitations">Limitations</h2>
+<p>The five governed representations are the exact versions retrieved at the pinned commit <code>9469f09</code>, not a live feed. geoBoundaries&#x27; own <code>shapeID</code> values identify a geometry within one build and are not stable across releases. The geometry is generalized and shoreline-clipped, sourced from the U.S. Census Bureau — the same provenance cluster as this pack&#x27;s Census Gazetteer and TIGER records, not independent corroboration. This page presents geoBoundaries&#x27; own published values; it is not the place to compare geoBoundaries against other sources — that comparison lives on <a href="https://knoedg.nyc/nyc-boundaries/">NYC Boundaries</a>.</p>
+</section>
+<section aria-labelledby="history">
+<h2 id="history">Publication history</h2>
+<ol><li><time datetime="2026-08-10T13:30:00Z">August 10, 2026, 9:30 AM EDT</time> — Initial publication of the NYC geoBoundaries Counties source page.</li></ol>
+</section>
+</section>
+</article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>
+
