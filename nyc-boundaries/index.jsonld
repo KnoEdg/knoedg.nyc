@@ -211,6 +211,9 @@
         },
         {
           "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-09"
+        },
+        {
+          "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-10"
         }
       ]
     },
@@ -1527,6 +1530,18 @@
       "dcterms:description": "Published the geoBoundaries internal source page. The Compared views geoBoundaries row now links there as its primary reference (external link retained alongside), and its build-date cell resolves via a time/pointer node instead of hardcoded prose.",
       "prov:generatedAtTime": {
         "@value": "2026-08-10T13:35:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "prov:generated": {
+        "@id": "https://knoedg.nyc/nyc-boundaries/"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/nyc-boundaries/#publication-2026-08-10-10",
+      "@type": "prov:Activity",
+      "dcterms:description": "Published the Overture Maps internal source page, completing the sixth and last planned per-publisher-family internal source page. The Compared views Overture row now links there as its primary reference, with the original Overture STAC collection link retained alongside.",
+      "prov:generatedAtTime": {
+        "@value": "2026-08-10T14:05:00Z",
         "@type": "xsd:dateTime"
       },
       "prov:generated": {
