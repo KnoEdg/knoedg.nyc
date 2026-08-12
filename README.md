@@ -100,8 +100,8 @@ measurements table, Rights, Published material, Validation, Governance,
 Limitations, Publication history) and the same JSON-LD shape: claim-level
 lifecycle/confidence, `dcterms:provenance`, and `prov:Activity`-backed
 publication history — never hardcoded prose duplicating a fact the JSON-LD
-already carries. See `meta-knoedg-nyc`'s `docs/governance/
-INTERNAL_SOURCE_PAGE_PATTERN.md` for the pattern definition.
+already carries. This internal source-page pattern is documented as part of
+the project's internal publication process.
 
 Regenerate and verify any of them without network access:
 
