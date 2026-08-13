@@ -22,6 +22,10 @@ on:
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
       - "scripts/validate_jsonld.py"
+      - "scripts/validate_no_private_coordinates.py"
+      - "README.md"
+      - "docs/**"
+      - "scripts/**"
       - "scripts/test_fixture_page_renderer.py"
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
@@ -79,6 +83,10 @@ on:
       - "scripts/generate_nyc_boundaries_view.py"
       - "scripts/generate_fixture_page.py"
       - "scripts/validate_jsonld.py"
+      - "scripts/validate_no_private_coordinates.py"
+      - "README.md"
+      - "docs/**"
+      - "scripts/**"
       - "scripts/test_fixture_page_renderer.py"
       - "tests/fixture-page-v1.json"
       - "data/fixtures/nyc-boundary-public-view.json"
@@ -141,6 +149,7 @@ jobs:
       - run: python3 scripts/generate_nyc_boroughs_svg.py --check
       - run: python3 scripts/generate_nyc_boundaries_view.py --check
       - run: python3 scripts/test_fixture_page_renderer.py
+      - run: python3 scripts/validate_no_private_coordinates.py
       - run: python3 scripts/validate_nyc_boundary_counts.py
       - run: python3 scripts/validate_jsonld.py
       - run: python3 scripts/validate_nyc_census_gazetteer_fixture.py
