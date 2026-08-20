@@ -36,9 +36,22 @@ def must_fail(candidate: dict, expected: str) -> None:
         path.unlink(missing_ok=True)
 
 
+# A governance decision moved this rejection earlier, into a closed-set identity check over
+# (artifactType, schema). The BEHAVIOUR is unchanged -- an unknown schema is
+# still refused -- so the vector is kept and its expected message updated to the
+# one that now applies. The vectors below it prove the widened set did not
+# loosen anything.
 broken = copy.deepcopy(v2)
 broken["schema"] = "https://knoedg.nyc/schemas/fixture-dependent-public-view/v99"
-must_fail(broken, "unsupported fixture-view schema")
+must_fail(broken, "unsupported artifactType/schema pair")
+
+broken = copy.deepcopy(v2)
+broken["artifactType"] = "data-paper"
+must_fail(broken, "unsupported artifactType/schema pair")
+
+broken = copy.deepcopy(v2)
+broken["artifactType"] = "something-else"
+must_fail(broken, "unsupported artifactType/schema pair")
 
 broken = copy.deepcopy(v2)
 broken["page"]["contentBlocks"][0]["children"][0]["content"] = [{"type": "value", "pointer": "/missing"}]
@@ -75,3 +88,36 @@ if date_html != '<time datetime="2023-12-12">December 12, 2023</time>':
     raise SystemExit(f"date-format time node did not preserve ISO date attribute while rendering human-readable text: {date_html!r}")
 
 print("Renderer conformance passes: v1 compatibility, v2 blocks, unknown schema, pointer, raw HTML, projection drift, ET localization, date-only formatting.")
+
+
+# ---- data-paper coverage ----------------------------------------
+# The renderer now serves two artifact classes, and every published page depends
+# on it, so both are exercised here before the change ships.
+
+DATA_PAPER = ROOT / "tests/data-paper-v1.json"
+paper = load_artifact(DATA_PAPER)
+paper_html = render_article(paper)
+if not paper_html.startswith("<article>\n<section"):
+    raise SystemExit("data-paper block rendering failed")
+if "<h1 " not in paper_html:
+    raise SystemExit("data-paper rendered without a heading")
+
+broken = copy.deepcopy(paper)
+del broken["citesPublicView"]
+must_fail(broken, "must cite a public view")
+
+broken = copy.deepcopy(paper)
+broken["citesPublicView"] = "http://example.org/not-https"
+must_fail(broken, "must cite a public view")
+
+broken = copy.deepcopy(paper)
+broken["page"]["articleHtml"] = "<article>trust me</article>"
+must_fail(broken, "renders only from contentBlocks")
+
+broken = copy.deepcopy(paper)
+broken["contentModel"] = "something-else/v1"
+must_fail(broken, "unsupported data-paper content model")
+
+broken = copy.deepcopy(paper)
+broken["rendererContract"] = "fixture-page/v1"
+must_fail(broken, "invalid data-paper/v1 identity")
