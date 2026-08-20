@@ -49,6 +49,9 @@ on:
       - "scripts/generate_nyc_overture_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
+      - "schemas/data-paper/**"
+      - "tests/data-paper-v1.json"
+      - "templates/data-paper.html"
       - "schemas/nyc-census-gazetteer-counties/**"
       - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "schemas/nyc-geoboundaries-usa-adm2-counties/**"
@@ -111,6 +114,9 @@ on:
       - "scripts/generate_nyc_overture_source_view.py"
       - "data/fixtures/SHA256SUMS"
       - "schemas/fixture-dependent-public-view/**"
+      - "schemas/data-paper/**"
+      - "tests/data-paper-v1.json"
+      - "templates/data-paper.html"
       - "schemas/nyc-census-gazetteer-counties/**"
       - "schemas/nyc-openstreetmap-relation-metadata/**"
       - "schemas/nyc-geoboundaries-usa-adm2-counties/**"
@@ -151,6 +157,16 @@ jobs:
       - run: python3 scripts/generate_nyc_boroughs_svg.py --check
       - run: python3 scripts/generate_nyc_boundaries_view.py --check
       - run: python3 scripts/test_fixture_page_renderer.py
+      - name: Validate the data-paper conformance vector against schemas/data-paper/v1
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open("schemas/data-paper/v1"))
+          artifact = json.load(open("tests/data-paper-v1.json"))
+          Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+          print("data-paper/v1 vector validates.")
+          PY
       - run: python3 scripts/validate_no_private_coordinates.py
       - run: python3 scripts/validate_nyc_boundary_counts.py
       - run: python3 scripts/validate_jsonld.py

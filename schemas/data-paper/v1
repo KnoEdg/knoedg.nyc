@@ -1,0 +1,496 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoedg.nyc/schemas/data-paper/v1",
+  "title": "KnoEdg.NYC data paper, v1",
+  "description": "A data paper: the prose article accompanying a thematic collection. It is a SIBLING artifact class to fixture-dependent-public-view, not a variant of it: a data paper CITES a public view's claims and holds none of its own, which is why citesPublicView is required and activeRecordCount, sourceGroups and countingGranularity are absent. Its metadata sections are authored into the artifact and proven equivalent to the governed source data by a validator held with that data, rather than generated -- and they are carried once, inside contentBlocks, so the renderer and that validator read one structure. The block and inline definitions below are the fixture-content-blocks/v1 model as published at /schemas/fixture-dependent-public-view/v2, with one addition: a section may declare a derivation.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "artifactType",
+    "schema",
+    "resource",
+    "artifactVersion",
+    "rendererContract",
+    "contentModel",
+    "issuedAt",
+    "citesPublicView",
+    "page",
+    "semanticRepresentation",
+    "provenanceBoundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "artifactType": {
+      "const": "data-paper"
+    },
+    "schema": {
+      "const": "https://knoedg.nyc/schemas/data-paper/v1"
+    },
+    "resource": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "artifactVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rendererContract": {
+      "const": "fixture-page/v2",
+      "description": "Reused unchanged from the public-view path. A data paper needs no renderer of its own (ADR-0010 Decision 1)."
+    },
+    "contentModel": {
+      "const": "fixture-content-blocks/v1",
+      "description": "Reused unchanged."
+    },
+    "issuedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "citesPublicView": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "The fixture-dependent public view whose claims this paper cites. Required, and the structural form of ADR-0008 Decision 6: the paper cites claims rather than holding them, so it must name what it cites."
+    },
+    "integrity": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "page": {
+      "type": "object",
+      "required": [
+        "language",
+        "title",
+        "description",
+        "canonical",
+        "stylesheet",
+        "contentBlocks"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alternate": {
+          "$ref": "#/$defs/alternate"
+        },
+        "stylesheet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentBlocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/block"
+          }
+        }
+      }
+    },
+    "semanticRepresentation": {
+      "type": "object",
+      "required": [
+        "@context",
+        "@graph"
+      ]
+    },
+    "provenanceBoundary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "alternate": {
+      "type": "object",
+      "required": [
+        "mediaType",
+        "href",
+        "title"
+      ],
+      "properties": {
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceGroup": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "count"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "provenanceCluster": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "inlineArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inline"
+      }
+    },
+    "inline": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "text"
+          ],
+          "properties": {
+            "type": {
+              "const": "text"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "pointer"
+          ],
+          "properties": {
+            "type": {
+              "const": "value"
+            },
+            "pointer": {
+              "type": "string",
+              "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+            },
+            "format": {
+              "enum": [
+                "text",
+                "integer",
+                "decimal",
+                "percent",
+                "date",
+                "datetime"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "content"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "emphasis",
+                "strong"
+              ]
+            },
+            "content": {
+              "$ref": "#/$defs/inlineArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "text"
+          ],
+          "properties": {
+            "type": {
+              "const": "code"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "pointer",
+            "format"
+          ],
+          "properties": {
+            "type": {
+              "const": "time"
+            },
+            "pointer": {
+              "type": "string",
+              "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+            },
+            "format": {
+              "enum": [
+                "date",
+                "datetime"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "href",
+            "content"
+          ],
+          "properties": {
+            "type": {
+              "const": "link"
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1
+            },
+            "content": {
+              "$ref": "#/$defs/inlineArray"
+            },
+            "newWindow": {
+              "type": "boolean"
+            },
+            "accessibleNewWindowText": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "block": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "id",
+            "heading",
+            "children"
+          ],
+          "properties": {
+            "type": {
+              "const": "section"
+            },
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+            },
+            "heading": {
+              "$ref": "#/$defs/inlineArray"
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/block"
+              }
+            },
+            "derivation": {
+              "enum": [
+                "fixture-equivalent",
+                "authored"
+              ],
+              "description": "How this section's content was derived. fixture-equivalent sections are proven against the governed source data by an upstream equivalence validator; authored sections have no such counterpart and are reported as unproven. An unrecognised or absent derivation on a metadata section fails closed in that validator."
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "content"
+          ],
+          "properties": {
+            "type": {
+              "const": "paragraph"
+            },
+            "content": {
+              "$ref": "#/$defs/inlineArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "items"
+          ],
+          "properties": {
+            "type": {
+              "const": "definitionList"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "term",
+                  "description"
+                ],
+                "properties": {
+                  "term": {
+                    "$ref": "#/$defs/inlineArray"
+                  },
+                  "description": {
+                    "$ref": "#/$defs/inlineArray"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "caption",
+            "columns",
+            "rows"
+          ],
+          "properties": {
+            "type": {
+              "const": "table"
+            },
+            "caption": {
+              "$ref": "#/$defs/inlineArray"
+            },
+            "columns": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "header"
+                ],
+                "properties": {
+                  "header": {
+                    "$ref": "#/$defs/inlineArray"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/inlineArray"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "src",
+            "caption"
+          ],
+          "properties": {
+            "type": {
+              "const": "figure"
+            },
+            "src": {
+              "type": "string",
+              "minLength": 1
+            },
+            "alt": {
+              "type": "string"
+            },
+            "decorative": {
+              "type": "boolean"
+            },
+            "caption": {
+              "$ref": "#/$defs/inlineArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "ordered",
+            "items"
+          ],
+          "properties": {
+            "type": {
+              "const": "list"
+            },
+            "ordered": {
+              "type": "boolean"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/inlineArray"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
