@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""Render fixture-page/v1 and fixture-page/v2 artifacts without network access."""
+"""Render fixture-page/v1 and fixture-page/v2 artifacts without network access.
+
+Serves TWO artifact classes over the fixture-page/v2 rendering contract:
+fixture-dependent-public-view, and data-paper.
+They are siblings, not variants -- a data paper cites a public view's claims
+and holds none of its own -- but they are made of the same content blocks, so
+they render through the same code rather than through a second renderer.
+
+The identity check in load_artifact tests membership of a CLOSED set of
+(artifactType, schema) pairs. It widens what this renderer accepts; it never
+widens what goes unchecked. A pair outside the set is refused exactly as an
+unknown artifactType always was.
+"""
 
 from __future__ import annotations
 
@@ -14,6 +26,14 @@ from zoneinfo import ZoneInfo
 
 V1_SCHEMA = "https://knoedg.nyc/schemas/fixture-dependent-public-view/v1"
 V2_SCHEMA = "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2"
+DATA_PAPER_SCHEMA = "https://knoedg.nyc/schemas/data-paper/v1"
+# Closed set. Adding a row is a decision, not a configuration change -- see
+# the governing decision's review trigger on a third artifact class.
+ACCEPTED_IDENTITIES = {
+    ("fixture-dependent-public-view", V1_SCHEMA),
+    ("fixture-dependent-public-view", V2_SCHEMA),
+    ("data-paper", DATA_PAPER_SCHEMA),
+}
 # KnoEdg.NYC is a New York City knowledge resource; displayed instant text
 # renders in the site's own local time, not the UTC the artifact stores.
 # The <time datetime="..."> machine attribute always keeps the original UTC
@@ -134,7 +154,18 @@ def render_blocks(blocks: list[dict], artifact: dict, level: int = 1, ids: set[s
         require(isinstance(block, dict), "block must be an object")
         kind = block.get("type")
         if kind == "section":
-            require(set(block) == {"type", "id", "heading", "children"}, "invalid section block")
+            # A data-paper section may additionally declare how it was derived
+            # in an upstream governance decision. The key is permitted for that class
+            # ONLY: a public view carrying a stray derivation is still rejected,
+            # because a claim about provenance that nothing validates is worse
+            # than no claim at all.
+            allowed = {"type", "id", "heading", "children"}
+            if artifact.get("artifactType") == "data-paper":
+                allowed = allowed | {"derivation"}
+                if "derivation" in block:
+                    require(block["derivation"] in {"fixture-equivalent", "authored"},
+                            f"unrecognised section derivation: {block['derivation']!r}")
+            require(set(block) == allowed or set(block) == allowed - {"derivation"}, "invalid section block")
             section_id = block["id"]
             require(isinstance(section_id, str) and re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]*", section_id), "invalid section id")
             require(section_id not in ids, f"duplicate section id: {section_id}")
@@ -196,9 +227,18 @@ def render_article(data: dict) -> str:
 
 def load_artifact(path: Path) -> dict:
     data = json.loads(path.read_text(encoding="utf-8"))
-    require(data.get("artifactType") == "fixture-dependent-public-view", "unsupported fixture-view artifactType")
+    identity = (data.get("artifactType"), data.get("schema"))
+    require(identity in ACCEPTED_IDENTITIES, f"unsupported artifactType/schema pair: {identity!r}")
     require(isinstance(data.get("semanticRepresentation"), dict), "semanticRepresentation must be an object")
-    if data.get("schema") == V1_SCHEMA:
+    if data.get("schema") == DATA_PAPER_SCHEMA:
+        require(data.get("schemaVersion") == 1 and data.get("rendererContract") == "fixture-page/v2", "invalid data-paper/v1 identity")
+        require(data.get("contentModel") == "fixture-content-blocks/v1", "unsupported data-paper content model")
+        # Made structural here: a data paper cites a public
+        # view's claims and holds none of its own, so it must name what it cites.
+        cited = data.get("citesPublicView")
+        require(isinstance(cited, str) and cited.startswith("https://"), "a data paper must cite a public view over https")
+        require("articleHtml" not in data.get("page", {}), "a data paper renders only from contentBlocks")
+    elif data.get("schema") == V1_SCHEMA:
         require(data.get("schemaVersion") == 2 and data.get("rendererContract") == "fixture-page/v1", "invalid fixture-page/v1 identity")
         require(isinstance(data.get("page", {}).get("articleHtml"), str), "v1 requires articleHtml")
     elif data.get("schema") == V2_SCHEMA:
