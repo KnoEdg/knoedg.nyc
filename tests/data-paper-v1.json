@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "data-paper",
+  "schema": "https://knoedg.nyc/schemas/data-paper/v1",
+  "resource": "https://knoedg.nyc/example-data-paper/",
+  "artifactVersion": "test.1",
+  "rendererContract": "fixture-page/v2",
+  "contentModel": "fixture-content-blocks/v1",
+  "issuedAt": "2026-08-20T22:50:00Z",
+  "citesPublicView": "https://knoedg.nyc/example-collection/",
+  "page": {
+    "language": "en",
+    "title": "Example data paper",
+    "description": "A minimal data paper exercising the shared renderer under ADR-0010. Not a publication.",
+    "canonical": "https://knoedg.nyc/example-data-paper/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/example-data-paper/index.jsonld",
+      "title": "Example data paper structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "contentBlocks": [
+      {
+        "type": "section",
+        "id": "example-data-paper",
+        "heading": [
+          {
+            "type": "text",
+            "text": "Example data paper"
+          }
+        ],
+        "children": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A conformance vector, not a publication. It exists so the renderer's data-paper path is exercised by CI."
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "provenance",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Provenance"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Recorded by the example collection's governed fixtures."
+                  }
+                ]
+              }
+            ],
+            "derivation": "fixture-equivalent"
+          },
+          {
+            "type": "section",
+            "id": "sources-and-citations",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Sources and citations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "One example source."
+                  }
+                ]
+              }
+            ],
+            "derivation": "fixture-equivalent"
+          },
+          {
+            "type": "section",
+            "id": "rights-and-attribution",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Example rights determination."
+                  }
+                ]
+              }
+            ],
+            "derivation": "fixture-equivalent"
+          },
+          {
+            "type": "section",
+            "id": "validation-evidence",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation evidence"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Validated against the example shapes."
+                  }
+                ]
+              }
+            ],
+            "derivation": "fixture-equivalent"
+          },
+          {
+            "type": "section",
+            "id": "publication-history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Issued once, for testing."
+                  }
+                ]
+              }
+            ],
+            "derivation": "fixture-equivalent"
+          },
+          {
+            "type": "section",
+            "id": "analytical-narrative",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Analytical narrative"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Authored prose with no fixture counterpart, reported as unproven."
+                  }
+                ]
+              }
+            ],
+            "derivation": "authored"
+          }
+        ]
+      }
+    ]
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/example-data-paper/",
+        "@type": "schema:Article",
+        "schema:name": "Example data paper",
+        "dcterms:provenance": "Conformance vector for the shared renderer's data-paper path."
+      }
+    ]
+  },
+  "provenanceBoundary": "Test vector; asserts nothing about any real collection."
+}
