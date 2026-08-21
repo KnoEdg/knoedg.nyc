@@ -59,6 +59,29 @@
           "@type": "schema:PropertyValue",
           "schema:name": "Unchanged since",
           "schema:value": "2026-06-17 — byte-identical to an archived capture, verified 2026-08-20"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Retrieved",
+          "schema:value": {
+            "@value": "2026-08-20T15:35:30Z",
+            "@type": "xsd:dateTime"
+          }
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Byte size",
+          "schema:value": 323548
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Checksum (SHA-256)",
+          "schema:value": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Archived capture",
+          "schema:value": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
         }
       ]
     },
