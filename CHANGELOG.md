@@ -7,6 +7,41 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.4.0] - 2026-08-21
+
+### Added
+
+- The first **subject-axis** collection on the site, and the first publication
+  carrying two artifact classes:
+  [`/nyc-immigrant-enclaves/`](https://knoedg.nyc/nyc-immigrant-enclaves/) —
+  the public view over eight governed records about the "New York City
+  Immigrant Enclaves" map, and
+  [`/nyc-immigrant-enclaves-paper/`](https://knoedg.nyc/nyc-immigrant-enclaves-paper/)
+  — a **data paper**, a prose article that cites the view's claims and holds
+  none of its own.
+- `schemas/data-paper/v1` and `templates/data-paper.html` now serve a real
+  published article rather than only a conformance vector.
+
+### Changed
+
+- The shared renderer emits a record-count manifest for a public view and
+  **refuses one for a data paper**. A data paper holds no claims, so counts
+  would be invented rather than rendered. Both directions are enforced and
+  covered by the renderer conformance suite.
+- `scripts/validate_jsonld.py` now expands **every** published JSON-LD
+  document, discovered by glob. It previously expanded one hardcoded page, so
+  the six source pages added after it were never checked — a gate covering one
+  of nine files reported success in the same words as one covering all nine.
+
+### Notes
+
+- The collection governs a **map as an artifact**, not New York City's
+  immigrant neighbourhoods. It takes no position on which neighbourhoods
+  belong on any such map.
+- The map itself is **cited and not reproduced**: no redistribution permission
+  was located for it, so the pages describe and link the artifact and publish
+  none of its bytes.
+
 ## [0.3.0] - 2026-08-10
 
 ### Added

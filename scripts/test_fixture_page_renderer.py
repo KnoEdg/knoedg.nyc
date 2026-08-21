@@ -121,3 +121,40 @@ must_fail(broken, "unsupported data-paper content model")
 broken = copy.deepcopy(paper)
 broken["rendererContract"] = "fixture-page/v1"
 must_fail(broken, "invalid data-paper/v1 identity")
+
+
+# ---- output-emission coverage -----------------------------------
+# The renderer could RENDER a data paper before it could EMIT one: build_counts
+# reads activeRecordCount and sourceGroups, which a data paper deliberately
+# lacks. Rendering was covered above and emission was not, so this pair is the
+# gap that hid it. Both directions are asserted, because "emits no manifest"
+# and "may skip the manifest" are different rules.
+
+from pathlib import Path as _Path
+from generate_fixture_page import outputs
+
+_paper = ROOT / "tests/data-paper-v1.json"
+_emitted = outputs(_paper, ROOT / "templates/data-paper.html",
+                   _Path("/tmp/_dp.html"), _Path("/tmp/_dp.jsonld"), None)
+if sorted(p.name for p in _emitted) != ["_dp.html", "_dp.jsonld"]:
+    raise SystemExit(f"data paper emitted unexpected outputs: {sorted(p.name for p in _emitted)}")
+
+try:
+    outputs(_paper, ROOT / "templates/data-paper.html",
+            _Path("/tmp/_dp.html"), _Path("/tmp/_dp.jsonld"), _Path("/tmp/_dp.json"))
+except ConformanceError as exc:
+    if "emits no record-count manifest" not in str(exc):
+        raise SystemExit(f"wrong rejection for data-paper manifest: {exc}")
+else:
+    raise SystemExit("a data paper was allowed to emit a record-count manifest")
+
+try:
+    outputs(V2, ROOT / "templates/fixture-page.html",
+            _Path("/tmp/_pv.html"), _Path("/tmp/_pv.jsonld"), None)
+except ConformanceError as exc:
+    if "must emit a record-count manifest" not in str(exc):
+        raise SystemExit(f"wrong rejection for missing public-view manifest: {exc}")
+else:
+    raise SystemExit("a public view was allowed to skip its record-count manifest")
+
+print("Emission conformance passes: data paper emits html+jsonld only; manifest refused for a paper and required for a view.")
