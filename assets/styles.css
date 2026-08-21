@@ -137,11 +137,17 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .copy p { color: var(--muted); font-size: 1.18rem; }
 .copy p:first-of-type { color: var(--ink); font-size: 1.35rem; }
 
-.resource-page { padding: clamp(3.5rem, 8vw, 7rem) 0; }
-.resource-page section { border-top: 1px solid var(--line); margin-top: clamp(3rem, 7vw, 5rem); padding-top: clamp(3rem, 7vw, 5rem); }
-.resource-page article > section:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+.resource-page, .data-paper { padding: clamp(3.5rem, 8vw, 7rem) 0; }
+.resource-page section, .data-paper section { border-top: 1px solid var(--line); margin-top: clamp(3rem, 7vw, 5rem); padding-top: clamp(3rem, 7vw, 5rem); }
+.resource-page article > section:first-child, .data-paper article > section:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
 .resource-page article > section:first-child > p:first-of-type { color: var(--accent-dark); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; margin-bottom: 0.75rem; text-transform: uppercase; }
 .resource-page article > section:first-child > p:nth-of-type(2) { font-size: clamp(1.2rem, 2.5vw, 1.55rem); margin: 2rem 0; }
+/* Any figure, at any nesting depth, on a resource page or a data paper.
+   The scoped rules below stay for the first-section hero figure; this is the
+   floor so a nested figure can never render at its natural pixel width. */
+.resource-page figure, .data-paper figure { margin: 2rem 0; max-width: 100%; }
+.resource-page figure img, .data-paper figure img { display: block; height: auto; max-width: 100%; width: 100%; }
+.resource-page figcaption, .data-paper figcaption { color: var(--muted); font-size: 0.78rem; margin-top: 0.75rem; max-width: 52rem; }
 .resource-page article > section:first-child > figure { margin: 2rem 0 0; max-width: 36rem; }
 .resource-page article > section:first-child > figure img { display: block; height: auto; width: 100%; }
 .resource-page article > section:first-child > figure figcaption { color: var(--muted); font-size: 0.78rem; margin-top: 0.75rem; }
@@ -150,11 +156,11 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.035em; margin: 0 0 
 .resource-page article > section:first-child > dl div + div { border-left: 1px solid var(--line); }
 .resource-page article > section:first-child > dl dt { color: var(--muted); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .resource-page article > section:first-child > dl dd { font-size: 0.98rem; margin: 0.35rem 0 0; }
-.resource-page section section section { margin-top: 2rem; padding-top: 2rem; }
-.resource-page h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
-.resource-page h2 { margin-bottom: 1.25rem; }
-.resource-page h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 500; line-height: 1.2; margin: 0 0 0.8rem; }
-.resource-page p { color: var(--muted); max-width: 52rem; }
+.resource-page section section section, .data-paper section section section { margin-top: 2rem; padding-top: 2rem; }
+.resource-page h1, .data-paper h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
+.resource-page h2, .data-paper h2 { margin-bottom: 1.25rem; }
+.resource-page h3, .data-paper h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 500; line-height: 1.2; margin: 0 0 0.8rem; }
+.resource-page p, .data-paper p { color: var(--muted); max-width: 52rem; }
 .resource-header { display: grid; gap: clamp(2.5rem, 6vw, 6rem); grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.65fr); align-items: center; }
 .resource-lede { font-size: clamp(1.2rem, 2.5vw, 1.55rem); margin: 2rem 0 0; }
 .resource-map { margin: 0; }
