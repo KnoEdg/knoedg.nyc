@@ -2,7 +2,7 @@
 """Generate the NYC Immigrant Enclaves public view page from its governed artifact."""
 
 from pathlib import Path
-import difflib
+import base64
 import sys
 
 from generate_fixture_page import main, outputs
@@ -19,14 +19,8 @@ if __name__ == "__main__":
         for path, rendered in outputs(ARTIFACT, TEMPLATE, HTML, JSONLD, MANIFEST).items():
             current = path.read_text(encoding="utf-8") if path.exists() else ""
             if current != rendered:
-                print(f"--- DIFF {path}")
-                print("".join(difflib.unified_diff(
-                    current.splitlines(keepends=True),
-                    rendered.splitlines(keepends=True),
-                    fromfile="committed",
-                    tofile="generated",
-                    n=3,
-                )))
+                encoded = base64.b64encode(rendered.encode("utf-8")).decode("ascii")
+                print(f"CANONICAL_BASE64 {path.name} {encoded}")
     defaults = [
         "--artifact", str(ARTIFACT),
         "--template", str(TEMPLATE),
