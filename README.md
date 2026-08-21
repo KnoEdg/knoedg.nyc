@@ -2,6 +2,8 @@
 
 This repository publishes [knoedg.nyc](https://knoedg.nyc), an early-stage public project for exploring New York City through connected, traceable public sources.
 
+KnoEdg.NYC is currently independently managed by René Yap as a singleton project. This describes the project's present stewardship and does not prescribe its future governance model.
+
 The public site is intentionally limited while the underlying work is developed and reviewed.
 
 
