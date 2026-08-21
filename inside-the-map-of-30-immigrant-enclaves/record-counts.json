@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "rendererContract": "fixture-page/v2",
-  "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+  "resource": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
   "activeRecordCount": 8,
   "representations": [
     {
