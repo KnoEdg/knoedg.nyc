@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.1",
+  "artifactVersion": "2026-08-21.3",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T00:40:00Z",
+  "issuedAt": "2026-08-21T01:30:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -167,6 +167,698 @@
                   {
                     "type": "text",
                     "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "the-roster",
+            "heading": [
+              {
+                "type": "text",
+                "text": "What the map lists"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The thirty entries printed on the map, transcribed from the checksummed image itself rather than from reporting. Names and transit strings appear as printed and are not corrected."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The map image is not reproduced here. No redistribution permission for it was located, and public accessibility is not permission, so what is shown is the factual content it prints. The image itself is served by its publisher: "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "view the original map at NYC Tourism + Conventions"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". That address has been unchanged since before the controversy, but the page that carried it has been withdrawn, so it may not stay reachable."
+                  }
+                ]
+              },
+              {
+                "type": "table",
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "The thirty enclaves printed on the map, in the artifact's own order"
+                  }
+                ],
+                "columns": [
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "#"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Name as printed"
+                      }
+                    ]
+                  },
+                  {
+                    "header": [
+                      {
+                        "type": "text",
+                        "text": "Transit access as printed"
+                      }
+                    ]
+                  }
+                ],
+                "rows": [
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "1"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Chinatown in Flushing"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "7 Flushing-Main St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "2"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Chinatown in Manhattan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "J M Z N Q R W 6 Canal St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "3"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Chinatown in Sunset Park"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "N 8th Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "4"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Guyana Gateway"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "3 4 Crown Hts - Utica Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "5"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Koreatown in Manhattan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B D F M N Q R W 34th St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "6"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Koreatown in Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "7 Flushing-Main St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "7"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Africa in Staten Island"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "SI Clifton"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "8"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Africa in the Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B D 167th St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "9"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Albania"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B D Fordham Rd"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "10"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Bangladesh"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "F 169 St / E J Z Jamaica Center"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "11"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Bhod-Tibet"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "M R Northern Blvd"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "12"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Caribbean"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B Q S Prospect Park / 2 5 Church Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "13"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Colombia"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "14"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Dominican Republic"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "A 175th St / 181st St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "15"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Ecuador"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "7 Junction Blvd / 74th St-Broadway"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "16"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Egypt"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "R Steinway St / N W Astoria Blvd"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "17"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Guyana in Queens"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "A Ozone Park-Lefferts Blvd"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "18"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Guyana in the Bronx"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2 5 Nereid Ave / 6 St Lawrence Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "19"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Haiti"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2 5 Newkirk Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "20"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little India"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "21"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Manila"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "22"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Mexico in Port Richmond"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "S44/S46 Bus: Port Richmond"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "23"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Mexico in Sunset Park"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "D N R W 25th St / 36th St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "24"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Odessa"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B Q Brighton Beach"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "25"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Palestine"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "R Bay Ridge Ave / 86th St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "26"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Pakistan"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "B Q Newkirk Plaza"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "27"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Poland"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "G Greenpoint Ave / Nassau Ave"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "28"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Senegal"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2 3 B C 116th St"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "29"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Ukraine"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "F 2nd Ave / 6 Astor Pl"
+                      }
+                    ]
+                  ],
+                  [
+                    [
+                      {
+                        "type": "text",
+                        "text": "30"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "Little Yemen"
+                      }
+                    ],
+                    [
+                      {
+                        "type": "text",
+                        "text": "2 5 Bronx Park East / Pelham Pkwy"
+                      }
+                    ]
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Little Italy is not among them. That absence is established from this transcription of the artifact, not from an outlet reporting it."
                   }
                 ]
               }
