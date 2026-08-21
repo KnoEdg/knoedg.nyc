@@ -30,8 +30,20 @@ fixes only.
 ### Changed
 
 - Site-wide `h1` scales at `clamp(3rem, 8vw, 7rem)`, down from `9vw`.
-- The data paper's title is split: `h1` is now "A map with no publisher", with
-  the descriptive half as the `h2` beneath it.
+- **Both documents read neutrally about their primary source**, which is a New
+  York City agency — a public body. The data paper was titled "A map with no
+  publisher", which states a real finding as a gotcha; it is now **"The NYC
+  Immigrant Enclaves map"**, with "What the record establishes, and what it
+  does not" as the `h2` beneath it. "A promise is not an edit" — an aphorism
+  about a public official's word — is gone from both pages, replaced by the
+  same distinction stated as a property of the record. Also removed:
+  *provenance is broken*, *a second life*, *the omission of Little Italy*, and
+  the repeated possessive framing (*the office's own report*).
+  **No finding was softened:** the map still does not include Little Italy, no
+  amended map has been observed, the pages still decline to say it did not
+  happen, and why the page was withdrawn is still not asserted. Direct
+  quotations and source URLs are citations rather than this project's voice,
+  and are untouched.
 - **Loaded wording removed from both published documents.** "This collection
   *refuses* to let the second stand in for the first" attributed intent to a
   document and read as self-congratulation; a scan found twelve more of the
