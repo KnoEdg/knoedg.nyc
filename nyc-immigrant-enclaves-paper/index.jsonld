@@ -9,7 +9,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
       "@type": "schema:ScholarlyArticle",
-      "schema:name": "The NYC Immigrant Enclaves map — provenance, evidence and limits",
+      "schema:name": "The Map of 30 Immigrant Enclaves — provenance, evidence and limits",
       "schema:citation": {
         "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/"
       },
