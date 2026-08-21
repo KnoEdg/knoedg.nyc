@@ -120,7 +120,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-demographic",
       "@type": "schema:Claim",
-      "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighbourhood today were born abroad. It appears in no published rule.",
+      "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule.",
       "schema:citation": {
         "@id": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
       },
@@ -145,7 +145,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-heritage",
       "@type": "schema:Claim",
-      "schema:text": "Critics, quoted by the press, treat a neighbourhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
+      "schema:text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
       "schema:citation": {
         "@id": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
       },
@@ -163,7 +163,7 @@
         {
           "@type": "schema:PropertyValue",
           "schema:name": "Relationship to the demographic criterion",
-          "schema:value": "Definition mismatch — the two ask different questions of the same neighbourhoods."
+          "schema:value": "Definition mismatch — the two ask different questions of the same neighborhoods."
         }
       ]
     },
@@ -230,7 +230,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
       "@type": "schema:Claim",
-      "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the programme nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
+      "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
       "schema:citation": {
         "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
       },
