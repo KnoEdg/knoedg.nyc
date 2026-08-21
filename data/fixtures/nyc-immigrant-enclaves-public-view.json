@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.9",
+  "artifactVersion": "2026-08-21.11",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T13:10:00Z",
+  "issuedAt": "2026-08-21T12:20:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -141,13 +141,75 @@
             "children": [
               {
                 "type": "figure",
-                "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                "src": "/assets/nyc-immigrant-enclaves-map.jpg",
                 "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighborhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
                 "decorative": false,
                 "caption": [
                   {
                     "type": "text",
-                    "text": "The artifact this collection governs, served by its publisher rather than copied here. Retrieved and checksummed 2026-08-20; byte-identical to an archived capture of 2026-06-17. If the publisher moves or withdraws it, this image will stop loading — the page that carried it has already been withdrawn."
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. Published by New York City Tourism + Conventions, who hold the rights in it. "
+                  },
+                  {
+                    "type": "text",
+                    "text": "Retrieved from "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "the publisher’s address"
+                      }
+                    ],
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab"
+                  },
+                  {
+                    "type": "text",
+                    "text": " on "
+                  },
+                  {
+                    "type": "time",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/5/schema:value/@value",
+                    "format": "datetime"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and checksummed: SHA-256 "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/7/schema:value"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/6/schema:value",
+                    "format": "integer"
+                  },
+                  {
+                    "type": "text",
+                    "text": " bytes. The copy served here was verified against that checksum before it was committed, so what you see is the artifact this page describes rather than whatever the address currently returns. The same bytes appear in "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "an independent archived capture of 2026-06-17"
+                      }
+                    ],
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab"
+                  },
+                  {
+                    "type": "text",
+                    "text": " — three weeks before the public comment. No redistribution permission was located and none is claimed; if the rightsholder objects the image is removed."
                   }
                 ]
               },
@@ -226,23 +288,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map is shown above, served by its publisher. Alongside it, the roster is the same content as text: searchable, linkable, and readable by anyone the image is not accessible to. "
-                  },
-                  {
-                    "type": "link",
-                    "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
-                    "newWindow": true,
-                    "accessibleNewWindowText": "opens in a new tab",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "open the original at full size"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": "."
+                    "text": "The map is shown above. Alongside it, the roster is the same content as text: searchable, linkable, and readable by anyone the image is not accessible to."
                   }
                 ]
               },
@@ -1315,7 +1361,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map and the page that carried it state a copyright and no license: no redistribution permission was located and none has been granted since. The map is nevertheless displayed on this page and on the data paper, by reference to the publisher's own address: this project stores no copy and serves no bytes, and the publisher serves every request. The decision to display it was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no license is asserted and none was determined."
+                    "text": "The map and the page that carried it state a copyright and no license: no redistribution permission was located and none has been granted since. The map is nevertheless published on this page and on the data paper, and the bytes are served from here rather than linked: the copy was verified against the governed checksum before it was committed, so the image is the artifact this page describes. Attribution to New York City Tourism + Conventions, the source address, the retrieval instant, the checksum and an independent archived capture are shown with it. Attribution is not a license and is not offered as one. The decision to publish was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist; if the rightsholder objects the image is removed. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no license is asserted and none was determined."
                   }
                 ]
               },
@@ -1561,6 +1607,29 @@
             "@type": "schema:PropertyValue",
             "schema:name": "Unchanged since",
             "schema:value": "2026-06-17 — byte-identical to an archived capture, verified 2026-08-20"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Retrieved",
+            "schema:value": {
+              "@value": "2026-08-20T15:35:30Z",
+              "@type": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Byte size",
+            "schema:value": 323548
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Checksum (SHA-256)",
+            "schema:value": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Archived capture",
+            "schema:value": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
           }
         ]
       },
