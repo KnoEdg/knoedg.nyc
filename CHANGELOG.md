@@ -7,6 +7,34 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.7.0] - 2026-08-21
+
+### Added
+
+- **The page now answers who published the map.** New York City Tourism +
+  Conventions is a **nonprofit organization** per the city's own governance
+  dataset — in the city org chart and agency directory, but **not a city
+  agency by type**. Carried as a qualifier on the existing artifact claim, so
+  the record count is unchanged.
+
+### Fixed
+
+- **The page no longer asserts a withdrawal.** What was observed is that the
+  URL redirects and the program index mentions neither the program nor the
+  map. "The page was withdrawn" added someone deciding to withdraw it, which
+  nothing retrieved supports — and the page then said "why the page was
+  withdrawn is not established", presupposing the act it declined to explain.
+- **It no longer reads as naming two different publishers.** The lede said the
+  accounts disagree on a publisher; the figure named one. Both are true, and
+  the page never said why: the **artifact** bears no publisher mark, while
+  **publication** is established from the host page's own markup. Both
+  passages now make that distinction.
+- **"What is not established" states its selection rule.** Five items with no
+  stated principle reads as arbitrary or as a claim to be exhaustive. Each is
+  an inference a reader is likely to draw from what the page does establish
+  and which the evidence does not settle; anything further out is outside
+  scope, not overlooked.
+
 ## [0.6.1] - 2026-08-21
 
 ### Fixed

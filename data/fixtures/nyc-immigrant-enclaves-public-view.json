@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.12",
+  "artifactVersion": "2026-08-21.14",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T13:00:00Z",
+  "issuedAt": "2026-08-21T14:00:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -67,7 +67,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide public comment because Little Italy is not on it. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
+                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide public comment because Little Italy is not on it. The artifact itself carries no publisher mark, no date and no address, so almost everything written about it since has had to supply those in its first sentence — and those press accounts do not agree with one another. This page does not take them as its source: the publisher below is established from the host page's own markup."
               }
             ]
           },
@@ -147,7 +147,7 @@
                 "caption": [
                   {
                     "type": "text",
-                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. Published by New York City Tourism + Conventions, who hold the rights in it. "
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. The artifact bears no publisher mark, no date and no designer credit. Publication is nonetheless established, from the host page's own markup rather than from press attribution: New York City Tourism + Conventions, who hold the rights in it. "
                   },
                   {
                     "type": "text",
@@ -259,6 +259,37 @@
                   {
                     "type": "text",
                     "text": "."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "No city agency published it."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " New York City Tourism + Conventions is recorded as a "
+                  },
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "nonprofit organization"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " in the city’s own governance dataset, present in the city org chart and agency directory without being an agency by type. The Mayor’s Office of Immigrant Affairs, named in the map’s footnote, is an agency — but it is named there as a data source, and a footnote naming a source does not identify who produced the artifact. Who designed the map remains unestablished."
                   }
                 ]
               }
@@ -1148,7 +1179,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established."
+                    "text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established."
                   }
                 ]
               },
@@ -1195,7 +1226,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Stated plainly, because a collection that only records what it found misrepresents itself:"
+                    "text": "These five, and not an open-ended list of everything unknown. Each is a question a reader is likely to answer for themselves from what this page does establish, and which the retrieved evidence does not settle — the inferences closest to the edge of the record. Anything further from it is simply outside this collection's scope and is not listed."
                   }
                 ]
               },
@@ -1253,13 +1284,13 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "Why the page was withdrawn."
+                          "text": "Why the URL now redirects."
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": " A program page ending with its program is ordinary; nothing dates the withdrawal against the public comment."
+                      "text": " A program page ending with its program is ordinary, and nothing dates the change against the public comment. Whether anyone withdrew the page is not established: a redirect is what was observed."
                     }
                   ],
                   [
@@ -1576,9 +1607,14 @@
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-artifact",
         "@type": "schema:Claim",
         "schema:text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution. The same bytes are attested by an archived capture taken 2026-06-17, three weeks before the criticism: identical checksum, identical length.",
-        "schema:citation": {
-          "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
-        },
+        "schema:citation": [
+          {
+            "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+          },
+          {
+            "@id": "https://data.cityofnewyork.us/resource/t3jq-9nkf.json?%24where=record_id%3D%27NYC_GOID_000310%27"
+          }
+        ],
         "schema:additionalProperty": [
           {
             "@type": "schema:PropertyValue",
@@ -1630,6 +1666,11 @@
             "@type": "schema:PropertyValue",
             "schema:name": "Archived capture",
             "schema:value": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Publisher organization type",
+            "schema:value": "Nonprofit Organization"
           }
         ]
       },
@@ -1801,7 +1842,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
         "@type": "schema:Claim",
-        "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
+        "schema:text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
         "schema:citation": {
           "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
         },
@@ -1818,7 +1859,7 @@
           },
           {
             "@type": "schema:PropertyValue",
-            "schema:name": "Reason for withdrawal",
+            "schema:name": "Reason for the redirect",
             "schema:value": "Not established."
           },
           {
