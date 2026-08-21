@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.7",
+  "artifactVersion": "2026-08-21.8",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T13:10:00Z",
+  "issuedAt": "2026-08-21T12:20:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -83,13 +83,73 @@
               },
               {
                 "type": "figure",
-                "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                "src": "/assets/nyc-immigrant-enclaves-map.jpg",
                 "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighborhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
                 "decorative": false,
                 "caption": [
                   {
                     "type": "text",
-                    "text": "The artifact this collection governs, served by its publisher rather than copied here. Retrieved and checksummed 2026-08-20; byte-identical to an archived capture of 2026-06-17. If the publisher moves or withdraws it, this image will stop loading — the page that carried it has already been withdrawn."
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. Published by New York City Tourism + Conventions, who hold the rights in it. "
+                  },
+                  {
+                    "type": "text",
+                    "text": "Retrieved from "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "the publisher’s address"
+                      }
+                    ],
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab"
+                  },
+                  {
+                    "type": "text",
+                    "text": " on "
+                  },
+                  {
+                    "type": "text",
+                    "text": "August 20, 2026"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and checksummed: SHA-256 "
+                  },
+                  {
+                    "type": "code",
+                    "text": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", "
+                  },
+                  {
+                    "type": "code",
+                    "text": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+                  },
+                  {
+                    "type": "text",
+                    "text": " bytes. The copy served here was verified against that checksum before it was committed, so what you see is the artifact this page describes rather than whatever the address currently returns. The same bytes appear in "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "an independent archived capture of 2026-06-17"
+                      }
+                    ],
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab"
+                  },
+                  {
+                    "type": "text",
+                    "text": " — three weeks before the public comment. No redistribution permission was located and none is claimed; if the rightsholder objects the image is removed."
                   }
                 ]
               },
@@ -367,7 +427,7 @@
                   [
                     {
                       "type": "text",
-                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission, so this pack does not commit or redistribute the bytes. POSITION CHANGED 2026-08-21 by decision of this project's owner. The artifact is now displayed on the public view and on the data paper by reference to this same publisher-served address. This project stores no copy, commits no bytes, and serves nothing: the publisher serves every request, and if the asset is moved or withdrawn the image stops loading. What the change does affect is that the artifact is now publicly displayed by this project, which public accessibility alone does not authorize. No permission has been located or granted. The rights position is unchanged; the display decision was taken without it. The earlier determination -- cited and not reproduced -- is superseded here rather than deleted, so the change is visible in the record. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8."
+                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission. POSITION CHANGED TWICE ON 2026-08-21, by decision of this project's owner, and both steps are recorded rather than collapsed into the final state. FIRST: the artifact was displayed by reference to the publisher-served address, with no copy stored here. SECOND: the bytes are copied into this project and served from it, with attribution to the rightsholder shown beside the image. The copy was verified against the governed checksum before it was committed and is byte-identical to it, so what a reader sees is the artifact this collection describes rather than whatever the publisher currently serves. That is why the copy was made: a referenced image can change or vanish underneath a checksum claim, and the page would then assert a provenance it no longer had. WHAT THIS IS AND IS NOT. This is redistribution, and it is more than display. No permission has been located or granted, and none is claimed. Public accessibility is not permission. The page carries attribution to New York City Tourism + Conventions, the source URL, the retrieval instant, the checksum, and a link to an independent archived capture, so a reader can identify the rightsholder and verify the bytes. Attribution is not a license and is not offered as one. CONTEXT RECORDED, NOT A DETERMINATION: news outlets reproduced this artifact in their own coverage, observed first-hand by this project on 2026-08-21 -- one article displays it captioned as the map that sparked the controversy. That is evidence of how the artifact has been treated in reporting about it. It is not a legal conclusion, and this pack makes none. The earlier determinations -- cited and not reproduced, then displayed but not copied -- are superseded here rather than deleted, so both reversals stay visible. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8, and the copy is deleted with it."
                     }
                   ],
                   [

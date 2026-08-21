@@ -7,6 +7,35 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.6.0] - 2026-08-21
+
+### Added
+
+- **The map is hosted here, with attribution**, at
+  `/assets/nyc-immigrant-enclaves-map.jpg`. The copy was verified against the
+  governed checksum before it was committed and is byte-identical to it, so a
+  reader sees the artifact the page describes rather than whatever the
+  publisher's address currently returns.
+- **The figure now shows its provenance**: attribution to New York City
+  Tourism + Conventions, the source address, the retrieval instant, the
+  SHA-256 checksum, the byte size, and a link to an independent archived
+  capture of 2026-06-17. The checksum is **rendered from the governed value**,
+  not retyped, so the page and the record cannot drift.
+
+### Fixed
+
+- **The caption previously claimed provenance the page did not show.** It said
+  "retrieved and checksummed" while carrying no checksum, no archive link, no
+  retrieval instant and no attribution — a summary asserting more than its
+  record exposed. The checksum existed only inside a prose string, so nothing
+  on the page could point at it; it is now a structured value.
+
+### Notes
+
+- **Attribution is not a license and is not offered as one.** No redistribution
+  permission was located and none is claimed. If the rightsholder objects, the
+  image is removed.
+
 ## [0.5.1] - 2026-08-21
 
 ### Changed
