@@ -7,6 +7,25 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.6.1] - 2026-08-21
+
+### Fixed
+
+- **The map was not responsive, because no sizing rule reached it.** The only
+  figure rule was scoped to `article > section:first-child > figure`; the map
+  sits two sections deep, so it matched nothing and rendered at its natural
+  1920px width. Figures at **any** depth now scale to their container on both
+  page types.
+- **The data paper had no layout styling at all.** Its template wraps content
+  in `.data-paper`, and the stylesheet had zero rules for that class, so the
+  page inherited none of the resource-page layout. `.data-paper` now shares
+  those rules rather than duplicating them.
+- **The old data-paper title survived where it mattered most.** The public
+  view's link to the article still read "A map with no publisher" — the
+  framing the retitle removed, left in the one place a reader clicks — and the
+  article's JSON-LD `schema:name` still carried it too, so the machine
+  representation and the `h1` disagreed about the page's name.
+
 ## [0.6.0] - 2026-08-21
 
 ### Added
