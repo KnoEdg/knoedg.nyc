@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.6",
+  "artifactVersion": "2026-08-21.7",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T12:00:00Z",
+  "issuedAt": "2026-08-21T13:10:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -84,7 +84,7 @@
               {
                 "type": "figure",
                 "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
-                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighbourhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
+                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighborhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
                 "decorative": false,
                 "caption": [
                   {
@@ -98,7 +98,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "This collection governs a map as an artifact. It does not govern New York City's immigrant neighbourhoods, and it takes no position on which neighbourhoods belong on any such map. The distinction is the whole point: the questions that proved answerable here were about who published a document, what it claims, and how confidently any of that can be said -- not about the city it depicts."
+                    "text": "This collection governs a map as an artifact. It does not govern New York City's immigrant neighborhoods, and it takes no position on which neighborhoods belong on any such map. The distinction is the whole point: the questions that proved answerable here were about who published a document, what it claims, and how confidently any of that can be said -- not about the city it depicts."
                   }
                 ]
               },
@@ -107,7 +107,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map was chosen as a subject because its publication details are not stated on the artifact itself. It is titled New York City Immigrant Enclaves, it lists thirty neighbourhoods, and it carries a footnote naming the Mayor's Office of Immigrant Affairs as its source. It carries no publisher mark, no date, and no address of its own. A footnote naming a data source records where information came from; it does not identify who produced the artifact. The map's publication is established here; its authorship is not."
+                    "text": "The map was chosen as a subject because its publication details are not stated on the artifact itself. It is titled New York City Immigrant Enclaves, it lists thirty neighborhoods, and it carries a footnote naming the Mayor's Office of Immigrant Affairs as its source. It carries no publisher mark, no date, and no address of its own. A footnote naming a data source records where information came from; it does not identify who produced the artifact. The map's publication is established here; its authorship is not."
                   }
                 ]
               },
@@ -134,7 +134,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The same reading appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have reported it the same way: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organisation headlined that the neighbourhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
+                    "text": "The same reading appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have reported it the same way: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organization headlined that the neighborhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
                   }
                 ]
               },
@@ -143,7 +143,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "What the re-test could establish, it established by retrieval rather than inference. The map file at its known address is byte-for-byte identical to its earliest archived capture and to a fresh retrieval; the file that was live three weeks before the public comment is the file that is live now. The publisher's sitemap of more than ten thousand pages contains no enclave-map page, and the programme page it lists now redirects. The only other map-named image on the surviving programme page was fetched and looked at rather than judged by its filename, and proved to be an unrelated official visitor map."
+                    "text": "What the re-test could establish, it established by retrieval rather than inference. The map file at its known address is byte-for-byte identical to its earliest archived capture and to a fresh retrieval; the file that was live three weeks before the public comment is the file that is live now. The publisher's sitemap of more than ten thousand pages contains no enclave-map page, and the program page it lists now redirects. The only other map-named image on the surviving program page was fetched and looked at rather than judged by its filename, and proved to be an unrelated official visitor map."
                   }
                 ]
               },
@@ -188,7 +188,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Rights were determined before publication rather than assumed. Municipal works are not public domain -- the federal rule does not reach city governments -- and the city's terms reserve all rights. Where an outlet asserts no machine-readable licence, the position is recorded as undetermined, which is neither absent nor permissive. Public accessibility is not permission, so this collection retains checksums and content-addressed addresses rather than redistributing bytes it has no permission to redistribute."
+                    "text": "Rights were determined before publication rather than assumed. Municipal works are not public domain -- the federal rule does not reach city governments -- and the city's terms reserve all rights. Where an outlet asserts no machine-readable license, the position is recorded as undetermined, which is neither absent nor permissive. Public accessibility is not permission, so this collection retains checksums and content-addressed addresses rather than redistributing bytes it has no permission to redistribute."
                   }
                 ]
               }
@@ -367,13 +367,13 @@
                   [
                     {
                       "type": "text",
-                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no licence. Public accessibility is not permission (PUBLIC_FIXTURE_PUBLICATION_RUNBOOK step 3), so this pack does not commit or redistribute the bytes. POSITION CHANGED 2026-08-21 by decision of this project's owner. The artifact is now displayed on the public view and on the data paper by reference to this same publisher-served address. This project stores no copy, commits no bytes, and serves nothing: the publisher serves every request, and if the asset is moved or withdrawn the image stops loading. What the change does affect is that the artifact is now publicly displayed by this project, which public accessibility alone does not authorise. No permission has been located or granted. The rights position is unchanged; the display decision was taken without it. The earlier determination -- cited and not reproduced -- is superseded here rather than deleted, so the change is visible in the record. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8."
+                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission, so this pack does not commit or redistribute the bytes. POSITION CHANGED 2026-08-21 by decision of this project's owner. The artifact is now displayed on the public view and on the data paper by reference to this same publisher-served address. This project stores no copy, commits no bytes, and serves nothing: the publisher serves every request, and if the asset is moved or withdrawn the image stops loading. What the change does affect is that the artifact is now publicly displayed by this project, which public accessibility alone does not authorize. No permission has been located or granted. The rights position is unchanged; the display decision was taken without it. The earlier determination -- cited and not reproduced -- is superseded here rather than deleted, so the change is visible in the record. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8."
                     }
                   ],
                   [
                     {
                       "type": "text",
-                      "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. The publisher asserts no machine-readable licence, and this pack did not retrieve or interpret the outlet's terms of service. Recorded as undetermined rather than as absent or as permissive."
+                      "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. The publisher asserts no machine-readable license, and this pack did not retrieve or interpret the outlet's terms of service. Recorded as undetermined rather than as absent or as permissive."
                     }
                   ],
                   [
@@ -391,19 +391,19 @@
                   [
                     {
                       "type": "text",
-                      "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/ | No licence stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
+                      "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/ | No license stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
                     }
                   ],
                   [
                     {
                       "type": "text",
-                      "text": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable licence is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
+                      "text": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
                     }
                   ],
                   [
                     {
                       "type": "text",
-                      "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable licence is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
+                      "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
                     }
                   ]
                 ]

@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.8",
+  "artifactVersion": "2026-08-21.9",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T12:00:00Z",
+  "issuedAt": "2026-08-21T13:10:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -142,7 +142,7 @@
               {
                 "type": "figure",
                 "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
-                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighbourhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
+                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighborhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
                 "decorative": false,
                 "caption": [
                   {
@@ -930,7 +930,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "Four of the five added names refer to communities at the centre of contested public argument."
+                        "text": "Four of the five added names refer to communities at the center of contested public argument."
                       }
                     ]
                   },
@@ -975,7 +975,7 @@
                   },
                   {
                     "type": "text",
-                    "text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighbourhood today were born abroad. It appears in no published rule."
+                    "text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule."
                   }
                 ]
               },
@@ -993,7 +993,7 @@
                   },
                   {
                     "type": "text",
-                    "text": "Critics, quoted by the press, treat a neighbourhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule."
+                    "text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule."
                   }
                 ]
               },
@@ -1002,7 +1002,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A neighbourhood can satisfy either, both, or neither, and both can be true of the same place at once. "
+                    "text": "A neighborhood can satisfy either, both, or neither, and both can be true of the same place at once. "
                   },
                   {
                     "type": "strong",
@@ -1063,7 +1063,7 @@
                   },
                   {
                     "type": "text",
-                    "text": " A published threshold exists; a neighbourhood falls below it; the neighbourhood is missing from a map. That sequence is not a chain of cause. Nothing found shows the map's authors read the report, cited it, or applied any threshold at all."
+                    "text": " A published threshold exists; a neighborhood falls below it; the neighborhood is missing from a map. That sequence is not a chain of cause. Nothing found shows the map's authors read the report, cited it, or applied any threshold at all."
                   }
                 ]
               },
@@ -1102,7 +1102,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the programme nor the map, while the map file itself is still served. Why the page was withdrawn is not established."
+                    "text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established."
                   }
                 ]
               },
@@ -1213,7 +1213,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the public comment."
+                      "text": " A program page ending with its program is ordinary; nothing dates the withdrawal against the public comment."
                     }
                   ],
                   [
@@ -1315,7 +1315,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located and none has been granted since. The map is nevertheless displayed on this page and on the data paper, by reference to the publisher's own address: this project stores no copy and serves no bytes, and the publisher serves every request. The decision to display it was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
+                    "text": "The map and the page that carried it state a copyright and no license: no redistribution permission was located and none has been granted since. The map is nevertheless displayed on this page and on the data paper, by reference to the publisher's own address: this project stores no copy and serves no bytes, and the publisher serves every request. The decision to display it was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no license is asserted and none was determined."
                   }
                 ]
               },
@@ -1404,7 +1404,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "This collection holds claims about the guide as an artifact. It is not a directory of New York City's immigrant neighbourhoods, and nothing here should be read as endorsing or disputing any neighbourhood's inclusion or exclusion."
+                    "text": "This collection holds claims about the guide as an artifact. It is not a directory of New York City's immigrant neighborhoods, and nothing here should be read as endorsing or disputing any neighborhood's inclusion or exclusion."
                   }
                 ]
               },
@@ -1622,7 +1622,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-demographic",
         "@type": "schema:Claim",
-        "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighbourhood today were born abroad. It appears in no published rule.",
+        "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule.",
         "schema:citation": {
           "@id": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
         },
@@ -1647,7 +1647,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-heritage",
         "@type": "schema:Claim",
-        "schema:text": "Critics, quoted by the press, treat a neighbourhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
+        "schema:text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
         "schema:citation": {
           "@id": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
         },
@@ -1665,7 +1665,7 @@
           {
             "@type": "schema:PropertyValue",
             "schema:name": "Relationship to the demographic criterion",
-            "schema:value": "Definition mismatch — the two ask different questions of the same neighbourhoods."
+            "schema:value": "Definition mismatch — the two ask different questions of the same neighborhoods."
           }
         ]
       },
@@ -1732,7 +1732,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
         "@type": "schema:Claim",
-        "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the programme nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
+        "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
         "schema:citation": {
           "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
         },
