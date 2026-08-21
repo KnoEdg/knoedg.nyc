@@ -7,6 +7,35 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.4.1] - 2026-08-21
+
+### Added
+
+- The **thirty-entry roster** the Immigrant Enclaves map prints, on
+  [`/nyc-immigrant-enclaves/`](https://knoedg.nyc/nyc-immigrant-enclaves/) —
+  names and transit access, transcribed from the checksummed image and
+  published **as printed**. The artifact prints "Little Bhod-Tibet"; that
+  spelling survives to the page. Little Italy's absence is now established from
+  the transcription rather than from an outlet reporting it.
+- A direct link to the original map, served by its publisher, opening in a new
+  tab with safe `rel` and assistive indication.
+
+### Notes
+
+- **The map image is still not reproduced.** No redistribution permission was
+  located for it, and public accessibility is not permission. What is published
+  is the factual content it prints — which is what the page is about.
+- Whether the *selection* of those thirty carries thin protection as a
+  compilation is **not settled**, and this project does not assert that it does
+  not. The reasoning is recorded on the governed record so a reader can weigh
+  it.
+
+### Changed
+
+- The roster cannot drift: a validator checks it against the governed record in
+  **both** directions, and a seven-case negative harness proves that validator
+  actually fails — including on a silently corrected misspelling.
+
 ## [0.4.0] - 2026-08-21
 
 ### Added
