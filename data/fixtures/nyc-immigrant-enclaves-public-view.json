@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.5",
+  "artifactVersion": "2026-08-21.6",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T04:25:00Z",
+  "issuedAt": "2026-08-21T04:40:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -108,6 +108,24 @@
               {
                 "type": "text",
                 "text": ". It cites the claims on this page and holds none of its own."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Published "
+              },
+              {
+                "type": "time",
+                "pointer": "/issuedAt",
+                "format": "datetime"
+              },
+              {
+                "type": "text",
+                "text": ". Every live value on this page was checked on or before that date. The sources it describes can change after it, and one of them — the page that carried the map — already has."
               }
             ]
           },

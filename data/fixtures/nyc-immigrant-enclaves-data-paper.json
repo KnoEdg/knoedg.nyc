@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.4",
+  "artifactVersion": "2026-08-21.5",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T04:25:00Z",
+  "issuedAt": "2026-08-21T04:40:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -40,6 +40,24 @@
               }
             ],
             "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Published "
+                  },
+                  {
+                    "type": "time",
+                    "pointer": "/issuedAt",
+                    "format": "datetime"
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Every live value on this page was checked on or before that date. The sources it describes can change after it, and one of them — the page that carried the map — already has."
+                  }
+                ]
+              },
               {
                 "type": "paragraph",
                 "content": [
