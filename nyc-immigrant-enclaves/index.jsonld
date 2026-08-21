@@ -28,9 +28,14 @@
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-artifact",
       "@type": "schema:Claim",
       "schema:text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution. The same bytes are attested by an archived capture taken 2026-06-17, three weeks before the criticism: identical checksum, identical length.",
-      "schema:citation": {
-        "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
-      },
+      "schema:citation": [
+        {
+          "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+        },
+        {
+          "@id": "https://data.cityofnewyork.us/resource/t3jq-9nkf.json?%24where=record_id%3D%27NYC_GOID_000310%27"
+        }
+      ],
       "schema:additionalProperty": [
         {
           "@type": "schema:PropertyValue",
@@ -82,6 +87,11 @@
           "@type": "schema:PropertyValue",
           "schema:name": "Archived capture",
           "schema:value": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "schema:name": "Publisher organization type",
+          "schema:value": "Nonprofit Organization"
         }
       ]
     },
@@ -253,7 +263,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
       "@type": "schema:Claim",
-      "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the program nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
+      "schema:text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
       "schema:citation": {
         "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
       },
@@ -270,7 +280,7 @@
         },
         {
           "@type": "schema:PropertyValue",
-          "schema:name": "Reason for withdrawal",
+          "schema:name": "Reason for the redirect",
           "schema:value": "Not established."
         },
         {
