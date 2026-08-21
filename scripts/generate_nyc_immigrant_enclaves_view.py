@@ -12,9 +12,9 @@ if __name__ == "__main__":
     defaults = [
         "--artifact", str(ROOT / "data/fixtures/nyc-immigrant-enclaves-public-view.json"),
         "--template", str(ROOT / "templates/fixture-page.html"),
-        "--html", str(ROOT / "nyc-immigrant-enclaves/index.html"),
-        "--jsonld", str(ROOT / "nyc-immigrant-enclaves/index.jsonld"),
-        "--manifest", str(ROOT / "nyc-immigrant-enclaves/record-counts.json"),
+        "--html", str(ROOT / "inside-the-map-of-30-immigrant-enclaves/index.html"),
+        "--jsonld", str(ROOT / "inside-the-map-of-30-immigrant-enclaves/index.jsonld"),
+        "--manifest", str(ROOT / "inside-the-map-of-30-immigrant-enclaves/record-counts.json"),
     ]
     sys.argv[1:1] = defaults
     raise SystemExit(main())
