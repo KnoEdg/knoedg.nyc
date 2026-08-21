@@ -9,7 +9,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
       "@type": "schema:ScholarlyArticle",
-      "schema:name": "A map with no publisher: governing the NYC Immigrant Enclaves guide as an artifact",
+      "schema:name": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
       "schema:citation": {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/"
       },
