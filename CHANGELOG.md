@@ -22,6 +22,11 @@ fixes only.
   is superseded in the record rather than deleted, so the change is visible.
   If the rightsholder objects, the remedy is withdrawal.
 
+- **A published date on both documents**, rendered from the artifact's own
+  `issuedAt` rather than hand-written. The line says what the date means:
+  every live value was checked on or before it, and the sources can change
+  after it — one of them already has.
+
 ### Changed
 
 - Site-wide `h1` scales at `clamp(3rem, 8vw, 7rem)`, down from `9vw`.
