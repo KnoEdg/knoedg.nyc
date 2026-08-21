@@ -3,15 +3,15 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.11",
+  "artifactVersion": "2026-08-21.13",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T17:12:34Z",
+  "issuedAt": "2026-08-21T20:19:16Z",
   "citesPublicView": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
   "page": {
     "language": "en",
-    "title": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
-    "description": "A data paper on the NYC Immigrant Enclaves thematic collection: what the map states, who published it, and which questions the retrieved evidence can and cannot answer.",
+    "title": "The NYC Immigrant Enclaves map — provenance, evidence and limits",
+    "description": "A technical data paper on the provenance, source relationships, evidence strength, rights, and unresolved questions surrounding a published 30-entry NYC immigrant-enclaves map.",
     "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
     "alternate": {
       "mediaType": "application/ld+json",
@@ -36,7 +36,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "What the record establishes, and what it does not"
+                "text": "Evidence, provenance and limits"
               }
             ],
             "children": [
@@ -54,7 +54,21 @@
                   },
                   {
                     "type": "text",
-                    "text": ". Every live value on this page was checked on or before that date. The sources it describes can change after it, and one of them — the page that carried the map — already has."
+                    "text": ". This data paper is the technical companion to "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Inside the Map of 30 Immigrant Enclaves"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". The public article presents the main findings; this paper focuses on provenance, source relationships, evidence strength, rights, and unresolved questions."
                   }
                 ]
               },
@@ -63,21 +77,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "This article accompanies the "
-                  },
-                  {
-                    "type": "link",
-                    "href": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "NYC Immigrant Enclaves public view"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": ". Every fact it restates is held there as a governed claim; the article cites those claims and holds none of its own."
+                    "text": "Scope: this collection governs one published map artifact. It does not define New York City's immigrant neighborhoods or decide which neighborhoods should appear on such a map."
                   }
                 ]
               },
@@ -89,11 +89,23 @@
                 "caption": [
                   {
                     "type": "text",
-                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. The artifact bears no publisher mark, no date and no designer credit. Publication is nonetheless established, from the host page's own markup rather than from press attribution: New York City Tourism + Conventions, who hold the rights in it. "
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES.” "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "New York City Tourism + Conventions"
+                      }
+                    ],
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab"
                   },
                   {
                     "type": "text",
-                    "text": "Retrieved from "
+                    "text": " is established as the publisher from the host page; the map itself cites the NYC Mayor’s Office of Immigrant Affairs as its source. The file was retrieved on August 20, 2026 from "
                   },
                   {
                     "type": "link",
@@ -101,7 +113,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "the publisher’s address"
+                        "text": "the publisher-served image address"
                       }
                     ],
                     "newWindow": true,
@@ -109,15 +121,7 @@
                   },
                   {
                     "type": "text",
-                    "text": " on "
-                  },
-                  {
-                    "type": "text",
-                    "text": "August 20, 2026"
-                  },
-                  {
-                    "type": "text",
-                    "text": " and checksummed: SHA-256 "
+                    "text": ". It is 323,548 bytes with SHA-256 "
                   },
                   {
                     "type": "code",
@@ -125,15 +129,7 @@
                   },
                   {
                     "type": "text",
-                    "text": ", "
-                  },
-                  {
-                    "type": "code",
-                    "text": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
-                  },
-                  {
-                    "type": "text",
-                    "text": " bytes. The copy served here was verified against that checksum before it was committed, so what you see is the artifact this page describes rather than whatever the address currently returns. The same bytes appear in "
+                    "text": ". Publisher metadata recorded a last-modified time of June 5, 2026, 15:44:36 UTC. The same bytes appear in "
                   },
                   {
                     "type": "link",
@@ -141,7 +137,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "an independent archived capture of 2026-06-17"
+                        "text": "an archived capture from June 17, 2026"
                       }
                     ],
                     "newWindow": true,
@@ -149,106 +145,336 @@
                   },
                   {
                     "type": "text",
-                    "text": " — three weeks before the public comment. No redistribution permission was located and none is claimed; if the rightsholder objects the image is removed."
+                    "text": ". No designer credit is present in the file or established by the sources in this collection."
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "artifact-provenance",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "This collection governs a map as an artifact. It does not govern New York City's immigrant neighborhoods, and it takes no position on which neighborhoods belong on any such map. The distinction is the whole point: the questions that proved answerable here were about who published a document, what it claims, and how confidently any of that can be said -- not about the city it depicts."
+                    "text": "Artifact identity and provenance"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The publication chain is separable: "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "New York City Tourism + Conventions"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " published the page that carried the map; the map footnote names the NYC Mayor’s Office of Immigrant Affairs as its data source. A source attribution on the artifact does not by itself establish authorship or design credit."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The preserved file can be identified independently of the current host-page state by its byte length and SHA-256 digest. A June 17, 2026 archived copy and the August 20 retrieval are byte-identical. The original host-page URL now redirects; "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://web.archive.org/web/20260708183800id_/https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "an archived July 8, 2026 host-page capture"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " preserves the page with the map block, while the image file remains served."
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "moia-comparison",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "The map was chosen as a subject because its publication details are not stated on the artifact itself. It is titled New York City Immigrant Enclaves, it lists thirty neighborhoods, and it carries a footnote naming the Mayor's Office of Immigrant Affairs as its source. It carries no publisher mark, no date, and no address of its own. A footnote naming a data source records where information came from; it does not identify who produced the artifact. The map's publication is established here; its authorship is not."
+                    "text": "Comparison with the earlier MOIA series"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The NYC Mayor’s Office of Immigrant Affairs launched its Immigrant Enclave Illustration Series on April 17, 2023. Its "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "end-of-tenure report"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " covers through December 31, 2025 and states that 23 illustrations were published. “Little Italy” does not appear in that 85-page report."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Comparing the report with the 30-entry map yields five map names not found in the report: Little Egypt, Little Odessa, Little Palestine, Little Poland and Little Senegal. A July 10, 2026 "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "NYC Mayor's Office transcript"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " records the mayor saying that the current administration added a few neighborhoods after inheriting the map. "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "NBC New York"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " reported that mayoral aides identified Little Senegal, Little Egypt, Little Palestine and Little Odessa as additions made by the administration. This establishes administration-level provenance for four of the five names. It does not identify the individual selector, and Little Poland remains unattributed in the sources checked."
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "criteria-analysis",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "In July 2026 the map drew wide public comment because Little Italy is not on it, and the mayor said additional changes would be made, including adding Little Italy. That commitment is recorded here. The amendment is not, because no amended map has been observed. The two are different facts, and this collection records them separately."
+                    "text": "Reported selection criteria and a separate DCP threshold"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Washington Examiner article published July 9, 2026"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " reports a city spokesperson saying the map highlights neighborhoods with substantial foreign-born populations. The collection records this as a demographic criterion reported by a source, not as a published map rule."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "link",
+                        "href": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The Blaze"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " quoted people who described a neighborhood’s history of immigrant settlement as a basis for inclusion. The collection records this as a heritage-based criterion reported by a source. No published selection rule was located that establishes either criterion as the rule used to make the map."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Separately, the NYC Department of City Planning’s "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The Newest New Yorkers 2026, Chapter 3"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " defines a “major immigrant neighborhood” for that report using a 40 percent foreign-born threshold and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own analysis; no source in this collection connects that threshold to the map."
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "amendment-status",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "Earlier passes of this intake merged the two, recording the commitment as a completed change that had not been observed -- one of four claims retracted in a single working session. The record that survived was shaped so the same compression could not recur: it carries no supersession link, and the map record it would supersede is not marked superseded."
+                    "text": "July 2026 statements and observed map state"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "On July 10, 2026, the "
+                      },
+                      {
+                        "type": "link",
+                        "href": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "NYC Mayor's Office transcript"
+                          }
+                        ],
+                        "newWindow": true,
+                        "accessibleNewWindowText": "opens in a new tab"
+                      },
+                      {
+                        "type": "text",
+                        "text": " records the mayor saying the map had been created in 2023 under the prior administration, that his administration added a few neighborhoods after inheriting it, and that future changes would include adding Little Italy. NBC New York separately reported the four administration-added names identified by mayoral aides, as described above."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The observable artifact state is recorded separately from that reported statement. The known map file retrieved on August 20 is byte-identical to archived captures from before the July reporting. No amended map was located in the sources checked. This does not establish that an amended version does not exist at another address."
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "confidence-and-limits",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "The same reading appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have reported it the same way: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organization headlined that the neighborhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
+                    "text": "Evidence strength and limits"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The governed records assign confidence values to each claim. Directly retrieved artifact and host-page observations carry higher values than claims dependent on press reporting; the exact values are listed in “Validation evidence” below."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The most material unresolved questions are who designed the map, whether a selection rule was used, which individual or office selected the four additions attributed at administration level, who selected or added Little Poland, why the original host-page URL now redirects, and whether an amended map exists elsewhere."
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "paragraph",
-                "content": [
+                "type": "section",
+                "id": "rights-and-preservation-note",
+                "heading": [
                   {
                     "type": "text",
-                    "text": "What the re-test could establish, it established by retrieval rather than inference. The map file at its known address is byte-for-byte identical to its earliest archived capture and to a fresh retrieval; the file that was live three weeks before the public comment is the file that is live now. The publisher's sitemap of more than ten thousand pages contains no enclave-map page, and the program page it lists now redirects. The only other map-named image on the surviving program page was fetched and looked at rather than judged by its filename, and proved to be an unrelated official visitor map."
+                    "text": "Rights and preservation"
                   }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
+                ],
+                "children": [
                   {
-                    "type": "text",
-                    "text": "What it could not establish is stated as plainly. Whether an amended map exists at an address nothing links to remains unknown. The one query that could have found such a map -- a sweep of the publisher's entire media library -- could not be run: it returned nothing against a search space known to contain results, so its silence proves nothing. That query is recorded as uncovered rather than as a negative finding. The amendment has not been observed, which is not the same as establishing that it did not happen."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The map is served on KnoEdg.NYC from a local copy verified against the governed checksum. No redistribution permission for the map was located or is claimed. New York City Tourism + Conventions is identified as the publisher, and the original source address and archived copy remain linked for inspection."
+                      }
+                    ]
+                  },
                   {
-                    "type": "text",
-                    "text": "The selection criteria were the hardest part of the collection to model. Reporting attributes two different rationales to the map: a demographic threshold and a heritage-based rationale. They look like a contradiction and they are not one. They ask different questions, and a record classifying the apparent conflict as a difference in definition asserts precisely that the appearance was examined and the cause is a mismatch of scope -- not that the two sources disagree. Classifying a real conflict as a mismatch is the failure mode this record is checked against, and the classification was made on the evidence rather than by default."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Confidence values in this collection carry a stated basis rather than a bare number. Evidential distance sets a ceiling and never sets the value: a claim resting on one outlet's report of a press conference cannot be recorded as confidently as a checksummed file this collection retrieved itself, however plausible it sounds. The amendment commitment sits below the outlet ceiling because the same article paraphrases an adjacent claim it could have quoted, which bears on how precisely it reports."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Unresolved questions are recorded as unresolved. The report contains an internal inconsistency, recorded as observed rather than resolved. One source's attribution is contested between two city offices by two outlets, and that disagreement is absent from the governed records because the second citation could not be resolved to a retrievable document. An unresolved question is kept as an unresolved question."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Rights were determined before publication rather than assumed. Municipal works are not public domain -- the federal rule does not reach city governments -- and the city's terms reserve all rights. Where an outlet asserts no machine-readable license, the position is recorded as undetermined, which is neither absent nor permissive. Public accessibility is not permission, so this collection retains checksums and content-addressed addresses rather than redistributing bytes it has no permission to redistribute."
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The city reports are recorded as all-rights-reserved under the NYC.gov terms reviewed for this collection. Rights for the cited press pages are recorded as undetermined unless a source-specific determination was established; no permissive license is inferred from public accessibility."
+                      }
+                    ]
                   }
                 ]
               }
@@ -356,44 +582,128 @@
                 "items": [
                   [
                     {
-                      "type": "text",
-                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+                      "type": "link",
+                      "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"
+                      "type": "link",
+                      "href": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
+                      "type": "link",
+                      "href": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.theblaze.com/news/wheres-little-italy-mamdani-immigrant-enclave-map-sparks-backlash"
+                      "type": "link",
+                      "href": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ],
                   [
                     {
-                      "type": "text",
-                      "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
+                      "type": "link",
+                      "href": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
                     }
                   ]
                 ]
@@ -416,7 +726,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The rights determination made for each cited source before publication. An undetermined position is recorded as undetermined."
+                    "text": "The current rights determination carried by the governed records for each cited source. An undetermined position is recorded as undetermined."
                   }
                 ]
               },
@@ -426,44 +736,164 @@
                 "items": [
                   [
                     {
+                      "type": "link",
+                      "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission. POSITION CHANGED TWICE ON 2026-08-21, by decision of this project's owner, and both steps are recorded rather than collapsed into the final state. FIRST: the artifact was displayed by reference to the publisher-served address, with no copy stored here. SECOND: the bytes are copied into this project and served from it, with attribution to the rightsholder shown beside the image. The copy was verified against the governed checksum before it was committed and is byte-identical to it, so what a reader sees is the artifact this collection describes rather than whatever the publisher currently serves. That is why the copy was made: a referenced image can change or vanish underneath a checksum claim, and the page would then assert a provenance it no longer had. WHAT THIS IS AND IS NOT. This is redistribution, and it is more than display. No permission has been located or granted, and none is claimed. Public accessibility is not permission. The page carries attribution to New York City Tourism + Conventions, the source URL, the retrieval instant, the checksum, and a link to an independent archived capture, so a reader can identify the rightsholder and verify the bytes. Attribution is not a license and is not offered as one. CONTEXT RECORDED, NOT A DETERMINATION: news outlets reproduced this artifact in their own coverage, observed first-hand by this project on 2026-08-21 -- one article displays it captioned as the map that sparked the controversy. That is evidence of how the artifact has been treated in reporting about it. It is not a legal conclusion, and this pack makes none. The earlier determinations -- cited and not reproduced, then displayed but not copied -- are superseded here rather than deleted, so both reversals stay visible. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8, and the copy is deleted with it."
+                      "text": " | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission. This project currently redistributes a local copy verified against the governed checksum, with attribution to New York City Tourism + Conventions and links to the publisher-served source and an independent archived capture. Attribution is not a license, and no permission is claimed. If the rightsholder objects, KnoEdg.NYC will withdraw the local copy."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. The publisher asserts no machine-readable license, and this pack did not retrieve or interpret the outlet's terms of service. Recorded as undetermined rather than as absent or as permissive."
+                      "text": " | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. The publisher asserts no machine-readable license, and this pack did not retrieve or interpret the outlet's terms of service. Recorded as undetermined rather than as absent or as permissive."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf | All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, verbatim: 'All other design, information, text, graphics, images, pages, interfaces, links, software, and other items and materials contained in or displayed on NYC.gov, and the selection and arrangements thereof, are the property of the City of New York. All rights are reserved.' No fair-use or permitted-use carve-out appears in those terms. NOT public domain: 17 USC 105 covers federal works, not municipal ones."
+                      "text": " | All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html | All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, verbatim: 'All other design, information, text, graphics, images, pages, interfaces, links, software, and other items and materials contained in or displayed on NYC.gov, and the selection and arrangements thereof, are the property of the City of New York. All rights are reserved.' No fair-use or permitted-use carve-out appears in those terms. NOT public domain: 17 USC 105 covers federal works, not municipal ones."
+                      "text": " | All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/ | No license stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
+                      "text": " | No license stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
+                      "text": " | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
                       "type": "text",
-                      "text": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/ | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
+                      "text": " | Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and this pack did not retrieve or interpret the outlet's terms of service."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
+                      "type": "text",
+                      "text": " | All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    },
+                    {
+                      "type": "text",
+                      "text": " | Not determined. This collection cites the page for the reported aides attribution; no permissive reuse license is asserted by this collection, and the outlet's terms were not interpreted."
                     }
                   ]
                 ]
@@ -486,7 +916,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The confidence value recorded for each governed record, each with a stated basis in the collection itself."
+                    "text": "The confidence value recorded for each governed record."
                   }
                 ]
               },
@@ -620,13 +1050,13 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
         "@type": "schema:ScholarlyArticle",
-        "schema:name": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
+        "schema:name": "The NYC Immigrant Enclaves map — provenance, evidence and limits",
         "schema:citation": {
           "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/"
         },
-        "dcterms:provenance": "Authored article citing the claims of the NYC Immigrant Enclaves public view. It holds no claims of its own; every fact it restates is proven equivalent to the governed records by a validator held with those records."
+        "dcterms:provenance": "Authored technical data paper citing the NYC Immigrant Enclaves public view. It holds no governed claims of its own; fixture-equivalent metadata sections are checked bidirectionally against the governed records before publication."
       }
     ]
   },
-  "provenanceBoundary": "Public-safe article. It cites the public view's claims and holds none of its own; upstream repository coordinates and fixture paths are intentionally absent."
+  "provenanceBoundary": "Public-safe data paper. It cites the public view's claims and holds none of its own; upstream repository coordinates and fixture paths are intentionally absent."
 }
