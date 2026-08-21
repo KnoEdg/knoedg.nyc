@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "rendererContract": "fixture-page/v2",
+  "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+  "activeRecordCount": 8,
+  "representations": [
+    {
+      "id": "nyc-tourism",
+      "label": "New York City Tourism + Conventions",
+      "count": 2,
+      "provenanceCluster": "New York City Tourism + Conventions"
+    },
+    {
+      "id": "nyc-government",
+      "label": "City of New York",
+      "count": 2,
+      "provenanceCluster": "City of New York"
+    },
+    {
+      "id": "press",
+      "label": "Press reports",
+      "count": 3,
+      "provenanceCluster": "Independent news outlets"
+    },
+    {
+      "id": "derived",
+      "label": "Derived by comparison",
+      "count": 1,
+      "provenanceCluster": "This project"
+    }
+  ]
+}

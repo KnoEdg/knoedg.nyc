@@ -10,6 +10,14 @@ on:
       - "nyc-whos-on-first/**"
       - "nyc-geoboundaries/**"
       - "nyc-overture/**"
+      - "nyc-immigrant-enclaves/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "scripts/generate_nyc_immigrant_enclaves_view.py"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "templates/data-paper.html"
+      - "schemas/data-paper/v1"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -75,6 +83,14 @@ on:
       - "nyc-whos-on-first/**"
       - "nyc-geoboundaries/**"
       - "nyc-overture/**"
+      - "nyc-immigrant-enclaves/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "scripts/generate_nyc_immigrant_enclaves_view.py"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "templates/data-paper.html"
+      - "schemas/data-paper/v1"
       - "assets/styles.css"
       - "assets/nyc-boroughs.svg"
       - "assets/nyc-boundaries-comparison.svg"
@@ -310,6 +326,22 @@ jobs:
           Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
           PY
       - run: python3 scripts/generate_nyc_overture_source_view.py --check
+      - run: python3 scripts/generate_nyc_immigrant_enclaves_view.py --check
+      - run: python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+      - name: Validate the NYC Immigrant Enclaves published artifacts against their schemas
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          for schema_path, artifact_path in [
+              ("schemas/fixture-dependent-public-view/v2", "data/fixtures/nyc-immigrant-enclaves-public-view.json"),
+              ("schemas/data-paper/v1", "data/fixtures/nyc-immigrant-enclaves-data-paper.json"),
+          ]:
+              schema = json.load(open(schema_path))
+              artifact = json.load(open(artifact_path))
+              Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+              print(f"{artifact_path} validates against {schema_path}.")
+          PY
       - name: Validate NYC Overture source-page JSON-LD expansion
         run: |
           python3 - <<'PY'

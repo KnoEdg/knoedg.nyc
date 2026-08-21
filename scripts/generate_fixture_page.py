@@ -288,14 +288,25 @@ def build_counts(data: dict) -> dict:
     }
 
 
-def outputs(artifact: Path, template: Path, html_path: Path, jsonld_path: Path, manifest_path: Path) -> dict[Path, str]:
+def outputs(artifact: Path, template: Path, html_path: Path, jsonld_path: Path, manifest_path: Path | None) -> dict[Path, str]:
     data = load_artifact(artifact)
     source = template.read_text(encoding="utf-8")
-    return {
+    produced = {
         html_path: render_template(source, data),
         jsonld_path: json.dumps(data["semanticRepresentation"], indent=2, ensure_ascii=False) + "\n",
-        manifest_path: json.dumps(build_counts(data), indent=2, ensure_ascii=False) + "\n",
     }
+    # A record-count manifest is a public-view concept. A data paper CITES a
+    # public view's claims and holds none of its own -- it carries no
+    # activeRecordCount and no sourceGroups, deliberately -- so emitting counts
+    # for one would be inventing a fact the artifact does not have. Refuse the
+    # manifest rather than fabricate it, and refuse its absence for a public
+    # view rather than silently drop a required output.
+    if data["artifactType"] == "data-paper":
+        require(manifest_path is None, "a data paper holds no claims, so it emits no record-count manifest")
+        return produced
+    require(manifest_path is not None, "a fixture-dependent public view must emit a record-count manifest")
+    produced[manifest_path] = json.dumps(build_counts(data), indent=2, ensure_ascii=False) + "\n"
+    return produced
 
 
 def main() -> int:
@@ -304,7 +315,7 @@ def main() -> int:
     parser.add_argument("--template", required=True, type=Path)
     parser.add_argument("--html", required=True, type=Path)
     parser.add_argument("--jsonld", required=True, type=Path)
-    parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--manifest", type=Path, default=None)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:

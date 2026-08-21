@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
+      "@type": "schema:ScholarlyArticle",
+      "schema:name": "A map with no publisher: governing the NYC Immigrant Enclaves guide as an artifact",
+      "schema:citation": {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/"
+      },
+      "dcterms:provenance": "Authored article citing the claims of the NYC Immigrant Enclaves public view. It holds no claims of its own; every fact it restates is proven equivalent to the governed records by a validator held with those records."
+    }
+  ]
+}
