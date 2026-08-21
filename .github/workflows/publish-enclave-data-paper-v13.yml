@@ -1,0 +1,95 @@
+name: Publish immigrant enclaves data paper v13
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.handoff/**'
+      - '.github/workflows/publish-enclave-data-paper-v13.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.head_ref == 'publish/immigrant-enclaves-data-paper-v13'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruct, verify, render, and stage publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            .handoff/data-paper-v13.00.b64 \
+            .handoff/data-paper-v13.01.b64 \
+            .handoff/data-paper-v13.02.b64 \
+            .handoff/data-paper-v13.bundle-03-07.b64 \
+            .handoff/data-paper-v13.bundle-08-12.b64 \
+            .handoff/data-paper-v13.bundle-13-17.b64 \
+            .handoff/data-paper-v13.bundle-18-21.b64 \
+            > /tmp/data-paper-v13.b64
+          tr -d '[:space:]' < /tmp/data-paper-v13.b64 | base64 --decode > /tmp/nyc-immigrant-enclaves-data-paper.json
+
+          test "$(wc -c < /tmp/nyc-immigrant-enclaves-data-paper.json | tr -d ' ')" = "47567"
+          test "$(sha256sum /tmp/nyc-immigrant-enclaves-data-paper.json | awk '{print $1}')" = "0d197e3a75432608e61d6cf88bb2cf3103d1d056cdc7c5f1c10ae318276e089d"
+          test "$(git hash-object /tmp/nyc-immigrant-enclaves-data-paper.json)" = "210df5a7ff825514c6ac1f27e786d3a2b765e628"
+
+          cp /tmp/nyc-immigrant-enclaves-data-paper.json data/fixtures/nyc-immigrant-enclaves-data-paper.json
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py
+          python3 scripts/test_fixture_page_renderer.py
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          checksum_file = Path('data/fixtures/SHA256SUMS')
+          targets = [
+              Path('data/fixtures/nyc-immigrant-enclaves-data-paper.json'),
+              Path('nyc-immigrant-enclaves-paper/index.html'),
+              Path('nyc-immigrant-enclaves-paper/index.jsonld'),
+          ]
+          replacements = {
+              str(p): hashlib.sha256(p.read_bytes()).hexdigest()
+              for p in targets
+          }
+          lines = checksum_file.read_text().splitlines()
+          seen = set()
+          out = []
+          for line in lines:
+              parts = line.split('  ', 1)
+              if len(parts) == 2 and parts[1] in replacements:
+                  path = parts[1]
+                  out.append(f"{replacements[path]}  {path}")
+                  seen.add(path)
+              else:
+                  out.append(line)
+          missing = set(replacements) - seen
+          if missing:
+              raise SystemExit(f'missing SHA256SUMS entries: {sorted(missing)}')
+          checksum_file.write_text('\n'.join(out) + '\n')
+          PY
+
+          sha256sum -c data/fixtures/SHA256SUMS
+
+          rm -rf .handoff
+          rm .github/workflows/publish-enclave-data-paper-v13.yml
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- \
+            data/fixtures/nyc-immigrant-enclaves-data-paper.json \
+            data/fixtures/SHA256SUMS \
+            nyc-immigrant-enclaves-paper/index.html \
+            nyc-immigrant-enclaves-paper/index.jsonld \
+            .handoff \
+            .github/workflows/publish-enclave-data-paper-v13.yml
+          git diff --cached --check
+          git commit -m 'publish: immigrant enclaves data paper v13'
+          git push origin HEAD:${GITHUB_HEAD_REF}
