@@ -8,24 +8,24 @@
   },
   "@graph": [
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
       "@type": "schema:Collection",
       "schema:name": "New York City Immigrant Enclaves",
       "dcterms:provenance": "Every claim on this page is drawn from two governed fixtures in a private conformance pack, each validated against pinned KEE SHACL shapes. Publication is established for the artifact described here; authorship is not, and this page does not supply it.",
       "prov:wasGeneratedBy": [
         {
-          "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture"
+          "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-capture"
         },
         {
-          "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis"
+          "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-analysis"
         },
         {
-          "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest"
+          "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-amendment-retest"
         }
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-artifact",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-artifact",
       "@type": "schema:Claim",
       "schema:text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution. The same bytes are attested by an archived capture taken 2026-06-17, three weeks before the criticism: identical checksum, identical length.",
       "schema:citation": [
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-moia-series",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-moia-series",
       "@type": "schema:Claim",
       "schema:text": "The Mayor’s Office of Immigrant Affairs published an Immigrant Enclave Illustration Series from 2023-04-17, and states in its own end-of-tenure report that 23 illustrations were published. “Little Italy” does not appear anywhere in that 85-page report.",
       "schema:citation": {
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-delta",
       "@type": "schema:Claim",
       "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
       "schema:citation": {
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-demographic",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-criterion-demographic",
       "@type": "schema:Claim",
       "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule.",
       "schema:citation": {
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-heritage",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-criterion-heritage",
       "@type": "schema:Claim",
       "schema:text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
       "schema:citation": {
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-dcp-threshold",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-dcp-threshold",
       "@type": "schema:Claim",
       "schema:text": "A published threshold does exist elsewhere. The Department of City Planning’s 2026 report defines a “major immigrant neighborhood” as one whose foreign-born density exceeds the city average, using a threshold of 40 percent, and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own chapter, and nothing found connects it to this map.",
       "schema:citation": {
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-amendment",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-amendment",
       "@type": "schema:Claim",
       "schema:text": "On 2026-07-10 the mayor said the map was “initially created by the prior administration in 2023” and that “we’re going to be making additional changes in the future … and that includes adding Little Italy to the map.” That is a commitment to a future change. No amended version has been located. The map file itself is byte-identical to an archived copy taken before the criticism, so this artifact was not amended.",
       "schema:citation": {
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-host-page",
       "@type": "schema:Claim",
       "schema:text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
       "schema:citation": {
@@ -291,7 +291,7 @@
       ]
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-capture",
       "@type": "prov:Activity",
       "dcterms:description": "Retrieval of the map artifact, the Mayor’s Office impact report, the Department of City Planning report chapter, the press reports, and the host page’s live state, each checksummed or recorded with its HTTP response.",
       "prov:generatedAtTime": {
@@ -300,7 +300,7 @@
       }
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-analysis",
       "@type": "prov:Activity",
       "dcterms:description": "Comparison of the retrieved documents: the five-name difference between the map and the office’s own series, and the examination that classified the two selection criteria as asking different questions rather than disagreeing.",
       "prov:generatedAtTime": {
@@ -309,7 +309,7 @@
       }
     },
     {
-      "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest",
+      "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-amendment-retest",
       "@type": "prov:Activity",
       "dcterms:description": "Re-test of whether an amended map exists at another address, run before this collection is written about at length. The map file at its known address was re-fetched and is unchanged; the publisher's sitemap and the retrieved reporting were searched. A sweep of the publisher's entire media library could not be run and is recorded as uncovered.",
       "prov:generatedAtTime": {
