@@ -6,7 +6,6 @@ own, so it carries no record counts to publish. The renderer refuses one.
 """
 
 from pathlib import Path
-import hashlib
 import sys
 
 from generate_fixture_page import main
@@ -21,18 +20,4 @@ if __name__ == "__main__":
         "--jsonld", str(ROOT / "nyc-immigrant-enclaves-paper/index.jsonld"),
     ]
     sys.argv[1:1] = defaults
-    code = main()
-    if code == 0 and "--check" in sys.argv:
-        for relative in [
-            "data/fixtures/nyc-immigrant-enclaves-public-view.json",
-            "data/fixtures/nyc-immigrant-enclaves-data-paper.json",
-            "scripts/generate_nyc_immigrant_enclaves_view.py",
-            "inside-the-map-of-30-immigrant-enclaves/index.html",
-            "inside-the-map-of-30-immigrant-enclaves/index.jsonld",
-            "inside-the-map-of-30-immigrant-enclaves/record-counts.json",
-            "nyc-immigrant-enclaves-paper/index.html",
-            "nyc-immigrant-enclaves-paper/index.jsonld",
-        ]:
-            path = ROOT / relative
-            print(f"PUBLISH_SHA256 {hashlib.sha256(path.read_bytes()).hexdigest()}  {relative}")
-    raise SystemExit(code)
+    raise SystemExit(main())
