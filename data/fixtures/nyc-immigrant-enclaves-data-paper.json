@@ -3,14 +3,14 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.2",
+  "artifactVersion": "2026-08-21.4",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T00:40:00Z",
+  "issuedAt": "2026-08-21T04:25:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
-    "title": "A map with no publisher: governing the NYC Immigrant Enclaves guide as an artifact",
+    "title": "A map with no publisher — governing the NYC Immigrant Enclaves guide as an artifact",
     "description": "A data paper on the NYC Immigrant Enclaves thematic collection: what the map claims, who published it, what was promised, and which of those can actually be established.",
     "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
     "alternate": {
@@ -26,7 +26,7 @@
         "heading": [
           {
             "type": "text",
-            "text": "A map with no publisher: governing the NYC Immigrant Enclaves guide as an artifact"
+            "text": "A map with no publisher"
           }
         ],
         "children": [
@@ -36,7 +36,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "The article"
+                "text": "Governing the NYC Immigrant Enclaves guide as an artifact"
               }
             ],
             "children": [
@@ -64,11 +64,23 @@
                 ]
               },
               {
+                "type": "figure",
+                "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighbourhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
+                "decorative": false,
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "The artifact this collection governs, served by its publisher rather than copied here. Retrieved and checksummed 2026-08-20; byte-identical to an archived capture of 2026-06-17. If the publisher moves or withdraws it, this image will stop loading — the page that carried it has already been withdrawn."
+                  }
+                ]
+              },
+              {
                 "type": "paragraph",
                 "content": [
                   {
                     "type": "text",
-                    "text": "This collection governs a map as an artifact. It does not govern New York City's immigrant neighbourhoods, and it takes no position on which neighbourhoods belong on any such map. The distinction is the whole point: the interesting questions here turned out to be about who published a document, what it claims, and how confidently any of that can be said -- not about the city it depicts."
+                    "text": "This collection governs a map as an artifact. It does not govern New York City's immigrant neighbourhoods, and it takes no position on which neighbourhoods belong on any such map. The distinction is the whole point: the questions that proved answerable here were about who published a document, what it claims, and how confidently any of that can be said -- not about the city it depicts."
                   }
                 ]
               },
@@ -86,7 +98,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A controversy gave the artifact a second life. In July 2026 the omission of Little Italy drew public criticism, and the mayor said additional changes would be made, including adding Little Italy. That commitment is recorded here. The amendment is not, because no amended map has been observed. The two are different facts and this collection refuses to let the second stand in for the first."
+                    "text": "A controversy gave the artifact a second life. In July 2026 the omission of Little Italy drew public criticism, and the mayor said additional changes would be made, including adding Little Italy. That commitment is recorded here. The amendment is not, because no amended map has been observed. The two are different facts, and this collection records them separately."
                   }
                 ]
               },
@@ -95,7 +107,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A promise is not an edit. That sentence is doing real work rather than decorating the page. Earlier passes of this intake compressed the commitment into a completed restoration and produced an event that never happened -- one of four claims retracted in a single working session. The record that survived was deliberately shaped so the same compression could not recur: it carries no supersession link, and the map record it would supersede is not marked superseded."
+                    "text": "A promise is not an edit. Earlier passes of this intake compressed the commitment into a completed restoration and produced an event that never happened -- one of four claims retracted in a single working session. The record that survived was shaped so the same compression could not recur: it carries no supersession link, and the map record it would supersede is not marked superseded."
                   }
                 ]
               },
@@ -104,7 +116,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The compression is not a local quirk. When the question was re-tested before this article was written, two independent third-party sources were found to have made exactly the same move: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organisation headlined that the neighbourhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. The compression is the ambient reading of this story."
+                    "text": "The same compression appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have made exactly the same move: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organisation headlined that the neighbourhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
                   }
                 ]
               },
@@ -131,7 +143,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The selection criteria produced the collection's most technically interesting problem. Reporting attributes two different rationales to the map: a demographic threshold and a heritage-based rationale. They look like a contradiction and they are not one. They ask different questions, and a record classifying the apparent conflict as a difference in definition asserts precisely that the appearance was examined and the cause is a mismatch of scope -- not that the two sources disagree. Recording a genuine conflict as a mismatch would be the easy failure here, and the classification was made deliberately rather than by default."
+                    "text": "The selection criteria were the hardest part of the collection to model. Reporting attributes two different rationales to the map: a demographic threshold and a heritage-based rationale. They look like a contradiction and they are not one. They ask different questions, and a record classifying the apparent conflict as a difference in definition asserts precisely that the appearance was examined and the cause is a mismatch of scope -- not that the two sources disagree. Classifying a real conflict as a mismatch is the failure mode this record is checked against, and the classification was made on the evidence rather than by default."
                   }
                 ]
               },
@@ -149,7 +161,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Nothing in this collection was reconciled into tidiness. The office's own report contains an internal inconsistency, recorded as observed rather than resolved. One source's attribution is contested between two city offices by two outlets, and that disagreement is deliberately absent from the governed records because the second citation could not be resolved to a retrievable document. An unresolved question is kept as an unresolved question."
+                    "text": "Unresolved questions are recorded as unresolved. The office's own report contains an internal inconsistency, recorded as observed rather than resolved. One source's attribution is contested between two city offices by two outlets, and that disagreement is absent from the governed records because the second citation could not be resolved to a retrievable document. An unresolved question is kept as an unresolved question."
                   }
                 ]
               },
@@ -337,7 +349,7 @@
                   [
                     {
                       "type": "text",
-                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no licence. Public accessibility is not permission (PUBLIC_FIXTURE_PUBLICATION_RUNBOOK step 3), so this pack retains the checksum and the content-addressed URL and does not commit the bytes."
+                      "text": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg | No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no licence. Public accessibility is not permission (PUBLIC_FIXTURE_PUBLICATION_RUNBOOK step 3), so this pack does not commit or redistribute the bytes. POSITION CHANGED 2026-08-21 by decision of this project's owner. The artifact is now displayed on the public view and on the data paper by reference to this same publisher-served address. This project stores no copy, commits no bytes, and serves nothing: the publisher serves every request, and if the asset is moved or withdrawn the image stops loading. What the change does affect is that the artifact is now publicly displayed by this project, which public accessibility alone does not authorise. No permission has been located or granted. The rights position is unchanged; the display decision was taken without it. The earlier determination -- cited and not reproduced -- is superseded here rather than deleted, so the change is visible in the record. If the rightsholder objects, the remedy is withdrawal under the publication runbook step 8."
                     }
                   ],
                   [
