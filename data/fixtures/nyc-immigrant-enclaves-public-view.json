@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.3",
+  "artifactVersion": "2026-08-21.5",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T01:30:00Z",
+  "issuedAt": "2026-08-21T04:25:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -122,6 +122,18 @@
             ],
             "children": [
               {
+                "type": "figure",
+                "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighbourhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
+                "decorative": false,
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "The artifact this collection governs, served by its publisher rather than copied here. Retrieved and checksummed 2026-08-20; byte-identical to an archived capture of 2026-06-17. If the publisher moves or withdraws it, this image will stop loading — the page that carried it has already been withdrawn."
+                  }
+                ]
+              },
+              {
                 "type": "paragraph",
                 "content": [
                   {
@@ -196,7 +208,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map image is not reproduced here. No redistribution permission for it was located, and public accessibility is not permission, so what is shown is the factual content it prints. The image itself is served by its publisher: "
+                    "text": "The map is shown above, served by its publisher. Alongside it, the roster is the same content as text: searchable, linkable, and readable by anyone the image is not accessible to. "
                   },
                   {
                     "type": "link",
@@ -206,13 +218,13 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "view the original map at NYC Tourism + Conventions"
+                        "text": "open the original at full size"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": ". That address has been unchanged since before the controversy, but the page that carried it has been withdrawn, so it may not stay reachable."
+                    "text": "."
                   }
                 ]
               },
@@ -1276,7 +1288,7 @@
                   },
                   {
                     "type": "text",
-                    "text": " That is unusual for this project, and it is recorded rather than glossed."
+                    "text": " That is unusual for this project, and it is recorded here."
                   }
                 ]
               },
@@ -1285,7 +1297,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located, so this page describes the artifact and does not reproduce it. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
+                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located and none has been granted since. The map is nevertheless displayed on this page and on the data paper, by reference to the publisher's own address: this project stores no copy and serves no bytes, and the publisher serves every request. The decision to display it was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
                   }
                 ]
               },

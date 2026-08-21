@@ -7,6 +7,35 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.5.0] - 2026-08-21
+
+### Added
+
+- **The map is now displayed** on both
+  [`/nyc-immigrant-enclaves/`](https://knoedg.nyc/nyc-immigrant-enclaves/) and
+  [`/nyc-immigrant-enclaves-paper/`](https://knoedg.nyc/nyc-immigrant-enclaves-paper/),
+  by reference to the publisher's own address. This project stores no copy and
+  serves no bytes; the publisher serves every request, and if the asset is
+  moved or withdrawn the image stops loading.
+- **The rights position is unchanged and says so.** No permission has been
+  located or granted. The earlier determination — cited and not reproduced —
+  is superseded in the record rather than deleted, so the change is visible.
+  If the rightsholder objects, the remedy is withdrawal.
+
+### Changed
+
+- Site-wide `h1` scales at `clamp(3rem, 8vw, 7rem)`, down from `9vw`.
+- The data paper's title is split: `h1` is now "A map with no publisher", with
+  the descriptive half as the `h2` beneath it.
+- **Loaded wording removed from both published documents.** "This collection
+  *refuses* to let the second stand in for the first" attributed intent to a
+  document and read as self-congratulation; a scan found twelve more of the
+  same shape (*deliberately*, *most technically interesting*, *the easy
+  failure here*, *reconciled into tidiness*, *glossed*, *quietly*, and others).
+  Every claim is unchanged — only the posture is gone.
+- No personal name appears in either published artifact; the rights record now
+  reads "by decision of this project's owner".
+
 ## [0.4.1] - 2026-08-21
 
 ### Added
