@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.3",
+  "artifactVersion": "2026-08-21.8",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T01:30:00Z",
+  "issuedAt": "2026-08-21T12:00:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -67,7 +67,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide criticism for leaving out Little Italy. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
+                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide public comment because Little Italy is not on it. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
               }
             ]
           },
@@ -112,6 +112,24 @@
             ]
           },
           {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Published "
+              },
+              {
+                "type": "time",
+                "pointer": "/issuedAt",
+                "format": "datetime"
+              },
+              {
+                "type": "text",
+                "text": ". Every live value on this page was checked on or before that date. The sources it describes can change after it, and one of them — the page that carried the map — already has."
+              }
+            ]
+          },
+          {
             "type": "section",
             "id": "the-artifact",
             "heading": [
@@ -121,6 +139,18 @@
               }
             ],
             "children": [
+              {
+                "type": "figure",
+                "src": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                "alt": "The NEW YORK CITY IMMIGRANT ENCLAVES map: thirty numbered neighbourhoods listed alphabetically with subway access, grouped under five borough headings. Little Italy does not appear.",
+                "decorative": false,
+                "caption": [
+                  {
+                    "type": "text",
+                    "text": "The artifact this collection governs, served by its publisher rather than copied here. Retrieved and checksummed 2026-08-20; byte-identical to an archived capture of 2026-06-17. If the publisher moves or withdraws it, this image will stop loading — the page that carried it has already been withdrawn."
+                  }
+                ]
+              },
               {
                 "type": "paragraph",
                 "content": [
@@ -196,7 +226,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map image is not reproduced here. No redistribution permission for it was located, and public accessibility is not permission, so what is shown is the factual content it prints. The image itself is served by its publisher: "
+                    "text": "The map is shown above, served by its publisher. Alongside it, the roster is the same content as text: searchable, linkable, and readable by anyone the image is not accessible to. "
                   },
                   {
                     "type": "link",
@@ -206,13 +236,13 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "view the original map at NYC Tourism + Conventions"
+                        "text": "open the original at full size"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": ". That address has been unchanged since before the controversy, but the page that carried it has been withdrawn, so it may not stay reachable."
+                    "text": "."
                   }
                 ]
               },
@@ -888,7 +918,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
+                    "text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
                   }
                 ]
               },
@@ -1084,7 +1114,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "A promise is not an edit."
+                        "text": "A stated commitment and an observed change are recorded separately."
                       }
                     ]
                   },
@@ -1183,7 +1213,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the criticism."
+                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the public comment."
                     }
                   ],
                   [
@@ -1192,7 +1222,7 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "Whether the promised addition has happened."
+                          "text": "Whether the stated addition has been made."
                         }
                       ]
                     },
@@ -1276,7 +1306,7 @@
                   },
                   {
                     "type": "text",
-                    "text": " That is unusual for this project, and it is recorded rather than glossed."
+                    "text": " That is unusual for this project, and it is recorded here."
                   }
                 ]
               },
@@ -1285,7 +1315,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located, so this page describes the artifact and does not reproduce it. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
+                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located and none has been granted since. The map is nevertheless displayed on this page and on the data paper, by reference to the publisher's own address: this project stores no copy and serves no bytes, and the publisher serves every request. The decision to display it was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
                   }
                 ]
               },
@@ -1392,7 +1422,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The office's own report contains an internal inconsistency: a repeated caption means its stated count of "
+                    "text": "The report contains an internal inconsistency: a repeated caption means its stated count of "
                   },
                   {
                     "type": "value",
@@ -1409,7 +1439,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's own sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
+                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
                   }
                 ]
               }
@@ -1562,7 +1592,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
         "@type": "schema:Claim",
-        "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
+        "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
         "schema:citation": {
           "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
         },

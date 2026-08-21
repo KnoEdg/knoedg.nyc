@@ -7,6 +7,52 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.5.0] - 2026-08-21
+
+### Added
+
+- **The map is now displayed** on both
+  [`/nyc-immigrant-enclaves/`](https://knoedg.nyc/nyc-immigrant-enclaves/) and
+  [`/nyc-immigrant-enclaves-paper/`](https://knoedg.nyc/nyc-immigrant-enclaves-paper/),
+  by reference to the publisher's own address. This project stores no copy and
+  serves no bytes; the publisher serves every request, and if the asset is
+  moved or withdrawn the image stops loading.
+- **The rights position is unchanged and says so.** No permission has been
+  located or granted. The earlier determination — cited and not reproduced —
+  is superseded in the record rather than deleted, so the change is visible.
+  If the rightsholder objects, the remedy is withdrawal.
+
+- **A published date on both documents**, rendered from the artifact's own
+  `issuedAt` rather than hand-written. The line says what the date means:
+  every live value was checked on or before it, and the sources can change
+  after it — one of them already has.
+
+### Changed
+
+- Site-wide `h1` scales at `clamp(3rem, 8vw, 7rem)`, down from `9vw`.
+- **Both documents read neutrally about their primary source**, which is a New
+  York City agency — a public body. The data paper was titled "A map with no
+  publisher", which states a real finding as a gotcha; it is now **"The NYC
+  Immigrant Enclaves map"**, with "What the record establishes, and what it
+  does not" as the `h2` beneath it. "A promise is not an edit" — an aphorism
+  about a public official's word — is gone from both pages, replaced by the
+  same distinction stated as a property of the record. Also removed:
+  *provenance is broken*, *a second life*, *the omission of Little Italy*, and
+  the repeated possessive framing (*the office's own report*).
+  **No finding was softened:** the map still does not include Little Italy, no
+  amended map has been observed, the pages still decline to say it did not
+  happen, and why the page was withdrawn is still not asserted. Direct
+  quotations and source URLs are citations rather than this project's voice,
+  and are untouched.
+- **Loaded wording removed from both published documents.** "This collection
+  *refuses* to let the second stand in for the first" attributed intent to a
+  document and read as self-congratulation; a scan found twelve more of the
+  same shape (*deliberately*, *most technically interesting*, *the easy
+  failure here*, *reconciled into tidiness*, *glossed*, *quietly*, and others).
+  Every claim is unchanged — only the posture is gone.
+- No personal name appears in either published artifact; the rights record now
+  reads "by decision of this project's owner".
+
 ## [0.4.1] - 2026-08-21
 
 ### Added
