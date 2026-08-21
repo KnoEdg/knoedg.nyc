@@ -1,0 +1,165 @@
+name: publish-enclaves-v18
+
+on:
+  push:
+    branches:
+      - publish/inside-map-30-immigrant-enclaves
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: publish/inside-map-30-immigrant-enclaves
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Reconstruct exact governed artifact
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, gzip, hashlib
+
+          encoded = Path('.handoff/enclaves-v18.json.gz.b64').read_text().strip()
+          payload = gzip.decompress(base64.b64decode(encoded))
+          expected = '0b222fbf63786e7b82f3ce9cf37edd837d3d6028'
+          header = f'blob {len(payload)}\0'.encode()
+          actual = hashlib.sha1(header + payload).hexdigest()
+          if actual != expected:
+              raise SystemExit(f'public-view blob mismatch: {actual} != {expected}')
+          Path('data/fixtures/nyc-immigrant-enclaves-public-view.json').write_bytes(payload)
+          print('verified public-view blob', actual)
+          PY
+
+      - name: Apply governed article-reference update to data paper
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          p = Path('data/fixtures/nyc-immigrant-enclaves-data-paper.json')
+          text = p.read_text()
+          text = text.replace('"artifactVersion": "2026-08-21.10"', '"artifactVersion": "2026-08-21.11"')
+          text = text.replace('"issuedAt": "2026-08-21T14:00:00Z"', '"issuedAt": "2026-08-21T17:12:34Z"')
+          text = text.replace('https://knoedg.nyc/nyc-immigrant-enclaves/', 'https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/')
+          p.write_text(text)
+          payload = p.read_bytes()
+          expected = '1ae40b7f8d46c0e89f7c3a64e42be84f714c922b'
+          actual = hashlib.sha1(f'blob {len(payload)}\0'.encode() + payload).hexdigest()
+          if actual != expected:
+              raise SystemExit(f'data-paper blob mismatch: {actual} != {expected}')
+          print('verified data-paper blob', actual)
+          PY
+
+      - name: Update public-site slug references
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          old = 'nyc-immigrant-enclaves/'
+          new = 'inside-the-map-of-30-immigrant-enclaves/'
+
+          p = Path('scripts/generate_nyc_immigrant_enclaves_view.py')
+          text = p.read_text()
+          if old not in text:
+              raise SystemExit('old generator output slug not found')
+          p.write_text(text.replace(old, new))
+
+          p = Path('.github/workflows/validate-nyc-boundary-counts.yml')
+          text = p.read_text()
+          old_filter = 'nyc-immigrant-enclaves/**'
+          new_filter = 'inside-the-map-of-30-immigrant-enclaves/**'
+          if old_filter not in text:
+              raise SystemExit('old CI path filter not found')
+          p.write_text(text.replace(old_filter, new_filter))
+
+          p = Path('sitemap.xml')
+          text = p.read_text()
+          old_url = 'https://knoedg.nyc/nyc-immigrant-enclaves/'
+          new_url = 'https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/'
+          if old_url not in text:
+              raise SystemExit('old sitemap URL not found')
+          p.write_text(text.replace(old_url, new_url))
+          PY
+
+      - name: Remove old article output and regenerate
+        run: |
+          rm -rf nyc-immigrant-enclaves
+          python3 scripts/generate_nyc_immigrant_enclaves_view.py
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py
+
+      - name: Refresh fixture checksums
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          sums = Path('data/fixtures/SHA256SUMS')
+          lines = sums.read_text().splitlines()
+          targets = {
+              'nyc-immigrant-enclaves-public-view.json',
+              'nyc-immigrant-enclaves-data-paper.json',
+          }
+          out = []
+          seen = set()
+          for line in lines:
+              parts = line.split()
+              name = parts[-1].lstrip('*') if parts else ''
+              if name in targets:
+                  digest = hashlib.sha256((sums.parent / name).read_bytes()).hexdigest()
+                  out.append(f'{digest}  {name}')
+                  seen.add(name)
+              else:
+                  out.append(line)
+          missing = targets - seen
+          if missing:
+              raise SystemExit(f'missing SHA256SUMS entries: {sorted(missing)}')
+          sums.write_text('\n'.join(out) + '\n')
+          PY
+
+      - name: Validate generated outputs
+        run: |
+          python3 scripts/generate_nyc_immigrant_enclaves_view.py --check
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          new = Path('inside-the-map-of-30-immigrant-enclaves')
+          for name in ('index.html', 'index.jsonld', 'record-counts.json'):
+              if not (new / name).is_file():
+                  raise SystemExit(f'missing generated file: {new / name}')
+          if Path('nyc-immigrant-enclaves').exists():
+              raise SystemExit('old article slug directory still exists')
+
+          html = (new / 'index.html').read_text()
+          expected = 'https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/'
+          if expected not in html:
+              raise SystemExit('new canonical missing from generated HTML')
+
+          paper = Path('nyc-immigrant-enclaves-paper/index.html').read_text()
+          if expected not in paper:
+              raise SystemExit('data-paper backlink was not updated')
+
+          sitemap = Path('sitemap.xml').read_text()
+          if expected not in sitemap or 'https://knoedg.nyc/nyc-immigrant-enclaves/' in sitemap:
+              raise SystemExit('sitemap slug cleanup failed')
+          PY
+
+      - name: Remove handoff scaffolding and commit publication
+        run: |
+          rm -rf .handoff
+          rm -f .github/workflows/publish-enclaves-v18.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'publish: move immigrant enclaves article to final slug'
+          git push origin HEAD:publish/inside-map-30-immigrant-enclaves
