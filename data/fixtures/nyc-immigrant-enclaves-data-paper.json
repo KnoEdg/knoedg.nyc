@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.9",
+  "artifactVersion": "2026-08-21.10",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T13:00:00Z",
+  "issuedAt": "2026-08-21T14:00:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -89,7 +89,7 @@
                 "caption": [
                   {
                     "type": "text",
-                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. Published by New York City Tourism + Conventions, who hold the rights in it. "
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. The artifact bears no publisher mark, no date and no designer credit. Publication is nonetheless established, from the host page's own markup rather than from press attribution: New York City Tourism + Conventions, who hold the rights in it. "
                   },
                   {
                     "type": "text",
