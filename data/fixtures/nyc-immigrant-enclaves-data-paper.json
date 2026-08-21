@@ -3,14 +3,14 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.13",
+  "artifactVersion": "2026-08-21.14",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T20:19:16Z",
+  "issuedAt": "2026-08-21T21:50:32Z",
   "citesPublicView": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
   "page": {
     "language": "en",
-    "title": "The NYC Immigrant Enclaves map — provenance, evidence and limits",
+    "title": "The Map of 30 Immigrant Enclaves — provenance, evidence and limits",
     "description": "A technical data paper on the provenance, source relationships, evidence strength, rights, and unresolved questions surrounding a published 30-entry NYC immigrant-enclaves map.",
     "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
     "alternate": {
@@ -26,7 +26,7 @@
         "heading": [
           {
             "type": "text",
-            "text": "The NYC Immigrant Enclaves map"
+            "text": "The Map of 30 Immigrant Enclaves"
           }
         ],
         "children": [
@@ -1050,7 +1050,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
         "@type": "schema:ScholarlyArticle",
-        "schema:name": "The NYC Immigrant Enclaves map — provenance, evidence and limits",
+        "schema:name": "The Map of 30 Immigrant Enclaves — provenance, evidence and limits",
         "schema:citation": {
           "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/"
         },
