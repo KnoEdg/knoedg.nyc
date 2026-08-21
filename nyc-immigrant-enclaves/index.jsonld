@@ -90,7 +90,7 @@
     {
       "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
       "@type": "schema:Claim",
-      "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
+      "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
       "schema:citation": {
         "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
       },
