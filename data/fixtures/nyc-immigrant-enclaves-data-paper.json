@@ -3,15 +3,15 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.5",
+  "artifactVersion": "2026-08-21.6",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T04:40:00Z",
+  "issuedAt": "2026-08-21T12:00:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
-    "title": "A map with no publisher — governing the NYC Immigrant Enclaves guide as an artifact",
-    "description": "A data paper on the NYC Immigrant Enclaves thematic collection: what the map claims, who published it, what was promised, and which of those can actually be established.",
+    "title": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
+    "description": "A data paper on the NYC Immigrant Enclaves thematic collection: what the map states, who published it, and which questions the retrieved evidence can and cannot answer.",
     "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
     "alternate": {
       "mediaType": "application/ld+json",
@@ -26,7 +26,7 @@
         "heading": [
           {
             "type": "text",
-            "text": "A map with no publisher"
+            "text": "The NYC Immigrant Enclaves map"
           }
         ],
         "children": [
@@ -36,7 +36,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "Governing the NYC Immigrant Enclaves guide as an artifact"
+                "text": "What the record establishes, and what it does not"
               }
             ],
             "children": [
@@ -107,7 +107,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map was chosen as a subject because its provenance is broken. It is titled New York City Immigrant Enclaves, it lists thirty neighbourhoods, and it carries a footnote naming the Mayor's Office of Immigrant Affairs as its source. It carries no publisher mark, no date, and no address of its own. A footnote naming a data source is not a byline, and this collection does not convert one into the other: the map's publication is established, and its authorship is not."
+                    "text": "The map was chosen as a subject because its publication details are not stated on the artifact itself. It is titled New York City Immigrant Enclaves, it lists thirty neighbourhoods, and it carries a footnote naming the Mayor's Office of Immigrant Affairs as its source. It carries no publisher mark, no date, and no address of its own. A footnote naming a data source records where information came from; it does not identify who produced the artifact. The map's publication is established here; its authorship is not."
                   }
                 ]
               },
@@ -116,7 +116,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A controversy gave the artifact a second life. In July 2026 the omission of Little Italy drew public criticism, and the mayor said additional changes would be made, including adding Little Italy. That commitment is recorded here. The amendment is not, because no amended map has been observed. The two are different facts, and this collection records them separately."
+                    "text": "In July 2026 the map drew wide public comment because Little Italy is not on it, and the mayor said additional changes would be made, including adding Little Italy. That commitment is recorded here. The amendment is not, because no amended map has been observed. The two are different facts, and this collection records them separately."
                   }
                 ]
               },
@@ -125,7 +125,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A promise is not an edit. Earlier passes of this intake compressed the commitment into a completed restoration and produced an event that never happened -- one of four claims retracted in a single working session. The record that survived was shaped so the same compression could not recur: it carries no supersession link, and the map record it would supersede is not marked superseded."
+                    "text": "Earlier passes of this intake merged the two, recording the commitment as a completed change that had not been observed -- one of four claims retracted in a single working session. The record that survived was shaped so the same compression could not recur: it carries no supersession link, and the map record it would supersede is not marked superseded."
                   }
                 ]
               },
@@ -134,7 +134,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The same compression appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have made exactly the same move: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organisation headlined that the neighbourhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
+                    "text": "The same reading appears outside this intake. When the question was re-tested before this article was written, two independent third-party sources were found to have reported it the same way: a news outlet headlined a completed restoration over a body reading that changes would be made in the future, beneath an image captioned as the map that sparked the controversy; an advocacy organisation headlined that the neighbourhood was back on the map over a body reading that it would be added. Neither showed or linked an amended map. That reading appeared in independent third-party sources, not only in this intake."
                   }
                 ]
               },
@@ -143,7 +143,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "What the re-test could establish, it established by retrieval rather than inference. The map file at its known address is byte-for-byte identical to its earliest archived capture and to a fresh retrieval; the file that was live three weeks before the criticism is the file that is live now. The publisher's own sitemap of more than ten thousand pages contains no enclave-map page, and still advertises the programme page that now redirects away. The only other map-named image on the surviving programme page was fetched and looked at rather than judged by its filename, and proved to be an unrelated official visitor map."
+                    "text": "What the re-test could establish, it established by retrieval rather than inference. The map file at its known address is byte-for-byte identical to its earliest archived capture and to a fresh retrieval; the file that was live three weeks before the public comment is the file that is live now. The publisher's sitemap of more than ten thousand pages contains no enclave-map page, and the programme page it lists now redirects. The only other map-named image on the surviving programme page was fetched and looked at rather than judged by its filename, and proved to be an unrelated official visitor map."
                   }
                 ]
               },
@@ -179,7 +179,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Unresolved questions are recorded as unresolved. The office's own report contains an internal inconsistency, recorded as observed rather than resolved. One source's attribution is contested between two city offices by two outlets, and that disagreement is absent from the governed records because the second citation could not be resolved to a retrievable document. An unresolved question is kept as an unresolved question."
+                    "text": "Unresolved questions are recorded as unresolved. The report contains an internal inconsistency, recorded as observed rather than resolved. One source's attribution is contested between two city offices by two outlets, and that disagreement is absent from the governed records because the second citation could not be resolved to a retrievable document. An unresolved question is kept as an unresolved question."
                   }
                 ]
               },
@@ -188,7 +188,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Rights were determined before publication rather than assumed. Municipal works are not public domain -- the federal rule does not reach city governments -- and the city's own terms reserve all rights. Where an outlet asserts no machine-readable licence, the position is recorded as undetermined, which is neither absent nor permissive. Public accessibility is not permission, so this collection retains checksums and content-addressed addresses rather than redistributing bytes it has no permission to redistribute."
+                    "text": "Rights were determined before publication rather than assumed. Municipal works are not public domain -- the federal rule does not reach city governments -- and the city's terms reserve all rights. Where an outlet asserts no machine-readable licence, the position is recorded as undetermined, which is neither absent nor permissive. Public accessibility is not permission, so this collection retains checksums and content-addressed addresses rather than redistributing bytes it has no permission to redistribute."
                   }
                 ]
               }
