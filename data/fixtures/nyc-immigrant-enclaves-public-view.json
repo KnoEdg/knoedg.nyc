@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.6",
+  "artifactVersion": "2026-08-21.8",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T04:40:00Z",
+  "issuedAt": "2026-08-21T12:00:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -67,7 +67,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide criticism for leaving out Little Italy. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
+                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide public comment because Little Italy is not on it. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
               }
             ]
           },
@@ -918,7 +918,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
+                    "text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
                   }
                 ]
               },
@@ -1114,7 +1114,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "A promise is not an edit."
+                        "text": "A stated commitment and an observed change are recorded separately."
                       }
                     ]
                   },
@@ -1213,7 +1213,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the criticism."
+                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the public comment."
                     }
                   ],
                   [
@@ -1222,7 +1222,7 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "Whether the promised addition has happened."
+                          "text": "Whether the stated addition has been made."
                         }
                       ]
                     },
@@ -1422,7 +1422,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The office's own report contains an internal inconsistency: a repeated caption means its stated count of "
+                    "text": "The report contains an internal inconsistency: a repeated caption means its stated count of "
                   },
                   {
                     "type": "value",
@@ -1439,7 +1439,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's own sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
+                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
                   }
                 ]
               }
@@ -1592,7 +1592,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
         "@type": "schema:Claim",
-        "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
+        "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
         "schema:citation": {
           "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
         },
