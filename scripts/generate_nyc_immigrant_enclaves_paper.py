@@ -6,29 +6,34 @@ own, so it carries no record counts to publish. The renderer refuses one.
 """
 
 from pathlib import Path
-import base64
+import hashlib
 import sys
 
-from generate_fixture_page import main, outputs
+from generate_fixture_page import main
 
 ROOT = Path(__file__).resolve().parents[1]
-ARTIFACT = ROOT / "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
-TEMPLATE = ROOT / "templates/data-paper.html"
-HTML = ROOT / "nyc-immigrant-enclaves-paper/index.html"
-JSONLD = ROOT / "nyc-immigrant-enclaves-paper/index.jsonld"
 
 if __name__ == "__main__":
-    if "--check" in sys.argv:
-        for path, rendered in outputs(ARTIFACT, TEMPLATE, HTML, JSONLD, None).items():
-            current = path.read_text(encoding="utf-8") if path.exists() else ""
-            if current != rendered:
-                encoded = base64.b64encode(rendered.encode("utf-8")).decode("ascii")
-                print(f"CANONICAL_BASE64 {path.name} {encoded}")
     defaults = [
-        "--artifact", str(ARTIFACT),
-        "--template", str(TEMPLATE),
-        "--html", str(HTML),
-        "--jsonld", str(JSONLD),
+        "--artifact", str(ROOT / "data/fixtures/nyc-immigrant-enclaves-data-paper.json"),
+        "--template", str(ROOT / "templates/data-paper.html"),
+        "--html", str(ROOT / "nyc-immigrant-enclaves-paper/index.html"),
+        "--jsonld", str(ROOT / "nyc-immigrant-enclaves-paper/index.jsonld"),
     ]
     sys.argv[1:1] = defaults
-    raise SystemExit(main())
+    code = main()
+    if code == 0 and "--check" in sys.argv:
+        for relative in [
+            "data/fixtures/nyc-immigrant-enclaves-public-view.json",
+            "data/fixtures/nyc-immigrant-enclaves-data-paper.json",
+            "scripts/generate_nyc_immigrant_enclaves_view.py",
+            "scripts/generate_nyc_immigrant_enclaves_paper.py",
+            "inside-the-map-of-30-immigrant-enclaves/index.html",
+            "inside-the-map-of-30-immigrant-enclaves/index.jsonld",
+            "inside-the-map-of-30-immigrant-enclaves/record-counts.json",
+            "nyc-immigrant-enclaves-paper/index.html",
+            "nyc-immigrant-enclaves-paper/index.jsonld",
+        ]:
+            path = ROOT / relative
+            print(f"PUBLISH_SHA256 {hashlib.sha256(path.read_bytes()).hexdigest()}  {relative}")
+    raise SystemExit(code)

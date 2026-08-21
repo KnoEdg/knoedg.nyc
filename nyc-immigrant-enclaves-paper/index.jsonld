@@ -11,7 +11,7 @@
       "@type": "schema:ScholarlyArticle",
       "schema:name": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
       "schema:citation": {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/"
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/"
       },
       "dcterms:provenance": "Authored article citing the claims of the NYC Immigrant Enclaves public view. It holds no claims of its own; every fact it restates is proven equivalent to the governed records by a validator held with those records."
     }
