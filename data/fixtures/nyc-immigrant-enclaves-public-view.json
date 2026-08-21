@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.14",
+  "resource": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
+  "artifactVersion": "2026-08-21.18",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T14:00:00Z",
+  "issuedAt": "2026-08-21T17:12:34Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -42,12 +42,12 @@
   ],
   "page": {
     "language": "en",
-    "title": "New York City Immigrant Enclaves",
-    "description": "What can be established about the disputed NYC immigrant enclaves map, and what cannot: its publisher, its relationship to an earlier city series, two selection criteria that ask different questions, and the authorship nobody has claimed.",
-    "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+    "title": "Inside the Map of 30 Immigrant Enclaves",
+    "description": "A look at a 30-entry immigrant-enclaves map: who published it, what it lists, how it differs from an earlier city series, and what remains unestablished.",
+    "canonical": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
     "alternate": {
       "mediaType": "application/ld+json",
-      "href": "https://knoedg.nyc/nyc-immigrant-enclaves/index.jsonld",
+      "href": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/index.jsonld",
       "title": "NYC Immigrant Enclaves structured data"
     },
     "stylesheet": "/assets/styles.css",
@@ -58,7 +58,7 @@
         "heading": [
           {
             "type": "text",
-            "text": "New York City Immigrant Enclaves"
+            "text": "Inside the Map of 30 Immigrant Enclaves"
           }
         ],
         "children": [
@@ -67,47 +67,73 @@
             "content": [
               {
                 "type": "text",
-                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide public comment because Little Italy is not on it. The artifact itself carries no publisher mark, no date and no address, so almost everything written about it since has had to supply those in its first sentence — and those press accounts do not agree with one another. This page does not take them as its source: the publisher below is established from the host page's own markup."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "type": "text",
-                "text": "This page holds what can be established about that map, and states what cannot. It is built from "
-              },
-              {
-                "type": "value",
-                "pointer": "/activeRecordCount"
-              },
-              {
-                "type": "text",
-                "text": " governed records, each traceable to a retrieved document. Where a question has no answer in the evidence, the answer here is that it has no answer — not a plausible reconstruction."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "type": "text",
-                "text": "A data paper discusses this collection at length: "
+                "text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES” lists 30 entries and does not include Little Italy. The map was published by "
               },
               {
                 "type": "link",
-                "href": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
+                "href": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+                "newWindow": true,
+                "accessibleNewWindowText": "opens in a new tab",
                 "content": [
                   {
                     "type": "text",
-                    "text": "The NYC Immigrant Enclaves map"
+                    "text": "New York City Tourism + Conventions"
                   }
                 ]
               },
               {
                 "type": "text",
-                "text": ". It cites the claims on this page and holds none of its own."
+                "text": ", and the map itself cites the NYC Mayor’s Office of Immigrant Affairs as its data source. No source in this collection identifies the map’s designer."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The Mayor’s Office of Immigrant Affairs launched an Immigrant Enclave Illustration Series on April 17, 2023. In its "
+              },
+              {
+                "type": "link",
+                "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                "newWindow": true,
+                "accessibleNewWindowText": "opens in a new tab",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "end-of-tenure report"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " covering through December 31, 2025, the office states that 23 illustrations were published. Comparing that report with this map shows five names that appear on the map but not in the report: Little Egypt, Little Odessa, Little Palestine, Little Poland and Little Senegal."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "On July 10, 2026, "
+              },
+              {
+                "type": "link",
+                "href": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/",
+                "newWindow": true,
+                "accessibleNewWindowText": "opens in a new tab",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "amNewYork"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " reported that the mayor’s team had updated the map. At the same press conference, the mayor said the map had been created by the prior administration in 2023 and that future changes would include adding Little Italy. As of August 20, no amended version had been located, and the known map file remained byte-for-byte unchanged from an archived copy captured before the July reporting."
               }
             ]
           },
@@ -125,7 +151,7 @@
               },
               {
                 "type": "text",
-                "text": ". Every live value on this page was checked on or before that date. The sources it describes can change after it, and one of them — the page that carried the map — already has."
+                "text": ". Source pages and files can change after that time."
               }
             ]
           },
@@ -147,149 +173,57 @@
                 "caption": [
                   {
                     "type": "text",
-                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES”. The artifact bears no publisher mark, no date and no designer credit. Publication is nonetheless established, from the host page's own markup rather than from press attribution: New York City Tourism + Conventions, who hold the rights in it. "
-                  },
+                    "text": "“NEW YORK CITY IMMIGRANT ENCLAVES,” published by New York City Tourism + Conventions. The map lists 30 entries; Little Italy is not included."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
                   {
                     "type": "text",
-                    "text": "Retrieved from "
+                    "text": "The map’s footnote reads “Source: NYC Mayor’s Office of Immigrant Affairs.” That identifies a data source; it does not name the map’s designer. The file carries no designer credit or authorship metadata."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The source image remains available at "
                   },
                   {
                     "type": "link",
                     "href": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "the publisher’s address"
+                        "text": "the publisher-served image address"
                       }
-                    ],
-                    "newWindow": true,
-                    "accessibleNewWindowText": "opens in a new tab"
+                    ]
                   },
                   {
                     "type": "text",
-                    "text": " on "
-                  },
-                  {
-                    "type": "time",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/5/schema:value/@value",
-                    "format": "datetime"
-                  },
-                  {
-                    "type": "text",
-                    "text": " and checksummed: SHA-256 "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/7/schema:value"
-                  },
-                  {
-                    "type": "text",
-                    "text": ", "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/6/schema:value",
-                    "format": "integer"
-                  },
-                  {
-                    "type": "text",
-                    "text": " bytes. The copy served here was verified against that checksum before it was committed, so what you see is the artifact this page describes rather than whatever the address currently returns. The same bytes appear in "
+                    "text": ". The same bytes appear in "
                   },
                   {
                     "type": "link",
                     "href": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "an independent archived capture of 2026-06-17"
-                      }
-                    ],
                     "newWindow": true,
-                    "accessibleNewWindowText": "opens in a new tab"
-                  },
-                  {
-                    "type": "text",
-                    "text": " — three weeks before the public comment. No redistribution permission was located and none is claimed; if the rightsholder objects the image is removed."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "The footnote is a "
-                  },
-                  {
-                    "type": "strong",
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "data-source citation, not a byline"
+                        "text": "an archived capture from June 17, 2026"
                       }
                     ]
-                  },
-                  {
-                    "type": "text",
-                    "text": ". It credits an office as the source of the information; it does not say who made the map. The file itself carries no publisher mark, no date, no designer credit, and no authorship metadata of any kind."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "File last modified "
-                  },
-                  {
-                    "type": "time",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/3/schema:value/@value",
-                    "format": "datetime"
                   },
                   {
                     "type": "text",
                     "text": "."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "strong",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "No city agency published it."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": " New York City Tourism + Conventions is recorded as a "
-                  },
-                  {
-                    "type": "strong",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "nonprofit organization"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": " in the city’s own governance dataset, present in the city org chart and agency directory without being an agency by type. The Mayor’s Office of Immigrant Affairs, named in the map’s footnote, is an agency — but it is named there as a data source, and a footnote naming a source does not identify who produced the artifact. Who designed the map remains unestablished."
                   }
                 ]
               }
@@ -310,16 +244,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The thirty entries printed on the map, transcribed from the checksummed image itself rather than from reporting. Names and transit strings appear as printed and are not corrected."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "The map is shown above. Alongside it, the roster is the same content as text: searchable, linkable, and readable by anyone the image is not accessible to."
+                    "text": "The table below transcribes the 30 entries and transit strings as printed on the map."
                   }
                 ]
               },
@@ -358,606 +283,36 @@
                   }
                 ],
                 "rows": [
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "1"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Chinatown in Flushing"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "7 Flushing-Main St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "2"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Chinatown in Manhattan"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "J M Z N Q R W 6 Canal St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "3"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Chinatown in Sunset Park"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "N 8th Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "4"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Guyana Gateway"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "3 4 Crown Hts - Utica Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "5"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Koreatown in Manhattan"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B D F M N Q R W 34th St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "6"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Koreatown in Queens"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "7 Flushing-Main St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "7"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Africa in Staten Island"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "SI Clifton"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "8"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Africa in the Bronx"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B D 167th St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "9"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Albania"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B D Fordham Rd"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "10"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Bangladesh"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "F 169 St / E J Z Jamaica Center"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "11"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Bhod-Tibet"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "M R Northern Blvd"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "12"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Caribbean"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B Q S Prospect Park / 2 5 Church Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "13"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Colombia"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "14"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Dominican Republic"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "A 175th St / 181st St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "15"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Ecuador"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "7 Junction Blvd / 74th St-Broadway"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "16"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Egypt"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "R Steinway St / N W Astoria Blvd"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "17"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Guyana in Queens"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "A Ozone Park-Lefferts Blvd"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "18"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Guyana in the Bronx"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "2 5 Nereid Ave / 6 St Lawrence Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "19"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Haiti"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "2 5 Newkirk Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "20"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little India"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "21"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Manila"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "E F M R Jackson Hts / 7 74th St-Broadway"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "22"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Mexico in Port Richmond"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "S44/S46 Bus: Port Richmond"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "23"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Mexico in Sunset Park"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "D N R W 25th St / 36th St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "24"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Odessa"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B Q Brighton Beach"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "25"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Palestine"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "R Bay Ridge Ave / 86th St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "26"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Pakistan"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "B Q Newkirk Plaza"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "27"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Poland"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "G Greenpoint Ave / Nassau Ave"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "28"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Senegal"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "2 3 B C 116th St"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "29"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Ukraine"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "F 2nd Ave / 6 Astor Pl"
-                      }
-                    ]
-                  ],
-                  [
-                    [
-                      {
-                        "type": "text",
-                        "text": "30"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "Little Yemen"
-                      }
-                    ],
-                    [
-                      {
-                        "type": "text",
-                        "text": "2 5 Bronx Park East / Pelham Pkwy"
-                      }
-                    ]
-                  ]
+                  [[{"type":"text","text":"1"}],[{"type":"text","text":"Chinatown in Flushing"}],[{"type":"text","text":"7 Flushing-Main St"}]],
+                  [[{"type":"text","text":"2"}],[{"type":"text","text":"Chinatown in Manhattan"}],[{"type":"text","text":"J M Z N Q R W 6 Canal St"}]],
+                  [[{"type":"text","text":"3"}],[{"type":"text","text":"Chinatown in Sunset Park"}],[{"type":"text","text":"N 8th Ave"}]],
+                  [[{"type":"text","text":"4"}],[{"type":"text","text":"Guyana Gateway"}],[{"type":"text","text":"3 4 Crown Hts - Utica Ave"}]],
+                  [[{"type":"text","text":"5"}],[{"type":"text","text":"Koreatown in Manhattan"}],[{"type":"text","text":"B D F M N Q R W 34th St"}]],
+                  [[{"type":"text","text":"6"}],[{"type":"text","text":"Koreatown in Queens"}],[{"type":"text","text":"7 Flushing-Main St"}]],
+                  [[{"type":"text","text":"7"}],[{"type":"text","text":"Little Africa in Staten Island"}],[{"type":"text","text":"SI Clifton"}]],
+                  [[{"type":"text","text":"8"}],[{"type":"text","text":"Little Africa in the Bronx"}],[{"type":"text","text":"B D 167th St"}]],
+                  [[{"type":"text","text":"9"}],[{"type":"text","text":"Little Albania"}],[{"type":"text","text":"B D Fordham Rd"}]],
+                  [[{"type":"text","text":"10"}],[{"type":"text","text":"Little Bangladesh"}],[{"type":"text","text":"F 169 St / E J Z Jamaica Center"}]],
+                  [[{"type":"text","text":"11"}],[{"type":"text","text":"Little Bhod-Tibet"}],[{"type":"text","text":"M R Northern Blvd"}]],
+                  [[{"type":"text","text":"12"}],[{"type":"text","text":"Little Caribbean"}],[{"type":"text","text":"B Q S Prospect Park / 2 5 Church Ave"}]],
+                  [[{"type":"text","text":"13"}],[{"type":"text","text":"Little Colombia"}],[{"type":"text","text":"E F M R Jackson Hts / 7 74th St-Broadway"}]],
+                  [[{"type":"text","text":"14"}],[{"type":"text","text":"Little Dominican Republic"}],[{"type":"text","text":"A 175th St / 181st St"}]],
+                  [[{"type":"text","text":"15"}],[{"type":"text","text":"Little Ecuador"}],[{"type":"text","text":"7 Junction Blvd / 74th St-Broadway"}]],
+                  [[{"type":"text","text":"16"}],[{"type":"text","text":"Little Egypt"}],[{"type":"text","text":"R Steinway St / N W Astoria Blvd"}]],
+                  [[{"type":"text","text":"17"}],[{"type":"text","text":"Little Guyana in Queens"}],[{"type":"text","text":"A Ozone Park-Lefferts Blvd"}]],
+                  [[{"type":"text","text":"18"}],[{"type":"text","text":"Little Guyana in the Bronx"}],[{"type":"text","text":"2 5 Nereid Ave / 6 St Lawrence Ave"}]],
+                  [[{"type":"text","text":"19"}],[{"type":"text","text":"Little Haiti"}],[{"type":"text","text":"2 5 Newkirk Ave"}]],
+                  [[{"type":"text","text":"20"}],[{"type":"text","text":"Little India"}],[{"type":"text","text":"E F M R Jackson Hts / 7 74th St-Broadway"}]],
+                  [[{"type":"text","text":"21"}],[{"type":"text","text":"Little Manila"}],[{"type":"text","text":"E F M R Jackson Hts / 7 74th St-Broadway"}]],
+                  [[{"type":"text","text":"22"}],[{"type":"text","text":"Little Mexico in Port Richmond"}],[{"type":"text","text":"S44/S46 Bus: Port Richmond"}]],
+                  [[{"type":"text","text":"23"}],[{"type":"text","text":"Little Mexico in Sunset Park"}],[{"type":"text","text":"D N R W 25th St / 36th St"}]],
+                  [[{"type":"text","text":"24"}],[{"type":"text","text":"Little Odessa"}],[{"type":"text","text":"B Q Brighton Beach"}]],
+                  [[{"type":"text","text":"25"}],[{"type":"text","text":"Little Palestine"}],[{"type":"text","text":"R Bay Ridge Ave / 86th St"}]],
+                  [[{"type":"text","text":"26"}],[{"type":"text","text":"Little Pakistan"}],[{"type":"text","text":"B Q Newkirk Plaza"}]],
+                  [[{"type":"text","text":"27"}],[{"type":"text","text":"Little Poland"}],[{"type":"text","text":"G Greenpoint Ave / Nassau Ave"}]],
+                  [[{"type":"text","text":"28"}],[{"type":"text","text":"Little Senegal"}],[{"type":"text","text":"2 3 B C 116th St"}]],
+                  [[{"type":"text","text":"29"}],[{"type":"text","text":"Little Ukraine"}],[{"type":"text","text":"F 2nd Ave / 6 Astor Pl"}]],
+                  [[{"type":"text","text":"30"}],[{"type":"text","text":"Little Yemen"}],[{"type":"text","text":"2 5 Bronx Park East / Pelham Pkwy"}]]
                 ]
               },
               {
@@ -965,7 +320,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Little Italy is not among them. That absence is established from this transcription of the artifact, not from an outlet reporting it."
+                    "text": "Little Italy is not among the 30 entries."
                   }
                 ]
               }
@@ -977,7 +332,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "Where the list came from"
+                "text": "How the map compares with an earlier city series"
               }
             ],
             "children": [
@@ -986,34 +341,32 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The Mayor’s Office of Immigrant Affairs published an Immigrant Enclave Illustration Series from 2023-04-17, and states in its own end-of-tenure report that 23 illustrations were published. “Little Italy” does not appear anywhere in that 85-page report."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
+                    "text": "The Mayor’s Office of Immigrant Affairs launched the Immigrant Enclave Illustration Series on April 17, 2023. In its "
+                  },
                   {
-                    "type": "text",
-                    "text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "strong",
+                    "type": "link",
+                    "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "Four of the five added names refer to communities at the center of contested public argument."
+                        "text": "end-of-tenure report"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": " No source found identifies who added them, and this page does not guess. The difference between the two documents is a fact about the documents; its authorship is not."
+                    "text": " covering through December 31, 2025, the office states that 23 illustrations were published. “Little Italy” does not appear in the 85-page report."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Five names appear on the map but nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland and Little Senegal. The map therefore includes five names not found in the report."
                   }
                 ]
               }
@@ -1025,7 +378,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "Two criteria that are not in conflict"
+                "text": "Two reported criteria"
               }
             ],
             "children": [
@@ -1034,7 +387,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Two selection criteria are usually reported as opposing answers to one question: whether Little Italy belongs on the map. They are not opposing answers. They are different questions."
+                    "text": "Two source accounts describe different criteria for why a neighborhood might appear on the map. Neither appears in a published selection rule."
                   }
                 ]
               },
@@ -1042,17 +395,24 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "type": "strong",
+                    "type": "text",
+                    "text": "In a July 9, 2026 "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "The demographic criterion. "
+                        "text": "Washington Examiner article"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule."
+                    "text": ", a city spokesperson said the map highlights neighborhoods with substantial foreign-born populations. This describes a demographic criterion based on current population."
                   }
                 ]
               },
@@ -1060,17 +420,20 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "type": "strong",
+                    "type": "link",
+                    "href": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "The heritage criterion. "
+                        "text": "The Blaze"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule."
+                    "text": " quoted people who described a neighborhood’s history of immigrant settlement as a basis for inclusion. This describes a heritage criterion that does not depend on the current foreign-born share."
                   }
                 ]
               },
@@ -1079,29 +442,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A neighborhood can satisfy either, both, or neither, and both can be true of the same place at once. "
-                  },
-                  {
-                    "type": "strong",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Neither criterion was ever published as a rule."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": " Both exist only as statements made to reporters, which is why no adjudication between them is possible and none is attempted here."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "This collection records the relationship between them explicitly rather than leaving it to silence: the apparent conflict was examined, and its cause is recorded as a difference in what each criterion is about."
+                    "text": "The two criteria ask different questions. A neighborhood can meet either, both or neither; the evidence does not establish that either criterion was the rule used to make the map."
                   }
                 ]
               }
@@ -1113,7 +454,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "A published threshold, and what it does not explain"
+                "text": "A separate Department of City Planning threshold"
               }
             ],
             "children": [
@@ -1122,25 +463,23 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A published threshold does exist elsewhere. The Department of City Planning’s 2026 report defines a “major immigrant neighborhood” as one whose foreign-born density exceeds the city average, using a threshold of 40 percent, and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own chapter, and nothing found connects it to this map."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
+                    "text": "The Department of City Planning’s "
+                  },
                   {
-                    "type": "strong",
+                    "type": "link",
+                    "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "This is the point at which a reader is most likely to draw a conclusion the evidence does not support."
+                        "text": "The Newest New Yorkers 2026, Chapter 3"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": " A published threshold exists; a neighborhood falls below it; the neighborhood is missing from a map. That sequence is not a chain of cause. Nothing found shows the map's authors read the report, cited it, or applied any threshold at all."
+                    "text": " defines a “major immigrant neighborhood” for that report as one whose foreign-born density exceeds the city average, using a 40 percent threshold. It records SoHo-Little Italy at 30.5 percent."
                   }
                 ]
               },
@@ -1149,7 +488,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "It appears here because leaving it out would be its own distortion. The absence of a link is on the record, rather than assumed in either direction."
+                    "text": "The report scopes that definition to its own chapter. No source in this collection connects the threshold to the map, so the threshold is not treated here as an explanation for Little Italy’s absence."
                   }
                 ]
               }
@@ -1170,42 +509,32 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "On 2026-07-10 the mayor said the map was “initially created by the prior administration in 2023” and that “we’re going to be making additional changes in the future … and that includes adding Little Italy to the map.” That is a commitment to a future change. No amended version has been located."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
+                    "text": "On July 10, 2026, "
+                  },
                   {
-                    "type": "text",
-                    "text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "strong",
+                    "type": "link",
+                    "href": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/",
+                    "newWindow": true,
+                    "accessibleNewWindowText": "opens in a new tab",
                     "content": [
                       {
                         "type": "text",
-                        "text": "A stated commitment and an observed change are recorded separately."
+                        "text": "amNewYork"
                       }
                     ]
                   },
                   {
                     "type": "text",
-                    "text": " As of the date this page was issued the map still lists "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/2/schema:value"
-                  },
+                    "text": " reported that the mayor’s team had updated the map. At the same press conference, the mayor said the map had been created by the prior administration in 2023 and said future changes would include adding Little Italy."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
                   {
                     "type": "text",
-                    "text": " entries and Little Italy is not among them. This collection records the commitment and does not record an amendment, because none has been observed."
+                    "text": "Checked on August 20, the known map file was unchanged from archived captures taken before the July reporting. The page that had carried the map redirected to the program index, while the image file was still served. No amended map was located."
                   }
                 ]
               }
@@ -1222,92 +551,12 @@
             ],
             "children": [
               {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "These five, and not an open-ended list of everything unknown. Each is a question a reader is likely to answer for themselves from what this page does establish, and which the retrieved evidence does not settle — the inferences closest to the edge of the record. Anything further from it is simply outside this collection's scope and is not listed."
-                  }
-                ]
-              },
-              {
                 "type": "list",
                 "items": [
-                  [
-                    {
-                      "type": "strong",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Who designed the map."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " No source names a designer for this artifact."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "strong",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Who chose the five added names,"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " and on whose authority."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "strong",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Whether any selection criterion was applied at all,"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " published or otherwise."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "strong",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Why the URL now redirects."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " A program page ending with its program is ordinary, and nothing dates the change against the public comment. Whether anyone withdrew the page is not established: a redirect is what was observed."
-                    }
-                  ],
-                  [
-                    {
-                      "type": "strong",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Whether the stated addition has been made."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " No amended version has been located."
-                    }
-                  ]
+                  [{"type":"text","text":"Who designed the map."}],
+                  [{"type":"text","text":"Whether a published or unpublished selection rule was used to choose the 30 entries."}],
+                  [{"type":"text","text":"Why the original host-page URL now redirects."}],
+                  [{"type":"text","text":"Whether an amended version adding Little Italy exists at another address; none was located in the sources checked."}]
                 ],
                 "ordered": false
               }
@@ -1319,41 +568,20 @@
             "heading": [
               {
                 "type": "text",
-                "text": "Published material"
+                "text": "Sources"
               }
             ],
             "children": [
               {
                 "type": "list",
                 "items": [
-                  [
-                    {
-                      "type": "link",
-                      "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
-                      "newWindow": true,
-                      "accessibleNewWindowText": "opens in a new tab",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Mayor's Office of Immigrant Affairs — impact report"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "type": "link",
-                      "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
-                      "newWindow": true,
-                      "accessibleNewWindowText": "opens in a new tab",
-                      "content": [
-                        {
-                          "type": "text",
-                          "text": "Department of City Planning — The Newest New Yorkers 2026, Chapter 3"
-                        }
-                      ]
-                    }
-                  ]
+                  [{"type":"link","href":"https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"New York City Tourism + Conventions — map host page"}]}],
+                  [{"type":"link","href":"https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"New York City Tourism + Conventions — source image"}]}],
+                  [{"type":"link","href":"https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"Mayor's Office of Immigrant Affairs — impact report covering through December 31, 2025"}]}],
+                  [{"type":"link","href":"https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"Department of City Planning — The Newest New Yorkers 2026, Chapter 3"}]}],
+                  [{"type":"link","href":"https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"Washington Examiner — July 9, 2026 article reporting the demographic criterion"}]}],
+                  [{"type":"link","href":"https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"The Blaze — article reporting the heritage criterion"}]}],
+                  [{"type":"link","href":"https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/","newWindow":true,"accessibleNewWindowText":"opens in a new tab","content":[{"type":"text","text":"amNewYork — July 10, 2026 report of the mayor's statement"}]}]
                 ],
                 "ordered": false
               }
@@ -1373,17 +601,8 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "type": "strong",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "No source in this collection is openly licensed."
-                      }
-                    ]
-                  },
-                  {
                     "type": "text",
-                    "text": " That is unusual for this project, and it is recorded here."
+                    "text": "No open license was identified for the map, the city reports or the press reports cited on this page."
                   }
                 ]
               },
@@ -1392,29 +611,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The map and the page that carried it state a copyright and no license: no redistribution permission was located and none has been granted since. The map is nevertheless published on this page and on the data paper, and the bytes are served from here rather than linked: the copy was verified against the governed checksum before it was committed, so the image is the artifact this page describes. Attribution to New York City Tourism + Conventions, the source address, the retrieval instant, the checksum and an independent archived capture are shown with it. Attribution is not a license and is not offered as one. The decision to publish was taken without permission having been located, and is recorded here so a reader does not infer permission that does not exist; if the rightsholder objects the image is removed. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no license is asserted and none was determined."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "This collection publishes claims "
-                  },
-                  {
-                    "type": "strong",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "about"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "text": " those documents. It redistributes none of them."
+                    "text": "The map is reproduced here from a local copy verified against the governed checksum. No redistribution permission for the map was located or is claimed. New York City Tourism + Conventions is identified as the publisher; the original image address and an archived capture are linked above."
                   }
                 ]
               }
@@ -1435,32 +632,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Every claim on this page is drawn from governed records validated against pinned KEE SHACL shapes, with no violations and no warnings. Each records its own lifecycle state and confidence, and each confidence value states what it is grounded in — the evidential distance of the source sets a ceiling, and the value beneath it is set by stated factors and recorded on the record."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Confidence here ranges from "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/5/schema:additionalProperty/1/schema:value"
-                  },
-                  {
-                    "type": "text",
-                    "text": " for a criterion reported at two removes, to "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/1/schema:value"
-                  },
-                  {
-                    "type": "text",
-                    "text": " for the artifact retrieved and checksummed first-hand."
+                    "text": "The structured representation contains eight claims corresponding to the eight governed records in this collection. Publication checks reconcile the roster in both directions, verify citations and governed confidence values, and reject missing required sections or unsupported private coordinates."
                   }
                 ]
               }
@@ -1481,7 +653,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "This collection holds claims about the guide as an artifact. It is not a directory of New York City's immigrant neighborhoods, and nothing here should be read as endorsing or disputing any neighborhood's inclusion or exclusion."
+                    "text": "This page describes this published map and the sources used to examine it. It is not a directory, ranking or definition of New York City’s immigrant neighborhoods."
                   }
                 ]
               },
@@ -1490,33 +662,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "One cited source's attribution is contested between two city offices by two outlets. That disagreement is not asserted in the governed records, because the second outlet's citation could not be resolved to a retrievable document."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "The report contains an internal inconsistency: a repeated caption means its stated count of "
-                  },
-                  {
-                    "type": "value",
-                    "pointer": "/semanticRepresentation/@graph/2/schema:additionalProperty/2/schema:value"
-                  },
-                  {
-                    "type": "text",
-                    "text": " may enumerate one fewer distinct enclave. It is recorded as observed and not reconciled."
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
+                    "text": "No amended version of the map was located in the sources checked. That does not establish that an amended version does not exist at another address."
                   }
                 ]
               }
@@ -1572,6 +718,62 @@
                 "ordered": false
               }
             ]
+          },
+          {
+            "type": "section",
+            "id": "broader-enclaves",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Broader NYC enclaves work"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This article begins a broader KnoEdg.NYC effort to document NYC enclaves and communities across overlapping categories and time periods. The broader work will draw on multiple sources and will not treat this 30-entry map as a complete inventory or defining authority."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "technical-depth",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Technical depth"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "For provenance, confidence, validation and modeling details, read the "
+                  },
+                  {
+                    "type": "link",
+                    "href": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "technical data paper"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1587,314 +789,135 @@
     },
     "@graph": [
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
         "@type": "schema:Collection",
         "schema:name": "New York City Immigrant Enclaves",
         "dcterms:provenance": "Every claim on this page is drawn from two governed fixtures in a private conformance pack, each validated against pinned KEE SHACL shapes. Publication is established for the artifact described here; authorship is not, and this page does not supply it.",
         "prov:wasGeneratedBy": [
-          {
-            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture"
-          },
-          {
-            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis"
-          },
-          {
-            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest"
-          }
+          {"@id":"https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-capture"},
+          {"@id":"https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-analysis"},
+          {"@id":"https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-amendment-retest"}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-artifact",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-artifact",
         "@type": "schema:Claim",
         "schema:text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution. The same bytes are attested by an archived capture taken 2026-06-17, three weeks before the criticism: identical checksum, identical length.",
         "schema:citation": [
-          {
-            "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
-          },
-          {
-            "@id": "https://data.cityofnewyork.us/resource/t3jq-9nkf.json?%24where=record_id%3D%27NYC_GOID_000310%27"
-          }
+          {"@id":"https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"},
+          {"@id":"https://data.cityofnewyork.us/resource/t3jq-9nkf.json?%24where=record_id%3D%27NYC_GOID_000310%27"}
         ],
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.95
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Entries listed",
-            "schema:value": 30
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Source last updated",
-            "schema:value": {
-              "@value": "2026-06-05T15:44:36Z",
-              "@type": "xsd:dateTime"
-            }
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Unchanged since",
-            "schema:value": "2026-06-17 — byte-identical to an archived capture, verified 2026-08-20"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Retrieved",
-            "schema:value": {
-              "@value": "2026-08-20T15:35:30Z",
-              "@type": "xsd:dateTime"
-            }
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Byte size",
-            "schema:value": 323548
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Checksum (SHA-256)",
-            "schema:value": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Archived capture",
-            "schema:value": "https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Publisher organization type",
-            "schema:value": "Nonprofit Organization"
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.95},
+          {"@type":"schema:PropertyValue","schema:name":"Entries listed","schema:value":30},
+          {"@type":"schema:PropertyValue","schema:name":"Source last updated","schema:value":{"@value":"2026-06-05T15:44:36Z","@type":"xsd:dateTime"}},
+          {"@type":"schema:PropertyValue","schema:name":"Unchanged since","schema:value":"2026-06-17 — byte-identical to an archived capture, verified 2026-08-20"},
+          {"@type":"schema:PropertyValue","schema:name":"Retrieved","schema:value":{"@value":"2026-08-20T15:35:30Z","@type":"xsd:dateTime"}},
+          {"@type":"schema:PropertyValue","schema:name":"Byte size","schema:value":323548},
+          {"@type":"schema:PropertyValue","schema:name":"Checksum (SHA-256)","schema:value":"83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"},
+          {"@type":"schema:PropertyValue","schema:name":"Archived capture","schema:value":"https://web.archive.org/web/20260617153310id_/https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"},
+          {"@type":"schema:PropertyValue","schema:name":"Publisher organization type","schema:value":"Nonprofit Organization"}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-moia-series",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-moia-series",
         "@type": "schema:Claim",
         "schema:text": "The Mayor’s Office of Immigrant Affairs published an Immigrant Enclave Illustration Series from 2023-04-17, and states in its own end-of-tenure report that 23 illustrations were published. “Little Italy” does not appear anywhere in that 85-page report.",
-        "schema:citation": {
-          "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
-        },
+        "schema:citation": {"@id":"https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.93
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Illustrations stated",
-            "schema:value": 23
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.93},
+          {"@type":"schema:PropertyValue","schema:name":"Illustrations stated","schema:value":23}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-delta",
         "@type": "schema:Claim",
         "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in that report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
-        "schema:citation": {
-          "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
-        },
+        "schema:citation": {"@id":"https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.9
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Names added",
-            "schema:value": 5
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Derivation",
-            "schema:value": "Derived by comparison of two retrieved primary documents, not retrieved as a claim from either."
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.9},
+          {"@type":"schema:PropertyValue","schema:name":"Names added","schema:value":5},
+          {"@type":"schema:PropertyValue","schema:name":"Derivation","schema:value":"Derived by comparison of two retrieved primary documents, not retrieved as a claim from either."}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-demographic",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-criterion-demographic",
         "@type": "schema:Claim",
         "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighborhood today were born abroad. It appears in no published rule.",
-        "schema:citation": {
-          "@id": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
-        },
+        "schema:citation": {"@id":"https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.7
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Relationship to the heritage criterion",
-            "schema:value": "Definition mismatch — examined and found to be a difference in what each criterion asks, not a disagreement."
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.7},
+          {"@type":"schema:PropertyValue","schema:name":"Relationship to the heritage criterion","schema:value":"Definition mismatch — examined and found to be a difference in what each criterion asks, not a disagreement."}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-heritage",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-criterion-heritage",
         "@type": "schema:Claim",
         "schema:text": "Critics, quoted by the press, treat a neighborhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
-        "schema:citation": {
-          "@id": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
-        },
+        "schema:citation": {"@id":"https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.65
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Relationship to the demographic criterion",
-            "schema:value": "Definition mismatch — the two ask different questions of the same neighborhoods."
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.65},
+          {"@type":"schema:PropertyValue","schema:name":"Relationship to the demographic criterion","schema:value":"Definition mismatch — the two ask different questions of the same neighborhoods."}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-dcp-threshold",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-dcp-threshold",
         "@type": "schema:Claim",
         "schema:text": "A published threshold does exist elsewhere. The Department of City Planning’s 2026 report defines a “major immigrant neighborhood” as one whose foreign-born density exceeds the city average, using a threshold of 40 percent, and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own chapter, and nothing found connects it to this map.",
-        "schema:citation": {
-          "@id": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"
-        },
+        "schema:citation": {"@id":"https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.94
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Threshold",
-            "schema:value": "40 percent foreign-born"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "SoHo-Little Italy foreign-born share",
-            "schema:value": 30.5
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Applies to this map",
-            "schema:value": "Not established. The report scopes the definition to its own chapter."
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.94},
+          {"@type":"schema:PropertyValue","schema:name":"Threshold","schema:value":"40 percent foreign-born"},
+          {"@type":"schema:PropertyValue","schema:name":"SoHo-Little Italy foreign-born share","schema:value":30.5},
+          {"@type":"schema:PropertyValue","schema:name":"Applies to this map","schema:value":"Not established. The report scopes the definition to its own chapter."}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-amendment",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-amendment",
         "@type": "schema:Claim",
         "schema:text": "On 2026-07-10 the mayor said the map was “initially created by the prior administration in 2023” and that “we’re going to be making additional changes in the future … and that includes adding Little Italy to the map.” That is a commitment to a future change. No amended version has been located. The map file itself is byte-identical to an archived copy taken before the criticism, so this artifact was not amended.",
-        "schema:citation": {
-          "@id": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"
-        },
+        "schema:citation": {"@id":"https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.72
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Amendment observed",
-            "schema:value": "No. The artifact is byte-identical across a window containing the whole controversy. This does not establish that no amended version exists at another address."
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.72},
+          {"@type":"schema:PropertyValue","schema:name":"Amendment observed","schema:value":"No. The artifact is byte-identical across a window containing the whole controversy. This does not establish that no amended version exists at another address."}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#claim-host-page",
         "@type": "schema:Claim",
         "schema:text": "Checked on 2026-08-20, the URL that carried the map redirects to the program index, and that index mentions neither the program nor the map, while the map file itself is still served. Why the URL now redirects is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
-        "schema:citation": {
-          "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
-        },
+        "schema:citation": {"@id":"https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"},
         "schema:additionalProperty": [
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE lifecycle state",
-            "schema:value": "Active"
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "KEE confidence",
-            "schema:value": 0.95
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Reason for the redirect",
-            "schema:value": "Not established."
-          },
-          {
-            "@type": "schema:PropertyValue",
-            "schema:name": "Map present in archived captures",
-            "schema:value": "2026-06-16, 2026-06-17 and 2026-07-08 — identical marker counts and image set"
-          }
+          {"@type":"schema:PropertyValue","schema:name":"KEE lifecycle state","schema:value":"Active"},
+          {"@type":"schema:PropertyValue","schema:name":"KEE confidence","schema:value":0.95},
+          {"@type":"schema:PropertyValue","schema:name":"Reason for the redirect","schema:value":"Not established."},
+          {"@type":"schema:PropertyValue","schema:name":"Map present in archived captures","schema:value":"2026-06-16, 2026-06-17 and 2026-07-08 — identical marker counts and image set"}
         ]
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-capture",
         "@type": "prov:Activity",
         "dcterms:description": "Retrieval of the map artifact, the Mayor’s Office impact report, the Department of City Planning report chapter, the press reports, and the host page’s live state, each checksummed or recorded with its HTTP response.",
-        "prov:generatedAtTime": {
-          "@value": "2026-08-20T15:35:30Z",
-          "@type": "xsd:dateTime"
-        }
+        "prov:generatedAtTime": {"@value":"2026-08-20T15:35:30Z","@type":"xsd:dateTime"}
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-analysis",
         "@type": "prov:Activity",
         "dcterms:description": "Comparison of the retrieved documents: the five-name difference between the map and the office’s own series, and the examination that classified the two selection criteria as asking different questions rather than disagreeing.",
-        "prov:generatedAtTime": {
-          "@value": "2026-08-20T20:46:00Z",
-          "@type": "xsd:dateTime"
-        }
+        "prov:generatedAtTime": {"@value":"2026-08-20T20:46:00Z","@type":"xsd:dateTime"}
       },
       {
-        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest",
+        "@id": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/#activity-amendment-retest",
         "@type": "prov:Activity",
         "dcterms:description": "Re-test of whether an amended map exists at another address, run before this collection is written about at length. The map file at its known address was re-fetched and is unchanged; the publisher's sitemap and the retrieved reporting were searched. A sweep of the publisher's entire media library could not be run and is recorded as uncovered.",
-        "prov:generatedAtTime": {
-          "@value": "2026-08-20T23:30:00Z",
-          "@type": "xsd:dateTime"
-        }
+        "prov:generatedAtTime": {"@value":"2026-08-20T23:30:00Z","@type":"xsd:dateTime"}
       }
     ]
   },
