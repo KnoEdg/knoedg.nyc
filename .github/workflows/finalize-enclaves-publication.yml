@@ -1,0 +1,126 @@
+name: Finalize enclaves publication
+
+on:
+  push:
+    branches:
+      - publish/inside-map-30-immigrant-enclaves-final
+    paths:
+      - ".github/workflows/finalize-enclaves-publication.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install renderer dependencies
+        run: python3 -m pip install --disable-pip-version-check jsonschema==4.25.0 PyLD==2.0.4
+
+      - name: Regenerate canonical publication outputs
+        run: |
+          python3 scripts/generate_nyc_immigrant_enclaves_view.py
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py
+
+      - name: Restore normal data-paper generator
+        run: |
+          cat > scripts/generate_nyc_immigrant_enclaves_paper.py <<'PY'
+          #!/usr/bin/env python3
+          """Generate the NYC Immigrant Enclaves data paper from its governed artifact.
+
+          No --manifest: a data paper cites a public view's claims and holds none of its
+          own, so it carries no record counts to publish. The renderer refuses one.
+          """
+
+          from pathlib import Path
+          import sys
+
+          from generate_fixture_page import main
+
+          ROOT = Path(__file__).resolve().parents[1]
+
+          if __name__ == "__main__":
+              defaults = [
+                  "--artifact", str(ROOT / "data/fixtures/nyc-immigrant-enclaves-data-paper.json"),
+                  "--template", str(ROOT / "templates/data-paper.html"),
+                  "--html", str(ROOT / "nyc-immigrant-enclaves-paper/index.html"),
+                  "--jsonld", str(ROOT / "nyc-immigrant-enclaves-paper/index.jsonld"),
+              ]
+              sys.argv[1:1] = defaults
+              raise SystemExit(main())
+          PY
+          chmod +x scripts/generate_nyc_immigrant_enclaves_paper.py
+
+      - name: Update canonical slug filter and checksum ledger
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          workflow = Path('.github/workflows/validate-nyc-boundary-counts.yml')
+          text = workflow.read_text()
+          text = text.replace('"nyc-immigrant-enclaves/**"', '"inside-the-map-of-30-immigrant-enclaves/**"')
+          workflow.write_text(text)
+
+          ledger = Path('data/fixtures/SHA256SUMS')
+          paths = [
+              'assets/nyc-immigrant-enclaves-map.jpg',
+              'data/fixtures/nyc-immigrant-enclaves-public-view.json',
+              'data/fixtures/nyc-immigrant-enclaves-data-paper.json',
+              'scripts/generate_nyc_immigrant_enclaves_view.py',
+              'scripts/generate_nyc_immigrant_enclaves_paper.py',
+              'templates/data-paper.html',
+              'schemas/data-paper/v1',
+              'inside-the-map-of-30-immigrant-enclaves/index.html',
+              'inside-the-map-of-30-immigrant-enclaves/index.jsonld',
+              'inside-the-map-of-30-immigrant-enclaves/record-counts.json',
+              'nyc-immigrant-enclaves-paper/index.html',
+              'nyc-immigrant-enclaves-paper/index.jsonld',
+          ]
+          drop_prefixes = (
+              'nyc-immigrant-enclaves/',
+              'inside-the-map-of-30-immigrant-enclaves/',
+          )
+          drop_exact = set(paths)
+          kept = []
+          for line in ledger.read_text().splitlines():
+              if not line.strip():
+                  continue
+              path = line.split(None, 1)[1]
+              if path in drop_exact or path.startswith(drop_prefixes):
+                  continue
+              kept.append(line)
+          for path in paths:
+              digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
+              kept.append(f'{digest}  {path}')
+          ledger.write_text('\n'.join(kept) + '\n')
+          PY
+
+      - name: Verify final publication tree
+        run: |
+          python3 scripts/generate_nyc_immigrant_enclaves_view.py --check
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+          python3 scripts/validate_jsonld.py
+          sha256sum --check data/fixtures/SHA256SUMS
+          test ! -e nyc-immigrant-enclaves/index.html
+          grep -q '/inside-the-map-of-30-immigrant-enclaves/' index.html
+          grep -q '/inside-the-map-of-30-immigrant-enclaves/' nyc-immigrant-enclaves-paper/index.html
+
+      - name: Commit clean generated publication
+        run: |
+          mkdir -p docs
+          printf '%s\n' 'Remove this trigger after the one-shot finalizer has committed.' > docs/.publication-trigger
+          git rm .github/workflows/finalize-enclaves-publication.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'publish: finalize immigrant enclaves article'
+          git push origin HEAD:publish/inside-map-30-immigrant-enclaves-final
