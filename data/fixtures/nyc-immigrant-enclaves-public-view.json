@@ -1,0 +1,1070 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "fixture-dependent-public-view",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+  "artifactVersion": "2026-08-21.1",
+  "rendererContract": "fixture-page/v2",
+  "contentModel": "fixture-content-blocks/v1",
+  "issuedAt": "2026-08-21T00:40:00Z",
+  "integrity": {
+    "mechanism": "immutable-git-blob-and-byte-equality",
+    "valueProvidedByTransport": true,
+    "compatibilityProjection": "generated-from-contentBlocks"
+  },
+  "countingGranularity": "Active governed assertion metadata records in the NYC Immigrant Enclaves thematic collection. The contradiction record relating two of them is not counted as a record of its own.",
+  "activeRecordCount": 8,
+  "sourceGroups": [
+    {
+      "id": "nyc-tourism",
+      "label": "New York City Tourism + Conventions",
+      "count": 2,
+      "provenanceCluster": "New York City Tourism + Conventions"
+    },
+    {
+      "id": "nyc-government",
+      "label": "City of New York",
+      "count": 2,
+      "provenanceCluster": "City of New York"
+    },
+    {
+      "id": "press",
+      "label": "Press reports",
+      "count": 3,
+      "provenanceCluster": "Independent news outlets"
+    },
+    {
+      "id": "derived",
+      "label": "Derived by comparison",
+      "count": 1,
+      "provenanceCluster": "This project"
+    }
+  ],
+  "page": {
+    "language": "en",
+    "title": "New York City Immigrant Enclaves",
+    "description": "What can be established about the disputed NYC immigrant enclaves map, and what cannot: its publisher, its relationship to an earlier city series, two selection criteria that ask different questions, and the authorship nobody has claimed.",
+    "canonical": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/nyc-immigrant-enclaves/index.jsonld",
+      "title": "NYC Immigrant Enclaves structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "contentBlocks": [
+      {
+        "type": "section",
+        "id": "nyc-immigrant-enclaves",
+        "heading": [
+          {
+            "type": "text",
+            "text": "New York City Immigrant Enclaves"
+          }
+        ],
+        "children": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "In July 2026 a map of New York City's immigrant enclaves drew wide criticism for leaving out Little Italy. Almost everything written about it since has had to name a publisher and a date in its first sentence, and the accounts do not agree with one another."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This page holds what can be established about that map, and states what cannot. It is built from "
+              },
+              {
+                "type": "value",
+                "pointer": "/activeRecordCount"
+              },
+              {
+                "type": "text",
+                "text": " governed records, each traceable to a retrieved document. Where a question has no answer in the evidence, the answer here is that it has no answer — not a plausible reconstruction."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A data paper discusses this collection at length: "
+              },
+              {
+                "type": "link",
+                "href": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A map with no publisher"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". It cites the claims on this page and holds none of its own."
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "the-artifact",
+            "heading": [
+              {
+                "type": "text",
+                "text": "The map"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The footnote is a "
+                  },
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "data-source citation, not a byline"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ". It credits an office as the source of the information; it does not say who made the map. The file itself carries no publisher mark, no date, no designer credit, and no authorship metadata of any kind."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "File last modified "
+                  },
+                  {
+                    "type": "time",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/3/schema:value/@value",
+                    "format": "datetime"
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "where-the-list-came-from",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Where the list came from"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Mayor’s Office of Immigrant Affairs published an Immigrant Enclave Illustration Series from 2023-04-17, and states in its own end-of-tenure report that 23 illustrations were published. “Little Italy” does not appear anywhere in that 85-page report."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Four of the five added names refer to communities at the centre of contested public argument."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " No source found identifies who added them, and this page does not guess. The difference between the two documents is a fact about the documents; its authorship is not."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "the-two-criteria",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Two criteria that are not in conflict"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Two selection criteria are usually reported as opposing answers to one question: whether Little Italy belongs on the map. They are not opposing answers. They are different questions."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The demographic criterion. "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighbourhood today were born abroad. It appears in no published rule."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The heritage criterion. "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "Critics, quoted by the press, treat a neighbourhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A neighbourhood can satisfy either, both, or neither, and both can be true of the same place at once. "
+                  },
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Neither criterion was ever published as a rule."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Both exist only as statements made to reporters, which is why no adjudication between them is possible and none is attempted here."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This collection records the relationship between them explicitly rather than leaving it to silence: the apparent conflict was examined, and its cause is recorded as a difference in what each criterion is about."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "the-published-threshold",
+            "heading": [
+              {
+                "type": "text",
+                "text": "A published threshold, and what it does not explain"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A published threshold does exist elsewhere. The Department of City Planning’s 2026 report defines a “major immigrant neighborhood” as one whose foreign-born density exceeds the city average, using a threshold of 40 percent, and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own chapter, and nothing found connects it to this map."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "This is the point at which a reader is most likely to draw a conclusion the evidence does not support."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " A published threshold exists; a neighbourhood falls below it; the neighbourhood is missing from a map. That sequence is not a chain of cause. Nothing found shows the map's authors read the report, cited it, or applied any threshold at all."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "It appears here because leaving it out would be its own distortion. The absence of a link is on the record, rather than assumed in either direction."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "what-happened-next",
+            "heading": [
+              {
+                "type": "text",
+                "text": "What happened next"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "On 2026-07-10 the mayor said the map was “initially created by the prior administration in 2023” and that “we’re going to be making additional changes in the future … and that includes adding Little Italy to the map.” That is a commitment to a future change. No amended version has been located."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the programme nor the map, while the map file itself is still served. Why the page was withdrawn is not established."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A promise is not an edit."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " As of the date this page was issued the map still lists "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/2/schema:value"
+                  },
+                  {
+                    "type": "text",
+                    "text": " entries and Little Italy is not among them. This collection records the commitment and does not record an amendment, because none has been observed."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "not-established",
+            "heading": [
+              {
+                "type": "text",
+                "text": "What is not established"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Stated plainly, because a collection that only records what it found misrepresents itself:"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "items": [
+                  [
+                    {
+                      "type": "strong",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Who designed the map."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " No source names a designer for this artifact."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "strong",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Who chose the five added names,"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " and on whose authority."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "strong",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Whether any selection criterion was applied at all,"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " published or otherwise."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "strong",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Why the page was withdrawn."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " A programme page ending with its programme is ordinary; nothing dates the withdrawal against the criticism."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "strong",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Whether the promised addition has happened."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " No amended version has been located."
+                    }
+                  ]
+                ],
+                "ordered": false
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "published-material",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Published material"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "items": [
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Mayor's Office of Immigrant Affairs — impact report"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type": "link",
+                      "href": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Department of City Planning — The Newest New Yorkers 2026, Chapter 3"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "ordered": false
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "No source in this collection is openly licensed."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " That is unusual for this project, and it is recorded rather than glossed."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The map and the page that carried it state a copyright and no licence: no redistribution permission was located, so this page describes the artifact and does not reproduce it. The two city reports are all rights reserved under the city's own terms of use — municipal publications are not public domain. For the press reports cited, no licence is asserted and none was determined."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This collection publishes claims "
+                  },
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "about"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " those documents. It redistributes none of them."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "validation",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Validation"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Every claim on this page is drawn from governed records validated against pinned KEE SHACL shapes, with no violations and no warnings. Each records its own lifecycle state and confidence, and each confidence value states what it is grounded in — the evidential distance of the source sets a ceiling, and the value beneath it is set by stated factors and recorded on the record."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Confidence here ranges from "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/5/schema:additionalProperty/1/schema:value"
+                  },
+                  {
+                    "type": "text",
+                    "text": " for a criterion reported at two removes, to "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/1/schema:additionalProperty/1/schema:value"
+                  },
+                  {
+                    "type": "text",
+                    "text": " for the artifact retrieved and checksummed first-hand."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "limitations",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Limitations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This collection holds claims about the guide as an artifact. It is not a directory of New York City's immigrant neighbourhoods, and nothing here should be read as endorsing or disputing any neighbourhood's inclusion or exclusion."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "One cited source's attribution is contested between two city offices by two outlets. That disagreement is not asserted in the governed records, because the second outlet's citation could not be resolved to a retrievable document."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The office's own report contains an internal inconsistency: a repeated caption means its stated count of "
+                  },
+                  {
+                    "type": "value",
+                    "pointer": "/semanticRepresentation/@graph/2/schema:additionalProperty/2/schema:value"
+                  },
+                  {
+                    "type": "text",
+                    "text": " may enumerate one fewer distinct enclave. It is recorded as observed and not reconciled."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Whether an amended map exists at an address nothing links to has not been determined. Re-checked on 2026-08-20: the map file at its known address is byte-for-byte unchanged, the publisher's own sitemap of 10,075 pages contains no enclave-map page, and no retrieved reporting shows or links an amended map. A sweep of the publisher's entire media library could not be run, so that space is uncovered. The amendment has not been observed, which is not the same as establishing that it did not happen."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "history",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Publication history"
+              }
+            ],
+            "children": [
+              {
+                "type": "list",
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "Sources retrieved and checksummed — "
+                    },
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/9/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "Documents compared and the criteria examined — "
+                    },
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/10/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "Amendment re-tested, still unobserved — "
+                    },
+                    {
+                      "type": "time",
+                      "pointer": "/semanticRepresentation/@graph/11/prov:generatedAtTime/@value",
+                      "format": "datetime"
+                    }
+                  ]
+                ],
+                "ordered": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/",
+        "@type": "schema:Collection",
+        "schema:name": "New York City Immigrant Enclaves",
+        "dcterms:provenance": "Every claim on this page is drawn from two governed fixtures in a private conformance pack, each validated against pinned KEE SHACL shapes. Publication is established for the artifact described here; authorship is not, and this page does not supply it.",
+        "prov:wasGeneratedBy": [
+          {
+            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis"
+          },
+          {
+            "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-artifact",
+        "@type": "schema:Claim",
+        "schema:text": "A map titled “NEW YORK CITY IMMIGRANT ENCLAVES”, footnoted “Source: NYC Mayor’s Office of Immigrant Affairs”, lists 30 numbered enclaves with transit access and does not include Little Italy. It was published by New York City Tourism + Conventions, established from its host page’s own source rather than from press attribution. The same bytes are attested by an archived capture taken 2026-06-17, three weeks before the criticism: identical checksum, identical length.",
+        "schema:citation": {
+          "@id": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Entries listed",
+            "schema:value": 30
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Source last updated",
+            "schema:value": {
+              "@value": "2026-06-05T15:44:36Z",
+              "@type": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Unchanged since",
+            "schema:value": "2026-06-17 — byte-identical to an archived capture, verified 2026-08-20"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-moia-series",
+        "@type": "schema:Claim",
+        "schema:text": "The Mayor’s Office of Immigrant Affairs published an Immigrant Enclave Illustration Series from 2023-04-17, and states in its own end-of-tenure report that 23 illustrations were published. “Little Italy” does not appear anywhere in that 85-page report.",
+        "schema:citation": {
+          "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.93
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Illustrations stated",
+            "schema:value": 23
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-delta",
+        "@type": "schema:Claim",
+        "schema:text": "Comparing the two, exactly five names appear on the map and nowhere in the office’s own report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural. The map is an extension of the series, not a subset of it. Who made the additions is not established.",
+        "schema:citation": {
+          "@id": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.9
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Names added",
+            "schema:value": 5
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Derivation",
+            "schema:value": "Derived by comparison of two retrieved primary documents, not retrieved as a claim from either."
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-demographic",
+        "@type": "schema:Claim",
+        "schema:text": "A city spokesperson, quoted by one outlet, said the map “highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.” This criterion asks how many residents of a neighbourhood today were born abroad. It appears in no published rule.",
+        "schema:citation": {
+          "@id": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.7
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Relationship to the heritage criterion",
+            "schema:value": "Definition mismatch — examined and found to be a difference in what each criterion asks, not a disagreement."
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-criterion-heritage",
+        "@type": "schema:Claim",
+        "schema:text": "Critics, quoted by the press, treat a neighbourhood’s history of immigrant settlement as the basis for inclusion, regardless of how many residents were born abroad today. This criterion also appears in no published rule.",
+        "schema:citation": {
+          "@id": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.65
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Relationship to the demographic criterion",
+            "schema:value": "Definition mismatch — the two ask different questions of the same neighbourhoods."
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-dcp-threshold",
+        "@type": "schema:Claim",
+        "schema:text": "A published threshold does exist elsewhere. The Department of City Planning’s 2026 report defines a “major immigrant neighborhood” as one whose foreign-born density exceeds the city average, using a threshold of 40 percent, and records SoHo-Little Italy at 30.5 percent. The report scopes that definition to its own chapter, and nothing found connects it to this map.",
+        "schema:citation": {
+          "@id": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.94
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Threshold",
+            "schema:value": "40 percent foreign-born"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "SoHo-Little Italy foreign-born share",
+            "schema:value": 30.5
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Applies to this map",
+            "schema:value": "Not established. The report scopes the definition to its own chapter."
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-amendment",
+        "@type": "schema:Claim",
+        "schema:text": "On 2026-07-10 the mayor said the map was “initially created by the prior administration in 2023” and that “we’re going to be making additional changes in the future … and that includes adding Little Italy to the map.” That is a commitment to a future change. No amended version has been located. The map file itself is byte-identical to an archived copy taken before the criticism, so this artifact was not amended.",
+        "schema:citation": {
+          "@id": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.72
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Amendment observed",
+            "schema:value": "No. The artifact is byte-identical across a window containing the whole controversy. This does not establish that no amended version exists at another address."
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#claim-host-page",
+        "@type": "schema:Claim",
+        "schema:text": "Checked on 2026-08-20, the page that carried the map redirects away and its replacement mentions neither the programme nor the map, while the map file itself is still served. Why the page was withdrawn is not established. Archived copies of the page from mid-June and from 2026-07-08 still carry the map, so it was on the page on the day the criticism was first reported.",
+        "schema:citation": {
+          "@id": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE lifecycle state",
+            "schema:value": "Active"
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "KEE confidence",
+            "schema:value": 0.95
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Reason for withdrawal",
+            "schema:value": "Not established."
+          },
+          {
+            "@type": "schema:PropertyValue",
+            "schema:name": "Map present in archived captures",
+            "schema:value": "2026-06-16, 2026-06-17 and 2026-07-08 — identical marker counts and image set"
+          }
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-capture",
+        "@type": "prov:Activity",
+        "dcterms:description": "Retrieval of the map artifact, the Mayor’s Office impact report, the Department of City Planning report chapter, the press reports, and the host page’s live state, each checksummed or recorded with its HTTP response.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-20T15:35:30Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-analysis",
+        "@type": "prov:Activity",
+        "dcterms:description": "Comparison of the retrieved documents: the five-name difference between the map and the office’s own series, and the examination that classified the two selection criteria as asking different questions rather than disagreeing.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-20T20:46:00Z",
+          "@type": "xsd:dateTime"
+        }
+      },
+      {
+        "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/#activity-amendment-retest",
+        "@type": "prov:Activity",
+        "dcterms:description": "Re-test of whether an amended map exists at another address, run before this collection is written about at length. The map file at its known address was re-fetched and is unchanged; the publisher's sitemap and the retrieved reporting were searched. A sweep of the publisher's entire media library could not be run and is recorded as uncovered.",
+        "prov:generatedAtTime": {
+          "@value": "2026-08-20T23:30:00Z",
+          "@type": "xsd:dateTime"
+        }
+      }
+    ]
+  },
+  "provenanceBoundary": "Public-safe projection of governed fixture facts; private repository coordinates are intentionally omitted."
+}
