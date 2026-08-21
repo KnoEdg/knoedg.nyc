@@ -7,6 +7,23 @@ Versions follow [Semantic Versioning](https://semver.org/): while this project
 is pre-1.0, a MINOR bump means new pages or capability, a PATCH bump means
 fixes only.
 
+## [0.5.1] - 2026-08-21
+
+### Changed
+
+- **American spelling across every published page.** This is a New York City
+  resource read by an American audience; *licence*, *neighbourhood*,
+  *organisation*, *programme*, *centre* and *authorise* were British forms.
+  53 conversions.
+- **Quotations and identifiers were checked first.** No British form appeared
+  inside a direct quotation, so no source's own words were altered, and none
+  appeared inside a URL or IRI, so no identifier broke. *analysis* is the
+  correct American noun and is **not** converted — one occurrence is an IRI
+  fragment.
+- The published rights statement no longer cites an internal governance
+  document by name. The determination is unchanged: public accessibility is
+  still not permission.
+
 ## [0.5.0] - 2026-08-21
 
 ### Added
@@ -111,7 +128,7 @@ fixes only.
 ### Notes
 
 - The collection governs a **map as an artifact**, not New York City's
-  immigrant neighbourhoods. It takes no position on which neighbourhoods
+  immigrant neighborhoods. It takes no position on which neighborhoods
   belong on any such map.
 - The map itself is **cited and not reproduced**: no redistribution permission
   was located for it, so the pages describe and link the artifact and publish
