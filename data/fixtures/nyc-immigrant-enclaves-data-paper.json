@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.8",
+  "artifactVersion": "2026-08-21.9",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T12:20:00Z",
+  "issuedAt": "2026-08-21T13:00:00Z",
   "citesPublicView": "https://knoedg.nyc/nyc-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -620,7 +620,7 @@
       {
         "@id": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
         "@type": "schema:ScholarlyArticle",
-        "schema:name": "A map with no publisher: governing the NYC Immigrant Enclaves guide as an artifact",
+        "schema:name": "The NYC Immigrant Enclaves map — what the record establishes, and what it does not",
         "schema:citation": {
           "@id": "https://knoedg.nyc/nyc-immigrant-enclaves/"
         },

@@ -3,10 +3,10 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves/",
-  "artifactVersion": "2026-08-21.11",
+  "artifactVersion": "2026-08-21.12",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T12:20:00Z",
+  "issuedAt": "2026-08-21T13:00:00Z",
   "integrity": {
     "mechanism": "immutable-git-blob-and-byte-equality",
     "valueProvidedByTransport": true,
@@ -101,7 +101,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "A map with no publisher"
+                    "text": "The NYC Immigrant Enclaves map"
                   }
                 ]
               },
