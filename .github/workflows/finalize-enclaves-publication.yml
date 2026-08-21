@@ -124,3 +124,5 @@ jobs:
           git add -A
           git commit -m 'publish: finalize immigrant enclaves article'
           git push origin HEAD:publish/inside-map-30-immigrant-enclaves-final
+
+# Triggered after initial workflow registration.
