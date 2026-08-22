@@ -1,6 +1,10 @@
 name: TEMP Materialize NYC Boundaries split
 
 on:
+  pull_request:
+    paths:
+      - "data/fixtures/.tmp-boundary-transfer/**"
+      - ".github/workflows/tmp-materialize-nyc-boundaries-split.yml"
   push:
     branches:
       - codex/nyc-boundaries-surface-split
