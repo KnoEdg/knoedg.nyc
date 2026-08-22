@@ -3,10 +3,10 @@
   "artifactType": "data-paper",
   "schema": "https://knoedg.nyc/schemas/data-paper/v1",
   "resource": "https://knoedg.nyc/nyc-immigrant-enclaves-paper/",
-  "artifactVersion": "2026-08-21.14",
+  "artifactVersion": "2026-08-22.1",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
-  "issuedAt": "2026-08-21T21:50:32Z",
+  "issuedAt": "2026-08-22T10:16:11Z",
   "citesPublicView": "https://knoedg.nyc/inside-the-map-of-30-immigrant-enclaves/",
   "page": {
     "language": "en",
@@ -907,7 +907,7 @@
             "heading": [
               {
                 "type": "text",
-                "text": "Validation evidence"
+                "text": "Confidence assessments"
               }
             ],
             "children": [
@@ -916,7 +916,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The confidence value recorded for each governed record."
+                    "text": "Confidence qualifies each assertion, not the source itself. The linked local assertion record carries the confidence basis, source references, timestamps and related public technical metadata."
                   }
                 ]
               },
@@ -926,50 +926,130 @@
                 "items": [
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/map-artifact.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "\"NEW YORK CITY IMMIGRANT ENCLAVES\" map, as published by NYC Tourism + Conventions"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-amendment-commitment | 0.72"
+                      "text": " — High Confidence · 0.95"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-dcp-threshold.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "DCP's chapter-scoped definition of a major immigrant neighborhood, and SoHo-Little Italy's figures under it"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-criterion-dcp-threshold | 0.94"
+                      "text": " — High Confidence · 0.94"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-demographic.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Demographic selection criterion for the NYC Immigrant Enclaves map, as reported"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-criterion-demographic | 0.70"
+                      "text": " — Moderate Confidence · 0.70"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-heritage.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Heritage selection criterion for the NYC Immigrant Enclaves map, as asserted by critics"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-criterion-heritage | 0.65"
+                      "text": " — Moderate Confidence · 0.65"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/host-page-state.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Host page URL redirects while the map asset is still served, observed 2026-08-20"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-delta | 0.90"
+                      "text": " — High Confidence · 0.95"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/moia-series.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "MOIA Immigrant Enclave Illustration Series, per MOIA's own end-of-tenure impact report"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-host-page-state | 0.95"
+                      "text": " — High Confidence · 0.93"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/amendment-commitment.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Public commitment to add Little Italy to the map, 2026-07-10"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-map-artifact | 0.95"
+                      "text": " — Moderate Confidence · 0.72"
                     }
                   ],
                   [
                     {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/delta.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "The map is the MOIA series plus five names and three structural splits"
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "text": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-enclaves-moia-series | 0.93"
+                      "text": " — High Confidence · 0.90"
                     }
                   ]
                 ]
