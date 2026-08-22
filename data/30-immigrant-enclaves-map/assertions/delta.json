@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/delta.json",
+  "@type": "schema:Claim",
+  "schema:name": "The map is the MOIA series plus five names and three structural splits",
+  "schema:text": "Comparing the map's 30 entries against the 23 caption entries in MOIA's impact report, exactly five names appear on the map and nowhere in the report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural: the map splits Koreatown into Manhattan and Queens entries, splits Little Guyana into Queens and Bronx entries, and lists Guyana Gateway separately, where the report combines them in single captions. The map is therefore an EXTENSION of the MOIA series, not a subset of it. Separate July 10 evidence adds provenance without changing that document comparison: the NYC Mayor's Office transcript states that the current administration added a few neighborhoods after inheriting the map, and NBC New York reports mayoral aides identifying Little Egypt, Little Odessa, Little Palestine and Little Senegal as administration additions. The individual selector and the provenance of Little Poland remain unestablished.",
+  "dcterms:description": "High confidence because the comparison is re-derivable from the cited map and MOIA report. The score is capped by the weaker input and leaves a margin for transcription and caption-matching risk.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#HighConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.90",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json"
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nbc-new-york-map-additions-report.json"
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json"
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-mayors-office-july-10-2026-transcript.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T20:46:00+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

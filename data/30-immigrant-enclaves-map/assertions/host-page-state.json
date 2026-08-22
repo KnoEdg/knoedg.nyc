@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/host-page-state.json",
+  "@type": "schema:Claim",
+  "schema:name": "Host page URL redirects while the map asset is still served, observed 2026-08-20",
+  "schema:text": "Requested live on 2026-08-20: the NYC Neighborhood Passport program page returns HTTP 308 to /worldcup26/, and that redirect target returns HTTP 200 containing zero occurrences of \"enclave\", \"immigrant\", \"Cultural Map\", \"Neighborhood Passport\", \"Mamdani\", or \"Team Wonder\". The map asset itself returns HTTP 200. The URL redirects; the asset is still served. Whether anyone withdrew the page is not established -- a redirect is what was observed.",
+  "dcterms:description": "High confidence because the HTTP status codes and occurrence counts were observed first-hand and can be re-run. The score qualifies the observed page and asset state, not the reason for the redirect.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#HighConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.95",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-neighborhood-passport-host-page.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T15:36:57+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-08-20T15:36:57+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

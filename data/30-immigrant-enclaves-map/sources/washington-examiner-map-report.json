@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/washington-examiner-map-report.json",
+  "@type": "prov:Entity",
+  "schema:name": "Washington Examiner — immigrant-enclaves map report",
+  "schema:url": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+  "dcterms:rights": "Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and the governed collection did not retrieve or interpret the outlet's terms of service."
+}

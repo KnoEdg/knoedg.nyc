@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-heritage.json",
+  "@type": "schema:Claim",
+  "schema:name": "Heritage selection criterion for the NYC Immigrant Enclaves map, as asserted by critics",
+  "schema:text": "Blaze Media reports that Council Member Joann Ariola (R-Queens) told the New York Post: \"They were able to get a Little Bhod-Tibet in there, but what about the original 'Little neighborhood,' Little Italy?\" and \"And what about areas like Woodlawn, in the Bronx, which are home to plenty of Irish immigrants? Do the Irish and Italians not count for the mayor's office?\" The predicate is historic immigrant-settlement significance, irrespective of present-day foreign-born share. Asserted in press statements; published as a rule nowhere.",
+  "dcterms:description": "Moderate confidence because the operative statements are quoted verbatim but relayed through one outlet reporting what was said to another outlet that was not retrieved.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.65",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/blaze-little-italy-map-report.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T20:46:00+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-07-09T17:30:00+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

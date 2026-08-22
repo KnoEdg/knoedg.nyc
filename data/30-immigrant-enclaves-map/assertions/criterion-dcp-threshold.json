@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-dcp-threshold.json",
+  "@type": "schema:Claim",
+  "schema:name": "DCP's chapter-scoped definition of a major immigrant neighborhood, and SoHo-Little Italy's figures under it",
+  "schema:text": "The New York City Department of City Planning, in The Newest New Yorkers, 2026, Chapter 3, states: \"Neighborhoods that have both a large number of immigrants, as well as high immigrant concentrations, are defined as major immigrant neighborhoods. To qualify as a major immigrant neighborhood in this chapter, foreign-born density had to exceed the city average—a threshold of 40 percent was used—and the 20 neighborhoods with the largest foreign-born populations were then selected.\" The same chapter's Manhattan neighborhood table records SoHo-Little Italy with a total population of 22,167, a foreign-born population of 6,769, and a foreign-born share of total population of 30.5 percent -- below the 40 percent threshold.",
+  "dcterms:description": "High confidence because the definition is quoted from the Department of City Planning's own retrieved report chapter and the figures are re-derivable from its embedded table. A small margin remains for the table-parsing step.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#HighConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.94",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/dcp-newest-new-yorkers-2026-chapter-3.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T21:11:00+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-06-11T00:00:00+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/",
+      "@type": "schema:Dataset",
+      "schema:name": "30 Immigrant Enclaves Map",
+      "schema:description": "Public technical collection for the governed map artifact containing 30 immigrant-enclave labels and the assertions, sources, provenance and rights determinations used to publish it.",
+      "schema:hasPart": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/amendment-commitment.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-dcp-threshold.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-demographic.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-heritage.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/delta.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/host-page-state.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/map-artifact.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/moia-series.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/amny-little-italy-map-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nbc-new-york-map-additions-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/dcp-newest-new-yorkers-2026-chapter-3.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-mayors-office-july-10-2026-transcript.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-neighborhood-passport-host-page.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/blaze-little-italy-map-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/washington-examiner-map-report.json"
+        }
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/amendment-commitment.json",
+      "@type": "schema:Claim",
+      "schema:name": "Public commitment to add Little Italy to the map, 2026-07-10",
+      "schema:text": "amNewYork reports that Mayor Zohran Mamdani, answering a question at an unrelated Manhattan press conference on Friday 2026-07-10, said the map was \"initially created by the prior administration in 2023\" and that \"It's clearly not an exhaustive list of the more than 200 ethnic communities that call our city home. We're going to be making additional changes in the future to reflect that, and that includes adding Little Italy to the map.\" A commitment to a future change, not a record of one.",
+      "dcterms:description": "Moderate confidence because the operative statement is quoted verbatim from one outlet's report of the press conference. The score remains below the reporting ceiling because adjacent provenance reporting is paraphrased.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.72",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/amny-little-italy-map-report.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T20:46:00+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-07-10T18:45:35+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-dcp-threshold.json",
+      "@type": "schema:Claim",
+      "schema:name": "DCP's chapter-scoped definition of a major immigrant neighborhood, and SoHo-Little Italy's figures under it",
+      "schema:text": "The New York City Department of City Planning, in The Newest New Yorkers, 2026, Chapter 3, states: \"Neighborhoods that have both a large number of immigrants, as well as high immigrant concentrations, are defined as major immigrant neighborhoods. To qualify as a major immigrant neighborhood in this chapter, foreign-born density had to exceed the city average—a threshold of 40 percent was used—and the 20 neighborhoods with the largest foreign-born populations were then selected.\" The same chapter's Manhattan neighborhood table records SoHo-Little Italy with a total population of 22,167, a foreign-born population of 6,769, and a foreign-born share of total population of 30.5 percent -- below the 40 percent threshold.",
+      "dcterms:description": "High confidence because the definition is quoted from the Department of City Planning's own retrieved report chapter and the figures are re-derivable from its embedded table. A small margin remains for the table-parsing step.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#HighConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.94",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/dcp-newest-new-yorkers-2026-chapter-3.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T21:11:00+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-06-11T00:00:00+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-demographic.json",
+      "@type": "schema:Claim",
+      "schema:name": "Demographic selection criterion for the NYC Immigrant Enclaves map, as reported",
+      "schema:text": "The Washington Examiner reports that a City Hall spokesperson, in a statement to the New York Post, defended the map by saying it \"highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.\" The predicate is present-tense foreign-born population share. This wording appears on no Mayor's Office of Immigrant Affairs page or document inspected by the governed collection, and in no published rule.",
+      "dcterms:description": "Moderate confidence because the criterion wording is quoted verbatim but relayed by one outlet, while a conflicting office attribution reported elsewhere remains unresolved.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.70",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/washington-examiner-map-report.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T20:46:00+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-07-09T14:24:16+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-heritage.json",
+      "@type": "schema:Claim",
+      "schema:name": "Heritage selection criterion for the NYC Immigrant Enclaves map, as asserted by critics",
+      "schema:text": "Blaze Media reports that Council Member Joann Ariola (R-Queens) told the New York Post: \"They were able to get a Little Bhod-Tibet in there, but what about the original 'Little neighborhood,' Little Italy?\" and \"And what about areas like Woodlawn, in the Bronx, which are home to plenty of Irish immigrants? Do the Irish and Italians not count for the mayor's office?\" The predicate is historic immigrant-settlement significance, irrespective of present-day foreign-born share. Asserted in press statements; published as a rule nowhere.",
+      "dcterms:description": "Moderate confidence because the operative statements are quoted verbatim but relayed through one outlet reporting what was said to another outlet that was not retrieved.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.65",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/blaze-little-italy-map-report.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T20:46:00+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-07-09T17:30:00+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/delta.json",
+      "@type": "schema:Claim",
+      "schema:name": "The map is the MOIA series plus five names and three structural splits",
+      "schema:text": "Comparing the map's 30 entries against the 23 caption entries in MOIA's impact report, exactly five names appear on the map and nowhere in the report: Little Egypt, Little Odessa, Little Palestine, Little Poland, Little Senegal. The remaining difference is structural: the map splits Koreatown into Manhattan and Queens entries, splits Little Guyana into Queens and Bronx entries, and lists Guyana Gateway separately, where the report combines them in single captions. The map is therefore an EXTENSION of the MOIA series, not a subset of it. Separate July 10 evidence adds provenance without changing that document comparison: the NYC Mayor's Office transcript states that the current administration added a few neighborhoods after inheriting the map, and NBC New York reports mayoral aides identifying Little Egypt, Little Odessa, Little Palestine and Little Senegal as administration additions. The individual selector and the provenance of Little Poland remain unestablished.",
+      "dcterms:description": "High confidence because the comparison is re-derivable from the cited map and MOIA report. The score is capped by the weaker input and leaves a margin for transcription and caption-matching risk.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#HighConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.90",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nbc-new-york-map-additions-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json"
+        },
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-mayors-office-july-10-2026-transcript.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T20:46:00+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/host-page-state.json",
+      "@type": "schema:Claim",
+      "schema:name": "Host page URL redirects while the map asset is still served, observed 2026-08-20",
+      "schema:text": "Requested live on 2026-08-20: the NYC Neighborhood Passport program page returns HTTP 308 to /worldcup26/, and that redirect target returns HTTP 200 containing zero occurrences of \"enclave\", \"immigrant\", \"Cultural Map\", \"Neighborhood Passport\", \"Mamdani\", or \"Team Wonder\". The map asset itself returns HTTP 200. The URL redirects; the asset is still served. Whether anyone withdrew the page is not established -- a redirect is what was observed.",
+      "dcterms:description": "High confidence because the HTTP status codes and occurrence counts were observed first-hand and can be re-run. The score qualifies the observed page and asset state, not the reason for the redirect.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#HighConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.95",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-neighborhood-passport-host-page.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T15:36:57+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-08-20T15:36:57+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/map-artifact.json",
+      "@type": "schema:Claim",
+      "schema:name": "\"NEW YORK CITY IMMIGRANT ENCLAVES\" map, as published by NYC Tourism + Conventions",
+      "schema:text": "A JPEG map titled \"NEW YORK CITY IMMIGRANT ENCLAVES*\", the asterisk resolving to the footnote \"*Source: NYC Mayor's Office of Immigrant Affairs\". Lists 30 numbered enclaves alphabetically with transit access, across all five boroughs. sha256 83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1, 323548 bytes, 1920x1740, HTTP last-modified 2026-06-05T15:44:36Z. Little Italy is absent. The artifact carries no publisher mark, no date, no URL, and no designer credit; its JPEG Exif directory is empty; the CMS credit field used by every other image on its host page is unused for this one asset. The same bytes are attested by an archived capture of 2026-06-17T15:33:10Z: identical sha256, identical length, identical empty Exif directory, and that capture preserves the origin's own last-modified header of 2026-06-05T15:44:36Z.",
+      "dcterms:description": "High confidence because the publisher-served bytes were retrieved first-hand, checksummed, and matched an archived capture. The score remains below certainty because a checksum proves the served artifact at observed times, not perpetual stability.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#HighConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.95",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T15:35:30+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2026-06-05T15:44:36+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "spdx:checksumValue": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/moia-series.json",
+      "@type": "schema:Claim",
+      "schema:name": "MOIA Immigrant Enclave Illustration Series, per MOIA's own end-of-tenure impact report",
+      "schema:text": "The Mayor's Office of Immigrant Affairs states, in its impact report covering the period through 2025-12-31: \"23 Immigrant Ethnic Enclave Illustrations were published honoring immigrant neighborhoods across all five boroughs.\" The series launched 2023-04-17 under Mayor Eric Adams and MOIA Commissioner Manuel Castro, with 25 illustrations announced at launch. \"Little Italy\" appears zero times across all 85 pages. The report states no selection criterion. Its poster captions repeat \"Little Africa in the Bronx\", so the stated 23 enumerates 23 captions but possibly only 22 distinct enclaves.",
+      "dcterms:description": "High confidence because this is MOIA's own retrieved and checksummed report. The score is slightly below the ceiling because the report repeats one Bronx caption, leaving 23 captions versus possibly 22 distinct enclaves unresolved.",
+      "kee:lifecycleState": {
+        "@id": "https://w3id.org/kee/lifecycle#Active"
+      },
+      "kee:confidenceStatus": {
+        "@id": "https://w3id.org/kee/confidence#HighConfidence"
+      },
+      "kee:confidenceValue": {
+        "@value": "0.93",
+        "@type": "xsd:decimal"
+      },
+      "dcterms:source": [
+        {
+          "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json"
+        }
+      ],
+      "prov:generatedAtTime": {
+        "@value": "2026-08-20T14:30:00+00:00",
+        "@type": "xsd:dateTime"
+      },
+      "kee:assertionTime": {
+        "@value": "2025-12-31T00:00:00+00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json",
+      "@type": "prov:Entity",
+      "schema:name": "New York City Tourism + Conventions — 30-enclaves map image",
+      "schema:url": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+      "dcterms:rights": "No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission. This project currently redistributes a local copy verified against the governed checksum, with attribution to New York City Tourism + Conventions and links to the publisher-served source and an independent archived capture. Attribution is not a license, and no permission is claimed. If the rightsholder objects, KnoEdg.NYC will withdraw the local copy."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/amny-little-italy-map-report.json",
+      "@type": "prov:Entity",
+      "schema:name": "amNewYork — Little Italy map report",
+      "schema:url": "https://www.amny.com/news/little-italy-mamdani-immigrant-map-backlash/",
+      "dcterms:rights": "Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. The publisher asserts no machine-readable license, and the governed collection did not retrieve or interpret the outlet's terms of service. Recorded as undetermined rather than as absent or as permissive."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nbc-new-york-map-additions-report.json",
+      "@type": "prov:Entity",
+      "schema:name": "NBC New York — reported map additions",
+      "schema:url": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/",
+      "dcterms:rights": "Not determined. This collection cites the page for the reported aides attribution; no permissive reuse license is asserted by this collection, and the outlet's terms were not interpreted."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json",
+      "@type": "prov:Entity",
+      "schema:name": "NYC Mayor's Office of Immigrant Affairs — end-of-tenure impact report",
+      "schema:url": "https://www.nyc.gov/assets/immigrants/downloads/pdf/digital-spread-12-31-2025-moia-impact.pdf",
+      "dcterms:rights": "All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/dcp-newest-new-yorkers-2026-chapter-3.json",
+      "@type": "prov:Entity",
+      "schema:name": "NYC Department of City Planning — The Newest New Yorkers 2026, Chapter 3",
+      "schema:url": "https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch3.html",
+      "dcterms:rights": "All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-mayors-office-july-10-2026-transcript.json",
+      "@type": "prov:Entity",
+      "schema:name": "NYC Mayor's Office — July 10, 2026 transcript",
+      "schema:url": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+      "dcterms:rights": "All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-neighborhood-passport-host-page.json",
+      "@type": "prov:Entity",
+      "schema:name": "New York City Tourism + Conventions — Neighborhood Passport host page",
+      "schema:url": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+      "dcterms:rights": "No license stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/blaze-little-italy-map-report.json",
+      "@type": "prov:Entity",
+      "schema:name": "Blaze Media — Little Italy map report",
+      "schema:url": "https://www.theblaze.com/news/wheres-little-italy-mamdanis-immigrant-enclave-map-sparks-backlash",
+      "dcterms:rights": "Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and the governed collection did not retrieve or interpret the outlet's terms of service."
+    },
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/washington-examiner-map-report.json",
+      "@type": "prov:Entity",
+      "schema:name": "Washington Examiner — immigrant-enclaves map report",
+      "schema:url": "https://www.washingtonexaminer.com/policy/immigration/4641977/mamdani-map-nyc-immigrant-outrage-italian-community/",
+      "dcterms:rights": "Not determined. Queries run 2026-08-20 against the retrieved page: rel='license' 0 occurrences, schema.org license 0, meta name='copyright' 0. No machine-readable license is asserted, and the governed collection did not retrieve or interpret the outlet's terms of service."
+    }
+  ]
+}
