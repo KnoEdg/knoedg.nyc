@@ -1,0 +1,112 @@
+name: Validate public provenance
+
+on:
+  pull_request:
+    paths:
+      - "inside-the-map-of-30-immigrant-enclaves/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "data/30-immigrant-enclaves-map/**"
+      - "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"
+      - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "data/fixtures/SHA256SUMS"
+      - "scripts/generate_30_enclaves_map_data.py"
+      - "scripts/generate_public_technical_records.py"
+      - "scripts/validate_public_provenance.py"
+      - "scripts/generate_nyc_immigrant_enclaves_view.py"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "scripts/generate_fixture_page.py"
+      - "scripts/validate_no_private_coordinates.py"
+      - "schemas/fixture-dependent-public-view/**"
+      - "schemas/data-paper/**"
+      - "templates/fixture-page.html"
+      - "templates/data-paper.html"
+      - ".github/workflows/validate-public-provenance.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "inside-the-map-of-30-immigrant-enclaves/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "data/30-immigrant-enclaves-map/**"
+      - "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"
+      - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "data/fixtures/SHA256SUMS"
+      - "scripts/generate_30_enclaves_map_data.py"
+      - "scripts/generate_public_technical_records.py"
+      - "scripts/validate_public_provenance.py"
+      - "scripts/generate_nyc_immigrant_enclaves_view.py"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "scripts/generate_fixture_page.py"
+      - "scripts/validate_no_private_coordinates.py"
+      - "schemas/fixture-dependent-public-view/**"
+      - "schemas/data-paper/**"
+      - "templates/fixture-page.html"
+      - "templates/data-paper.html"
+      - ".github/workflows/validate-public-provenance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-public-provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned conformance dependencies
+        run: python3 -m pip install --disable-pip-version-check jsonschema==4.25.0 PyLD==2.0.4
+      - name: Validate public-safe artifacts against existing schemas
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+
+          pairs = [
+              ("schemas/fixture-dependent-public-view/v2", "data/fixtures/nyc-immigrant-enclaves-public-view.json"),
+              ("schemas/data-paper/v1", "data/fixtures/nyc-immigrant-enclaves-data-paper.json"),
+              ("schemas/fixture-dependent-public-view/v2", "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"),
+          ]
+          for schema_path, artifact_path in pairs:
+              schema = json.load(open(schema_path, encoding="utf-8"))
+              artifact = json.load(open(artifact_path, encoding="utf-8"))
+              Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+              print(f"{artifact_path} validates against {schema_path}")
+          PY
+      - name: Prove all affected public surfaces are exact renderer output
+        run: |
+          python3 scripts/generate_nyc_immigrant_enclaves_view.py --check
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+          python3 scripts/generate_30_enclaves_map_data.py --check
+      - name: Require every emitted local provenance reference to resolve
+        run: python3 scripts/validate_public_provenance.py
+      - name: Validate technical collection JSON-LD expansion
+        run: |
+          python3 - <<'PY'
+          import json
+          from pyld import jsonld
+
+          document = json.load(open("data/30-immigrant-enclaves-map/index.jsonld", encoding="utf-8"))
+          expanded = jsonld.expand(document)
+          if not isinstance(expanded, list) or not expanded:
+              raise SystemExit("technical collection JSON-LD expansion produced no nodes")
+          for node in expanded:
+              identifier = node.get("@id")
+              if identifier is not None and not identifier.startswith("https://"):
+                  raise SystemExit(f"expanded graph contains a non-HTTPS node identity: {identifier}")
+          print(f"technical collection JSON-LD expansion validates: {len(expanded)} nodes")
+          PY
+      - name: Reject unresolved and private provenance coordinates
+        run: |
+          ! grep -REiq 'knoedg.org/nyc-knowledge-pack/assertion-metadata-|github.com/knoedg/(pack-nyc|meta-knoedg-nyc)|knoedg/(pack-nyc|meta-knoedg-nyc)' \
+            data/30-immigrant-enclaves-map \
+            data/fixtures/30-immigrant-enclaves-map-technical-collection.json \
+            data/fixtures/nyc-immigrant-enclaves-data-paper.json \
+            nyc-immigrant-enclaves-paper \
+            inside-the-map-of-30-immigrant-enclaves
+          python3 scripts/validate_no_private_coordinates.py
+      - name: Verify publication checksum ledger
+        run: sha256sum --check data/fixtures/SHA256SUMS
