@@ -1,9 +1,7 @@
 name: TEMP Promote 30-enclaves provenance conformance
 
 on:
-  push:
-    branches:
-      - codex/public-data-provenance
+  pull_request:
     paths:
       - ".github/workflows/tmp-stage-30-enclaves-technical-collection.yml"
 
@@ -33,18 +31,12 @@ jobs:
           paper_path = '      - "nyc-immigrant-enclaves-paper/**"\n'
           if text.count(paper_path) != 2:
               raise SystemExit(f'expected two legacy paper path filters, found {text.count(paper_path)}')
-          text = text.replace(
-              paper_path,
-              paper_path + '      - "data/30-immigrant-enclaves-map/**"\n',
-          )
+          text = text.replace(paper_path, paper_path + '      - "data/30-immigrant-enclaves-map/**"\n')
 
           paper_fixture = '      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"\n'
           if text.count(paper_fixture) != 2:
               raise SystemExit(f'expected two paper fixture filters, found {text.count(paper_fixture)}')
-          text = text.replace(
-              paper_fixture,
-              paper_fixture + '      - "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"\n',
-          )
+          text = text.replace(paper_fixture, paper_fixture + '      - "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"\n')
 
           paper_check = '      - run: python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check\n'
           if text.count(paper_check) != 1:
@@ -61,8 +53,7 @@ jobs:
               raise SystemExit('could not identify enclave schema-validation vector')
           text = text.replace(
               schema_tuple,
-              schema_tuple
-              + '              ("schemas/fixture-dependent-public-view/v2", "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"),\n',
+              schema_tuple + '              ("schemas/fixture-dependent-public-view/v2", "data/fixtures/30-immigrant-enclaves-map-technical-collection.json"),\n',
           )
 
           overture_ld = '      - name: Validate NYC Overture source-page JSON-LD expansion\n'
@@ -85,10 +76,9 @@ jobs:
           PYLD
 '''
           text = text.replace(overture_ld, technical_ld + overture_ld)
-
           path.write_text(text, encoding='utf-8')
           PY
-      - name: Assert the stale path and unresolved namespace are absent
+      - name: Assert promoted rules
         run: |
           ! grep -Fq '"nyc-immigrant-enclaves/**"' .github/workflows/validate-nyc-boundary-counts.yml
           grep -Fq '"inside-the-map-of-30-immigrant-enclaves/**"' .github/workflows/validate-nyc-boundary-counts.yml
