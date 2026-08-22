@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v2 ownership, parity, accessibility and deterministic output."""
+"""Validate v2 ownership, parity, accessibility and deterministic technical output."""
 
 import html
 import json
@@ -9,11 +9,12 @@ from pathlib import Path
 from generate_fixture_page import load_artifact, render_article
 
 ROOT = Path(__file__).resolve().parents[1]
-ARTIFACT = ROOT / "data/fixtures/nyc-boundary-public-view.json"
+ARTIFACT = ROOT / "data/fixtures/nyc-boundaries-technical-collection.json"
 TEMPLATE = ROOT / "templates/fixture-page.html"
-HTML = ROOT / "nyc-boundaries/index.html"
-JSONLD = ROOT / "nyc-boundaries/index.jsonld"
-MANIFEST = ROOT / "nyc-boundaries/record-counts.json"
+HTML = ROOT / "data/nyc-boundaries/index.html"
+JSONLD = ROOT / "data/nyc-boundaries/index.jsonld"
+MANIFEST = ROOT / "data/nyc-boundaries/record-counts.json"
+PUBLIC_LANDING = "https://knoedg.nyc/nyc-boundaries/"
 
 
 def fail(message: str) -> None:
@@ -31,6 +32,8 @@ if data.get("schemaVersion") != 1 or data.get("rendererContract") != "fixture-pa
     fail("artifact does not declare fixture-page/v2 schema version 1")
 if data.get("contentModel") != "fixture-content-blocks/v1":
     fail("artifact does not declare fixture-content-blocks/v1")
+if data.get("resource") != "https://knoedg.nyc/data/nyc-boundaries/":
+    fail("validator is not bound to the technical collection identity")
 if "articleHtml" in data["page"]:
     fail("v2 source must not carry an independently authored articleHtml")
 if rendered.count("<article>") != 1 or article not in rendered:
@@ -44,10 +47,12 @@ if manifest["activeRecordCount"] != data["activeRecordCount"]:
     fail("manifest total disagrees with artifact")
 if manifest["schema"] != data["schema"] or manifest["rendererContract"] != data["rendererContract"]:
     fail("manifest omits the exact v2 contract identity")
+if manifest.get("resource") != data["resource"]:
+    fail("manifest resource identity disagrees with technical artifact")
 visible_article = html.unescape(article)
 for group in groups:
     if group["label"] not in visible_article:
-        fail(f"article does not expose source group {group['id']}")
+        fail(f"technical article does not expose source group {group['id']}")
 for forbidden in [data["page"]["title"], str(data["activeRecordCount"]), *[g["label"] for g in groups]]:
     if forbidden in template:
         fail(f"template independently contains fixture content: {forbidden}")
@@ -71,14 +76,14 @@ ids = [node.get("@id") for node in graph if isinstance(node, dict)]
 if any(not isinstance(identifier, str) or not identifier.startswith("https://") for identifier in ids):
     fail("JSON-LD graph nodes require stable HTTPS identifiers")
 if data["resource"] not in ids:
-    fail("public resource identity is absent from the JSON-LD graph")
+    fail("technical resource identity is absent from the JSON-LD graph")
 resource_node = next(node for node in graph if node.get("@id") == data["resource"])
-if resource_node.get("dcat:landingPage", {}).get("@id") != data["page"]["canonical"]:
-    fail("HTML canonical and JSON-LD landing-page identity disagree")
+if resource_node.get("dcat:landingPage", {}).get("@id") != PUBLIC_LANDING:
+    fail("technical Dataset does not identify the general-public landing page")
 
 serialized = json.dumps(data, ensure_ascii=False).lower()
 for private_coordinate in ["knoedg/pack-nyc", "github.com/knoedg/pack-nyc", "meta-knoedg-nyc", "docs/publications/"]:
     if private_coordinate in serialized:
         fail(f"private repository coordinate leaked: {private_coordinate}")
 
-print(f"Fixture page v2 is artifact-generated: {data['activeRecordCount']} records, {len(groups)} groups, blocks + HTML + expanded JSON-LD gate + manifest.")
+print(f"Technical fixture page v2 is artifact-generated: {data['activeRecordCount']} records, {len(groups)} groups, blocks + HTML + expanded JSON-LD gate + manifest.")
