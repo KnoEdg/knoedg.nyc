@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the published Overture Maps division-area fixture and artifact parity."""
+"""Validate the published Overture Maps division-area fixture and technical artifact parity."""
 
 import json
 from pathlib import Path
@@ -9,7 +9,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "data" / "fixtures" / "nyc-overture-division-area-representations.geojson"
 SCHEMA_PATH = ROOT / "schemas" / "nyc-overture-division-area-representations" / "v1"
-VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
+VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundaries-technical-collection.json"
 PUBLIC_URL = "https://knoedg.nyc/data/fixtures/nyc-overture-division-area-representations.geojson"
 
 
@@ -63,22 +63,22 @@ if fixture["comparisonDisposition"]["independentEvidenceFamily"] is not False:
 graph = view["semanticRepresentation"]["@graph"]
 resource = next(node for node in graph if node.get("@id") == view["resource"])
 if PUBLIC_URL not in {item["@id"] for item in resource["dcat:distribution"]}:
-    fail("JSON-LD dataset does not declare the Overture distribution")
+    fail("technical JSON-LD dataset does not declare the Overture distribution")
 distribution = next((node for node in graph if node.get("@id") == PUBLIC_URL), None)
 if not distribution or distribution.get("dcat:downloadURL", {}).get("@id") != PUBLIC_URL:
-    fail("JSON-LD Overture distribution is missing or malformed")
+    fail("technical JSON-LD Overture distribution is missing or malformed")
 if distribution.get("dcterms:license", {}).get("@id") != fixture["rights"]["licenseUrl"]:
-    fail("JSON-LD license does not match fixture rights")
+    fail("technical JSON-LD license does not match fixture rights")
 
 blocks = json.dumps(view["page"]["contentBlocks"], ensure_ascii=False)
 if "/data/fixtures/nyc-overture-division-area-representations.geojson" not in blocks:
-    fail("human-visible download link is absent")
+    fail("technical collection download link is absent")
 if "Overture" not in blocks or "ODbL" not in blocks:
-    fail("human-visible attribution is absent")
+    fail("technical collection attribution is absent")
 
 serialized = json.dumps(fixture, ensure_ascii=False).lower()
 for private_coordinate in ["knoedg/pack-nyc", "github.com/knoedg/pack-nyc", "meta-knoedg-nyc"]:
     if private_coordinate in serialized:
         fail(f"private repository coordinate leaked: {private_coordinate}")
 
-print("NYC Overture public fixture validates: schema, eleven geometries, Richmond land/maritime disposition, rights, artifact parity, and public safety.")
+print("NYC Overture public fixture validates: schema, eleven geometries, Richmond land/maritime disposition, rights, technical artifact parity, and public safety.")
