@@ -1,0 +1,70 @@
+name: TEMP Materialize NYC Boundaries split
+
+on:
+  push:
+    branches:
+      - codex/nyc-boundaries-surface-split
+    paths:
+      - "data/fixtures/.tmp-boundary-transfer/**"
+      - ".github/workflows/tmp-materialize-nyc-boundaries-split.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/nyc-boundaries-surface-split
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Decode exact governed technical artifact
+        run: |
+          cat data/fixtures/.tmp-boundary-transfer/part-*.b64 | base64 -d | gzip -d > data/fixtures/nyc-boundaries-technical-collection.json
+          test "$(git hash-object data/fixtures/nyc-boundaries-technical-collection.json)" = "48bc2d8093ed5efb901e78f5c6f4825bbc59a676"
+          test "$(git hash-object data/fixtures/nyc-boundaries-public-page.json)" = "050ca3780425014d6dbfdad6ddcbfdcc410ece3c"
+      - name: Render public and technical surfaces
+        run: |
+          python3 scripts/generate_nyc_boundaries_view.py
+          python3 scripts/generate_nyc_boundaries_data.py
+      - name: Refresh checksum ledger for split surfaces
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          ledger = Path('data/fixtures/SHA256SUMS')
+          paths = [
+              'data/fixtures/nyc-boundaries-public-page.json',
+              'data/fixtures/nyc-boundaries-technical-collection.json',
+              'scripts/generate_nyc_boundaries_view.py',
+              'scripts/generate_nyc_boundaries_data.py',
+              'nyc-boundaries/index.html',
+              'nyc-boundaries/index.jsonld',
+              'nyc-boundaries/record-counts.json',
+              'data/nyc-boundaries/index.html',
+              'data/nyc-boundaries/index.jsonld',
+              'data/nyc-boundaries/record-counts.json',
+          ]
+          tracked = set(paths)
+          kept = []
+          for line in ledger.read_text().splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2 and parts[1] in tracked:
+                  continue
+              kept.append(line)
+          for path in paths:
+              digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
+              kept.append(f'{digest}  {path}')
+          ledger.write_text('\n'.join(kept) + '\n')
+          PY
+      - name: Commit exact fixture and generated surfaces
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures/nyc-boundaries-technical-collection.json data/fixtures/SHA256SUMS nyc-boundaries data/nyc-boundaries scripts/generate_nyc_boundaries_view.py scripts/generate_nyc_boundaries_data.py
+          git diff --cached --check
+          git commit -m "feat: materialize NYC Boundaries public and technical surfaces"
+          git push origin HEAD:codex/nyc-boundaries-surface-split
