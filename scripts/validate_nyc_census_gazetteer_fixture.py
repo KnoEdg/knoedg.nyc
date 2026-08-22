@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the published Census Gazetteer fixture and its public-view links."""
+"""Validate the published Census Gazetteer fixture and its technical-collection links."""
 
 import json
 from pathlib import Path
@@ -9,9 +9,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "data" / "fixtures" / "nyc-census-gazetteer-county-measurements.json"
 SCHEMA_PATH = ROOT / "schemas" / "nyc-census-gazetteer-counties" / "v1"
-VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
-HTML_PATH = ROOT / "nyc-boundaries" / "index.html"
-JSONLD_PATH = ROOT / "nyc-boundaries" / "index.jsonld"
+VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundaries-technical-collection.json"
+HTML_PATH = ROOT / "data" / "nyc-boundaries" / "index.html"
+JSONLD_PATH = ROOT / "data" / "nyc-boundaries" / "index.jsonld"
 PUBLIC_URL = "https://knoedg.nyc/data/fixtures/nyc-census-gazetteer-county-measurements.json"
 
 
@@ -45,21 +45,21 @@ if observed_pairs != expected_pairs:
 
 relative_url = "/data/fixtures/nyc-census-gazetteer-county-measurements.json"
 if relative_url not in html:
-    fail("generated HTML does not link the fixture")
+    fail("technical collection HTML does not link the fixture")
 if jsonld != view["semanticRepresentation"]:
-    fail("generated JSON-LD differs from the canonical artifact graph")
+    fail("generated technical JSON-LD differs from the canonical artifact graph")
 
 graph = jsonld["@graph"]
 resource = next(node for node in graph if node.get("@id") == view["resource"])
 if PUBLIC_URL not in {item["@id"] for item in resource["dcat:distribution"]}:
-    fail("JSON-LD dataset omits the fixture distribution")
+    fail("technical JSON-LD dataset omits the fixture distribution")
 distribution = next((node for node in graph if node.get("@id") == PUBLIC_URL), None)
 if not distribution or distribution.get("dcat:downloadURL", {}).get("@id") != PUBLIC_URL:
-    fail("JSON-LD fixture distribution is missing or malformed")
+    fail("technical JSON-LD fixture distribution is missing or malformed")
 
 serialized = json.dumps(fixture, ensure_ascii=False).lower()
 for private_coordinate in ["knoedg/pack-nyc", "github.com/knoedg/pack-nyc", "meta-knoedg-nyc"]:
     if private_coordinate in serialized:
         fail(f"private repository coordinate leaked: {private_coordinate}")
 
-print("Published Census Gazetteer fixture validates: schema, 5 records, HTML/JSON-LD links, comparison parity, and public safety.")
+print("Published Census Gazetteer fixture validates: schema, 5 records, technical HTML/JSON-LD links, comparison parity, and public safety.")
