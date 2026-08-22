@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate every NYC Boundaries public surface from its governed artifact."""
+"""Generate the general-public NYC Boundaries surface from its governed artifact."""
 
 from pathlib import Path
 import sys
@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 if __name__ == "__main__":
     defaults = [
-        "--artifact", str(ROOT / "data/fixtures/nyc-boundary-public-view.json"),
+        "--artifact", str(ROOT / "data/fixtures/nyc-boundaries-public-page.json"),
         "--template", str(ROOT / "templates/fixture-page.html"),
         "--html", str(ROOT / "nyc-boundaries/index.html"),
         "--jsonld", str(ROOT / "nyc-boundaries/index.jsonld"),
