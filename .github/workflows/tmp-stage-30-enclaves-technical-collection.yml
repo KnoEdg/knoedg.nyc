@@ -1,12 +1,9 @@
-name: TEMP Stage 30-enclaves technical collection
+name: TEMP Stage 30-enclaves governed publication
 
 on:
   push:
     branches:
       - codex/public-data-provenance
-    paths:
-      - ".github/workflows/tmp-stage-30-enclaves-technical-collection.yml"
-  pull_request:
     paths:
       - ".github/workflows/tmp-stage-30-enclaves-technical-collection.yml"
 
@@ -20,21 +17,65 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: codex/public-data-provenance
-      - name: Generate technical collection surfaces
-        run: python3 scripts/generate_30_enclaves_map_data.py
-      - name: Verify deterministic regeneration
-        run: python3 scripts/generate_30_enclaves_map_data.py --check
+      - name: Fetch exact migrated governed data-paper artifact
+        run: |
+          curl -L --fail --silent --show-error 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-bdc4-81f5-bfb0-471931b73b2c/raw?se=2026-08-22T10%3A25%3A42Z&sp=r&sv=2026-02-06&sr=b&scid=e0cccd56-7811-54b2-9a25-bb965e3be604&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-22T00%3A37%3A59Z&ske=2026-08-23T00%3A37%3A59Z&sks=b&skv=2026-02-06&sig=pGcLJbVHzJNZOT0I2n%2Bv/1j6qQcdvbigtG%2BQ3tSLfJU%3D' -o /tmp/paper.zip
+          rm -rf /tmp/paper && mkdir -p /tmp/paper
+          unzip -q /tmp/paper.zip -d /tmp/paper
+          echo '773d0afe304ae27715b4d60adbb8db8465d95832521233aaa08009283d2eff46  /tmp/paper/nyc-immigrant-enclaves-data-paper.json' | sha256sum -c -
+          cp /tmp/paper/nyc-immigrant-enclaves-data-paper.json data/fixtures/nyc-immigrant-enclaves-data-paper.json
+      - name: Generate all affected public surfaces
+        run: |
+          python3 scripts/generate_30_enclaves_map_data.py
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py
+      - name: Verify deterministic regeneration and public provenance
+        run: |
+          python3 scripts/generate_30_enclaves_map_data.py --check
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+          python3 scripts/validate_public_provenance.py
+      - name: Refresh checksum ledger atomically for affected publication files
+        run: |
+          python3 - <<'PY'
+          from hashlib import sha256
+          from pathlib import Path
+
+          ledger = Path('data/fixtures/SHA256SUMS')
+          affected = {
+              'data/fixtures/30-immigrant-enclaves-map-technical-collection.json',
+              'data/fixtures/nyc-immigrant-enclaves-data-paper.json',
+              'nyc-immigrant-enclaves-paper/index.html',
+              'nyc-immigrant-enclaves-paper/index.jsonld',
+              'data/30-immigrant-enclaves-map/index.html',
+              'data/30-immigrant-enclaves-map/index.jsonld',
+              'data/30-immigrant-enclaves-map/record-counts.json',
+          }
+          for folder in ('data/30-immigrant-enclaves-map/assertions', 'data/30-immigrant-enclaves-map/sources'):
+              affected.update(str(p) for p in sorted(Path(folder).glob('*.json')))
+
+          existing = []
+          for line in ledger.read_text(encoding='utf-8').splitlines():
+              if not line.strip():
+                  continue
+              digest, path = line.split('  ', 1)
+              if path not in affected:
+                  existing.append((path, digest))
+          for path in sorted(affected):
+              raw = Path(path).read_bytes()
+              existing.append((path, sha256(raw).hexdigest()))
+          ledger.write_text(''.join(f'{digest}  {path}\n' for path, digest in existing), encoding='utf-8')
+          PY
+          sha256sum -c data/fixtures/SHA256SUMS
       - name: Reject unresolved/private public provenance
         run: |
-          ! grep -REiq 'knoedg.org/nyc-knowledge-pack/assertion-metadata-|github.com/knoedg/(pack-nyc|meta-knoedg-nyc)|knoedg/(pack-nyc|meta-knoedg-nyc)' data/30-immigrant-enclaves-map data/fixtures/30-immigrant-enclaves-map-technical-collection.json
-      - name: Commit exact generated outputs
+          ! grep -REiq 'knoedg.org/nyc-knowledge-pack/assertion-metadata-|github.com/knoedg/(pack-nyc|meta-knoedg-nyc)|knoedg/(pack-nyc|meta-knoedg-nyc)' data/30-immigrant-enclaves-map data/fixtures/30-immigrant-enclaves-map-technical-collection.json data/fixtures/nyc-immigrant-enclaves-data-paper.json nyc-immigrant-enclaves-paper
+      - name: Commit exact artifact, generated outputs, and ledger
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/30-immigrant-enclaves-map
+          git add data/fixtures/nyc-immigrant-enclaves-data-paper.json data/fixtures/SHA256SUMS data/30-immigrant-enclaves-map nyc-immigrant-enclaves-paper
           if git diff --cached --quiet; then
-            echo "generated outputs already staged"
+            echo "publication bytes already staged"
           else
-            git commit -m "feat: generate 30-enclaves public technical surfaces"
+            git commit -m "fix: publish dereferenceable enclave-map provenance"
             git push origin HEAD:codex/public-data-provenance
           fi
