@@ -1,0 +1,33 @@
+name: TEMP Stage 30-enclaves technical collection
+
+on:
+  push:
+    branches:
+      - codex/public-data-provenance
+    paths:
+      - ".github/workflows/tmp-stage-30-enclaves-technical-collection.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/public-data-provenance
+      - name: Fetch exact governed artifact transport
+        run: |
+          curl -L --fail --silent --show-error 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-6ba4-81f5-bb6e-0be17318cc00/raw?se=2026-08-22T10%3A18%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=0560f415-9797-5231-bc99-a88176de72a2&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-22T00%3A53%3A10Z&ske=2026-08-23T00%3A53%3A10Z&sks=b&skv=2026-02-06&sig=%2Brhqd5VOMFkp3kTdM35vdCelREU0yHOEvVjcZYMDhwc%3D' -o /tmp/technical-collection.zip
+          mkdir -p /tmp/staged data/fixtures
+          unzip -q /tmp/technical-collection.zip -d /tmp/staged
+          cp /tmp/staged/30-immigrant-enclaves-map-technical-collection.json data/fixtures/30-immigrant-enclaves-map-technical-collection.json
+          echo '363d97471715def38eac936994a963014fd1d4b568c0ba903aad21d2f17a340d  data/fixtures/30-immigrant-enclaves-map-technical-collection.json' | sha256sum -c -
+      - name: Commit staged artifact
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures/30-immigrant-enclaves-map-technical-collection.json
+          git commit -m "data: stage 30-enclaves technical collection artifact"
+          git push origin HEAD:codex/public-data-provenance
