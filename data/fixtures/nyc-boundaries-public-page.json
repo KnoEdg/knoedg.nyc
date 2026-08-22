@@ -3,7 +3,7 @@
   "artifactType": "fixture-dependent-public-view",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
   "resource": "https://knoedg.nyc/nyc-boundaries/",
-  "artifactVersion": "2026-08-22.2",
+  "artifactVersion": "2026-08-22.3",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
   "issuedAt": "2026-08-22T13:04:00Z",
