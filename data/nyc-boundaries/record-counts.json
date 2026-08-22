@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "rendererContract": "fixture-page/v2",
+  "resource": "https://knoedg.nyc/data/nyc-boundaries/",
+  "activeRecordCount": 46,
+  "representations": [
+    {
+      "id": "dcp",
+      "label": "DCP",
+      "count": 10,
+      "provenanceCluster": "NYC Department of City Planning"
+    },
+    {
+      "id": "census-gazetteer",
+      "label": "Census Gazetteer",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau"
+    },
+    {
+      "id": "openstreetmap",
+      "label": "OpenStreetMap",
+      "count": 10,
+      "provenanceCluster": "OpenStreetMap"
+    },
+    {
+      "id": "geoboundaries",
+      "label": "geoBoundaries",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau"
+    },
+    {
+      "id": "overture",
+      "label": "Overture",
+      "count": 11,
+      "provenanceCluster": "OpenStreetMap"
+    },
+    {
+      "id": "whos-on-first",
+      "label": "Who's On First",
+      "count": 5,
+      "provenanceCluster": "U.S. Census Bureau via Quattroshapes"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+name: Validate NYC Boundaries split
+
+on:
+  pull_request:
+    paths:
+      - "nyc-boundaries/**"
+      - "data/nyc-boundaries/**"
+      - "data/fixtures/nyc-boundaries-public-page.json"
+      - "data/fixtures/nyc-boundaries-technical-collection.json"
+      - "data/fixtures/SHA256SUMS"
+      - "scripts/generate_nyc_boundaries_view.py"
+      - "scripts/generate_nyc_boundaries_data.py"
+      - "scripts/generate_fixture_page.py"
+      - "scripts/validate_nyc_boundaries_surface_split.py"
+      - "schemas/fixture-dependent-public-view/**"
+      - "templates/fixture-page.html"
+      - ".github/workflows/validate-nyc-boundaries-split.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "nyc-boundaries/**"
+      - "data/nyc-boundaries/**"
+      - "data/fixtures/nyc-boundaries-public-page.json"
+      - "data/fixtures/nyc-boundaries-technical-collection.json"
+      - "data/fixtures/SHA256SUMS"
+      - "scripts/generate_nyc_boundaries_view.py"
+      - "scripts/generate_nyc_boundaries_data.py"
+      - "scripts/generate_fixture_page.py"
+      - "scripts/validate_nyc_boundaries_surface_split.py"
+      - "schemas/fixture-dependent-public-view/**"
+      - "templates/fixture-page.html"
+      - ".github/workflows/validate-nyc-boundaries-split.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned conformance dependencies
+        run: python3 -m pip install --disable-pip-version-check jsonschema==4.25.0 PyLD==2.0.4
+      - name: Validate both v2 artifacts
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open('schemas/fixture-dependent-public-view/v2'))
+          for path in (
+              'data/fixtures/nyc-boundaries-public-page.json',
+              'data/fixtures/nyc-boundaries-technical-collection.json',
+          ):
+              Draft202012Validator(schema, format_checker=FormatChecker()).validate(json.load(open(path)))
+              print('valid', path)
+          PY
+      - name: Prove both surfaces regenerate exactly
+        run: |
+          python3 scripts/generate_nyc_boundaries_view.py --check
+          python3 scripts/generate_nyc_boundaries_data.py --check
+      - name: Validate public/technical separation and identity
+        run: python3 scripts/validate_nyc_boundaries_surface_split.py
+      - name: Validate technical JSON-LD expansion
+        run: |
+          python3 - <<'PY'
+          import json
+          from pyld import jsonld
+          for path in ('nyc-boundaries/index.jsonld', 'data/nyc-boundaries/index.jsonld'):
+              expanded = jsonld.expand(json.load(open(path)))
+              if not isinstance(expanded, list) or not expanded:
+                  raise SystemExit(f'{path}: JSON-LD expansion produced no nodes')
+              for node in expanded:
+                  identifier = node.get('@id')
+                  if identifier is not None and not identifier.startswith('https://'):
+                      raise SystemExit(f'{path}: non-HTTPS node identity: {identifier}')
+              print(path, len(expanded), 'expanded nodes')
+          PY
+      - name: Validate checksum ledger
+        run: sha256sum -c data/fixtures/SHA256SUMS

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the published geoBoundaries fixture and artifact parity."""
+"""Validate the published geoBoundaries fixture and technical artifact parity."""
 
 import json
 from pathlib import Path
@@ -9,7 +9,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "data" / "fixtures" / "nyc-geoboundaries-usa-adm2-counties.geojson"
 SCHEMA_PATH = ROOT / "schemas" / "nyc-geoboundaries-usa-adm2-counties" / "v1"
-VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
+VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundaries-technical-collection.json"
 PUBLIC_URL = "https://knoedg.nyc/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson"
 
 
@@ -42,22 +42,22 @@ if fixture["comparisonDisposition"]["independentEvidenceFamily"] is not False:
 graph = view["semanticRepresentation"]["@graph"]
 resource = next(node for node in graph if node.get("@id") == view["resource"])
 if PUBLIC_URL not in {item["@id"] for item in resource["dcat:distribution"]}:
-    fail("JSON-LD dataset does not declare the geoBoundaries distribution")
+    fail("technical JSON-LD dataset does not declare the geoBoundaries distribution")
 distribution = next((node for node in graph if node.get("@id") == PUBLIC_URL), None)
 if not distribution or distribution.get("dcat:downloadURL", {}).get("@id") != PUBLIC_URL:
-    fail("JSON-LD geoBoundaries distribution is missing or malformed")
+    fail("technical JSON-LD geoBoundaries distribution is missing or malformed")
 if distribution.get("dcterms:license", {}).get("@id") != fixture["rights"]["licenseUrl"]:
-    fail("JSON-LD license does not match fixture rights")
+    fail("technical JSON-LD license does not match fixture rights")
 
 blocks = json.dumps(view["page"]["contentBlocks"], ensure_ascii=False)
 if "/data/fixtures/nyc-geoboundaries-usa-adm2-counties.geojson" not in blocks:
-    fail("human-visible download link is absent")
+    fail("technical collection download link is absent")
 if "CC BY 4.0" not in blocks:
-    fail("human-visible license attribution is absent")
+    fail("technical collection license attribution is absent")
 
 serialized = json.dumps(fixture, ensure_ascii=False).lower()
 for private_coordinate in ["knoedg/pack-nyc", "github.com/knoedg/pack-nyc", "meta-knoedg-nyc"]:
     if private_coordinate in serialized:
         fail(f"private repository coordinate leaked: {private_coordinate}")
 
-print("NYC geoBoundaries public fixture validates: schema, five geometries, rights, artifact parity, stable identities, and public safety.")
+print("NYC geoBoundaries public fixture validates: schema, five geometries, rights, technical artifact parity, stable identities, and public safety.")
