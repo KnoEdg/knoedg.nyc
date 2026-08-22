@@ -1,8 +1,17 @@
 name: TEMP Refresh boundary validator checksums
 
 on:
-  pull_request:
-    types: [reopened]
+  push:
+    branches:
+      - codex/nyc-boundaries-surface-split
+    paths:
+      - ".github/workflows/tmp-refresh-boundary-validator-checksums.yml"
+      - "scripts/validate_nyc_boundary_counts.py"
+      - "scripts/validate_nyc_census_gazetteer_fixture.py"
+      - "scripts/validate_nyc_osm_relation_metadata_fixture.py"
+      - "scripts/validate_nyc_geoboundaries_fixture.py"
+      - "scripts/validate_nyc_whos_on_first_fixture.py"
+      - "scripts/validate_nyc_overture_fixture.py"
 
 permissions:
   contents: write
