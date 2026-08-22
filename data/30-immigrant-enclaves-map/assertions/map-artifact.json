@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/map-artifact.json",
+  "@type": "schema:Claim",
+  "schema:name": "\"NEW YORK CITY IMMIGRANT ENCLAVES\" map, as published by NYC Tourism + Conventions",
+  "schema:text": "A JPEG map titled \"NEW YORK CITY IMMIGRANT ENCLAVES*\", the asterisk resolving to the footnote \"*Source: NYC Mayor's Office of Immigrant Affairs\". Lists 30 numbered enclaves alphabetically with transit access, across all five boroughs. sha256 83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1, 323548 bytes, 1920x1740, HTTP last-modified 2026-06-05T15:44:36Z. Little Italy is absent. The artifact carries no publisher mark, no date, no URL, and no designer credit; its JPEG Exif directory is empty; the CMS credit field used by every other image on its host page is unused for this one asset. The same bytes are attested by an archived capture of 2026-06-17T15:33:10Z: identical sha256, identical length, identical empty Exif directory, and that capture preserves the origin's own last-modified header of 2026-06-05T15:44:36Z.",
+  "dcterms:description": "High confidence because the publisher-served bytes were retrieved first-hand, checksummed, and matched an archived capture. The score remains below certainty because a checksum proves the served artifact at observed times, not perpetual stability.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#HighConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.95",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T15:35:30+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-06-05T15:44:36+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "spdx:checksumValue": "83367ebcba3d5886db60144dba4e2a091d6572e90baa394224704beb3f5a99b1"
+}

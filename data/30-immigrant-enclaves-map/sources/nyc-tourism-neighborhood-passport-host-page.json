@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-neighborhood-passport-host-page.json",
+  "@type": "prov:Entity",
+  "schema:name": "New York City Tourism + Conventions — Neighborhood Passport host page",
+  "schema:url": "https://www.nyctourism.com/worldcup26/the-nyc-neighborhood-passport-world-cup-program/",
+  "dcterms:rights": "No license stated. Footer read '(c) 2006-2026 New York City Tourism + Conventions' when the page was live. The URL now returns HTTP 308; the rights position is recorded as it stood at retrieval."
+}

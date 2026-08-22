@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/criterion-demographic.json",
+  "@type": "schema:Claim",
+  "schema:name": "Demographic selection criterion for the NYC Immigrant Enclaves map, as reported",
+  "schema:text": "The Washington Examiner reports that a City Hall spokesperson, in a statement to the New York Post, defended the map by saying it \"highlights neighborhoods in New York City that have substantial foreign-born populations from regions and countries around the world.\" The predicate is present-tense foreign-born population share. This wording appears on no Mayor's Office of Immigrant Affairs page or document inspected by the governed collection, and in no published rule.",
+  "dcterms:description": "Moderate confidence because the criterion wording is quoted verbatim but relayed by one outlet, while a conflicting office attribution reported elsewhere remains unresolved.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.70",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/washington-examiner-map-report.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T20:46:00+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-07-09T14:24:16+00:00",
+    "@type": "xsd:dateTime"
+  }
+}
