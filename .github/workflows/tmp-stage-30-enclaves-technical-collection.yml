@@ -20,21 +20,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: codex/public-data-provenance
-      - name: Fetch exact governed artifact transport
+      - name: Generate technical collection surfaces
+        run: python3 scripts/generate_30_enclaves_map_data.py
+      - name: Verify deterministic regeneration
+        run: python3 scripts/generate_30_enclaves_map_data.py --check
+      - name: Reject unresolved/private public provenance
         run: |
-          curl -L --fail --silent --show-error 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-6ba4-81f5-bb6e-0be17318cc00/raw?se=2026-08-22T10%3A18%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=0560f415-9797-5231-bc99-a88176de72a2&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-22T00%3A53%3A10Z&ske=2026-08-23T00%3A53%3A10Z&sks=b&skv=2026-02-06&sig=%2Brhqd5VOMFkp3kTdM35vdCelREU0yHOEvVjcZYMDhwc%3D' -o /tmp/technical-collection.zip
-          mkdir -p /tmp/staged data/fixtures
-          unzip -q /tmp/technical-collection.zip -d /tmp/staged
-          cp /tmp/staged/30-immigrant-enclaves-map-technical-collection.json data/fixtures/30-immigrant-enclaves-map-technical-collection.json
-          echo '363d97471715def38eac936994a963014fd1d4b568c0ba903aad21d2f17a340d  data/fixtures/30-immigrant-enclaves-map-technical-collection.json' | sha256sum -c -
-      - name: Commit staged artifact
+          ! grep -REiq 'knoedg.org/nyc-knowledge-pack/assertion-metadata-|github.com/knoedg/(pack-nyc|meta-knoedg-nyc)|knoedg/(pack-nyc|meta-knoedg-nyc)' data/30-immigrant-enclaves-map data/fixtures/30-immigrant-enclaves-map-technical-collection.json
+      - name: Commit exact generated outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/fixtures/30-immigrant-enclaves-map-technical-collection.json
+          git add data/30-immigrant-enclaves-map
           if git diff --cached --quiet; then
-            echo "artifact already staged"
+            echo "generated outputs already staged"
           else
-            git commit -m "data: stage 30-enclaves technical collection artifact"
+            git commit -m "feat: generate 30-enclaves public technical surfaces"
             git push origin HEAD:codex/public-data-provenance
           fi
