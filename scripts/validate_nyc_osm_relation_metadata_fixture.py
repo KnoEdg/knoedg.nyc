@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the published OSM relation metadata fixture and public surfaces."""
+"""Validate the published OSM relation metadata fixture and technical surfaces."""
 
 import json
 from collections import Counter
@@ -10,9 +10,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "data" / "fixtures" / "nyc-openstreetmap-relation-metadata.json"
 SCHEMA_PATH = ROOT / "schemas" / "nyc-openstreetmap-relation-metadata" / "v1"
-VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundary-public-view.json"
-HTML_PATH = ROOT / "nyc-boundaries" / "index.html"
-JSONLD_PATH = ROOT / "nyc-boundaries" / "index.jsonld"
+VIEW_PATH = ROOT / "data" / "fixtures" / "nyc-boundaries-technical-collection.json"
+HTML_PATH = ROOT / "data" / "nyc-boundaries" / "index.html"
+JSONLD_PATH = ROOT / "data" / "nyc-boundaries" / "index.jsonld"
 PUBLIC_URL = "https://knoedg.nyc/data/fixtures/nyc-openstreetmap-relation-metadata.json"
 
 
@@ -66,7 +66,7 @@ if fixture["selection"]["geometryIncluded"] is not False or fixture["selection"]
     fail("fixture does not explicitly state geometry/member absence")
 
 if jsonld != view["semanticRepresentation"]:
-    fail("generated JSON-LD differs from the canonical artifact graph")
+    fail("generated technical JSON-LD differs from the technical artifact graph")
 source_versions = {row["versionUrl"]: row["sourceModifiedAt"] for row in records}
 view_versions = {
     node["@id"]: node["dcterms:modified"]["@value"]
@@ -74,21 +74,21 @@ view_versions = {
     if node.get("@id") in source_versions
 }
 if view_versions != source_versions:
-    fail("relation versions or timestamps drift from the canonical artifact")
+    fail("relation versions or timestamps drift from the technical artifact")
 if "/data/fixtures/nyc-openstreetmap-relation-metadata.json" not in html:
-    fail("generated HTML does not link the fixture")
+    fail("technical HTML does not link the fixture")
 resource = next(node for node in jsonld["@graph"] if node.get("@id") == view["resource"])
 if PUBLIC_URL not in {item["@id"] for item in resource["dcat:distribution"]}:
-    fail("JSON-LD dataset omits the fixture distribution")
+    fail("technical JSON-LD dataset omits the fixture distribution")
 distribution = next((node for node in jsonld["@graph"] if node.get("@id") == PUBLIC_URL), None)
 if not distribution or distribution.get("dcat:downloadURL", {}).get("@id") != PUBLIC_URL:
-    fail("JSON-LD fixture distribution is missing or malformed")
+    fail("technical JSON-LD fixture distribution is missing or malformed")
 if distribution.get("dcterms:license", {}).get("@id") != fixture["rights"]["licenseUrl"]:
-    fail("JSON-LD license does not match fixture rights")
+    fail("technical JSON-LD license does not match fixture rights")
 
 serialized = json.dumps(fixture, ensure_ascii=False).lower()
 for private_coordinate in ["knoedg/pack-nyc", "github.com/knoedg/pack-nyc", "meta-knoedg-nyc"]:
     if private_coordinate in serialized:
         fail(f"private repository coordinate leaked: {private_coordinate}")
 
-print("Published OSM metadata fixture validates: schema, 10 exact versions, no geometry, HTML/JSON-LD parity, rights, and public safety.")
+print("Published OSM metadata fixture validates: schema, 10 exact versions, no geometry, technical HTML/JSON-LD parity, rights, and public safety.")
