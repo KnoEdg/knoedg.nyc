@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/moia-series.json",
+  "@type": "schema:Claim",
+  "schema:name": "MOIA Immigrant Enclave Illustration Series, per MOIA's own end-of-tenure impact report",
+  "schema:text": "The Mayor's Office of Immigrant Affairs states, in its impact report covering the period through 2025-12-31: \"23 Immigrant Ethnic Enclave Illustrations were published honoring immigrant neighborhoods across all five boroughs.\" The series launched 2023-04-17 under Mayor Eric Adams and MOIA Commissioner Manuel Castro, with 25 illustrations announced at launch. \"Little Italy\" appears zero times across all 85 pages. The report states no selection criterion. Its poster captions repeat \"Little Africa in the Bronx\", so the stated 23 enumerates 23 captions but possibly only 22 distinct enclaves.",
+  "dcterms:description": "High confidence because this is MOIA's own retrieved and checksummed report. The score is slightly below the ceiling because the report repeats one Bronx caption, leaving 23 captions versus possibly 22 distinct enclaves unresolved.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#HighConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.93",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/moia-end-of-tenure-impact-report.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T14:30:00+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2025-12-31T00:00:00+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

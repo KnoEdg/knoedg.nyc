@@ -21,9 +21,16 @@ PRIVATE_COORDINATES = [
     "docs/publications/",
 ]
 
-# Allowed to name a coordinate because each exists to define a per-fixture
-# leak check against it, not to disclose one -- same reasoning as SELF.
-EXEMPT = {SELF, *(ROOT / "scripts").glob("validate_nyc_*.py")}
+# Allowed to name a coordinate because each exists to define a leak check
+# against it, not to disclose one. Keep this explicit: publication artifacts,
+# prose, templates, generated pages, and ordinary scripts remain in scan scope.
+EXEMPT = {
+    SELF,
+    *(ROOT / "scripts").glob("validate_nyc_*.py"),
+    ROOT / "scripts" / "validate_public_provenance.py",
+    ROOT / "scripts" / "generate_public_technical_records.py",
+    ROOT / ".github" / "workflows" / "validate-public-provenance.yml",
+}
 
 
 def tracked_files():
