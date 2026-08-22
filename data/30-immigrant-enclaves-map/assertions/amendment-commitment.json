@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/assertions/amendment-commitment.json",
+  "@type": "schema:Claim",
+  "schema:name": "Public commitment to add Little Italy to the map, 2026-07-10",
+  "schema:text": "amNewYork reports that Mayor Zohran Mamdani, answering a question at an unrelated Manhattan press conference on Friday 2026-07-10, said the map was \"initially created by the prior administration in 2023\" and that \"It's clearly not an exhaustive list of the more than 200 ethnic communities that call our city home. We're going to be making additional changes in the future to reflect that, and that includes adding Little Italy to the map.\" A commitment to a future change, not a record of one.",
+  "dcterms:description": "Moderate confidence because the operative statement is quoted verbatim from one outlet's report of the press conference. The score remains below the reporting ceiling because adjacent provenance reporting is paraphrased.",
+  "kee:lifecycleState": {
+    "@id": "https://w3id.org/kee/lifecycle#Active"
+  },
+  "kee:confidenceStatus": {
+    "@id": "https://w3id.org/kee/confidence#ModerateConfidence"
+  },
+  "kee:confidenceValue": {
+    "@value": "0.72",
+    "@type": "xsd:decimal"
+  },
+  "dcterms:source": [
+    {
+      "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/amny-little-italy-map-report.json"
+    }
+  ],
+  "prov:generatedAtTime": {
+    "@value": "2026-08-20T20:46:00+00:00",
+    "@type": "xsd:dateTime"
+  },
+  "kee:assertionTime": {
+    "@value": "2026-07-10T18:45:35+00:00",
+    "@type": "xsd:dateTime"
+  }
+}

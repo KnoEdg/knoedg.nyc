@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-mayors-office-july-10-2026-transcript.json",
+  "@type": "prov:Entity",
+  "schema:name": "NYC Mayor's Office — July 10, 2026 transcript",
+  "schema:url": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-announces-landmark--click-to-cancel--c",
+  "dcterms:rights": "All rights reserved. NYC.gov Terms of Use, retrieved 2026-08-20, section IV INTELLECTUAL PROPERTY, state that NYC.gov content and its selection and arrangement are property of the City of New York and that all rights are reserved. No permissive reuse license was identified in those terms. 17 USC 105 applies to works of the U.S. federal government and does not by itself place municipal works in the public domain."
+}

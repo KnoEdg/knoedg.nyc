@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nyc-tourism-30-enclaves-map-image.json",
+  "@type": "prov:Entity",
+  "schema:name": "New York City Tourism + Conventions — 30-enclaves map image",
+  "schema:url": "https://images.ctfassets.net/1aemqu6a6t65/5v68fmavEAod5jBdx4cdko/2d41975edab31488b3772798d1465695/WC_Passport_map.jpg",
+  "dcterms:rights": "No redistribution permission located. The page that carried this asset states '(c) 2006-2026 New York City Tourism + Conventions' and no license. Public accessibility is not permission. This project currently redistributes a local copy verified against the governed checksum, with attribution to New York City Tourism + Conventions and links to the publisher-served source and an independent archived capture. Attribution is not a license, and no permission is claimed. If the rightsholder objects, KnoEdg.NYC will withdraw the local copy."
+}

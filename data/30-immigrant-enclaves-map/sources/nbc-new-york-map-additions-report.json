@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "kee": "https://w3id.org/kee#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://knoedg.nyc/data/30-immigrant-enclaves-map/sources/nbc-new-york-map-additions-report.json",
+  "@type": "prov:Entity",
+  "schema:name": "NBC New York — reported map additions",
+  "schema:url": "https://www.nbcnewyork.com/new-york-city/mamdani-to-add-more-neighborhoods-to-nyc-immigrant-enclave-list-after-perceived-snubs/6524448/",
+  "dcterms:rights": "Not determined. This collection cites the page for the reported aides attribution; no permissive reuse license is asserted by this collection, and the outlet's terms were not interpreted."
+}
