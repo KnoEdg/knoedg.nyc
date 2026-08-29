@@ -1,0 +1,45 @@
+name: Validate Enclaves paper route
+
+on:
+  pull_request:
+    paths:
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "scripts/validate_enclaves_paper_route.py"
+      - "data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "sitemap.xml"
+      - "data/fixtures/SHA256SUMS"
+      - ".github/workflows/validate-enclaves-paper-route.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
+      - "scripts/generate_nyc_immigrant_enclaves_paper.py"
+      - "scripts/validate_enclaves_paper_route.py"
+      - "data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/**"
+      - "nyc-immigrant-enclaves-paper/**"
+      - "sitemap.xml"
+      - "data/fixtures/SHA256SUMS"
+      - ".github/workflows/validate-enclaves-paper-route.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate canonical route and legacy redirect
+        run: python3 scripts/validate_enclaves_paper_route.py
+      - name: Prove canonical render reproduces exactly
+        run: |
+          cp data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/index.html /tmp/enclaves-paper.html
+          cp data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/index.jsonld /tmp/enclaves-paper.jsonld
+          python3 scripts/generate_nyc_immigrant_enclaves_paper.py
+          cmp /tmp/enclaves-paper.html data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/index.html
+          cmp /tmp/enclaves-paper.jsonld data/papers/the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits/index.jsonld
+      - name: Verify publication checksums
+        run: sha256sum -c data/fixtures/SHA256SUMS
