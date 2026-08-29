@@ -11,13 +11,14 @@ import sys
 from generate_fixture_page import main
 
 ROOT = Path(__file__).resolve().parents[1]
+PAPER_ROUTE = ROOT / "data" / "papers" / "the-map-of-30-immigrant-enclaves-provenance-evidence-and-limits"
 
 if __name__ == "__main__":
     defaults = [
         "--artifact", str(ROOT / "data/fixtures/nyc-immigrant-enclaves-data-paper.json"),
         "--template", str(ROOT / "templates/data-paper.html"),
-        "--html", str(ROOT / "nyc-immigrant-enclaves-paper/index.html"),
-        "--jsonld", str(ROOT / "nyc-immigrant-enclaves-paper/index.jsonld"),
+        "--html", str(PAPER_ROUTE / "index.html"),
+        "--jsonld", str(PAPER_ROUTE / "index.jsonld"),
     ]
     sys.argv[1:1] = defaults
     raise SystemExit(main())
