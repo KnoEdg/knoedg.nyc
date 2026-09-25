@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactType": "fixture-dependent-public-view",
   "resource": "https://knoedg.nyc/kee-nyc-case-study/",
-  "issuedAt": "2026-09-25T12:40:00Z",
+  "issuedAt": "2026-09-25T14:05:00Z",
   "countingGranularity": "Four governed case-study examples. This count is a presentation count, not an evidence-source count.",
   "activeRecordCount": 4,
   "sourceGroups": [
@@ -33,7 +33,7 @@
   ],
   "provenanceBoundary": "Public-safe projection of governed case-study facts and analysis. Private repository coordinates, Git SHAs, source geometry, captured bytes, and internal publication topology are intentionally omitted.",
   "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
-  "artifactVersion": "2026-09-25.1",
+  "artifactVersion": "2026-09-25.2",
   "rendererContract": "fixture-page/v2",
   "contentModel": "fixture-content-blocks/v1",
   "integrity": {
@@ -67,7 +67,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Four New York City examples show what can be lost when a knowledge system collapses disagreement, scope, provenance, or time into a single answer."
+                "text": "KEE is a framework for keeping knowledge understandable as it moves between people, organizations, and software systems. These four New York City examples show why some differences should not be collapsed into one answer."
               }
             ]
           },
@@ -76,7 +76,16 @@
             "content": [
               {
                 "type": "text",
-                "text": "These examples are framed against KEE v0.10.0, but the downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049. This publication does not claim that the downstream NYC corpus conforms to KEE v0.10.0."
+                "text": "The examples cover four recurring problems: sources can disagree, two records can describe different aspects of the same thing, several datasets can share one upstream source, and newer observations can replace older ones without erasing history."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "One example is intentionally a mixed result: the historical Brooklyn Central Library fixture marks an address contradiction even though its own analysis says both addresses can plausibly be legitimate. The case study preserves that tension rather than rewriting it."
               }
             ]
           },
@@ -665,6 +674,15 @@
               }
             ],
             "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "These examples are interpreted against KEE v0.10.0. The downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049; this publication does not claim that the downstream corpus conforms to KEE v0.10.0."
+                  }
+                ]
+              },
               {
                 "type": "list",
                 "ordered": false,
