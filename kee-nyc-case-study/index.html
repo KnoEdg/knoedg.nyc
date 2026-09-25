@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Four New York City cases showing why disagreement, scope, provenance, and time must remain distinct in governed knowledge.">
+  <title>What KEE prevents us from losing — KnoEdg.NYC</title>
+  <link rel="canonical" href="https://knoedg.nyc/kee-nyc-case-study/">
+  <link rel="alternate" type="application/ld+json" href="https://knoedg.nyc/kee-nyc-case-study/index.jsonld" title="KEE NYC case study structured data">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/" aria-label="KnoEdg.NYC">KnoEdg.NYC</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="resource-page">
+    <div class="shell">
+<article>
+<section aria-labelledby="kee-nyc-case-study">
+<h1 id="kee-nyc-case-study">What KEE prevents us from losing</h1>
+<p>Four New York City examples show what can be lost when a knowledge system collapses disagreement, scope, provenance, or time into a single answer.</p>
+<p>These examples are framed against KEE v0.10.0, but the downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049. This publication does not claim that the downstream NYC corpus conforms to KEE v0.10.0.</p>
+<section aria-labelledby="case-1">
+<h2 id="case-1">A disagreement can be preserved without turning source prestige into truth</h2>
+<p>What can go wrong: A naive system can either discard one source or treat every cross-source difference as a contradiction.</p>
+<p>What the governed record preserves: The useful governance result is preservation of the disagreement and its provenance. The historical contradiction edge is itself a governed classification, not proof that the records are logically incompatible.</p>
+<p><strong>A source is not the same thing as correctness.</strong></p>
+<ul><li>Overture Maps recorded Brooklyn Botanic Garden with the website https://linktr.ee/brooklynbotanic and coordinates (40.6686244, -73.96442177). Source: <a href="https://docs.overturemaps.org/" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>OpenStreetMap way 157016745 recorded Brooklyn Botanic Garden with website https://www.bbg.org and centroid (40.6677056, -73.9646509). Source: <a href="https://www.openstreetmap.org/way/157016745" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>The historical governed fixture classified the two assertion records as contradicting each other. Source: <a href="https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bbg-per-overture" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li></ul>
+<section aria-labelledby="case-1-limitations">
+<h3 id="case-1-limitations">Limitations</h3>
+<ul><li>The Overture record cites publisher documentation rather than the exact retrieved feature.</li><li>The historical contradiction classification remains challengeable.</li></ul>
+</section>
+</section>
+<section aria-labelledby="case-2">
+<h2 id="case-2">An apparent contradiction can expose a modeling problem</h2>
+<p>What can go wrong: A naive system can treat different field values as proof that one source is wrong without checking whether the values answer different scoped questions.</p>
+<p>What the governed record preserves: The same historical fixture explains that a public-facing entrance address and a tax-lot address can both plausibly be legitimate for one building. This is a mixed result: the preserved context lets us challenge the fixture's own contradiction classification instead of silently canonizing it.</p>
+<p><strong>A governed contradiction marker is still a claim that can itself be challenged.</strong></p>
+<ul><li>NYC's Library facilities dataset gives Brooklyn Central Library the address 10 Grand Army Plaza and BBL 3011830002. Source: <a href="https://data.cityofnewyork.us/resource/feuq-due4.json?system=BPL" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>PLUTO for BBL 3011830002 gives address 415 Flatbush Avenue and owner BROOKLYN PUBLIC LIBRARY. Source: <a href="https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3011830002" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>The historical governed fixture marks the facilities and PLUTO assertion records with a contradiction relation. Source: <a href="https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bpl-central-per-pluto" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li></ul>
+<section aria-labelledby="case-2-limitations">
+<h3 id="case-2-limitations">Limitations</h3>
+<ul><li>This is intentionally not presented as a clean KEE success story.</li><li>The case study does not silently rewrite the historical downstream fixture.</li></ul>
+</section>
+</section>
+<section aria-labelledby="case-3">
+<h2 id="case-3">More representations do not necessarily mean more independent evidence</h2>
+<p>What can go wrong: A naive system can count every representation as a separate vote and overstate evidential support.</p>
+<p>What the governed record preserves: Representation count and independent-provenance count answer different questions. Derived products can add value without becoming independent corroboration.</p>
+<p><strong>More records do not necessarily mean more independent evidence.</strong></p>
+<ul><li>The governed NYC Boundaries public view counts 46 active boundary representations across six publisher families. Source: <a href="https://knoedg.nyc/nyc-boundaries/" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>Only DCP and the Census Gazetteer are included in that artifact's independent land-area comparison. Source: <a href="https://knoedg.nyc/nyc-boundaries/" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>geoBoundaries and Who's On First remain in the Census provenance cluster, while Overture representations remain in the OpenStreetMap provenance cluster for the relevant source lineage. Source: <a href="https://knoedg.nyc/nyc-boundaries/" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li></ul>
+<section aria-labelledby="case-3-limitations">
+<h3 id="case-3-limitations">Limitations</h3>
+<ul><li>Independence is purpose-specific; a derived product may still add useful identifiers, hierarchy, packaging, or accessibility.</li></ul>
+</section>
+</section>
+<section aria-labelledby="case-4">
+<h2 id="case-4">A newer observation can replace an older one without erasing history</h2>
+<p>What can go wrong: A naive system can overwrite old observations or compare changed measurement vocabularies as if they meant exactly the same thing.</p>
+<p>What the governed record preserves: Currentness, historical validity, assertion time, capture time, and supersession are different dimensions. The three censuses also use different condition/status vocabularies, so raw totals must not be silently treated as directly comparable living-tree counts.</p>
+<p><strong>Time is part of the knowledge.</strong></p>
+<ul><li>The 1995 NYC Street Tree Census fixture records 516,989 street-tree records and is governed as superseded by the 2005 record. Source: <a href="https://data.cityofnewyork.us/resource/kyad-zm4j.json" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>The 2005 fixture records 592,372 street-tree records and is governed as superseded by the 2015 record. Source: <a href="https://data.cityofnewyork.us/resource/29bw-z7pj.json" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li><li>The 2015 fixture records 683,788 street-tree records, including 652,173 with status Alive, and is governed as the active record in this chain. Source: <a href="https://data.cityofnewyork.us/resource/uvpi-gqnh.json" target="_blank" rel="noopener noreferrer" aria-label="source (opens in a new tab)">source<span aria-hidden="true"> ↗</span></a></li></ul>
+<section aria-labelledby="case-4-limitations">
+<h3 id="case-4-limitations">Limitations</h3>
+<ul><li>The raw census totals are not presented as directly comparable living-tree counts.</li><li>The 2005 governed source records a disclosed upstream borough-name data-quality defect.</li></ul>
+</section>
+</section>
+<section aria-labelledby="rights">
+<h2 id="rights">Rights and attribution</h2>
+<p>This page republishes factual summaries and public source references, not source geometry, media, or captured source bytes.</p>
+<ul><li>OpenStreetMap-origin material retains attribution to © OpenStreetMap contributors and the Open Database License (ODbL) 1.0 reference.</li><li>Overture Maps material retains attribution to Overture Maps Foundation and underlying OpenStreetMap contributors.</li><li>NYC Open Data facts retain exact source links; source datasets or source bytes require a fresh terms review before redistribution.</li></ul>
+</section>
+<section aria-labelledby="governance">
+<h2 id="governance">Governance and limitations</h2>
+<ul><li>The Brooklyn Central Library case is intentionally a mixed result: the historical fixture records a contradiction edge even though its own analysis says both addresses can plausibly be legitimate.</li><li>The Brooklyn Botanic Garden contradiction edge is a governed historical classification, not proof of logical incompatibility.</li><li>More representations are not automatically more independent evidence.</li><li>Time roles remain separate: represented assertion time, capture time, lifecycle state, and supersession are not collapsed.</li></ul>
+</section>
+</section>
+</article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KnoEdg.NYC · New York City, connected.</p></div></footer>
+</body>
+</html>
+
