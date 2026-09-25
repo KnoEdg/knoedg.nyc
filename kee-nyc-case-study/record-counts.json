@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "rendererContract": "fixture-page/v2",
+  "resource": "https://knoedg.nyc/kee-nyc-case-study/",
+  "activeRecordCount": 4,
+  "representations": [
+    {
+      "id": "recorded-disagreement",
+      "label": "Recorded disagreement",
+      "count": 1,
+      "provenanceCluster": "Overture Maps + OpenStreetMap"
+    },
+    {
+      "id": "scope-stress-finding",
+      "label": "Scope stress finding",
+      "count": 1,
+      "provenanceCluster": "NYC Open Data / PLUTO"
+    },
+    {
+      "id": "provenance-independence",
+      "label": "Provenance independence",
+      "count": 1,
+      "provenanceCluster": "Existing governed NYC Boundaries publication"
+    },
+    {
+      "id": "time-and-supersession",
+      "label": "Time and supersession",
+      "count": 1,
+      "provenanceCluster": "NYC Parks Street Tree Census"
+    }
+  ]
+}
