@@ -12,6 +12,10 @@ on:
       - "nyc-overture/**"
       - "inside-the-map-of-30-immigrant-enclaves/**"
       - "nyc-immigrant-enclaves-paper/**"
+      - "kee-nyc-case-study/**"
+      - "data/fixtures/nyc-kee-case-study-public-view.json"
+      - "index.html"
+      - "sitemap.xml"
       - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
       - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
       - "scripts/generate_nyc_immigrant_enclaves_view.py"
@@ -86,6 +90,10 @@ on:
       - "nyc-overture/**"
       - "inside-the-map-of-30-immigrant-enclaves/**"
       - "nyc-immigrant-enclaves-paper/**"
+      - "kee-nyc-case-study/**"
+      - "data/fixtures/nyc-kee-case-study-public-view.json"
+      - "index.html"
+      - "sitemap.xml"
       - "data/fixtures/nyc-immigrant-enclaves-public-view.json"
       - "data/fixtures/nyc-immigrant-enclaves-data-paper.json"
       - "scripts/generate_nyc_immigrant_enclaves_view.py"
@@ -330,6 +338,21 @@ jobs:
       - run: python3 scripts/generate_nyc_overture_source_view.py --check
       - run: python3 scripts/generate_nyc_immigrant_enclaves_view.py --check
       - run: python3 scripts/generate_nyc_immigrant_enclaves_paper.py --check
+      - name: Validate KEE NYC case-study v2 artifact against the public JSON Schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          schema = json.load(open("schemas/fixture-dependent-public-view/v2"))
+          artifact = json.load(open("data/fixtures/nyc-kee-case-study-public-view.json"))
+          Draft202012Validator(schema, format_checker=FormatChecker()).validate(artifact)
+          if artifact["caseStudyGovernance"]["publicationAuthorized"] is not False:
+              raise SystemExit("source artifact must not self-authorize publication")
+          if artifact["caseStudyGovernance"]["negativeResultPreserved"] is not True:
+              raise SystemExit("mixed/negative case-study result was not preserved")
+          print("KEE NYC case-study v2 artifact validates.")
+          PY
+      - run: python3 scripts/generate_kee_nyc_case_study_view.py --check
       - name: Validate the NYC Immigrant Enclaves published artifacts against their schemas
         run: |
           python3 - <<'PY'
