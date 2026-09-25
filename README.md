@@ -122,3 +122,18 @@ site (`knoedg.nyc` is a New York City knowledge resource); the underlying
 unchanged. A value the source only ever recorded as a calendar date (no
 time-of-day) renders as a plain human-readable date and is never given a
 fabricated time.
+
+
+## KEE NYC flagship case study
+
+`data/fixtures/nyc-kee-case-study-public-view.json` is the approved public-safe semantic artifact for [What KEE prevents us from losing](https://knoedg.nyc/kee-nyc-case-study/). It uses the existing `fixture-page/v2` contract and the shared `scripts/generate_fixture_page.py` renderer; `scripts/generate_kee_nyc_case_study.py` is only a thin path wrapper.
+
+Regenerate and verify without network access:
+
+```bash
+python3 scripts/generate_kee_nyc_case_study.py
+python3 scripts/generate_kee_nyc_case_study.py --check
+python3 scripts/validate_jsonld.py
+```
+
+The page preserves four governed examples: recorded source disagreement, a Central Library contradiction/scope stress finding, provenance-family dependence in NYC Boundaries, and Street Tree Census time/supersession. The downstream fixtures remain historical KEE v0.7.2 + ADR-0049 material; the page interprets them against KEE v0.10.0 and explicitly does not claim downstream v0.10.0 conformance.
