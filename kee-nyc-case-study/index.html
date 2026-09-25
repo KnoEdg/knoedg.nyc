@@ -25,8 +25,9 @@
 <article>
 <section aria-labelledby="kee-nyc-case-study">
 <h1 id="kee-nyc-case-study">What KEE prevents us from losing</h1>
-<p>Four New York City examples show what can be lost when a knowledge system collapses disagreement, scope, provenance, or time into a single answer.</p>
-<p>These examples are framed against KEE v0.10.0, but the downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049. This publication does not claim that the downstream NYC corpus conforms to KEE v0.10.0.</p>
+<p>KEE is a framework for keeping knowledge understandable as it moves between people, organizations, and software systems. These four New York City examples show why some differences should not be collapsed into one answer.</p>
+<p>The examples cover four recurring problems: sources can disagree, two records can describe different aspects of the same thing, several datasets can share one upstream source, and newer observations can replace older ones without erasing history.</p>
+<p>One example is intentionally a mixed result: the historical Brooklyn Central Library fixture marks an address contradiction even though its own analysis says both addresses can plausibly be legitimate. The case study preserves that tension rather than rewriting it.</p>
 <section aria-labelledby="case-1">
 <h2 id="case-1">A disagreement can be preserved without turning source prestige into truth</h2>
 <p>What can go wrong: A naive system can either discard one source or treat every cross-source difference as a contradiction.</p>
@@ -78,6 +79,7 @@
 </section>
 <section aria-labelledby="governance">
 <h2 id="governance">Governance and limitations</h2>
+<p>These examples are interpreted against KEE v0.10.0. The downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049; this publication does not claim that the downstream corpus conforms to KEE v0.10.0.</p>
 <ul><li>The Brooklyn Central Library case is intentionally a mixed result: the historical fixture records a contradiction edge even though its own analysis says both addresses can plausibly be legitimate.</li><li>The Brooklyn Botanic Garden contradiction edge is a governed historical classification, not proof of logical incompatibility.</li><li>More representations are not automatically more independent evidence.</li><li>Time roles remain separate: represented assertion time, capture time, lifecycle state, and supersession are not collapsed.</li></ul>
 </section>
 </section>
