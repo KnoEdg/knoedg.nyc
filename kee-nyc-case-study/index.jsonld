@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@id": "https://knoedg.nyc/kee-nyc-case-study/",
+      "@type": "schema:Article",
+      "schema:name": "What KEE prevents us from losing",
+      "schema:description": "Four New York City cases about disagreement, scope, provenance, and time.",
+      "dcterms:rights": "Factual summaries and source references only; source-family attribution and redistribution obligations remain attached.",
+      "dcterms:provenance": "Derived from governed NYC records and an existing governed NYC Boundaries public resource; downstream fixtures remain on KEE v0.7.2 + ADR-0049."
+    },
+    {
+      "@id": "https://knoedg.nyc/kee-nyc-case-study/#recorded-disagreement",
+      "@type": "schema:Claim",
+      "schema:name": "A disagreement can be preserved without turning source prestige into truth",
+      "schema:text": "The useful governance result is preservation of the disagreement and its provenance. The historical contradiction edge is itself a governed classification, not proof that the records are logically incompatible.",
+      "schema:citation": [
+        "https://docs.overturemaps.org/",
+        "https://www.openstreetmap.org/way/157016745",
+        "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bbg-per-overture"
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/kee-nyc-case-study/#scope-stress-finding",
+      "@type": "schema:Claim",
+      "schema:name": "An apparent contradiction can expose a modeling problem",
+      "schema:text": "The same historical fixture explains that a public-facing entrance address and a tax-lot address can both plausibly be legitimate for one building. This is a mixed result: the preserved context lets us challenge the fixture's own contradiction classification instead of silently canonizing it.",
+      "schema:citation": [
+        "https://data.cityofnewyork.us/resource/feuq-due4.json?system=BPL",
+        "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3011830002",
+        "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bpl-central-per-pluto"
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/kee-nyc-case-study/#provenance-independence",
+      "@type": "schema:Claim",
+      "schema:name": "More representations do not necessarily mean more independent evidence",
+      "schema:text": "Representation count and independent-provenance count answer different questions. Derived products can add value without becoming independent corroboration.",
+      "schema:citation": [
+        "https://knoedg.nyc/nyc-boundaries/",
+        "https://knoedg.nyc/nyc-boundaries/",
+        "https://knoedg.nyc/nyc-boundaries/"
+      ]
+    },
+    {
+      "@id": "https://knoedg.nyc/kee-nyc-case-study/#time-and-supersession",
+      "@type": "schema:Claim",
+      "schema:name": "A newer observation can replace an older one without erasing history",
+      "schema:text": "Currentness, historical validity, assertion time, capture time, and supersession are different dimensions. The three censuses also use different condition/status vocabularies, so raw totals must not be silently treated as directly comparable living-tree counts.",
+      "schema:citation": [
+        "https://data.cityofnewyork.us/resource/kyad-zm4j.json",
+        "https://data.cityofnewyork.us/resource/29bw-z7pj.json",
+        "https://data.cityofnewyork.us/resource/uvpi-gqnh.json"
+      ]
+    }
+  ]
+}
