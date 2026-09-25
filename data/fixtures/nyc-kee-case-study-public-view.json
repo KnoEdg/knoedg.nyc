@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "fixture-dependent-public-view",
+  "resource": "https://knoedg.nyc/kee-nyc-case-study/",
+  "issuedAt": "2026-09-25T14:05:00Z",
+  "countingGranularity": "Four governed case-study examples. This count is a presentation count, not an evidence-source count.",
+  "activeRecordCount": 4,
+  "sourceGroups": [
+    {
+      "id": "recorded-disagreement",
+      "label": "Recorded disagreement",
+      "count": 1,
+      "provenanceCluster": "Overture Maps + OpenStreetMap"
+    },
+    {
+      "id": "scope-stress-finding",
+      "label": "Scope stress finding",
+      "count": 1,
+      "provenanceCluster": "NYC Open Data / PLUTO"
+    },
+    {
+      "id": "provenance-independence",
+      "label": "Provenance independence",
+      "count": 1,
+      "provenanceCluster": "Existing governed NYC Boundaries publication"
+    },
+    {
+      "id": "time-and-supersession",
+      "label": "Time and supersession",
+      "count": 1,
+      "provenanceCluster": "NYC Parks Street Tree Census"
+    }
+  ],
+  "provenanceBoundary": "Public-safe projection of governed case-study facts and analysis. Private repository coordinates, Git SHAs, source geometry, captured bytes, and internal publication topology are intentionally omitted.",
+  "schema": "https://knoedg.nyc/schemas/fixture-dependent-public-view/v2",
+  "artifactVersion": "2026-09-25.2",
+  "rendererContract": "fixture-page/v2",
+  "contentModel": "fixture-content-blocks/v1",
+  "integrity": {
+    "mechanism": "immutable-git-blob-and-byte-equality",
+    "valueProvidedByTransport": true
+  },
+  "page": {
+    "language": "en",
+    "title": "What KEE prevents us from losing — KnoEdg.NYC",
+    "description": "Four New York City cases showing why disagreement, scope, provenance, and time must remain distinct in governed knowledge.",
+    "canonical": "https://knoedg.nyc/kee-nyc-case-study/",
+    "alternate": {
+      "mediaType": "application/ld+json",
+      "href": "https://knoedg.nyc/kee-nyc-case-study/index.jsonld",
+      "title": "KEE NYC case study structured data"
+    },
+    "stylesheet": "/assets/styles.css",
+    "contentBlocks": [
+      {
+        "type": "section",
+        "id": "kee-nyc-case-study",
+        "heading": [
+          {
+            "type": "text",
+            "text": "What KEE prevents us from losing"
+          }
+        ],
+        "children": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "KEE is a framework for keeping knowledge understandable as it moves between people, organizations, and software systems. These four New York City examples show why some differences should not be collapsed into one answer."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The examples cover four recurring problems: sources can disagree, two records can describe different aspects of the same thing, several datasets can share one upstream source, and newer observations can replace older ones without erasing history."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "One example is intentionally a mixed result: the historical Brooklyn Central Library fixture marks an address contradiction even though its own analysis says both addresses can plausibly be legitimate. The case study preserves that tension rather than rewriting it."
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "case-1",
+            "heading": [
+              {
+                "type": "text",
+                "text": "A disagreement can be preserved without turning source prestige into truth"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What can go wrong: A naive system can either discard one source or treat every cross-source difference as a contradiction."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What the governed record preserves: The useful governance result is preservation of the disagreement and its provenance. The historical contradiction edge is itself a governed classification, not proof that the records are logically incompatible."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A source is not the same thing as correctness."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "Overture Maps recorded Brooklyn Botanic Garden with the website https://linktr.ee/brooklynbotanic and coordinates (40.6686244, -73.96442177). Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://docs.overturemaps.org/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "OpenStreetMap way 157016745 recorded Brooklyn Botanic Garden with website https://www.bbg.org and centroid (40.6677056, -73.9646509). Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://www.openstreetmap.org/way/157016745",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "The historical governed fixture classified the two assertion records as contradicting each other. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bbg-per-overture",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ]
+                ]
+              },
+              {
+                "type": "section",
+                "id": "case-1-limitations",
+                "heading": [
+                  {
+                    "type": "text",
+                    "text": "Limitations"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "items": [
+                      [
+                        {
+                          "type": "text",
+                          "text": "The Overture record cites publisher documentation rather than the exact retrieved feature."
+                        }
+                      ],
+                      [
+                        {
+                          "type": "text",
+                          "text": "The historical contradiction classification remains challengeable."
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "case-2",
+            "heading": [
+              {
+                "type": "text",
+                "text": "An apparent contradiction can expose a modeling problem"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What can go wrong: A naive system can treat different field values as proof that one source is wrong without checking whether the values answer different scoped questions."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What the governed record preserves: The same historical fixture explains that a public-facing entrance address and a tax-lot address can both plausibly be legitimate for one building. This is a mixed result: the preserved context lets us challenge the fixture's own contradiction classification instead of silently canonizing it."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A governed contradiction marker is still a claim that can itself be challenged."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "NYC's Library facilities dataset gives Brooklyn Central Library the address 10 Grand Army Plaza and BBL 3011830002. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://data.cityofnewyork.us/resource/feuq-due4.json?system=BPL",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "PLUTO for BBL 3011830002 gives address 415 Flatbush Avenue and owner BROOKLYN PUBLIC LIBRARY. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3011830002",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "The historical governed fixture marks the facilities and PLUTO assertion records with a contradiction relation. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bpl-central-per-pluto",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ]
+                ]
+              },
+              {
+                "type": "section",
+                "id": "case-2-limitations",
+                "heading": [
+                  {
+                    "type": "text",
+                    "text": "Limitations"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "items": [
+                      [
+                        {
+                          "type": "text",
+                          "text": "This is intentionally not presented as a clean KEE success story."
+                        }
+                      ],
+                      [
+                        {
+                          "type": "text",
+                          "text": "The case study does not silently rewrite the historical downstream fixture."
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "case-3",
+            "heading": [
+              {
+                "type": "text",
+                "text": "More representations do not necessarily mean more independent evidence"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What can go wrong: A naive system can count every representation as a separate vote and overstate evidential support."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What the governed record preserves: Representation count and independent-provenance count answer different questions. Derived products can add value without becoming independent corroboration."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "More records do not necessarily mean more independent evidence."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "The governed NYC Boundaries public view counts 46 active boundary representations across six publisher families. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-boundaries/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "Only DCP and the Census Gazetteer are included in that artifact's independent land-area comparison. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-boundaries/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "geoBoundaries and Who's On First remain in the Census provenance cluster, while Overture representations remain in the OpenStreetMap provenance cluster for the relevant source lineage. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://knoedg.nyc/nyc-boundaries/",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ]
+                ]
+              },
+              {
+                "type": "section",
+                "id": "case-3-limitations",
+                "heading": [
+                  {
+                    "type": "text",
+                    "text": "Limitations"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "items": [
+                      [
+                        {
+                          "type": "text",
+                          "text": "Independence is purpose-specific; a derived product may still add useful identifiers, hierarchy, packaging, or accessibility."
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "case-4",
+            "heading": [
+              {
+                "type": "text",
+                "text": "A newer observation can replace an older one without erasing history"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What can go wrong: A naive system can overwrite old observations or compare changed measurement vocabularies as if they meant exactly the same thing."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "What the governed record preserves: Currentness, historical validity, assertion time, capture time, and supersession are different dimensions. The three censuses also use different condition/status vocabularies, so raw totals must not be silently treated as directly comparable living-tree counts."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "strong",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Time is part of the knowledge."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "The 1995 NYC Street Tree Census fixture records 516,989 street-tree records and is governed as superseded by the 2005 record. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://data.cityofnewyork.us/resource/kyad-zm4j.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "The 2005 fixture records 592,372 street-tree records and is governed as superseded by the 2015 record. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://data.cityofnewyork.us/resource/29bw-z7pj.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "The 2015 fixture records 683,788 street-tree records, including 652,173 with status Alive, and is governed as the active record in this chain. Source: "
+                    },
+                    {
+                      "type": "link",
+                      "href": "https://data.cityofnewyork.us/resource/uvpi-gqnh.json",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "source"
+                        }
+                      ],
+                      "newWindow": true,
+                      "accessibleNewWindowText": "opens in a new tab"
+                    }
+                  ]
+                ]
+              },
+              {
+                "type": "section",
+                "id": "case-4-limitations",
+                "heading": [
+                  {
+                    "type": "text",
+                    "text": "Limitations"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "items": [
+                      [
+                        {
+                          "type": "text",
+                          "text": "The raw census totals are not presented as directly comparable living-tree counts."
+                        }
+                      ],
+                      [
+                        {
+                          "type": "text",
+                          "text": "The 2005 governed source records a disclosed upstream borough-name data-quality defect."
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "rights",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Rights and attribution"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This page republishes factual summaries and public source references, not source geometry, media, or captured source bytes."
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "OpenStreetMap-origin material retains attribution to © OpenStreetMap contributors and the Open Database License (ODbL) 1.0 reference."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "Overture Maps material retains attribution to Overture Maps Foundation and underlying OpenStreetMap contributors."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "NYC Open Data facts retain exact source links; source datasets or source bytes require a fresh terms review before redistribution."
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "id": "governance",
+            "heading": [
+              {
+                "type": "text",
+                "text": "Governance and limitations"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "These examples are interpreted against KEE v0.10.0. The downstream NYC fixtures were created under KEE v0.7.2 plus ADR-0049; this publication does not claim that the downstream corpus conforms to KEE v0.10.0."
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  [
+                    {
+                      "type": "text",
+                      "text": "The Brooklyn Central Library case is intentionally a mixed result: the historical fixture records a contradiction edge even though its own analysis says both addresses can plausibly be legitimate."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "The Brooklyn Botanic Garden contradiction edge is a governed historical classification, not proof of logical incompatibility."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "More representations are not automatically more independent evidence."
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "text": "Time roles remain separate: represented assertion time, capture time, lifecycle state, and supersession are not collapsed."
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "semanticRepresentation": {
+    "@context": {
+      "schema": "https://schema.org/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#"
+    },
+    "@graph": [
+      {
+        "@id": "https://knoedg.nyc/kee-nyc-case-study/",
+        "@type": "schema:Article",
+        "schema:name": "What KEE prevents us from losing",
+        "schema:description": "Four New York City cases about disagreement, scope, provenance, and time.",
+        "dcterms:rights": "Factual summaries and source references only; source-family attribution and redistribution obligations remain attached.",
+        "dcterms:provenance": "Derived from governed NYC records and an existing governed NYC Boundaries public resource; downstream fixtures remain on KEE v0.7.2 + ADR-0049."
+      },
+      {
+        "@id": "https://knoedg.nyc/kee-nyc-case-study/#recorded-disagreement",
+        "@type": "schema:Claim",
+        "schema:name": "A disagreement can be preserved without turning source prestige into truth",
+        "schema:text": "The useful governance result is preservation of the disagreement and its provenance. The historical contradiction edge is itself a governed classification, not proof that the records are logically incompatible.",
+        "schema:citation": [
+          "https://docs.overturemaps.org/",
+          "https://www.openstreetmap.org/way/157016745",
+          "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bbg-per-overture"
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/kee-nyc-case-study/#scope-stress-finding",
+        "@type": "schema:Claim",
+        "schema:name": "An apparent contradiction can expose a modeling problem",
+        "schema:text": "The same historical fixture explains that a public-facing entrance address and a tax-lot address can both plausibly be legitimate for one building. This is a mixed result: the preserved context lets us challenge the fixture's own contradiction classification instead of silently canonizing it.",
+        "schema:citation": [
+          "https://data.cityofnewyork.us/resource/feuq-due4.json?system=BPL",
+          "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3011830002",
+          "https://knoedg.org/nyc-knowledge-pack/assertion-metadata-bpl-central-per-pluto"
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/kee-nyc-case-study/#provenance-independence",
+        "@type": "schema:Claim",
+        "schema:name": "More representations do not necessarily mean more independent evidence",
+        "schema:text": "Representation count and independent-provenance count answer different questions. Derived products can add value without becoming independent corroboration.",
+        "schema:citation": [
+          "https://knoedg.nyc/nyc-boundaries/",
+          "https://knoedg.nyc/nyc-boundaries/",
+          "https://knoedg.nyc/nyc-boundaries/"
+        ]
+      },
+      {
+        "@id": "https://knoedg.nyc/kee-nyc-case-study/#time-and-supersession",
+        "@type": "schema:Claim",
+        "schema:name": "A newer observation can replace an older one without erasing history",
+        "schema:text": "Currentness, historical validity, assertion time, capture time, and supersession are different dimensions. The three censuses also use different condition/status vocabularies, so raw totals must not be silently treated as directly comparable living-tree counts.",
+        "schema:citation": [
+          "https://data.cityofnewyork.us/resource/kyad-zm4j.json",
+          "https://data.cityofnewyork.us/resource/29bw-z7pj.json",
+          "https://data.cityofnewyork.us/resource/uvpi-gqnh.json"
+        ]
+      }
+    ]
+  },
+  "caseStudyGovernance": {
+    "caseStudyBaseline": "0.10.0",
+    "downstreamFixtureBaseline": "0.7.2+ADR-0049",
+    "conformanceClaim": false,
+    "curationReady": true,
+    "disputedRecordsReviewed": true,
+    "supersessionChainReviewed": true,
+    "publicationAuthorized": false,
+    "negativeResultPreserved": true
+  }
+}
